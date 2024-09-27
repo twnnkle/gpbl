@@ -1,0 +1,107 @@
+<div id="carouselMainPage" class="carousel slide">
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <div
+        class="carousel-card mx-1"
+        style="background-image: url('https://dummyimage.com/600x400/a6a6ff&text=+')"
+      >
+        <h4>Talent journey: новый отдел и новое назначение</h4>
+        <p>
+          Два года назад команда HR сформулировала свою миссию следующим
+          образом: нанимать лучших, внедрять инновации и делать жизнь
+          сотрудников легкой,
+        </p>
+      </div>
+    </div>
+    <div class="carousel-item">
+      <div
+        class="carousel-card mx-1"
+        style="background-image: url('https://dummyimage.com/600x400/a6a6ff&text=+')"
+      >
+        <h4>Talent journey: новый отдел и новое назначение</h4>
+        <p>
+          Два года назад команда HR сформулировала свою миссию следующим
+          образом: нанимать лучших, внедрять инновации и делать жизнь
+          сотрудников легкой,
+        </p>
+      </div>
+    </div>
+    <div class="carousel-item">
+      <div
+        class="carousel-card mx-1"
+        style="background-image: url('https://dummyimage.com/600x400/a6a6ff&text=+')"
+      >
+        <h4>Talent journey: новый отдел и новое назначение</h4>
+        <p>
+          Два года назад команда HR сформулировала свою миссию следующим
+          образом: нанимать лучших, внедрять инновации и делать жизнь
+          сотрудников легкой,
+        </p>
+      </div>
+    </div>
+  </div>
+  <div class="carousel-btns">
+    <button
+      class="carousel-btn"
+      type="button"
+      data-bs-target="#carouselMainPage"
+      data-bs-slide="prev"
+    >
+      <img src="/pages/main/carousel-arrow.svg" width="16" height="16" alt="Стрелка" />
+    </button>
+    <button
+      class="carousel-btn carousel-btn_next"
+      type="button"
+      data-bs-target="#carouselMainPage"
+      data-bs-slide="next"
+    >
+      <img src="/pages/main/carousel-arrow.svg" width="16" height="16" alt="Стрелка" />
+    </button>
+  </div>
+</div>
+
+<style lang="scss">
+  .carousel-card {
+    padding: 24px 24px 200px 24px;
+    border-radius: 24px;
+    color: #ffffff;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    h4 {
+      font-size: 40px;
+      font-weight: 500;
+      line-height: 48px;
+    }
+
+    p {
+      font-size: 16px;
+      font-weight: 400;
+      margin-top: 20px;
+    }
+  }
+
+  .carousel-btns {
+    position: absolute;
+    bottom: 24px;
+    left: 24px;
+    display: flex;
+    gap: 5px;
+  }
+
+  .carousel-btn {
+    background-color: #ffffff;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: unset;
+
+    &_next img {
+      transform: rotate(180deg);
+    }
+  }
+</style>

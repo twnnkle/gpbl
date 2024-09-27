@@ -2,25 +2,24 @@
 const { img, subdivision, title, description, date } = Astro.props;
 ---
 
-<div class="grayCardWithImg">
+<div class="gray-card-with-img">
   <img src={img} alt="Картинка карточки" />
 
-  <div class="grayCardWithImg__text">
-    <span class="grayCardWithImg__subdivision">{subdivision}</span>
-    <h4 class="grayCardWithImg__title">{title}</h4>
-    <p class="grayCardWithImg__description">{description}</p>
-    <span class="grayCardWithImg__date">{date}</span>
+  <div class="gray-card-with-img__text">
+    <span class="gray-card-with-img__subdivision">{subdivision}</span>
+    <h4 class="gray-card-with-img__title">{title}</h4>
+    <p class="gray-card-with-img__description">{description}</p>
+    <span class="gray-card-with-img__date">{date}</span>
   </div>
 </div>
 
 <style lang="scss">
-  .grayCardWithImg {
+  .gray-card-with-img {
     background-color: #f3f5fb;
     display: flex;
     flex-direction: column;
-    gap: 10px;
     border-radius: 24px;
-    width: fit-content;
+    cursor: pointer;
 
     img {
       width: 100%;
@@ -31,7 +30,7 @@ const { img, subdivision, title, description, date } = Astro.props;
     &__text {
       display: flex;
       flex-direction: column;
-      gap: 10px;
+      gap: 7px;
       padding: 15px;
     }
 

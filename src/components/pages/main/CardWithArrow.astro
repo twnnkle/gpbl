@@ -1,0 +1,61 @@
+---
+const { tag, text, img } = Astro.props;
+---
+
+<div class="card-with-arrow" style=`background-image: url(${img})`>
+  <span class="card-with-arrow__tag">{tag}</span>
+
+  <div class="card-with-arrow__text-and-btn">
+    <div class="card-with-arrow__text">{text}</div>
+
+    <span class="card-with-arrow__btn">
+      <img src="/arrow-card-with-arrow.svg" width="16" height="14" alt="Стрелка" />
+    </span>
+  </div>
+</div>
+
+<style lang="scss">
+  .card-with-arrow {
+    padding: 16px;
+    border-radius: 16px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100%;
+
+    &__tag {
+      background-color: #ee8031;
+      padding: 5px 10px;
+      color: #ffffff;
+      font-size: 15px;
+      font-weight: 700;
+      border-radius: 4px;
+      width: fit-content;
+    }
+
+    &__text-and-btn {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    &__text {
+      color: #212529;
+      font-size: 24px;
+      font-weight: 500;
+    }
+
+    &__btn {
+      padding: 9px;
+      border: 1px solid #CCD3E7;
+      border-radius: 4px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+    }
+  }
+</style>

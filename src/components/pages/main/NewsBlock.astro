@@ -1,0 +1,66 @@
+---
+import Button from '../../common/Button.astro';
+import GrayCardWithImg from '../../common/GrayCardWithImg.astro';
+---
+
+<div class="news-block">
+  <div class="news-block__header">
+    <h3>Новости</h3>
+    <Button text="Все новости" option="btn-primary" />
+  </div>
+
+  <div class="news-block__cards">
+    <div class="row">
+      <div class="col-md-4">
+        <GrayCardWithImg
+          img="https://dummyimage.com/294x184/a6a6ff&text=+"
+          subdivision="Название подразделения"
+          title="Как мы съездили? Душевно и весело"
+          description="Ранним утром волонтеры-москвичи устремились "
+          date="12.03"
+        />
+      </div>
+
+      <div class="col-md-4">
+        <GrayCardWithImg
+          img="https://dummyimage.com/294x184/a6a6ff&text=+"
+          subdivision="Название подразделения"
+          title="Как мы съездили? Душевно и весело"
+          description="Ранним утром волонтеры-москвичи устремились "
+          date="12.03"
+        />
+      </div>
+
+      <div class="col-md-4">
+        <GrayCardWithImg
+          img="https://dummyimage.com/294x184/a6a6ff&text=+"
+          subdivision="Название подразделения"
+          title="Как мы съездили? Душевно и весело"
+          description="Ранним утром волонтеры-москвичи устремились "
+          date="12.03"
+        />
+      </div>
+    </div>
+  </div>
+</div>
+
+<style lang="scss">
+  .news-block {
+    margin-top: 60px;
+
+    &__header {
+      display: flex;
+      justify-content: space-between;
+
+      h3 {
+        color: #212529;
+        font-size: 32px;
+        font-weight: 500;
+      }
+    }
+
+    &__cards {
+      margin-top: 25px;
+    }
+  }
+</style>
