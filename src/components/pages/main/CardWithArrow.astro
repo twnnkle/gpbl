@@ -1,4 +1,8 @@
 ---
+import { Image } from 'astro:assets';
+
+import arrowCardWithArrow from '@assets/arrow-card-with-arrow.svg';
+
 const { tag, text, img } = Astro.props;
 ---
 
@@ -9,7 +13,7 @@ const { tag, text, img } = Astro.props;
     <div class="card-with-arrow__text">{text}</div>
 
     <span class="card-with-arrow__btn">
-      <img src="/src/assets/arrow-card-with-arrow.svg" width="16" height="14" alt="Стрелка" />
+      <Image src={arrowCardWithArrow} width="16" height="14" alt="Стрелка" />
     </span>
   </div>
 </div>
@@ -50,7 +54,7 @@ const { tag, text, img } = Astro.props;
 
     &__btn {
       padding: 9px;
-      border: 1px solid #CCD3E7;
+      border: 1px solid #ccd3e7;
       border-radius: 4px;
       display: flex;
       align-items: center;

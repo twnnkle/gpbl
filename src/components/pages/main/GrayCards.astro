@@ -1,4 +1,8 @@
 ---
+import grayCard2 from '@assets/pages/main/grayCards/2.png';
+import grayCard3 from '@assets/pages/main/grayCards/3.png';
+import grayCard4 from '@assets/pages/main/grayCards/4.png';
+
 import GrayCardWithImg from '../../common/GrayCardWithImg.astro';
 ---
 
@@ -6,7 +10,7 @@ import GrayCardWithImg from '../../common/GrayCardWithImg.astro';
   <div class="row gy-4">
     <div class="col-md-6 col-xl-4">
       <GrayCardWithImg
-        img="/pages/main/grayCards/2.png"
+        img={grayCard2}
         subdivision="Название подразделения"
         title="Как мы съездили? Душевно и весело"
         description="Ранним утром волонтеры-москвичи устремились "
@@ -16,7 +20,7 @@ import GrayCardWithImg from '../../common/GrayCardWithImg.astro';
 
     <div class="col-md-6 col-xl-4">
       <GrayCardWithImg
-        img="/pages/main/grayCards/3.png"
+        img={grayCard3}
         subdivision="Название подразделения"
         title="Как мы съездили? Душевно и весело"
         description="Ранним утром волонтеры-москвичи устремились "
@@ -26,7 +30,7 @@ import GrayCardWithImg from '../../common/GrayCardWithImg.astro';
 
     <div class="col-md-6 col-xl-4">
       <GrayCardWithImg
-        img="/pages/main/grayCards/4.png"
+        img={grayCard4}
         subdivision="Название подразделения"
         title="Как мы съездили? Душевно и весело"
         description="Ранним утром волонтеры-москвичи устремились "

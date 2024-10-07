@@ -1,4 +1,9 @@
 ---
+import { Image } from 'astro:assets';
+
+import differentCard1 from '@assets/pages/main/differentCards/1.png';
+import miniAvatar from '@assets/mini-avatar.png';
+
 import CardWithArrow from './CardWithArrow.astro';
 ---
 
@@ -9,8 +14,8 @@ import CardWithArrow from './CardWithArrow.astro';
         <p class="card-with-gradient__title">Победитель проекта «Благодарю»</p>
 
         <div class="card-with-gradient__avatar">
-          <img
-            src="/src/assets/pages/main/differentCards/1.png"
+          <Image
+            src={differentCard1}
             width="204"
             height="204"
             alt="Картинка карточки"
@@ -55,12 +60,7 @@ import CardWithArrow from './CardWithArrow.astro';
         <p class="employees-cards__title">Новые сотрудники</p>
 
         <div class="employees-cards__card">
-          <img
-            src="/src/assets/pages/main/mini-avatar.png"
-            width="60"
-            height="60"
-            alt="Аватар"
-          />
+          <Image src={miniAvatar} width="60" height="60" alt="Аватар" />
 
           <div class="employees-cards__card-text">
             <p>Константин Константинопальский</p>
@@ -69,12 +69,7 @@ import CardWithArrow from './CardWithArrow.astro';
         </div>
 
         <div class="employees-cards__card">
-          <img
-            src="/src/assets/pages/main/mini-avatar.png"
-            width="60"
-            height="60"
-            alt="Аватар"
-          />
+          <Image src={miniAvatar} width="60" height="60" alt="Аватар" />
 
           <div class="employees-cards__card-text">
             <p>Константин Константинопальский</p>
@@ -83,12 +78,7 @@ import CardWithArrow from './CardWithArrow.astro';
         </div>
 
         <div class="employees-cards__card">
-          <img
-            src="/src/assets/pages/main/mini-avatar.png"
-            width="60"
-            height="60"
-            alt="Аватар"
-          />
+          <Image src={miniAvatar} width="60" height="60" alt="Аватар" />
 
           <div class="employees-cards__card-text">
             <p>Константин Константинопальский</p>
@@ -97,12 +87,7 @@ import CardWithArrow from './CardWithArrow.astro';
         </div>
 
         <div class="employees-cards__card">
-          <img
-            src="/src/assets/pages/main/mini-avatar.png"
-            width="60"
-            height="60"
-            alt="Аватар"
-          />
+          <Image src={miniAvatar} width="60" height="60" alt="Аватар" />
 
           <div class="employees-cards__card-text">
             <p>Константин Константинопальский</p>
@@ -111,12 +96,7 @@ import CardWithArrow from './CardWithArrow.astro';
         </div>
 
         <div class="employees-cards__card">
-          <img
-            src="/src/assets/pages/main/mini-avatar.png"
-            width="60"
-            height="60"
-            alt="Аватар"
-          />
+          <Image src={miniAvatar} width="60" height="60" alt="Аватар" />
 
           <div class="employees-cards__card-text">
             <p>Константин Константинопальский</p>

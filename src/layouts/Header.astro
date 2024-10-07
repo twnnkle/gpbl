@@ -1,6 +1,8 @@
 ---
-import logo from '@assets/logo.png';
 import { Image } from 'astro:assets';
+
+import logo from '@assets/logo.png';
+import miniAvatar from '@assets/mini-avatar.png';
 ---
 
 <div class="header">
@@ -37,12 +39,7 @@ import { Image } from 'astro:assets';
   </div>
 
   <div class="header__avatar">
-    <img
-      src="/src/assets/pages/main/mini-avatar.png"
-      width="40"
-      height="40"
-      alt="Аватар"
-    />
+    <Image src={miniAvatar} width="40" height="40" alt="Аватар" />
   </div>
 </div>
 

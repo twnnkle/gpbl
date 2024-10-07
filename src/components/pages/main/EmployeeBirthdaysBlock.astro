@@ -1,3 +1,10 @@
+---
+import { Image } from 'astro:assets';
+
+import avatar from '@assets/pages/main/avatar.png'
+import avatarBalloon from '@assets/pages/main/avatar-balloon.svg'
+---
+
 <div class="employee-birthdays-block">
   <div class="employee-birthdays-block__header">
     <h3>Дни рождения сотрудников</h3>
@@ -7,11 +14,11 @@
     <div class="row row-cols-md-3 row-cols-xl-4 row-cols-xxl-5 gy-2">
       <div class="col">
         <div class="employee-birthdays-block-card">
-          <img src="/src/assets/pages/main/avatar.png" width="96" height="96" alt="Аватар" />
+          <Image src={avatar} width="96" height="96" alt="Аватар" />
 
           <span class="employee-birthdays-block-card__baloon"
-            ><img
-              src="/src/assets/pages/main/avatar-balloon.svg"
+            ><Image
+              src={avatarBalloon}
               width="36"
               height="36"
               alt="Воздушный шар"
@@ -31,11 +38,11 @@
 
       <div class="col">
         <div class="employee-birthdays-block-card">
-          <img src="/src/assets/pages/main/avatar.png" width="96" height="96" alt="Аватар" />
+          <Image src={avatar} width="96" height="96" alt="Аватар" />
 
           <span class="employee-birthdays-block-card__baloon"
-            ><img
-              src="/src/assets/pages/main/avatar-balloon.svg"
+            ><Image
+              src={avatarBalloon}
               width="36"
               height="36"
               alt="Воздушный шар"
@@ -55,7 +62,7 @@
 
       <div class="col">
         <div class="employee-birthdays-block-card">
-          <img src="/src/assets/pages/main/avatar.png" width="96" height="96" alt="Аватар" />
+          <Image src={avatar} width="96" height="96" alt="Аватар" />
 
           <p class="employee-birthdays-block-card__name">
             Константин Константинопальский
@@ -72,7 +79,7 @@
 
       <div class="col">
         <div class="employee-birthdays-block-card">
-          <img src="/src/assets/pages/main/avatar.png" width="96" height="96" alt="Аватар" />
+          <Image src={avatar} width="96" height="96" alt="Аватар" />
 
           <p class="employee-birthdays-block-card__name">
             Константин Константинопальский
@@ -89,7 +96,7 @@
 
       <div class="col">
         <div class="employee-birthdays-block-card">
-          <img src="/src/assets/pages/main/avatar.png" width="96" height="96" alt="Аватар" />
+          <Image src={avatar} width="96" height="96" alt="Аватар" />
 
           <p class="employee-birthdays-block-card__name">
             Константин Константинопальский

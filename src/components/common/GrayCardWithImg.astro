@@ -1,9 +1,11 @@
 ---
+import { Image } from 'astro:assets';
+
 const { img, subdivision, title, description, date } = Astro.props;
 ---
 
 <div class="gray-card-with-img">
-  <img src={img} alt="Картинка карточки" />
+  <Image src={img} alt="Картинка карточки" />
 
   <div class="gray-card-with-img__text">
     <span class="gray-card-with-img__subdivision">{subdivision}</span>
@@ -24,7 +26,7 @@ const { img, subdivision, title, description, date } = Astro.props;
     transition: all 0.1s ease-in-out;
 
     &:hover {
-      border-color: #CCD3E7;
+      border-color: #ccd3e7;
     }
 
     img {
@@ -42,7 +44,7 @@ const { img, subdivision, title, description, date } = Astro.props;
 
     &__subdivision,
     &__date {
-      color: #A6B1D2;
+      color: #a6b1d2;
       font-size: 16px;
       font-weight: 500;
     }
