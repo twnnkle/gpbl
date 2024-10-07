@@ -1,0 +1,38 @@
+---
+import Banner from './Banner.astro';
+import EmployeeBirthdaysBlock from './EmployeeBirthdaysBlock.astro';
+import Carousel from './Carousel.astro';
+import CardWithArrow from './CardWithArrow.astro';
+import NewsBlock from './NewsBlock.astro';
+import GrayCards from './GrayCards.astro';
+import DifferentCards from './DifferentCards.astro';
+---
+
+<div class="left-content-block">
+  <div class="row justify-content-between">
+    <div class="col-md-7 col-xl-8">
+      <Carousel />
+    </div>
+    <div class="col-md-5 col-xl-4">
+      <CardWithArrow
+        tag="Новый раздел"
+        text="Идея 2.0"
+        img="/pages/main/card-with-arrow-bg-1.png"
+      />
+    </div>
+  </div>
+
+  <EmployeeBirthdaysBlock />
+  <NewsBlock />
+  <Banner />
+  <GrayCards />
+  <DifferentCards />
+</div>
+
+<style lang="scss">
+  .left-content-block {
+    background-color: #ffffff;
+    padding: 25px;
+    border-radius: 25px;
+  }
+</style>

@@ -1,11 +1,7 @@
 ---
 import Container from '../layouts/Container.astro';
-import Carousel from '../components/pages/main/Carousel.astro';
-import CardWithArrow from '../components/pages/main/CardWithArrow.astro';
-import EmployeeBirthdaysBlock from '../components/pages/main/EmployeeBirthdaysBlock.astro';
-import NewsBlock from '../components/pages/main/NewsBlock.astro';
-import Banner from '../components/pages/main/Banner.astro';
-import GrayCars from "../components/pages/main/GrayCards.astro";
+import LeftContentBlock from '../components/pages/main/LeftContentBlock.astro';
+import RightContentBlock from '../components/pages/main/RightContentBlock.astro';
 ---
 
 <body>
@@ -14,46 +10,23 @@ import GrayCars from "../components/pages/main/GrayCards.astro";
       <div class="main-page">
         <div class="row justify-content-between">
           <div class="col-md-9">
-            <div class="left-content-block">
-              <div class="row justify-content-between">
-                <div class="col-md-8">
-                  <Carousel />
-                </div>
-                <div class="col-md-4">
-                  <CardWithArrow
-                    tag="Новый раздел"
-                    text="Идея 2.0"
-                    img="https://dummyimage.com/306x400/a6a6ff&text=+"
-                  />
-                </div>
-              </div>
-
-              <EmployeeBirthdaysBlock />
-              <NewsBlock />
-              <Banner />
-              <GrayCars />
-            </div>
+            <LeftContentBlock />
           </div>
           <div class="col-md-3">
-            <div>Кек</div>
+            <RightContentBlock />
           </div>
         </div>
       </div>
     </main>
   </Container>
 </body>
+
 <style lang="scss">
   body {
     background-color: #f3f5fb;
   }
 
   .main-page {
-    margin-top: 25px;
-  }
-
-  .left-content-block {
-    background-color: #ffffff;
-    padding: 25px;
-    border-radius: 25px;
+    margin: 25px 0;
   }
 </style>

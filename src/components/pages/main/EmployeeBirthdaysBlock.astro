@@ -4,8 +4,8 @@
   </div>
 
   <div class="employee-birthdays-block-cards">
-    <div class="row justify-content-between">
-      <div class="col-md-2 card-column">
+    <div class="row row-cols-md-3 row-cols-xl-4 row-cols-xxl-5 gy-2">
+      <div class="col">
         <div class="employee-birthdays-block-card">
           <img src="/pages/main/avatar.png" width="96" height="96" alt="Аватар" />
 
@@ -29,7 +29,7 @@
         </div>
       </div>
 
-      <div class="col-md-2 card-column">
+      <div class="col">
         <div class="employee-birthdays-block-card">
           <img src="/pages/main/avatar.png" width="96" height="96" alt="Аватар" />
 
@@ -53,7 +53,7 @@
         </div>
       </div>
 
-      <div class="col-md-2 card-column">
+      <div class="col">
         <div class="employee-birthdays-block-card">
           <img src="/pages/main/avatar.png" width="96" height="96" alt="Аватар" />
 
@@ -70,7 +70,7 @@
         </div>
       </div>
 
-      <div class="col-md-2 card-column">
+      <div class="col">
         <div class="employee-birthdays-block-card">
           <img src="/pages/main/avatar.png" width="96" height="96" alt="Аватар" />
 
@@ -87,7 +87,7 @@
         </div>
       </div>
 
-      <div class="col-md-2 card-column">
+      <div class="col">
         <div class="employee-birthdays-block-card">
           <img src="/pages/main/avatar.png" width="96" height="96" alt="Аватар" />
 
@@ -127,6 +127,10 @@
   .employee-birthdays-block-card {
     position: relative;
     color: #212529;
+
+    img {
+      border-radius: 50%;
+    }
 
     &__baloon {
       position: absolute;

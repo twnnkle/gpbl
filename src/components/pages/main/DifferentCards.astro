@@ -1,0 +1,221 @@
+---
+import CardWithArrow from './CardWithArrow.astro';
+---
+
+<div class="different-cards">
+  <div class="row gy-4">
+    <div class="col-md-6 col-xl-4">
+      <div class="card-with-gradient">
+        <p class="card-with-gradient__title">Победитель проекта «Благодарю»</p>
+
+        <div class="card-with-gradient__avatar">
+          <img
+            src="/pages/main/differentCards/1.png"
+            width="204"
+            height="204"
+            alt="Картинка карточки"
+          />
+        </div>
+
+        <div class="card-with-gradient__bottom-block">
+          <div class="card-with-gradient__bottom-text-block">
+            <p>Ирина Аванесянс</p>
+            <span>1 квартал</span>
+          </div>
+
+          <span class="card-with-gradient__btn">
+            <svg
+              width="16"
+              height="15"
+              viewBox="0 0 16 15"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                fill-rule="evenodd"
+                clip-rule="evenodd"
+                d="M0 7.49998C0 7.23477 0.105357 6.98041 0.292893 6.79288C0.48043 6.60534 0.734784 6.49998 1 6.49998H12.586L8.292 2.20798C8.10423 2.02021 7.99874 1.76553 7.99874 1.49998C7.99874 1.23443 8.10423 0.979755 8.292 0.791982C8.47977 0.604208 8.73445 0.498718 9 0.498718C9.26555 0.498718 9.52023 0.604208 9.708 0.791982L15.708 6.79198C15.8011 6.88487 15.875 6.99522 15.9254 7.11671C15.9758 7.2382 16.0018 7.36845 16.0018 7.49998C16.0018 7.63152 15.9758 7.76176 15.9254 7.88325C15.875 8.00474 15.8011 8.11509 15.708 8.20798L9.708 14.208C9.52023 14.3958 9.26555 14.5012 9 14.5012C8.73445 14.5012 8.47977 14.3958 8.292 14.208C8.10423 14.0202 7.99874 13.7655 7.99874 13.5C7.99874 13.2344 8.10423 12.9798 8.292 12.792L12.586 8.49998H1C0.734784 8.49998 0.48043 8.39463 0.292893 8.20709C0.105357 8.01955 0 7.7652 0 7.49998Z"
+                fill="#FFFFFF"></path>
+            </svg>
+          </span>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md-6 col-xl-4">
+      <CardWithArrow
+        tag="Опрос"
+        text="Как быстрее вырости?"
+        img="/pages/main/differentCards/2.png"
+      />
+    </div>
+
+    <div class="col-md-6 col-xl-4">
+      <div class="employees-cards">
+        <p class="employees-cards__title">Новые сотрудники</p>
+
+        <div class="employees-cards__card">
+          <img
+            src="/pages/main/mini-avatar.png"
+            width="60"
+            height="60"
+            alt="Аватар"
+          />
+
+          <div class="employees-cards__card-text">
+            <p>Константин Константинопальский</p>
+            <span>HRBP</span>
+          </div>
+        </div>
+
+        <div class="employees-cards__card">
+          <img
+            src="/pages/main/mini-avatar.png"
+            width="60"
+            height="60"
+            alt="Аватар"
+          />
+
+          <div class="employees-cards__card-text">
+            <p>Константин Константинопальский</p>
+            <span>HRBP</span>
+          </div>
+        </div>
+
+        <div class="employees-cards__card">
+          <img
+            src="/pages/main/mini-avatar.png"
+            width="60"
+            height="60"
+            alt="Аватар"
+          />
+
+          <div class="employees-cards__card-text">
+            <p>Константин Константинопальский</p>
+            <span>HRBP</span>
+          </div>
+        </div>
+
+        <div class="employees-cards__card">
+          <img
+            src="/pages/main/mini-avatar.png"
+            width="60"
+            height="60"
+            alt="Аватар"
+          />
+
+          <div class="employees-cards__card-text">
+            <p>Константин Константинопальский</p>
+            <span>HRBP</span>
+          </div>
+        </div>
+
+        <div class="employees-cards__card">
+          <img
+            src="/pages/main/mini-avatar.png"
+            width="60"
+            height="60"
+            alt="Аватар"
+          />
+
+          <div class="employees-cards__card-text">
+            <p>Константин Константинопальский</p>
+            <span>HRBP</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<style lang="scss">
+  .different-cards {
+    margin-top: 55px;
+    padding: 24px;
+    border-radius: 16px;
+    background-color: #f3f5fb;
+  }
+
+  .card-with-gradient {
+    padding: 16px;
+    border-radius: 16px;
+    background-image: linear-gradient(to bottom, #547bf3, #a0b2f9);
+    color: #ffffff;
+
+    &__title {
+      font-size: 24px;
+      font-weight: 500;
+      line-height: 100%;
+    }
+
+    &__avatar {
+      margin-top: 40px;
+      display: flex;
+      justify-content: center;
+
+      img {
+        border-radius: 50%;
+        width: 100%;
+        height: auto;
+      }
+    }
+
+    &__bottom-block {
+      margin-top: 50px;
+      display: flex;
+      align-items: flex-end;
+      justify-content: space-between;
+
+      p,
+      span {
+        font-size: 16px;
+        font-weight: 400;
+        line-height: normal;
+      }
+    }
+
+    &__btn {
+      padding: 9px;
+      border: 1px solid #ccd3e7;
+      border-radius: 4px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+    }
+  }
+
+  .employees-cards {
+    &__title {
+      color: #a6b1d2;
+      font-size: 20px;
+      font-weight: 500;
+    }
+
+    &__card {
+      margin-top: 12px;
+      display: flex;
+
+      img {
+        border-radius: 50%;
+      }
+    }
+
+    &__card-text {
+      margin-left: 5px;
+      color: #212529;
+      line-height: 100%;
+
+      p {
+        font-size: 16px;
+        font-weight: 500;
+        margin-bottom: 5px;
+      }
+
+      span {
+        font-size: 14px;
+        font-weight: 400;
+      }
+    }
+  }
+</style>
