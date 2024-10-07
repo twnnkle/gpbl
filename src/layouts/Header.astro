@@ -1,6 +1,11 @@
+---
+import logo from '../../src/assets/logo.png';
+import Image from 'astro:assets';
+---
+
 <div class="header">
   <a href="/">
-    <img src="/src/assets/logo.png" width="271" height="40" alt="Логотип" />
+    <Image src={logo} width="271" height="40" alt="Логотип" />
   </a>
 
   <ul class="header__nav-list">
@@ -65,7 +70,7 @@
         cursor: pointer;
 
         &:hover {
-          color: #487CFB;
+          color: #487cfb;
         }
 
         &:nth-last-child(2) {
@@ -105,7 +110,7 @@
         color: #212529;
 
         &::placeholder {
-          color: #7F8EBE;
+          color: #7f8ebe;
           font-size: 14px;
           font-weight: 500;
           line-height: 100%;
