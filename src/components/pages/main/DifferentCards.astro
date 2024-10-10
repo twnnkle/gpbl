@@ -11,7 +11,7 @@ import CardWithArrow from './CardWithArrow.astro';
 <div class="different-cards">
   <div class="row gy-4">
     <div class="col-md-6 col-xl-4">
-      <div class="card-with-gradient">
+      <a href="#" class="card-with-gradient">
         <p class="card-with-gradient__title">Победитель проекта «Благодарю»</p>
 
         <div class="card-with-gradient__avatar">
@@ -45,7 +45,7 @@ import CardWithArrow from './CardWithArrow.astro';
             </svg>
           </span>
         </div>
-      </div>
+      </a>
     </div>
 
     <div class="col-md-6 col-xl-4">
@@ -60,50 +60,50 @@ import CardWithArrow from './CardWithArrow.astro';
       <div class="employees-cards">
         <p class="employees-cards__title">Новые сотрудники</p>
 
-        <div class="employees-cards__card">
+        <a href="#" class="employees-cards__card">
           <Image src={miniAvatar} width="60" height="60" alt="Аватар" />
 
           <div class="employees-cards__card-text">
             <p>Константин Константинопальский</p>
             <span>HRBP</span>
           </div>
-        </div>
+        </a>
 
-        <div class="employees-cards__card">
+        <a href="#" class="employees-cards__card">
           <Image src={miniAvatar} width="60" height="60" alt="Аватар" />
 
           <div class="employees-cards__card-text">
             <p>Константин Константинопальский</p>
             <span>HRBP</span>
           </div>
-        </div>
+        </a>
 
-        <div class="employees-cards__card">
+        <a href="#" class="employees-cards__card">
           <Image src={miniAvatar} width="60" height="60" alt="Аватар" />
 
           <div class="employees-cards__card-text">
             <p>Константин Константинопальский</p>
             <span>HRBP</span>
           </div>
-        </div>
+        </a>
 
-        <div class="employees-cards__card">
+        <a href="#" class="employees-cards__card">
           <Image src={miniAvatar} width="60" height="60" alt="Аватар" />
 
           <div class="employees-cards__card-text">
             <p>Константин Константинопальский</p>
             <span>HRBP</span>
           </div>
-        </div>
+        </a>
 
-        <div class="employees-cards__card">
+        <a href="#" class="employees-cards__card">
           <Image src={miniAvatar} width="60" height="60" alt="Аватар" />
 
           <div class="employees-cards__card-text">
             <p>Константин Константинопальский</p>
             <span>HRBP</span>
           </div>
-        </div>
+        </a>
       </div>
     </div>
   </div>
@@ -122,6 +122,8 @@ import CardWithArrow from './CardWithArrow.astro';
     border-radius: 16px;
     background-image: linear-gradient(to bottom, #547bf3, #a0b2f9);
     color: #ffffff;
+    text-decoration: none;
+    display: block;
 
     &__title {
       font-size: 24px;
@@ -176,6 +178,7 @@ import CardWithArrow from './CardWithArrow.astro';
     &__card {
       margin-top: 12px;
       display: flex;
+      text-decoration: none;
 
       img {
         border-radius: 50%;
