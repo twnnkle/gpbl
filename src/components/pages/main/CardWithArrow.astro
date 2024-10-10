@@ -6,7 +6,7 @@ import arrowCardWithArrow from '@assets/arrow-card-with-arrow.svg';
 const { tag, text, img } = Astro.props;
 ---
 
-<div class="card-with-arrow" style=`background-image: url(${img})`>
+<a href="#" class="card-with-arrow" style=`background-image: url(${img})`>
   <span class="card-with-arrow__tag">{tag}</span>
 
   <div class="card-with-arrow__text-and-btn">
@@ -16,7 +16,7 @@ const { tag, text, img } = Astro.props;
       <Image src={arrowCardWithArrow} width="16" height="14" alt="Стрелка" />
     </span>
   </div>
-</div>
+</a>
 
 <style lang="scss">
   .card-with-arrow {
@@ -29,6 +29,7 @@ const { tag, text, img } = Astro.props;
     background-repeat: no-repeat;
     background-size: cover;
     height: 100%;
+    text-decoration: none;
 
     &__tag {
       background-color: #ee8031;
@@ -59,7 +60,6 @@ const { tag, text, img } = Astro.props;
       display: flex;
       align-items: center;
       justify-content: center;
-      cursor: pointer;
     }
   }
 </style>

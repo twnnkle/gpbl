@@ -4,7 +4,7 @@ import { Image } from 'astro:assets';
 const { img, subdivision, title, description, date } = Astro.props;
 ---
 
-<div class="gray-card-with-img">
+<a href="#" class="gray-card-with-img">
   <Image src={img} width="294" height="184" alt="Картинка карточки" />
 
   <div class="gray-card-with-img__text">
@@ -13,7 +13,7 @@ const { img, subdivision, title, description, date } = Astro.props;
     <p class="gray-card-with-img__description">{description}</p>
     <span class="gray-card-with-img__date">{date}</span>
   </div>
-</div>
+</a>
 
 <style lang="scss">
   .gray-card-with-img {
@@ -21,9 +21,9 @@ const { img, subdivision, title, description, date } = Astro.props;
     display: flex;
     flex-direction: column;
     border-radius: 24px;
-    cursor: pointer;
     border: 1px solid #f3f5fb;
     transition: all 0.1s ease-in-out;
+    text-decoration: none;
 
     &:hover {
       border-color: #ccd3e7;

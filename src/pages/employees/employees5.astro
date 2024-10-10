@@ -1,0 +1,32 @@
+---
+import Container from '@layouts/Container.astro';
+
+import SideMenu from '@components/pages/employees5/SideMenu.astro';
+import Breadcrumbs from '@components/pages/employees5/Breadcrumbs.astro';
+---
+
+<body>
+  <Container>
+    <main>
+      <div class="employees-page">
+        <div class="row justify-content-between">
+          <div class="col-md-3">
+            <SideMenu />
+          </div>
+
+          <div class="col-md-9">
+            <Breadcrumbs />
+
+            <div></div>
+          </div>
+        </div>
+      </div>
+    </main>
+  </Container>
+</body>
+
+<style lang="scss">
+  .employees-page {
+    margin-top: 50px;
+  }
+</style>

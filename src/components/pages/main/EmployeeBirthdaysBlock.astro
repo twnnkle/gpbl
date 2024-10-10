@@ -1,8 +1,8 @@
 ---
 import { Image } from 'astro:assets';
 
-import avatar from '@assets/pages/main/avatar.png'
-import avatarBalloon from '@assets/pages/main/avatar-balloon.svg'
+import avatar from '@assets/pages/main/avatar.png';
+import avatarBalloon from '@assets/pages/main/avatar-balloon.svg';
 ---
 
 <div class="employee-birthdays-block">
@@ -13,7 +13,7 @@ import avatarBalloon from '@assets/pages/main/avatar-balloon.svg'
   <div class="employee-birthdays-block-cards">
     <div class="row row-cols-md-3 row-cols-xl-4 row-cols-xxl-5 gy-2">
       <div class="col">
-        <div class="employee-birthdays-block-card">
+        <a href="#" class="employee-birthdays-block-card">
           <Image src={avatar} width="96" height="96" alt="Аватар" />
 
           <span class="employee-birthdays-block-card__baloon"
@@ -33,11 +33,11 @@ import avatarBalloon from '@assets/pages/main/avatar-balloon.svg'
             <span>11.02</span>
             <span>сегодня</span>
           </div>
-        </div>
+        </a>
       </div>
 
       <div class="col">
-        <div class="employee-birthdays-block-card">
+        <a href="#" class="employee-birthdays-block-card">
           <Image src={avatar} width="96" height="96" alt="Аватар" />
 
           <span class="employee-birthdays-block-card__baloon"
@@ -57,11 +57,11 @@ import avatarBalloon from '@assets/pages/main/avatar-balloon.svg'
             <span>11.02</span>
             <span>сегодня</span>
           </div>
-        </div>
+        </a>
       </div>
 
       <div class="col">
-        <div class="employee-birthdays-block-card">
+        <a href="#" class="employee-birthdays-block-card">
           <Image src={avatar} width="96" height="96" alt="Аватар" />
 
           <p class="employee-birthdays-block-card__name">
@@ -74,11 +74,11 @@ import avatarBalloon from '@assets/pages/main/avatar-balloon.svg'
               >завтра</span
             >
           </div>
-        </div>
+        </a>
       </div>
 
       <div class="col">
-        <div class="employee-birthdays-block-card">
+        <a href="#" class="employee-birthdays-block-card">
           <Image src={avatar} width="96" height="96" alt="Аватар" />
 
           <p class="employee-birthdays-block-card__name">
@@ -91,11 +91,11 @@ import avatarBalloon from '@assets/pages/main/avatar-balloon.svg'
               >в среду</span
             >
           </div>
-        </div>
+        </a>
       </div>
 
       <div class="col">
-        <div class="employee-birthdays-block-card">
+        <a href="#" class="employee-birthdays-block-card">
           <Image src={avatar} width="96" height="96" alt="Аватар" />
 
           <p class="employee-birthdays-block-card__name">
@@ -108,7 +108,7 @@ import avatarBalloon from '@assets/pages/main/avatar-balloon.svg'
               >в среду</span
             >
           </div>
-        </div>
+        </a>
       </div>
     </div>
   </div>
@@ -134,6 +134,8 @@ import avatarBalloon from '@assets/pages/main/avatar-balloon.svg'
   .employee-birthdays-block-card {
     position: relative;
     color: #212529;
+    display: block;
+    text-decoration: none;
 
     img {
       border-radius: 50%;
