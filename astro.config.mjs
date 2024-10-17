@@ -7,7 +7,7 @@ export default defineConfig({
     image: {
         service: passthroughImageService(),
     },
-    base: 'gpbl',
+    // base: 'gpbl',
     output: 'static',
     build: {
         inlineStylesheets: 'never'

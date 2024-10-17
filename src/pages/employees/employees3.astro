@@ -5,6 +5,7 @@ import Container from '../../layouts/Container.astro';
 
 import SideMenu from '../../components/pages/employees3/SideMenu.astro';
 import EmployeeCard from '@components/pages/employees/EmployeeCard.astro';
+import Datepicker from '@components/pages/employees3/Datepicker.astro'
 
 import avatar from '@assets/pages/employees/avatar.png';
 ---
@@ -113,6 +114,10 @@ import avatar from '@assets/pages/employees/avatar.png';
                           />
                         </div>
                       </div>
+                    </div>
+
+                    <div class="employees-content-birthdays-block__datepicker">
+                      <Datepicker />
                     </div>
                   </div>
                 </div>
@@ -291,6 +296,10 @@ import avatar from '@assets/pages/employees/avatar.png';
 
     &__cards {
       margin-top: 30px;
+    }
+
+    &__datepicker {
+      margin-top: 50px;
     }
   }
 
