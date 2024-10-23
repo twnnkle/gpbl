@@ -1,0 +1,71 @@
+<div class="white-block">
+  <div class="row justify-content-between">
+    <div class="col-md-5">
+      <h4>Информация</h4>
+    </div>
+
+    <div class="col-md-6">
+      <div class="info-content">
+        <div class="info-content__item">
+          <span>День рождения</span>
+          <p>16 января</p>
+        </div>
+
+        <div class="info-content__item">
+          <span>Должность</span>
+          <p>Ведущий специалист по администрированию ИТ-инфраструктуры</p>
+        </div>
+
+        <div class="info-content__item">
+          <span>Подразделение</span>
+          <p>Отдел информационно-технического обеспечения</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<style lang="scss">
+  .white-block {
+    background-color: #ffffff;
+    margin-top: 24px;
+    padding: 30px;
+    border-radius: 16px;
+
+    h4 {
+      line-height: 100%;
+      color: #212529;
+      font-size: 24px;
+      font-weight: 500;
+    }
+  }
+
+  .info-content {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+
+    &__item {
+      display: flex;
+      justify-content: space-between;
+      gap: 5px;
+
+      span,
+      p {
+        font-size: 14px;
+        font-weight: 500;
+        line-height: 100%;
+      }
+
+      span {
+        color: #737373;
+        width: 45%;
+      }
+
+      p {
+        color: #212529;
+        width: 55%;
+      }
+    }
+  }
+</style>

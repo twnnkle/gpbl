@@ -1,0 +1,60 @@
+<div class="white-block">
+  <div class="row justify-content-between">
+    <div class="col-md-5">
+      <h4>Контакты</h4>
+    </div>
+
+    <div class="col-md-6">
+      <div class="contacts-content">
+        <div class="contacts-content__item">
+          <a href="tel:12345">12345</a>
+        </div>
+
+        <div class="contacts-content__item">
+          <a href="tel:+74954581122">+7(495)458-11-22</a>
+        </div>
+
+        <div class="contacts-content__item">
+          <a href="mailto:Maksim.DEREVYANKIN@gpbl.ru"
+            >Maksim.DEREVYANKIN@gpbl.ru</a
+          >
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<style lang="scss">
+  .white-block {
+    background-color: #ffffff;
+    margin-top: 24px;
+    padding: 30px;
+    border-radius: 16px;
+
+    h4 {
+      line-height: 100%;
+      color: #212529;
+      font-size: 24px;
+      font-weight: 500;
+    }
+  }
+
+  .contacts-content {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+
+    &__item {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+
+      a {
+        text-decoration: none;
+        color: #212529;
+        font-size: 14px;
+        font-weight: 500;
+      }
+    }
+  }
+</style>

@@ -1,0 +1,82 @@
+---
+import EmployeeCard from '@components/pages/employees/EmployeeCard.astro';
+import Datepicker from '@components/pages/employees/employees3/Datepicker.astro';
+---
+
+<div class="birthdays-block">
+  <h4>Дни рождения</h4>
+
+  <div class="birthdays-block__cards">
+    <div class="row row-cols-md-2 gy-2">
+      <div class="col">
+        <EmployeeCard
+          name="Константин Константинопальский"
+          text1="HRBP"
+          text2="22.10.87"
+        />
+      </div>
+      <div class="col">
+        <EmployeeCard
+          name="Константин Константинопальский"
+          text1="HRBP"
+          text2="22.10.87"
+        />
+      </div>
+      <div class="col">
+        <EmployeeCard
+          name="Константин Константинопальский"
+          text1="HRBP"
+          text2="22.10.87"
+        />
+      </div>
+      <div class="col">
+        <EmployeeCard
+          name="Константин Константинопальский"
+          text1="HRBP"
+          text2="22.10.87"
+        />
+      </div>
+      <div class="col">
+        <EmployeeCard
+          name="Константин Константинопальский"
+          text1="HRBP"
+          text2="22.10.87"
+        />
+      </div>
+      <div class="col">
+        <EmployeeCard
+          name="Константин Константинопальский"
+          text1="HRBP"
+          text2="22.10.87"
+        />
+      </div>
+    </div>
+  </div>
+
+  <div class="birthdays-block__datepicker">
+    <Datepicker />
+  </div>
+</div>
+
+<style lang="scss">
+  .birthdays-block {
+    background-color: #ffffff;
+    padding: 20px 15px;
+    border-radius: 24px;
+
+    h4 {
+      color: #212529;
+      font-size: 20px;
+      font-weight: 500;
+      line-height: 100%;
+    }
+
+    &__cards {
+      margin-top: 30px;
+    }
+
+    &__datepicker {
+      margin-top: 50px;
+    }
+  }
+</style>

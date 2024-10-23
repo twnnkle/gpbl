@@ -1,0 +1,45 @@
+---
+import Container from '@layouts/Container.astro';
+
+import SideMenu from '@components/pages/myPage/myPage1/SideMenu.astro';
+import Star from '@components/common/Star.astro';
+import Info from '@components/pages/myPage/myPage1/Info.astro';
+import WhiteBlockContacts from '@components/pages/myPage/myPage1/whiteBlocks/WhiteBlockContacts.astro';
+import WhiteBlockInfo from '@components/pages/myPage/myPage1/whiteBlocks/WhiteBlockInfo.astro';
+---
+
+<body>
+  <Container>
+    <main>
+      <div class="my-page-page">
+        <div class="row justify-content-between">
+          <div class="col-md-3">
+            <SideMenu />
+          </div>
+
+          <div class="col-md-9">
+            <Star />
+            <Info />
+
+            <div class="row">
+              <div class="col-md-9">
+                <WhiteBlockContacts />
+                <WhiteBlockInfo />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+  </Container>
+
+  <style lang="scss">
+    body {
+      background-color: #f3f5fb;
+    }
+
+    .my-page-page {
+      margin-top: 50px;
+    }
+  </style>
+</body>

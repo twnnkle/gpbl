@@ -1,0 +1,120 @@
+---
+import { Image } from 'astro:assets';
+
+import bigAvatar from '@assets/about-big-avatar.png';
+---
+
+<div class="row">
+  <div class="col-md-4 col-xl-3">
+    <div class="info-info-avatar">
+      <Image src={bigAvatar} width="190" height="190" alt="Аватар" />
+
+      <div class="info-info-avatar__status">
+        <svg
+          width="10"
+          height="10"
+          viewBox="0 0 15 15"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            fill-rule="evenodd"
+            clip-rule="evenodd"
+            d="M7.4375 14.4688C9.3023 14.4688 11.0907 13.728 12.4093 12.4093C13.728 11.0907 14.4688 9.3023 14.4688 7.4375C14.4688 5.5727 13.728 3.78427 12.4093 2.46566C11.0907 1.14704 9.3023 0.40625 7.4375 0.40625C5.5727 0.40625 3.78427 1.14704 2.46566 2.46566C1.14704 3.78427 0.40625 5.5727 0.40625 7.4375C0.40625 9.3023 1.14704 11.0907 2.46566 12.4093C3.78427 13.728 5.5727 14.4688 7.4375 14.4688Z"
+            fill="#198754"></path>
+        </svg>
+
+        <span>В офисе</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="col-md-8 col-xl-6">
+    <div class="info-about">
+      <h4 class="info-about__name">
+        Константинопольский Константин Вениаминович
+      </h4>
+
+      <p class="info-about__positions">
+        Ведущий специалист по администрированию ИТ-инфраструктуры
+      </p>
+      <p class="info-about__positions">
+        Отдел информационно-технического обеспечения
+      </p>
+
+      <div class="info-about__about-label">
+        <p>О себе</p>
+      </div>
+      <p class="info-about__about-description">
+        Люблю дизайн и все, что с ним связано. Пишу в «Про дизайн» посты со
+        своими коллегами и рисую этот внутренний сервис
+      </p>
+    </div>
+  </div>
+</div>
+
+<style lang="scss">
+  .info-info-avatar {
+    position: relative;
+    height: fit-content;
+    width: fit-content;
+
+    img {
+      border-radius: 50%;
+    }
+
+    &__status {
+      position: absolute;
+      bottom: -15px;
+      left: 50%;
+      transform: translateX(-50%);
+      background-color: #ffffff;
+      border-radius: 46px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      padding: 6px 12px;
+
+      span {
+        color: #212529;
+        font-size: 16px;
+        font-weight: 400;
+        white-space: nowrap;
+      }
+    }
+  }
+
+  .info-about {
+    p,
+    h4,
+    a {
+      color: #212529;
+      line-height: 100%;
+    }
+
+    &__name {
+      font-size: 32px;
+      font-weight: 500;
+    }
+
+    &__positions {
+      font-size: 16px;
+      font-weight: 400;
+      margin-top: 8px;
+    }
+
+    &__about-label {
+      p {
+        font-size: 16px;
+        font-weight: 700;
+        margin-top: 25px;
+      }
+    }
+
+    &__about-description {
+      font-size: 14px;
+      font-weight: 500;
+      margin-top: 12px;
+    }
+  }
+</style>

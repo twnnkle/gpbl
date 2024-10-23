@@ -1,0 +1,32 @@
+---
+import { Image } from 'astro:assets';
+
+import advertising from '@assets/pages/main/advertising.png';
+---
+
+<div class="row card-row gy-2">
+  <div class="col-md-12 gx-2">
+    <a href="#" class="advertising">
+      <Image
+        src={advertising}
+        width="318"
+        height="318"
+        alt="Рекламный баннер"
+      />
+    </a>
+  </div>
+</div>
+
+<style>
+  .advertising {
+    margin-top: 25px;
+    display: block;
+    text-decoration: none;
+
+    img {
+      border-radius: 16px;
+      width: 100%;
+      height: auto;
+    }
+  }
+</style>
