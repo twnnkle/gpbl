@@ -1,0 +1,86 @@
+---
+import Container from '@layouts/Container.astro';
+
+import Star from '@components/common/Star.astro';
+import SideMenu from '@components/pages/myPage/myPage5/SideMenu.astro';
+import TableWithComments from '@components/pages/myPage/tableWithComments/TableWithComments.astro';
+import WhiteCardsBlock from '@components/pages/myPage/myPage5/WhiteCardsBlock.astro';
+---
+
+<body>
+  <Container>
+    <main>
+      <div class="my-page-page">
+        <div class="row justify-content-between">
+          <div class="col-md-3">
+            <SideMenu />
+          </div>
+
+          <div class="col-md-9">
+            <div class="my-page-page__header">
+              <h4>Индивидуальный план работ на испытательный срок</h4>
+
+              <div class="my-page-page__header-btns">
+                <span>Печатать</span>
+                <Star />
+              </div>
+            </div>
+
+            <div class="col-xxl-11 col-xl-12">
+              <div class="my-page-page__content">
+                <WhiteCardsBlock />
+                <TableWithComments />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+  </Container>
+
+  <style lang="scss">
+    body {
+      background-color: #f3f5fb;
+    }
+
+    .my-page-page {
+      margin: 50px 0;
+
+      &__header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        h4 {
+          font-size: 28px;
+          font-weight: 500;
+          line-height: 120%;
+          color: #212529;
+        }
+      }
+
+      &__header-btns {
+        display: flex;
+        gap: 5px;
+
+        span {
+          background-color: #cfe2ff;
+          border-radius: 46px;
+          height: 38px;
+          padding: 0 12px;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          color: #487cfb;
+          font-size: 16px;
+          font-weight: 400;
+          cursor: pointer;
+        }
+      }
+
+      &__content {
+        margin-top: 30px;
+      }
+    }
+  </style>
+</body>

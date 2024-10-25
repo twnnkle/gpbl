@@ -1,0 +1,70 @@
+---
+import { Image } from 'astro:assets';
+
+const { id, withAvatars = false } = Astro.props;
+
+import avatar from '@assets/pages/myPage/table-with-comments-avatar.png';
+---
+
+<tr>
+  <td>{id}</td>
+  <td class="col-md-3"
+    >Провести аудит кадровой документации, утвержденной на текущий момент
+  </td>
+  <td class="col-md-3"
+    >Аудит проведен, составлен перечень отсутсвующих документов
+  </td>
+  <td class="col-md-2">{'04.04.2022\n04.04.2022'}</td>
+  <td>
+    {
+      withAvatars ? (
+        <div class="avatars">
+          <div class="avatars__item">
+            <Image src={avatar} width="32" height="32" alt="Аватар" />
+          </div>
+
+          <div class="avatars__item">
+            <Image src={avatar} width="32" height="32" alt="Аватар" />
+          </div>
+        </div>
+      ) : (
+        <span>Ввести</span>
+      )
+    }
+  </td>
+  <td>-</td>
+  <td>Ч</td>
+</tr>
+
+<style lang="scss">
+  tr {
+    cursor: pointer;
+  }
+
+  tr:last-child td {
+    border: none;
+  }
+
+  td {
+    color: #41464b;
+    font-size: 14px;
+    font-weight: 500;
+    padding: 20px 10px;
+    white-space: pre-line;
+    background-color: #f3f5fb;
+  }
+
+  td span {
+    color: #487cfb;
+  }
+
+  .avatars {
+    display: flex;
+    align-items: center;
+
+    &__item {
+      border-radius: 50%;
+      padding: 5px;
+    }
+  }
+</style>

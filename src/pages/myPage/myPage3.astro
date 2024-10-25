@@ -1,0 +1,59 @@
+---
+import Container from '@layouts/Container.astro';
+
+import Star from '@components/common/Star.astro';
+import SideMenu from '@components/pages/myPage/myPage3/SideMenu.astro';
+import Table from '../../components/pages/myPage/myPage3/table/Table.astro';
+---
+
+<body>
+  <Container>
+    <main>
+      <div class="my-page-page">
+        <div class="row justify-content-between">
+          <div class="col-md-3">
+            <SideMenu />
+          </div>
+
+          <div class="col-md-9">
+            <div class="my-page-page__header">
+              <h4>Мое подразделение</h4>
+              <Star />
+            </div>
+
+            <div class="my-page-page__content">
+              <Table />
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+  </Container>
+
+  <style lang="scss">
+    body {
+      background-color: #f3f5fb;
+    }
+
+    .my-page-page {
+      margin: 50px 0;
+
+      &__header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        h4 {
+          font-size: 28px;
+          font-weight: 500;
+          line-height: 120%;
+          color: #212529;
+        }
+      }
+
+      &__content {
+        margin-top: 30px;
+      }
+    }
+  </style>
+</body>

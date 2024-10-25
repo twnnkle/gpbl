@@ -5,7 +5,7 @@ import SideMenu from '@components/pages/employees/employees2/SideMenu.astro';
 import NavMenu from '@components/pages/employees/employees2/NavMenu.astro';
 import Search from '@components/pages/employees/Search.astro';
 import Star from '@components/common/Star.astro';
-import Table from '@components/pages/employees/employees2/Table.astro';
+import Table from '@components/pages/employees/employees2/table/Table.astro';
 ---
 
 <body>
@@ -19,7 +19,7 @@ import Table from '@components/pages/employees/employees2/Table.astro';
 
           <div class="col-md-9">
             <div class="employees-header">
-              <div>
+              <div class="employees-header__search-and-nav">
                 <NavMenu />
                 <Search />
               </div>
@@ -44,6 +44,12 @@ import Table from '@components/pages/employees/employees2/Table.astro';
       align-items: flex-start;
       justify-content: space-between;
       gap: 10px;
+
+      &__search-and-nav {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+      }
     }
   }
 </style>

@@ -1,0 +1,16 @@
+---
+import { Image } from 'astro:assets';
+
+import subdivisionAvatar from '@assets/pages/myPage/subdivisionAvatar.png';
+---
+
+<a href="#" class="subdivision-avatar">
+  <Image src={subdivisionAvatar} width="64px" height="64px" alt="Аватар" />
+</a>
+
+<style>
+  .subdivision-avatar {
+    border-radius: 50%;
+    text-decoration: none;
+  }
+</style>
