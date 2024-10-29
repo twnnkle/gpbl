@@ -1,10 +1,8 @@
 ---
-import AirDatepicker from 'air-datepicker';
-
 import Container from '@layouts/Container.astro';
 
 import SideMenu from '@components/pages/employees/employees3/SideMenu.astro';
-import Search from '@components/pages/employees/Search.astro';
+import Search from '@components/common/SearchWithBlueBtn.astro';
 import Star from '@components/common/Star.astro';
 import BirthdaysBlock from '@components/pages/employees/employees3/BirthdaysBlock.astro';
 import YourTeamBlock from '@components/pages/employees/employees3/YourTeamBlock.astro';
@@ -45,7 +43,7 @@ import YourTeamBlock from '@components/pages/employees/employees3/YourTeamBlock.
         import 'air-datepicker/air-datepicker.css';
 
         document.addEventListener('DOMContentLoaded', () => {
-          new AirDatepicker('#datepicker', []);
+          new AirDatepicker('#datepicker', {});
         });
       </script>
     </main>

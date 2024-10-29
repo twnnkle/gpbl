@@ -2,8 +2,11 @@
 import Container from '@layouts/Container.astro';
 
 import Star from '@components/common/Star.astro';
-import SideMenu from '@components/pages/myPage/myPage3/SideMenu.astro';
-import Table from '@components/pages/myPage/myPage3/table/Table.astro';
+import SideMenu from '@components/pages/myPage/myPage7/SideMenu.astro';
+import Table from '@components/pages/myPage/myPage7/table/Table.astro';
+import NavMenu from '@components/pages/myPage/myPage7/NavMenu.astro';
+import Search from '@components/pages/myPage/myPage7/SearchWithBlueBtn.astro';
+import BtnsGroup from '@components/pages/myPage/myPage7/BtnsGroup.astro';
 ---
 
 <body>
@@ -17,8 +20,17 @@ import Table from '@components/pages/myPage/myPage3/table/Table.astro';
 
           <div class="col-md-9">
             <div class="my-page-page__header">
-              <h4>Мое подразделение</h4>
+              <h4>Мои задачи</h4>
               <Star />
+            </div>
+
+            <div class="my-page-page__nav-menu">
+              <NavMenu />
+            </div>
+
+            <div class="my-page-page__search-and-btns-group">
+              <Search placeholder="Поиск по задачам... " />
+              <BtnsGroup />
             </div>
 
             <div class="my-page-page__content">
@@ -32,10 +44,6 @@ import Table from '@components/pages/myPage/myPage3/table/Table.astro';
 </body>
 
 <style lang="scss">
-  body {
-    background-color: #f3f5fb;
-  }
-
   .my-page-page {
     margin: 50px 0;
 
@@ -51,6 +59,18 @@ import Table from '@components/pages/myPage/myPage3/table/Table.astro';
         line-height: 120%;
         color: #212529;
       }
+    }
+
+    &__nav-menu {
+      margin-top: 20px;
+    }
+
+    &__search-and-btns-group {
+      margin-top: 20px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 10px;
     }
 
     &__content {

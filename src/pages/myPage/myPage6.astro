@@ -2,11 +2,13 @@
 import Container from '@layouts/Container.astro';
 
 import Star from '@components/common/Star.astro';
-import SideMenu from '@components/pages/myPage/myPage5/SideMenu.astro';
+import SideMenu from '@components/pages/myPage/myPage6/SideMenu.astro';
 import TableWithComments from '@components/pages/myPage/tableWithComments/TableWithComments.astro';
 import WhiteCardsBlock from '@components/pages/myPage/whiteCardsBlock/WhiteCardsBlock.astro';
 import SignaturesBlock from '@components/pages/myPage/SignaturesBlock.astro';
 import Breadcrumbs from '@components/pages/myPage/Breadcrumbs.astro';
+import StatisticsBlock from '@components/pages/myPage/myPage6/StatisticsBlock.astro';
+import CompletedSignaturesBlock from '@components/pages/myPage/myPage6/CompletedSignaturesBlock.astro';
 ---
 
 <body>
@@ -39,9 +41,15 @@ import Breadcrumbs from '@components/pages/myPage/Breadcrumbs.astro';
                 <TableWithComments />
               </div>
 
+              <StatisticsBlock />
+
               <div class="my-page-page__signatures-block">
                 <SignaturesBlock />
               </div>
+
+              <h5>Испытательный срок пройден</h5>
+
+              <CompletedSignaturesBlock />
             </div>
           </div>
         </div>
@@ -64,6 +72,14 @@ import Breadcrumbs from '@components/pages/myPage/Breadcrumbs.astro';
       line-height: 120%;
       color: #212529;
       margin-top: 30px;
+    }
+
+    h5 {
+      font-size: 20px;
+      font-weight: 500;
+      line-height: 120%;
+      color: #212529;
+      margin-top: 80px;
     }
 
     &__header {
@@ -101,7 +117,7 @@ import Breadcrumbs from '@components/pages/myPage/Breadcrumbs.astro';
     }
 
     &__signatures-block {
-      margin-top: 20px;
+      margin-top: 30px;
     }
   }
 </style>

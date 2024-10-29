@@ -1,7 +1,3 @@
----
-import TableWithCommentsCard from '@components/pages/myPage/tableWithComments/TableWithCommentsCard.astro';
----
-
 <div class="employees-table table-responsive">
   <table class="table align-middle">
     <thead>
@@ -17,8 +13,13 @@ import TableWithCommentsCard from '@components/pages/myPage/tableWithComments/Ta
     </thead>
 
     <tbody>
-      <TableWithCommentsCard id="1"/>
-      <TableWithCommentsCard id="2" withAvatars/>
+      <tr>
+        <td colspan="7" style="text-align: center;">
+          <div class="employees-table__btn">
+            <span>Добавить задачу</span>
+          </div>
+        </td>
+      </tr>
     </tbody>
   </table>
 </div>
@@ -34,12 +35,31 @@ import TableWithCommentsCard from '@components/pages/myPage/tableWithComments/Ta
       background-color: #f3f5fb;
       vertical-align: top;
     }
-    
+
     tbody::before {
       content: '-';
       display: block;
       line-height: 1em;
       color: transparent;
+    }
+
+    td {
+      background-color: #f3f5fb;
+      border: none;
+    }
+
+    &__btn {
+      padding: 40px 0;
+
+			span {
+				background-color: #CFE2FF;
+				padding: 10px 15px;
+				border-radius: 46px;
+				color: #487CFB;
+        font-size: 16px;
+        font-weight: 400;
+				cursor: pointer;
+      }
     }
   }
 </style>

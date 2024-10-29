@@ -1,0 +1,60 @@
+---
+import { Image } from 'astro:assets';
+
+import avatar from '@assets/pages/myPage/table-with-comments-avatar.png';;
+---
+
+<div class="dropdown-comment-card">
+  <div class="dropdown-comment-card__info">
+    <div class="dropdown-comment-card__avatar">
+      <Image src={avatar} width="32" height="32" alt="Аватар" />
+    </div>
+
+    <p class="dropdown-comment-card__name">Константин Константинопальский</p>
+
+    <p class="dropdown-comment-card__date">13.03.2023</p>
+  </div>
+
+  <div class="dropdown-comment-card__text">
+    <p>Аудит проведен, составлен перечень отсутсвующих документов</p>
+  </div>
+</div>
+
+<style lang="scss">
+  .dropdown-comment-card {
+    width: 300px;
+
+    &__info {
+      display: flex;
+      gap: 10px;
+    }
+
+    &__avatar {
+      border-radius: 50%;
+    }
+
+    &__name {
+      color: #212529;
+      font-size: 14px;
+      font-weight: 900;
+      line-height: 16.8px;
+      max-width: 200px;
+    }
+
+    &__date {
+      color: #b3b3b3;
+      font-size: 14px;
+      font-weight: 500;
+    }
+
+    &__text {
+      margin: 10px 0 0 42px;
+
+      p {
+        color: #41464b;
+        font-size: 14px;
+        font-weight: 500;
+      }
+    }
+  }
+</style>

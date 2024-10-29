@@ -1,0 +1,23 @@
+<div class="btn-group" role="group" aria-label="Базовая группа переключателей радио">
+  <input type="radio" class="btn-check" name="btnradio" id="btnradio1" autocomplete="off" checked>
+  <label class="btn btn-outline-primary" for="btnradio1">Задачи мне</label>
+
+  <input type="radio" class="btn-check" name="btnradio" id="btnradio2" autocomplete="off">
+  <label class="btn btn-outline-primary" for="btnradio2">Задачи от меня</label>
+</div>
+
+<style lang="scss">
+	.btn {
+		border-color: #487cfb;
+		color: #487cfb;
+		font-size: 16px;
+		font-weight: 400;
+		height: 38px;
+	}
+
+	.btn-check {
+		&:checked + .btn {
+			background-color: #487cfb;
+		}
+	}
+</style>
