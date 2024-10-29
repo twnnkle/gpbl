@@ -47,7 +47,8 @@ import TreeAccordion from '@components/pages/employees/employees4/TreeAccordion.
         const setContentHeight = () => {
           const contentBlock = document.querySelector(
             '.tree-employees-content-wrapper'
-          );
+          ) as HTMLElement;
+          
           contentBlock.style.maxHeight = `${contentBlock.offsetHeight}px`;
         };
 

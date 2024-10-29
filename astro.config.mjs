@@ -4,11 +4,9 @@ import relativeLinks from 'astro-relative-links';
 
 // https://astro.build/config
 export default defineConfig({
-  //   site: 'https://twnnkle.github.io',
   image: {
     service: passthroughImageService(),
   },
-  //   base: 'gpbl',
   output: 'static',
   trailingSlash: 'never',
   build: {
@@ -39,5 +37,7 @@ export default defineConfig({
       },
     },
   },
+  // Следующая строчка убирает минификацию HTML, но при этом в сборке едет некоторая верстка.
+  // Как-будто в основном ломаются некоторые бутстрап компоненты, мб еще что-то.
   // compressHTML: false,
 });
