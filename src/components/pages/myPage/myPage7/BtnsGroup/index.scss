@@ -1,0 +1,13 @@
+.btn {
+  border-color: #487cfb;
+  color: #487cfb;
+  font-size: 16px;
+  font-weight: 400;
+  height: 38px;
+}
+
+.btn-check {
+  &:checked + .btn {
+    background-color: #487cfb;
+  }
+}

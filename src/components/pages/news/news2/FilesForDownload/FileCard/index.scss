@@ -1,0 +1,39 @@
+.files-for-download-card {
+  display: flex;
+  gap: 10px;
+  justify-content: space-between;
+  align-items: center;
+
+  p,
+  a {
+    font-size: 16px;
+    line-height: 150%;
+    font-weight: 400;
+  }
+
+  p {
+    color: #212529;
+  }
+
+  a {
+    text-decoration: none;
+    color: #487cfb;
+  }
+
+  &__left-block {
+    display: flex;
+    gap: 18px;
+    align-items: center;
+  }
+
+  &__right-block {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+
+    p {
+      border-right: 2px solid rgb(225, 215, 215);
+      padding-right: 10px;
+    }
+  }
+}

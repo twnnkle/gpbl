@@ -1,0 +1,17 @@
+.files-for-download {
+  margin-top: 40px;
+
+  &__title {
+    font-size: 24px;
+    font-weight: 500;
+    line-height: 120%;
+    color: #212529;
+  }
+
+  &__files {
+    margin-top: 30px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+  }
+}

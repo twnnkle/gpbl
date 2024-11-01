@@ -1,0 +1,18 @@
+.news-block {
+  margin-top: 60px;
+
+  &__header {
+    display: flex;
+    justify-content: space-between;
+
+    h3 {
+      color: #212529;
+      font-size: 32px;
+      font-weight: 500;
+    }
+  }
+
+  &__cards {
+    margin-top: 25px;
+  }
+}

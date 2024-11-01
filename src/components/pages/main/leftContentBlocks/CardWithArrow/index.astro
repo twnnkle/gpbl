@@ -1,0 +1,21 @@
+---
+import './index.scss';
+
+import { Image } from 'astro:assets';
+
+import arrowCardWithArrow from '@assets/arrow-card-with-arrow.svg';
+
+const { tag, text, img } = Astro.props;
+---
+
+<a href="#" class="card-with-arrow" style=`background-image: url(${img})`>
+  <span class="card-with-arrow__tag">{tag}</span>
+
+  <div class="card-with-arrow__text-and-btn">
+    <div class="card-with-arrow__text">{text}</div>
+
+    <span class="card-with-arrow__btn">
+      <Image src={arrowCardWithArrow} width="16" height="14" alt="Стрелка" />
+    </span>
+  </div>
+</a>

@@ -1,0 +1,99 @@
+.different-cards {
+  margin-top: 55px;
+  padding: 24px;
+  border-radius: 16px;
+  background-color: #f3f5fb;
+}
+
+.card-with-gradient {
+  padding: 16px;
+  border-radius: 16px;
+  background-image: linear-gradient(to bottom, #547bf3, #a0b2f9);
+  color: #ffffff;
+  text-decoration: none;
+  display: block;
+
+  &__title {
+    font-size: 24px;
+    font-weight: 500;
+    line-height: 100%;
+  }
+
+  &__avatar {
+    margin-top: 40px;
+    display: flex;
+    justify-content: center;
+
+    img {
+      border-radius: 50%;
+      width: 100%;
+      height: auto;
+    }
+  }
+
+  &__bottom-block {
+    margin-top: 50px;
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+
+    p,
+    span {
+      font-size: 16px;
+      font-weight: 400;
+      line-height: normal;
+    }
+  }
+
+  &__btn {
+    padding: 9px;
+    border: 1px solid #ccd3e7;
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+  }
+}
+
+.employees-cards {
+  &__title {
+    color: #a6b1d2;
+    font-size: 20px;
+    font-weight: 500;
+  }
+
+  &__card {
+    margin-top: 12px;
+    display: flex;
+    text-decoration: none;
+    transition: all 0.1s ease-in-out;
+
+    &:hover {
+      .employees-cards__card-text p {
+        color: #487cfb;
+      }
+    }
+
+    img {
+      border-radius: 50%;
+    }
+  }
+
+  &__card-text {
+    margin-left: 5px;
+    color: #212529;
+    line-height: 100%;
+
+    p {
+      font-size: 16px;
+      font-weight: 500;
+      margin-bottom: 5px;
+    }
+
+    span {
+      font-size: 14px;
+      font-weight: 400;
+    }
+  }
+}

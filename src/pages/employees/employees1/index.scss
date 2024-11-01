@@ -1,0 +1,16 @@
+.employees-page {
+  margin-top: 50px;
+
+  .employees-header {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 10px;
+
+    &__search-and-nav {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+  }
+}

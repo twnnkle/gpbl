@@ -1,0 +1,38 @@
+.card-row {
+  margin-top: 5px;
+
+  &_gray {
+    padding: 0 12px;
+  }
+}
+
+.gray-card-with-img {
+  background-color: #ffffff;
+  display: flex;
+  flex-direction: column;
+  border-radius: 16px;
+  cursor: pointer;
+
+  img {
+    width: 100%;
+    height: auto;
+    border-radius: 16px;
+  }
+
+  &__text {
+    padding: 16px;
+  }
+
+  &__title {
+    color: #212529;
+    font-size: 20px;
+    font-weight: 500;
+  }
+
+  &__date {
+    margin-top: 8px;
+    color: #a6b1d2;
+    font-size: 16px;
+    font-weight: 500;
+  }
+}

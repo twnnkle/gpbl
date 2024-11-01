@@ -1,0 +1,27 @@
+---
+import './index.scss';
+
+import { Image } from 'astro:assets';
+
+import avatar from '@assets/avatar.png';
+
+import Button from '@components/common/Button/index.astro';
+---
+
+<div class="comment-input-block">
+  <Image src={avatar} width="32" height="32" alt="Аватар" />
+
+  <div class="comment-input-block__input-block">
+    <textarea
+      placeholder="Напишите комментарий"
+      rows="1"
+      oninput="this.style.height = 'auto'; this.style.height = this.scrollHeight + 'px'"
+    ></textarea>
+
+    <span class="comment-input-block__counter">0/100</span>
+
+    <div class="comment-input-block__send-btn">
+      <Button text="Добавить комментарий" option="btn-primary" />
+    </div>
+  </div>
+</div>

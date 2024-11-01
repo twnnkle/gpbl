@@ -1,0 +1,17 @@
+.comments {
+  margin-top: 40px;
+
+  &__title {
+    font-size: 32px;
+    font-weight: 500;
+    line-height: 150%;
+    color: #212529;
+  }
+
+  &__list {
+    margin-top: 35px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+  }
+}

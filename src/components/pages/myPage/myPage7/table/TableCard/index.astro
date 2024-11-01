@@ -1,0 +1,27 @@
+---
+import './index.scss';
+
+import { Image } from 'astro:assets';
+
+import avatar from '@assets/avatar.png';
+---
+
+<tr>
+  <td class="col-md-3"
+    >Провести аудит кадровой документации, утвержденной на текущий момент</td
+  >
+  <td class="col-md-2"
+    >Аудит проведен, составлен перечень отсутсвующих документов</td
+  >
+  <td class="item-with-avatar">
+    <Image src={avatar} width="32" height="32" alt="Аватар" />
+    <p>Иванов Иван Иванович</p>
+  </td>
+  <td>04.04.2022</td>
+  <td>04.04.2022</td>
+  <td>Готов</td>
+  <td class="item-with-avatar">
+    <Image src={avatar} width="32" height="32" alt="Аватар" />
+    <p>Иванов Иван Иванович</p>
+  </td>
+</tr>

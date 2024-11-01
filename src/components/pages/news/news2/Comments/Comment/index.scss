@@ -1,0 +1,97 @@
+.comment {
+  display: flex;
+  gap: 15px;
+}
+
+.comment-content {
+  &__top-block {
+    display: flex;
+    gap: 10px;
+  }
+
+  &__name {
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 150%;
+    color: #ccd3e7;
+  }
+
+  &__date {
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 150%;
+    color: #f3f5fb;
+  }
+
+  &__text {
+    margin-top: 5px;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 150%;
+    color: #212529;
+  }
+
+  &__bottom-block {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    margin-top: 15px;
+  }
+
+  &__likes {
+    &:hover {
+      span {
+        color: #77c6a1;
+      }
+
+      svg {
+        path {
+          fill: #77c6a1;
+        }
+      }
+    }
+  }
+
+  &__dislikes {
+    &:hover {
+      span {
+        color: #d27575;
+      }
+
+      svg {
+        path {
+          fill: #d27575;
+        }
+      }
+    }
+  }
+
+  &__likes,
+  &__dislikes {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    cursor: pointer;
+    transition: all 0.1s ease;
+
+    span {
+      font-size: 14px;
+      font-weight: 500;
+      line-height: 150%;
+      color: #ccd3e7;
+    }
+  }
+
+  &__reply-btn {
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 150%;
+    color: #ccd3e7;
+    cursor: pointer;
+    transition: all 0.1s ease;
+
+    &:hover {
+      color: #b0b9d0;
+    }
+  }
+}

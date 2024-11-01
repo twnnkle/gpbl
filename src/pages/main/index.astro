@@ -1,0 +1,26 @@
+---
+import './index.scss';
+
+import Container from '@layouts/Container/index.astro';
+
+import LeftContentBlock from '@components/pages/main/LeftContentBlock/index.astro';
+import RightContentBlock from '@components/pages/main/RightContentBlock/index.astro';
+---
+
+<body>
+  <Container>
+    <main>
+      <div class="main-page">
+        <div class="row justify-content-between">
+          <div class="col-md-9">
+            <LeftContentBlock />
+          </div>
+
+          <div class="col-md-3">
+            <RightContentBlock />
+          </div>
+        </div>
+      </div>
+    </main>
+  </Container>
+</body>

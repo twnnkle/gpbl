@@ -1,0 +1,26 @@
+---
+import './index.scss';
+
+import TableWithCommentsCard from '@components/pages/myPage/tableWithComments/TableWithCommentsCard/index.astro';
+---
+
+<div class="employees-table table-responsive">
+  <table class="table align-middle">
+    <thead>
+      <tr>
+        <th>№</th>
+        <th>Задача</th>
+        <th>Критерии выполнения</th>
+        <th>{'Срок исполнения\nплан/факт'}</th>
+        <th>Комментарии</th>
+        <th>Оценка цели</th>
+        <th>Выкл/вкл задача</th>
+      </tr>
+    </thead>
+
+    <tbody>
+      <TableWithCommentsCard id="1" />
+      <TableWithCommentsCard id="2" withAvatars />
+    </tbody>
+  </table>
+</div>

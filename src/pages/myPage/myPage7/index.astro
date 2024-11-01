@@ -1,0 +1,46 @@
+---
+import './index.scss';
+
+import Container from '@layouts/Container/index.astro';
+
+import Star from '@components/common/Star/index.astro';
+import SideMenu from '@components/pages/myPage/myPage7/SideMenu/index.astro';
+import Table from '@components/pages/myPage/myPage7/table/Table/index.astro';
+import NavMenu from '@components/pages/myPage/myPage7/NavMenu/index.astro';
+import Search from '@components/pages/myPage/myPage7/SearchWithBlueBtn/index.astro';
+import BtnsGroup from '@components/pages/myPage/myPage7/BtnsGroup/index.astro';
+---
+
+<body>
+  <Container>
+    <main>
+      <div class="my-page-page">
+        <div class="row justify-content-between">
+          <div class="col-md-3">
+            <SideMenu />
+          </div>
+
+          <div class="col-md-9">
+            <div class="my-page-page__header">
+              <h4 class="my-page-page__title">Мои задачи</h4>
+              <Star />
+            </div>
+
+            <div class="my-page-page__nav-menu">
+              <NavMenu />
+            </div>
+
+            <div class="my-page-page__search-and-btns-group">
+              <Search placeholder="Поиск по задачам... " />
+              <BtnsGroup />
+            </div>
+
+            <div class="my-page-page__content">
+              <Table />
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+  </Container>
+</body>

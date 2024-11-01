@@ -1,0 +1,57 @@
+---
+import './index.scss';
+
+import Container from '@layouts/Container/index.astro';
+
+import SideMenu from '@components/pages/myPage/myPage1/SideMenu/index.astro';
+import Star from '@components/common/Star/index.astro';
+import Info from '@components/pages/myPage/myPage1/Info/index.astro';
+import WhiteBlockContacts from '@components/pages/myPage/myPage1/whiteBlocks/WhiteBlockContacts/index.astro';
+import WhiteBlockInfo from '@components/pages/myPage/myPage1/whiteBlocks/WhiteBlockInfo/index.astro';
+import WhiteBlockSubdivision from '@components/pages/myPage/myPage1/whiteBlocks/whiteBlockSubdivision/WhiteBlockSubdivision/index.astro';
+import WhiteBlockFunctional from '@components/pages/myPage/myPage1/whiteBlocks/WhiteBlockFunctional/index.astro';
+import WhiteBlockVacation from '@components/pages/myPage/myPage1/whiteBlocks/WhiteBlockVacation/index.astro';
+---
+
+<body>
+  <Container>
+    <main>
+      <div class="my-page-page">
+        <div class="row justify-content-between">
+          <div class="col-md-3">
+            <SideMenu />
+          </div>
+
+          <div class="col-md-9">
+            <Star />
+            <Info />
+
+            <div class="row">
+              <div class="col-md-11 col-xl-9">
+                <div class="white-block">
+                  <WhiteBlockContacts />
+                </div>
+
+                <div class="white-block">
+                  <WhiteBlockInfo />
+                </div>
+
+                <div class="white-block">
+                  <WhiteBlockSubdivision />
+                </div>
+
+                <div class="white-block">
+                  <WhiteBlockFunctional />
+                </div>
+
+                <div class="white-block">
+                  <WhiteBlockVacation />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+  </Container>
+</body>

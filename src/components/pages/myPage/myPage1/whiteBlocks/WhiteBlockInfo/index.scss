@@ -1,0 +1,35 @@
+.info-title {
+  line-height: 100%;
+  color: #212529;
+  font-size: 24px;
+  font-weight: 500;
+}
+
+.info-content {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+
+  &__item {
+    display: flex;
+    justify-content: space-between;
+    gap: 5px;
+
+    span,
+    p {
+      font-size: 14px;
+      font-weight: 500;
+      line-height: 150%;
+    }
+
+    span {
+      color: #737373;
+      width: 45%;
+    }
+
+    p {
+      color: #212529;
+      width: 55%;
+    }
+  }
+}

@@ -1,0 +1,37 @@
+.employees-table {
+  thead th {
+    border: none;
+    color: #b3b3b3;
+    font-size: 12px;
+    font-weight: 900;
+    white-space: pre-line;
+    background-color: #f3f5fb;
+    vertical-align: top;
+  }
+
+  tbody::before {
+    content: '-';
+    display: block;
+    line-height: 1em;
+    color: transparent;
+  }
+
+  td {
+    background-color: #f3f5fb;
+    border: none;
+  }
+
+  &__btn {
+    padding: 40px 0;
+
+    span {
+      background-color: #cfe2ff;
+      padding: 10px 15px;
+      border-radius: 46px;
+      color: #487cfb;
+      font-size: 16px;
+      font-weight: 400;
+      cursor: pointer;
+    }
+  }
+}

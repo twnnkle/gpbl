@@ -1,0 +1,57 @@
+.block-with-title {
+  background-color: #ffffff;
+  padding: 12px;
+  border-radius: 16px;
+
+  h4 {
+    color: #212529;
+    font-size: 24px;
+    font-weight: 500;
+    line-height: 100%;
+  }
+}
+
+.card-row {
+  margin-top: 5px;
+
+  &_gray {
+    padding: 0 12px;
+  }
+}
+
+.vacation-date {
+  margin-top: 7px;
+  color: #222222;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 100%;
+}
+
+.vacation-card {
+  display: flex;
+  align-items: center;
+  margin-top: 12px;
+  cursor: pointer;
+  width: fit-content;
+
+  p {
+    color: #7f8ebe;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 100%;
+    margin-left: 6px;
+  }
+}
+
+.vacation-btn {
+  border: 1px solid #ccd3e7;
+  border-radius: 4px;
+  padding: 6px 12px;
+  display: block;
+  width: fit-content;
+  cursor: pointer;
+  margin-top: 45px;
+  color: #212529;
+  font-size: 16px;
+  font-weight: 400;
+}

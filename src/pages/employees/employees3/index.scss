@@ -1,0 +1,18 @@
+body {
+  background-color: #f3f5fb;
+}
+
+.employees-page {
+  margin-top: 50px;
+
+  .employees-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+  }
+}
+
+.employees-content {
+  margin-top: 20px;
+}

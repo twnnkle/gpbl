@@ -1,0 +1,29 @@
+.functional-title {
+  line-height: 100%;
+  color: #212529;
+  font-size: 24px;
+  font-weight: 500;
+}
+
+.functional-content {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+
+  &__item {
+    h4 {
+      font-size: 16px;
+      color: #212529;
+      font-weight: 700;
+      line-height: 100%;
+    }
+
+    p {
+      margin-top: 5px;
+      font-size: 14px;
+      color: #737373;
+      font-weight: 500;
+      line-height: 150%;
+    }
+  }
+}

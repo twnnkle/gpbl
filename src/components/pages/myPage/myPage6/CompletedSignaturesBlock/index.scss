@@ -1,0 +1,42 @@
+.completed-signatures-block {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  row-gap: 10px;
+  margin-top: 20px;
+
+  &__group {
+    width: 25%;
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+
+    @media (max-width: 1150px) {
+      width: 50%;
+      justify-content: flex-start;
+    }
+  }
+}
+
+.completed-signatures-block-item {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 5px;
+
+  &__label,
+  &__text {
+    font-size: 14px;
+    line-height: 150%;
+    font-weight: 500;
+  }
+
+  &__label {
+    white-space: nowrap;
+    color: #b3b3b3;
+  }
+
+  &__approved {
+    color: #198754;
+  }
+}

@@ -1,0 +1,25 @@
+.statistics-block {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+  padding-top: 30px;
+  border-top: 1px solid #d3d6d8;
+
+  &__left-block {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+
+    p {
+      color: #b3b3b3;
+      font-size: 14px;
+      font-weight: 500;
+    }
+  }
+
+  &__summary {
+    font-size: 24px;
+    font-weight: 500;
+    color: #212529;
+  }
+}

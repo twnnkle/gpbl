@@ -1,0 +1,36 @@
+.dropdown-comment-card {
+  width: 300px;
+
+  &__info {
+    display: flex;
+    gap: 10px;
+  }
+
+  &__avatar {
+    border-radius: 50%;
+  }
+
+  &__name {
+    color: #212529;
+    font-size: 14px;
+    font-weight: 900;
+    line-height: 16.8px;
+    max-width: 200px;
+  }
+
+  &__date {
+    color: #b3b3b3;
+    font-size: 14px;
+    font-weight: 500;
+  }
+
+  &__text {
+    margin: 10px 0 0 42px;
+
+    p {
+      color: #41464b;
+      font-size: 14px;
+      font-weight: 500;
+    }
+  }
+}

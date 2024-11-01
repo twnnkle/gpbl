@@ -1,0 +1,65 @@
+.block-with-title {
+  background-color: #ffffff;
+  padding: 12px;
+  border-radius: 16px;
+
+  h4 {
+    color: #212529;
+    font-size: 24px;
+    font-weight: 500;
+    line-height: 100%;
+  }
+}
+
+.card-row {
+  margin-top: 5px;
+
+  &_gray {
+    padding: 0 12px;
+  }
+}
+
+.task-card {
+  margin-top: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  cursor: pointer;
+  transition: all 0.1s ease-in-out;
+
+  &:hover {
+    .task-card__btn {
+      background-color: #0b5ed7;
+
+      p {
+        color: #ffffff;
+      }
+
+      svg path {
+        fill: #ffffff;
+      }
+    }
+  }
+
+  &__task-label {
+    color: #212529;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 100%;
+  }
+
+  &__btn {
+    display: flex;
+    align-items: center;
+    padding: 4px;
+    border-radius: 3px;
+
+    p {
+      margin-right: 5px;
+      color: #212529;
+      font-size: 14px;
+      font-weight: 400;
+      line-height: 100%;
+    }
+  }
+}

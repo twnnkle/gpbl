@@ -1,0 +1,57 @@
+.employee-card {
+  display: flex;
+  gap: 15px;
+  align-items: flex-start;
+  text-decoration: none;
+
+  @media (min-width: 1200px) and (max-width: 1300px) {
+    gap: 6px;
+  }
+
+  &__avatar {
+    position: relative;
+
+    img {
+      border-radius: 50%;
+    }
+  }
+
+  &__avatar-after-element {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 15px;
+    height: 15px;
+    display: flex;
+  }
+
+  &__info {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+
+    p {
+      color: #212529;
+      font-size: 16px;
+      font-weight: 500;
+    }
+
+    span {
+      color: #7f8ebe;
+      font-size: 14px;
+      font-weight: 500;
+    }
+  }
+
+  &__btn {
+    background-color: #f3f5fb;
+    width: 31px;
+    min-width: 31px;
+    height: 31px;
+    border-radius: 3px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 5px;
+  }
+}

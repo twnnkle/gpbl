@@ -1,0 +1,34 @@
+.card-with-icon-and-label {
+  padding: 12px;
+  border-radius: 16px;
+  cursor: pointer;
+  transition: all 0.1s ease-in-out;
+  height: 100%;
+  background-color: #ffffff;
+
+  &:hover {
+    .card-with-icon-and-label__label {
+      color: #487cfb;
+    }
+
+    svg path {
+      fill: #487cfb;
+    }
+  }
+
+  &__label {
+    color: #a6b1d2;
+    font-size: 15px;
+    font-weight: 700;
+    margin-top: 45px;
+    line-height: 100%;
+  }
+}
+
+.card-row {
+  margin-top: 5px;
+
+  &_gray {
+    padding: 0 12px;
+  }
+}

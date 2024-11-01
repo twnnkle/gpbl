@@ -1,0 +1,74 @@
+.new-statistics {
+  display: flex;
+  gap: 15px;
+  margin-top: 55px;
+  align-items: center;
+
+  &__likes,
+  &__dislikes,
+  &__comments,
+  &__views {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+    span {
+      font-size: 16px;
+      font-weight: 500;
+      line-height: 120%;
+    }
+  }
+
+  &__likes {
+    cursor: pointer;
+    transition: all 0.1s ease;
+
+    span {
+      color: #198754;
+    }
+
+    &:hover {
+      span {
+        color: #77c6a1;
+      }
+
+      svg {
+        path {
+          fill: #77c6a1;
+        }
+      }
+    }
+  }
+
+  &__dislikes {
+    cursor: pointer;
+    transition: all 0.1s ease;
+
+    span {
+      color: #dc3545;
+    }
+
+    &:hover {
+      span {
+        color: #d27575;
+      }
+
+      svg {
+        path {
+          fill: #d27575;
+        }
+      }
+    }
+  }
+
+  &__comments,
+  &__views {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+    span {
+      color: #7f8ebe;
+    }
+  }
+}

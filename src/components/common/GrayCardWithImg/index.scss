@@ -1,0 +1,45 @@
+.gray-card-with-img {
+  background-color: #f3f5fb;
+  display: flex;
+  flex-direction: column;
+  border-radius: 24px;
+  border: 1px solid #f3f5fb;
+  transition: all 0.1s ease-in-out;
+  text-decoration: none;
+
+  &:hover {
+    border-color: #ccd3e7;
+  }
+
+  img {
+    width: 100%;
+    height: auto;
+    border-radius: 24px;
+  }
+
+  &__text {
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+    padding: 15px;
+  }
+
+  &__subdivision,
+  &__date {
+    color: #a6b1d2;
+    font-size: 16px;
+    font-weight: 500;
+  }
+
+  &__title {
+    color: #212529;
+    font-size: 20px;
+    font-weight: 500;
+  }
+
+  &__description {
+    color: #212529;
+    font-size: 16px;
+    font-weight: 400;
+  }
+}

@@ -1,0 +1,63 @@
+.table-employee-card {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+
+  &__avatar {
+    position: relative;
+  }
+
+  &__avatar-after-element {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 15px;
+    height: 15px;
+    display: flex;
+  }
+
+  &__text {
+    p {
+      color: #212529;
+      font-size: 16px;
+    }
+
+    span {
+      display: block;
+      margin-top: 5px;
+      color: #7f8ebe;
+    }
+  }
+
+  &__tasks-btn {
+    background-color: #487cfb;
+    color: #ffffff;
+    font-size: 16px;
+    font-weight: 400;
+    padding: 6px 12px;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+}
+
+tr:last-child td {
+  border: none;
+}
+
+td {
+  color: #41464b !important;
+  font-size: 12.2px;
+  font-weight: 500;
+  padding: 20px 10px !important;
+  white-space: pre-line;
+}
+
+.item-with-avatar {
+  img {
+    border-radius: 50%;
+  }
+
+  p {
+    margin: 5px;
+  }
+}

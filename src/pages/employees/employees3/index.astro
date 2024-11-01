@@ -1,0 +1,53 @@
+---
+import './index.scss';
+
+import Container from '@layouts/Container/index.astro';
+
+import SideMenu from '@components/pages/employees/employees3/SideMenu/index.astro';
+import Search from '@components/common/SearchWithBlueBtn/index.astro';
+import Star from '@components/common/Star/index.astro';
+import BirthdaysBlock from '@components/pages/employees/employees3/BirthdaysBlock/index.astro';
+import YourTeamBlock from '@components/pages/employees/employees3/YourTeamBlock/index.astro';
+---
+
+<body>
+  <Container>
+    <main>
+      <div class="employees-page">
+        <div class="row justify-content-between">
+          <div class="col-md-3">
+            <SideMenu />
+          </div>
+
+          <div class="col-md-9">
+            <div class="employees-header">
+              <Search bgColor="#ffffff" />
+              <Star />
+            </div>
+
+            <div class="employees-content">
+              <div class="row justify-content-between">
+                <div class="col-xxl-8 col-md-12">
+                  <BirthdaysBlock />
+                </div>
+
+                <div class="col-xxl-4 col-md-12">
+                  <YourTeamBlock />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <script>
+        import AirDatepicker from 'air-datepicker';
+        import 'air-datepicker/air-datepicker.css';
+
+        document.addEventListener('DOMContentLoaded', () => {
+          new AirDatepicker('#datepicker', {});
+        });
+      </script>
+    </main>
+  </Container>
+</body>

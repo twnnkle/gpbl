@@ -1,0 +1,67 @@
+---
+import './index.scss';
+
+import Container from '@layouts/Container/index.astro';
+
+import Star from '@components/common/Star/index.astro';
+import NewsCard from '@components/pages/news/news1/NewsCard/index.astro';
+import FilterDropdown from '@components/pages/news/news1/FilterDropdown/index.astro';
+import DatepickerDropdown from '@components/pages/news/news1/DatepickerDropdown/index.astro';
+---
+
+<body>
+  <Container>
+    <main>
+      <div class="news-page">
+        <div class="news-page__header">
+          <h4 class="news-page__title">Новости компании</h4>
+          <Star />
+        </div>
+
+        <div class="news-page__dropdowns">
+          <FilterDropdown />
+          <DatepickerDropdown />
+        </div>
+
+        <div class="row justify-content-between gy-4 news-page__cards">
+          <div class="col-md-6">
+            <NewsCard isBigCard />
+          </div>
+
+          <div class="col-md-3">
+            <NewsCard />
+          </div>
+
+          <div class="col-md-3">
+            <NewsCard />
+          </div>
+
+          <div class="col-md-3">
+            <NewsCard />
+          </div>
+
+          <div class="col-md-3">
+            <NewsCard />
+          </div>
+
+          <div class="col-md-3">
+            <NewsCard />
+          </div>
+
+          <div class="col-md-3">
+            <NewsCard />
+          </div>
+        </div>
+      </div>
+
+      <script>
+        import AirDatepicker from 'air-datepicker';
+        import 'air-datepicker/air-datepicker.css';
+
+        document.addEventListener('DOMContentLoaded', () => {
+          new AirDatepicker('#datepicker', {});
+        });
+      </script>
+    </main>
+  </Container>
+</body>

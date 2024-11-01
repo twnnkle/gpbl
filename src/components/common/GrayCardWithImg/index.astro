@@ -1,0 +1,18 @@
+---
+import './index.scss';
+
+import { Image } from 'astro:assets';
+
+const { img, subdivision, title, description, date } = Astro.props;
+---
+
+<a href="#" class="gray-card-with-img">
+  <Image src={img} width="294" height="184" alt="Картинка карточки" />
+
+  <div class="gray-card-with-img__text">
+    <span class="gray-card-with-img__subdivision">{subdivision}</span>
+    <h4 class="gray-card-with-img__title">{title}</h4>
+    <p class="gray-card-with-img__description">{description}</p>
+    <span class="gray-card-with-img__date">{date}</span>
+  </div>
+</a>

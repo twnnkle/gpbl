@@ -1,0 +1,26 @@
+.subdivision-title {
+  line-height: 100%;
+  color: #212529;
+  font-size: 24px;
+  font-weight: 500;
+}
+
+.subdivision-content {
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+
+  &__count-block {
+    width: 64px;
+    height: 64px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #fecba1;
+    color: #ca6510;
+    font-size: 20px;
+    font-weight: 500;
+    border-radius: 50%;
+    cursor: pointer;
+  }
+}

@@ -1,0 +1,39 @@
+.accordion {
+  margin-left: 15px;
+}
+
+.accordion-step {
+  display: flex;
+  gap: 15px;
+  align-items: flex-end;
+
+  &__cards {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 10px;
+  }
+
+  &__btn {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: #487cfb;
+    margin-bottom: 35px;
+    font-size: 14px;
+    font-weight: 500;
+    cursor: pointer;
+
+    svg {
+      transition: all 0.2s ease-in-out;
+    }
+  }
+}
+
+.accordion-step2 {
+  margin-left: 80px;
+}
+
+.accordion-step3 {
+  margin-left: 160px;
+}

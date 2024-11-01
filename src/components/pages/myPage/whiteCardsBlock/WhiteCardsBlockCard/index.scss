@@ -1,0 +1,26 @@
+.white-cards-block-item {
+  background-color: #ffffff;
+  display: flex;
+  padding: 12px 22px;
+  border-radius: 10px;
+  height: 100%;
+
+  p,
+  span {
+    width: 50%;
+    font-size: 14px;
+    line-height: 150%;
+    color: #212529;
+  }
+
+  p {
+    font-weight: 700;
+    padding-right: 30px;
+  }
+
+  span {
+    font-weight: 400;
+    border-left: 2px solid #d3d6d8;
+    padding-left: 30px;
+  }
+}

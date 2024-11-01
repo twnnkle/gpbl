@@ -1,0 +1,68 @@
+.grayClass {
+  border-color: #f3f5fb !important;
+  background-color: #f3f5fb;
+}
+
+.employee-card:not(.grayClass) {
+  border-color: #ccd3e7;
+}
+
+.employee-card {
+  border: 2px solid;
+  border-radius: 30px;
+  display: flex;
+  gap: 15px;
+  align-items: flex-start;
+  text-decoration: none;
+  width: fit-content;
+  padding: 10px 15px 15px 10px;
+
+  &__avatar {
+    position: relative;
+
+    img {
+      border-radius: 50%;
+    }
+  }
+
+  &__avatar-after-element {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 15px;
+    height: 15px;
+    display: flex;
+  }
+
+  &__info {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+    width: 210px;
+
+    p {
+      color: #212529;
+      font-size: 16px;
+      font-weight: 500;
+      white-space: pre-line;
+    }
+
+    span {
+      color: #7f8ebe;
+      font-size: 14px;
+      font-weight: 500;
+    }
+  }
+
+  &__btn {
+    background-color: #ccd3e7;
+    width: 31px;
+    min-width: 31px;
+    height: 31px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 5px;
+  }
+}

@@ -1,0 +1,38 @@
+---
+import './index.scss';
+
+import Container from '@layouts/Container/index.astro';
+
+import SideMenu from '@components/pages/employees/employees2/SideMenu/index.astro';
+import NavMenu from '@components/pages/employees/employees2/NavMenu/index.astro';
+import Search from '@components/common/SearchWithBlueBtn/index.astro';
+import Star from '@components/common/Star/index.astro';
+import Table from '@components/pages/employees/employees2/table/Table/index.astro';
+---
+
+<body>
+  <Container>
+    <main>
+      <div class="employees-page">
+        <div class="row justify-content-between">
+          <div class="col-md-3">
+            <SideMenu />
+          </div>
+
+          <div class="col-md-9">
+            <div class="employees-header">
+              <div class="employees-header__search-and-nav">
+                <NavMenu />
+                <Search />
+              </div>
+
+              <Star />
+            </div>
+
+            <Table />
+          </div>
+        </div>
+      </div>
+    </main>
+  </Container>
+</body>

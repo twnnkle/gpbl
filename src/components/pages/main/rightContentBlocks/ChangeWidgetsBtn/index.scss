@@ -1,0 +1,25 @@
+.card-row {
+  margin-top: 5px;
+
+  &_gray {
+    padding: 0 12px;
+  }
+}
+
+.change-widgets-btn {
+  margin-top: 25px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 4px;
+  border: 1px solid #ccd3e7;
+  padding: 6px 0;
+  gap: 8px;
+  cursor: pointer;
+
+  p {
+    color: #212529;
+    font-size: 16px;
+    font-weight: 400;
+  }
+}

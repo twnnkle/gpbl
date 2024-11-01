@@ -1,0 +1,42 @@
+.history-2 {
+  margin-top: 40px;
+
+  &__title {
+    font-size: 32px;
+    font-weight: 500;
+    line-height: 120%;
+    color: #212529;
+  }
+
+  &__description-bold {
+    font-weight: 700;
+    margin-top: 15px;
+  }
+
+  &__description {
+    margin-top: 15px;
+  }
+
+  &__description,
+  &__card-description {
+    font-weight: 400;
+  }
+
+  &__description-bold,
+  &__description,
+  &__card-description {
+    font-size: 16px;
+    line-height: 150%;
+    color: #212529;
+  }
+
+  &__cards,
+  &__new-img {
+    margin-top: 40px;
+
+    img {
+      width: 100%;
+      height: auto;
+    }
+  }
+}

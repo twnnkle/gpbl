@@ -1,0 +1,64 @@
+---
+import './index.scss';
+
+import { Image } from 'astro:assets';
+
+import avatar from '@assets/avatar.png';
+import newImg from '@assets/pages/news/news2/new-img.png';
+
+import Table from '@components/pages/news/news2/History2/Table/index.astro';
+import Carousel from '@components/pages/news/news2/History2/Carousel/index.astro';
+---
+
+<div class="history-2">
+  <h4 class="history-2__title">История</h4>
+  <p class="history-2__description-bold">
+    Если действия клиента подпадают под указанные в этих статьях основания, то
+    финансовая организация имеет право расторгнуть ДБС. В этом случае банк также
+    должен отправить юридическому лицу письменное уведомление за 60 дней до
+    фактической даты расторжения. В течение этих 60 дней финансовая организация
+    не имеет права совершать какие-либо операции с р/с, кроме снятия комиссии за
+    обслуживание или начисления процентов.
+  </p>
+  <p class="history-2__description">
+    Если действия клиента подпадают под указанные в этих статьях основания, то
+    финансовая организация имеет право расторгнуть ДБС. В этом случае банк также
+    должен отправить юридическому лицу письменное уведомление за 60 дней до
+    фактической даты расторжения. В течение этих 60 дней финансовая организация
+    не имеет права совершать какие-либо операции с р/с, кроме снятия комиссии за
+    обслуживание или начисления процентов.
+  </p>
+
+  <div class="row justify-content-between gy-4 history-2__cards">
+    <div class="col-md-6">
+      <Image src={newImg} width="308" height="177" alt="Картинка истории" />
+    </div>
+
+    <div class="col-md-6">
+      <p class="history-2__card-description">
+        Закрыть счет юридического лица может как владелец счета, так и банк. По
+        закону клиент имеет право в любой момент отказаться от своего счета в
+        банке, объяснять причины такого решения не требуется.
+      </p>
+    </div>
+
+    <div class="col-md-6">
+      <p class="history-2__card-description">
+        Закрыть счет юридического лица может как владелец счета, так и банк. По
+        закону клиент имеет право в любой момент отказаться от своего счета в
+        банке, объяснять причины такого решения не требуется.
+      </p>
+    </div>
+
+    <div class="col-md-6">
+      <Image src={newImg} width="308" height="177" alt="Картинка истории" />
+    </div>
+  </div>
+
+  <div class="history-2__new-img">
+    <Image src={newImg} width="636" height="357" alt="Картинка истории" />
+  </div>
+
+  <Table />
+  <Carousel />
+</div>

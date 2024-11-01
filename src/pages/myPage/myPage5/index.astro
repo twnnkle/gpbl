@@ -1,0 +1,55 @@
+---
+import './index.scss';
+
+import Container from '@layouts/Container/index.astro';
+
+import Star from '@components/common/Star/index.astro';
+import SideMenu from '@components/pages/myPage/myPage5/SideMenu/index.astro';
+import TableWithComments from '@components/pages/myPage/tableWithComments/TableWithComments/index.astro';
+import WhiteCardsBlock from '@components/pages/myPage/whiteCardsBlock/WhiteCardsBlock/index.astro';
+import SignaturesBlock from '@components/pages/myPage/SignaturesBlock/index.astro';
+import Breadcrumbs from '@components/pages/myPage/Breadcrumbs/index.astro';
+---
+
+<body>
+  <Container>
+    <main>
+      <div class="my-page-page">
+        <div class="row justify-content-between">
+          <div class="col-md-3">
+            <SideMenu />
+          </div>
+
+          <div class="col-md-9">
+            <div class="my-page-page__header">
+              <Breadcrumbs />
+
+              <div class="my-page-page__header-btns">
+                <span>Печатать</span>
+                <Star />
+              </div>
+            </div>
+
+            <h4 class="my-page-page__title">
+              Индивидуальный план работ на испытательный срок
+            </h4>
+
+            <div class="my-page-page__content">
+              <div class="col-xxl-11 col-xl-12">
+                <WhiteCardsBlock />
+              </div>
+
+              <div class="my-page-page__content-table">
+                <TableWithComments />
+              </div>
+
+              <div class="my-page-page__signatures-block">
+                <SignaturesBlock />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+  </Container>
+</body>
