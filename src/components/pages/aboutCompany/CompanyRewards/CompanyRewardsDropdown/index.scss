@@ -1,0 +1,30 @@
+.rewards-dropdown-btn {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  background-color: #ccd3e7;
+  border-radius: 4px;
+  padding: 7px 14px;
+  width: fit-content;
+  margin-top: 15px;
+  cursor: pointer;
+
+  span {
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 150%;
+    color: #212529;
+  }
+}
+
+.rewards-dropdown-item.active {
+  background-color: #ccd3e7 !important;
+}
+
+.rewards-dropdown-item {
+  color: #212529 !important;
+
+	&:active {
+		background-color: #ccd3e7 !important;
+	}
+}

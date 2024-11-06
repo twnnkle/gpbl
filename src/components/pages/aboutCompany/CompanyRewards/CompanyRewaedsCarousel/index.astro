@@ -1,0 +1,153 @@
+---
+import './index.scss';
+
+import { Image } from 'astro:assets';
+
+import rewardImg1 from '@assets/pages/aboutCompany/rewards/1.png';
+import rewardImg2 from '@assets/pages/aboutCompany/rewards/2.png';
+import rewardImg3 from '@assets/pages/aboutCompany/rewards/3.png';
+
+const rewards1 = [
+  {
+    id: 1,
+    image: rewardImg1,
+    title: 'Премия «Лучшие социальные проекты России»',
+    description:
+      'в категории «Проекты по улучшению жилищно-коммунальных услуг»',
+  },
+  {
+    id: 2,
+    image: rewardImg2,
+    title: 'Премия Investment Leaders Awards 2023',
+    description: 'в категории «Инвестиции в бизнес»',
+  },
+  {
+    id: 3,
+    image: rewardImg3,
+    title: 'Диплом «Эксперт РА»',
+    description:
+      'в номинации «1 место по объему нового бизнеса за 9 месяцев 2023 года»',
+  },
+];
+
+const rewards2 = [
+  {
+    id: 1,
+    image: rewardImg3,
+    title: 'Диплом «Эксперт РА»',
+    description:
+      'в номинации «1 место по объему нового бизнеса за 9 месяцев 2023 года»',
+  },
+  {
+    id: 2,
+    image: rewardImg3,
+    title: 'Диплом «Эксперт РА»',
+    description:
+      'в номинации «1 место по объему нового бизнеса за 9 месяцев 2023 года»',
+  },
+];
+---
+
+<div id="carouselNewPage" class="carousel slide rewards-carousel">
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <div class="row flex-nowrap">
+        {
+          rewards1.map((reward) => (
+            <div
+              class="col-4"
+              data-bs-toggle="modal"
+              data-bs-target="#rewardModal"
+              data-title={reward.title}
+              data-description={reward.description}
+              data-image={reward.image.src}
+              style="cursor: pointer;"
+            >
+              <Image
+                src={reward.image}
+                width="275"
+                height="370"
+                alt={reward.title}
+              />
+              <p>{reward.title}</p>
+              <span>{reward.description}</span>
+            </div>
+          ))
+        }
+      </div>
+    </div>
+
+    <div class="carousel-item">
+      <div class="row flex-nowrap">
+        {
+          rewards2.map((reward) => (
+            <div
+              class="col-4"
+              data-bs-toggle="modal"
+              data-bs-target="#rewardModal"
+              data-title={reward.title}
+              data-description={reward.description}
+              data-image={reward.image.src}
+              style="cursor: pointer;"
+            >
+              <Image
+                src={reward.image}
+                width="275"
+                height="370"
+                alt={reward.title}
+              />
+              <p>{reward.title}</p>
+              <span>{reward.description}</span>
+            </div>
+          ))
+        }
+      </div>
+    </div>
+  </div>
+</div>
+
+<div
+  class="modal fade reward-modal"
+  id="rewardModal"
+  tabindex="-1"
+  aria-hidden="true"
+>
+  <div class="modal-dialog modal-lg modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-body">
+        <button
+          type="button"
+          class="close-button"
+          data-bs-dismiss="modal"
+          aria-label="Close"></button>
+        <img class="modal-image img-fluid" src="" alt="" />
+        <p class="modal-description"></p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    const modal = document.getElementById('rewardModal');
+
+    if (modal) {
+      modal.addEventListener('show.bs.modal', (event) => {
+        const button = event.relatedTarget;
+        const title = button.getAttribute('data-title');
+        const description = button.getAttribute('data-description');
+        const image = button.getAttribute('data-image');
+
+        const modalDescription = modal.querySelector('.modal-description');
+        const modalImage = modal.querySelector('.modal-image');
+
+        if (modalDescription)
+          modalDescription.textContent = title + ' ' + description;
+        if (modalImage) {
+          modalImage.src = image;
+          modalImage.alt = title;
+        }
+      });
+    }
+  });
+</script>

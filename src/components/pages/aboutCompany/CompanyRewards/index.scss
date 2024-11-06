@@ -1,0 +1,44 @@
+.company-rewards {
+  margin-top: 70px;
+
+  &__header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+  }
+
+  &__title {
+    font-size: 32px;
+    font-weight: 500;
+    line-height: 120%;
+    color: #212529;
+  }
+
+  &__carousel-btns {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+
+    button {
+      background-color: #e6e9f3;
+      border-radius: 50%;
+      width: 40px;
+      height: 40px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border: unset;
+      transition: all 0.1s ease-in-out;
+      z-index: 3;
+
+      &:hover svg path {
+        fill: gray;
+      }
+
+      &:last-child svg {
+        transform: rotate(180deg);
+      }
+    }
+  }
+}

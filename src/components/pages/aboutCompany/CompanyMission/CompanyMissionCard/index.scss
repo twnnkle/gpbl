@@ -1,0 +1,23 @@
+.company-mission-card {
+  padding: 14px;
+  background-color: #e9f2ff;
+  border-radius: 16px;
+  height: 310px;
+
+  &__label {
+    font-size: 21px;
+    font-weight: 500;
+    color: #212529;
+    line-height: 120%;
+    padding-right: 30px;
+    margin-top: 15px;
+  }
+
+  &__description {
+    margin-top: 10px;
+    font-size: 16px;
+    font-weight: 400;
+    color: #212529;
+    line-height: 120%;
+  }
+}

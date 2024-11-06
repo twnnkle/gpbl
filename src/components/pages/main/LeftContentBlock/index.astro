@@ -3,7 +3,7 @@ import './index.scss';
 
 import cardWithArrowBg1 from '@assets/pages/main/card-with-arrow-bg-1.png';
 
-import Banner from '@components/pages/main/leftContentBlocks/Banner/index.astro';
+import Banner from '@components/common/Banner/index.astro';
 import EmployeeBirthdaysBlock from '@components/pages/main/leftContentBlocks/EmployeeBirthdaysBlock/index.astro';
 import Carousel from '@components/pages/main/leftContentBlocks/Carousel/index.astro';
 import CardWithArrow from '@components/pages/main/leftContentBlocks/CardWithArrow/index.astro';
@@ -29,7 +29,10 @@ import DifferentCards from '@components/pages/main/leftContentBlocks/DifferentCa
 
   <EmployeeBirthdaysBlock />
   <NewsBlock />
-  <Banner />
+  <Banner
+    title="QMM 28/06: программа и другие детали"
+    text="Делимся программой мероприятия и подробностями о регистрации"
+  />
   <GrayCards />
   <DifferentCards />
 </div>

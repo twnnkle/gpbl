@@ -20,6 +20,10 @@
   width: 100%;
 }
 
-.active {
+.filter-dropdown-item.active {
+  background-color: #487cfb !important;
+}
+
+.filter-dropdown-item:active {
   background-color: #487cfb !important;
 }

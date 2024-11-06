@@ -1,0 +1,69 @@
+.left-block {
+	width: 70%;
+	
+  &__title {
+    margin-bottom: 30px;
+    font-size: 56px;
+    font-weight: 500;
+    line-height: auto;
+    color: #212529;
+  }
+
+  img {
+    width: 100%;
+    height: auto;
+  }
+
+  &__description {
+    margin-top: 30px;
+    font-size: 20px;
+    font-weight: 500;
+    line-height: auto;
+    color: #212529;
+  }
+
+  &__gray-block {
+    margin-top: 30px;
+    background-color: #f5f7fc;
+    padding: 24px;
+
+    p {
+      font-size: 16px;
+      font-weight: 500;
+      line-height: 150%;
+      color: #212529;
+    }
+  }
+
+  &-instruction {
+    margin-top: 30px;
+    
+    &__title {
+      font-size: 32px;
+      font-weight: 500;
+      line-height: auto;
+      color: #212529;
+    }
+
+    &__label {
+      margin-top: 15px;
+      font-size: 20px;
+      font-weight: 500;
+      line-height: auto;
+      color: #212529;
+    }
+
+    &__description {
+      margin-top: 15px;
+      font-size: 16px;
+      font-weight: 400;
+      line-height: auto;
+      color: #212529;
+
+      a {
+        font-weight: 500;
+        color: #212529;
+      }
+    }
+  }
+}

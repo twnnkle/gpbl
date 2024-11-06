@@ -1,0 +1,71 @@
+---
+import './index.scss';
+
+import CompanyMissionCard from '@components/pages/aboutCompany/CompanyMission/CompanyMissionCard/index.astro';
+
+import logo1 from '@assets/pages/aboutCompany/missionLogos/1.png';
+import logo2 from '@assets/pages/aboutCompany/missionLogos/2.png';
+import logo3 from '@assets/pages/aboutCompany/missionLogos/3.png';
+import logo4 from '@assets/pages/aboutCompany/missionLogos/4.png';
+import logo5 from '@assets/pages/aboutCompany/missionLogos/5.png';
+import logo6 from '@assets/pages/aboutCompany/missionLogos/6.png';
+---
+
+<div class="company-mission">
+  <h4 class="company-mission__title">Миссия компании</h4>
+
+  <p class="company-mission__subtitle">
+    Наша миссия — обеспечить клиентам максимальное удобство и комфорт при
+    оформлении и обслуживании лизинговых услуг.
+  </p>
+
+  <div class="row gy-4 company-mission__cards">
+    <div class="col-md-4">
+      <CompanyMissionCard
+        icon={logo1}
+        label="Благодарность и уважение"
+        description="Долгосрочные отношения с клиентом для нас важней краткосрочной прибыли"
+      />
+    </div>
+
+    <div class="col-md-4">
+      <CompanyMissionCard
+        icon={logo2}
+        label="Слышать — слушать, уважать — ценить"
+        description="Мы всегда смотрим на ситуацию глазами оппонента и потом предлагаем решения"
+      />
+    </div>
+
+    <div class="col-md-4">
+      <CompanyMissionCard
+        icon={logo3}
+        label="Ответственный подход к делу"
+        description="Мы всегда делаем то, что обещаем; мы обещаем то, что можем сделать"
+      />
+    </div>
+
+    <div class="col-md-4">
+      <CompanyMissionCard
+        icon={logo4}
+        label="Эффективность каждого — результат команды"
+        description="Каждый из нас успешен, если успешна наша Команда. Мы ориентируемся на конечный результат и на общую командную цель"
+      />
+    </div>
+
+    <div class="col-md-4">
+      <CompanyMissionCard
+        icon={logo5}
+        label="Индивидуальный подход к клиенту"
+        description="Мы предлагаем нашим клиентам разные, альтернативные, порой нестандартные варианты решения его задач"
+      />
+    </div>
+
+    <div class="col-md-4">
+      <CompanyMissionCard
+        icon={logo6}
+        label="Ответственный подход к делу"
+        description="Мы готовы меняться, пробовать что-то новое, мы рискуем, учимся и постоянно двигаемся вперед"
+      />
+    </div>
+  </div>
+</div>

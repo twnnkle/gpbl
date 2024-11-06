@@ -1,0 +1,27 @@
+body {
+  background-color: #f3f5fb;
+}
+
+.hr-page {
+  margin-top: 35px;
+
+  &__title {
+    font-size: 40px;
+    font-weight: 700;
+    color: #212529;
+    line-height: auto;
+  }
+
+  &__description {
+    font-size: 16px;
+    font-weight: 500;
+    color: #a6b1d2;
+    line-height: auto;
+    margin-top: 5px;
+    max-width: 450px;
+  }
+
+  &__cards {
+    margin-top: 25px;
+  }
+}

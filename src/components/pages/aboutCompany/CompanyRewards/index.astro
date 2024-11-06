@@ -1,80 +1,15 @@
 ---
 import './index.scss';
 
-import { Image } from 'astro:assets';
+import CompanyRewardsDropdown from '@components/pages/aboutCompany/CompanyRewards/CompanyRewardsDropdown/index.astro';
+import CompanyRewardsCarousel from '@components/pages/aboutCompany/CompanyRewards/CompanyRewaedsCarousel/index.astro';
 ---
 
-<div class="history-carousel">
-  <Image
-    class="history-carousel-active-img"
-    src="https://dummyimage.com/126x71/000000&text=+"
-    width="636"
-    height="357"
-    alt="Активная картинка слайдера"
-  />
+<div class="company-rewards">
+  <div class="company-rewards__header">
+    <h4 class="company-rewards__title">Наши награды</h4>
 
-  <div id="carouselNewPage" class="carousel slide history-carousel-items">
-    <div class="carousel-inner">
-      <div class="carousel-item active">
-        <div class="row flex-nowrap">
-          <div class="col-3">
-            <Image
-              src="https://dummyimage.com/126x71/000000&text=+"
-              width="636"
-              height="357"
-              alt="Картинка слайдера"
-            />
-          </div>
-          <div class="col-3">
-            <Image
-              src="https://dummyimage.com/126x71/FF7F50&text=+"
-              width="636"
-              height="357"
-              alt="Картинка слайдера"
-            />
-          </div>
-          <div class="col-3">
-            <Image
-              src="https://dummyimage.com/126x71/5F9EA0&text=+"
-              width="636"
-              height="357"
-              alt="Картинка слайдера"
-            />
-          </div>
-          <div class="col-3">
-            <Image
-              src="https://dummyimage.com/126x71/FFFACD&text=+"
-              width="636"
-              height="357"
-              alt="Картинка слайдера"
-            />
-          </div>
-        </div>
-      </div>
-
-      <div class="carousel-item">
-        <div class="row flex-nowrap">
-          <div class="col-3">
-            <Image
-              src="https://dummyimage.com/126x71/000000&text=+"
-              width="636"
-              height="357"
-              alt="Картинка слайдера"
-            />
-          </div>
-          <div class="col-3">
-            <Image
-              src="https://dummyimage.com/126x71/FF7F50&text=+"
-              width="636"
-              height="357"
-              alt="Картинка слайдера"
-            />
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <div class="carousel-btns history-carousel-items__btns">
+    <div class="carousel-btns company-rewards__carousel-btns">
       <button
         class="carousel-btn"
         type="button"
@@ -104,6 +39,7 @@ import { Image } from 'astro:assets';
           </defs>
         </svg>
       </button>
+
       <button
         class="carousel-btn carousel-btn_next"
         type="button"
@@ -135,15 +71,7 @@ import { Image } from 'astro:assets';
       </button>
     </div>
   </div>
+
+  <CompanyRewardsDropdown />
+  <CompanyRewardsCarousel />
 </div>
-
-<script>
-  const thumbs = document.querySelectorAll('.history-carousel-items img');
-  const mainImage = document.querySelector('.history-carousel-active-img');
-
-  thumbs.forEach((thumb) => {
-    thumb.addEventListener('click', () => {
-      mainImage.src = thumb.src;
-    });
-  });
-</script>

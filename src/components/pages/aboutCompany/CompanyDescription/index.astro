@@ -1,0 +1,58 @@
+---
+import './index.scss';
+
+import { Image } from 'astro:assets';
+
+import Star from '@components/common/Star/index.astro';
+import CompanyDescriptionCards from '@components/pages/aboutCompany/CompanyDescription/CompanyDescriptionCards/index.astro';
+
+import presidentAvatar from '@assets/pages/aboutCompany/president-avatar.png';
+---
+
+<div class="company-description">
+  <div class="d-flex justify-content-between">
+    <h2 class="company-description__title">О компании</h2>
+
+    <Star />
+  </div>
+
+  <div class="company-description__history">
+    <p>
+      Газпромбанк Лизинг является частью Группы Газпромбанка, которая объединяет
+      крупные компании в финансовой сфере, нефтехимической отрасли,
+      машиностроении и медийном бизнесе.
+    </p>
+
+    <p>
+      Компания была образована в 2003 году и на сегодняшний день занимает
+      лидирующие позиции на рынке лизинга, являясь одной из крупнейших
+      лизинговых компаний России.
+    </p>
+  </div>
+
+  <div class="company-description__quote">
+    <p class="company-description__quote-text">
+      Каждый день мы стремимся держать высокую планку, и у нас есть все, чтобы
+      демонстрировать значимые результаты: опыт, экспертиза, сильная команда,
+      поддержка нашего акционера –Газпромбанка и, конечно, доверие клиентов и
+      партнеров
+    </p>
+
+    <div class="company-description__president">
+      <Image src={presidentAvatar} width={60} height={60} alt="Аватар" />
+
+      <div class="company-description__president-info">
+        <span class="company-description__president-name"
+          >Вячеслав Спиров</span
+        >
+
+        <span class="company-description__president-position"
+          >Вице-Президент Банка ГПБ (АО), <br />Генеральный директор Группы
+          Газпромбанк Лизинг</span
+        >
+      </div>
+    </div>
+  </div>
+
+  <CompanyDescriptionCards />
+</div>

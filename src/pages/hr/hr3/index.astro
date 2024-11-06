@@ -1,0 +1,69 @@
+---
+import './index.scss';
+
+import { Image } from 'astro:assets';
+
+import Container from '@layouts/Container/index.astro';
+
+import Breadcrumbs from '@components/pages/hr/hr3/Breadcrumbs/index.astro';
+import Star from '@components/common/Star/index.astro';
+
+import hrImage from '@assets/pages/hr/hr-big-card-2.png';
+---
+
+<body>
+  <Container>
+    <main>
+      <div class="hr-page">
+        <div class="hr-page__header">
+          <Breadcrumbs />
+          <Star />
+        </div>
+
+        <div class="hr-page__content">
+          <h4 class="hr-page__title">Внутренние коммуникации</h4>
+
+          <Image src={hrImage} width={636} height={192} alt="Картинка статьи" />
+
+          <p class="hr-page__label">Коммуникационные сессии</p>
+
+          <p class="hr-page__description">
+            Коммуникационная сессия - новый формат информирования сотрудников о
+            происходящих в компании ключевых планах и событиях. Формат
+            предполагает проведение ежеквартальных сессий в режиме ВКС
+            продолжительностью до 1 часа, в рамках которых коллеги расскажут о
+            результатах прошлого квартала, планах и проектах на будущее,
+            ключевых событиях, интересных кейсах, а также ответят на вопросы
+            сотрудников.
+          </p>
+
+          <div class="hr-page__tags">
+            <span class="hr-page__tag">Август 2023</span>
+            <span class="hr-page__tag">Июнь 2023</span>
+            <span class="hr-page__tag">Февраль 2023</span>
+            <span class="hr-page__tag">Октябрь 2022</span>
+          </div>
+
+          <p class="hr-page__label">eNPS</p>
+
+          <p class="hr-page__description">
+            eNPS — (от англ. employee Net Promoter Score) индекс
+            удовлетворенности персонала. Основная цель использования — помощь в
+            изучении уровня лояльности и получение «обратной связи» от
+            сотрудников для развития компании и каждого сотрудника.
+          </p>
+
+          <div class="hr-page__tags">
+            <span class="hr-page__tag">eNPS 2022</span>
+          </div>
+
+          <p class="hr-page__text-with-link">
+            Все материалы по внутренним коммуникациям можно найти <a href="#"
+              >в папке на сетевых ресурсах</a
+            >.
+          </p>
+        </div>
+      </div>
+    </main>
+  </Container>
+</body>

@@ -1,0 +1,99 @@
+---
+import './index.scss';
+
+import Container from '@layouts/Container/index.astro';
+
+import HRCard from '@components/pages/hr/hr1/HRCard/index.astro';
+
+import cardIcon1 from '@assets/pages/hr/cards/1.svg';
+import cardIcon2 from '@assets/pages/hr/cards/2.svg';
+import cardIcon3 from '@assets/pages/hr/cards/3.svg';
+import cardIcon4 from '@assets/pages/hr/cards/4.svg';
+import cardIcon5 from '@assets/pages/hr/cards/5.svg';
+import cardIcon6 from '@assets/pages/hr/cards/6.svg';
+import cardIcon7 from '@assets/pages/hr/cards/7.svg';
+import cardIcon8 from '@assets/pages/hr/cards/8.svg';
+import cardIcon9 from '@assets/pages/hr/cards/9.svg';
+import cardIcon10 from '@assets/pages/hr/cards/10.svg';
+import cardIcon11 from '@assets/pages/hr/cards/11.svg';
+import cardIcon12 from '@assets/pages/hr/cards/12.svg';
+import cardIcon13 from '@assets/pages/hr/cards/13.svg';
+import cardIcon14 from '@assets/pages/hr/cards/14.svg';
+import cardIcon15 from '@assets/pages/hr/cards/15.svg';
+---
+
+<body>
+  <Container>
+    <main>
+      <div class="hr-page">
+        <h4 class="hr-page__title">HR</h4>
+        <p class="hr-page__description">
+          Раздел, где ты найдешь основную информацию по отпускам,
+          компенсационному пакету и другим вопросам
+        </p>
+
+        <div class="row row-cols-xl-5 row-cols-md-4 gy-4 hr-page__cards">
+          <div class="col">
+            <HRCard label="Отпуск" icon={cardIcon1} />
+          </div>
+
+          <div class="col">
+            <HRCard label="Отпуск" icon={cardIcon2} />
+          </div>
+
+          <div class="col">
+            <HRCard label="Отпуск" icon={cardIcon3} />
+          </div>
+
+          <div class="col">
+            <HRCard label="Отпуск" icon={cardIcon4} />
+          </div>
+
+          <div class="col">
+            <HRCard label="Отпуск" icon={cardIcon5} />
+          </div>
+
+          <div class="col">
+            <HRCard label="Отпуск" icon={cardIcon6} />
+          </div>
+
+          <div class="col">
+            <HRCard label="Отпуск" icon={cardIcon7} />
+          </div>
+
+          <div class="col">
+            <HRCard label="Отпуск" icon={cardIcon8} />
+          </div>
+
+          <div class="col">
+            <HRCard label="Отпуск" icon={cardIcon9} />
+          </div>
+
+          <div class="col">
+            <HRCard label="Отпуск" icon={cardIcon10} />
+          </div>
+
+          <div class="col">
+            <HRCard label="Отпуск" icon={cardIcon11} />
+          </div>
+
+          <div class="col">
+            <HRCard label="Отпуск" icon={cardIcon12} />
+          </div>
+
+          <div class="col">
+            <HRCard label="Отпуск" icon={cardIcon13} />
+          </div>
+
+          <div class="col">
+            <HRCard label="Отпуск" icon={cardIcon14} />
+          </div>
+
+          <div class="col">
+            <HRCard label="Отпуск" icon={cardIcon15} />
+          </div>
+        </div>
+      </div>
+    </main>
+  </Container>
+</body>

@@ -1,0 +1,98 @@
+.rewards-carousel {
+  margin-top: 30px;
+
+  .carousel-item {
+    cursor: pointer;
+    p {
+      margin-top: 15px;
+      font-size: 20px;
+      font-weight: 500;
+      line-height: 120%;
+      color: #212529;
+    }
+
+    span {
+      display: block;
+      margin-top: 10px;
+      font-size: 16px;
+      font-weight: 400;
+      line-height: 150%;
+      color: #212529;
+    }
+  }
+}
+
+.fade.reward-modal {
+  background-color: rgba(0, 0, 0, 0.7);
+}
+
+.reward-modal {
+  .modal-dialog {
+    max-width: 500px;
+    margin: 1.75rem auto;
+  }
+
+  .modal-content {
+    background: transparent;
+    border: none;
+  }
+
+  .modal-body {
+    padding: 0;
+    position: relative;
+
+		.close-button {
+			position: absolute;
+			top: 15px;
+			right: 15px;
+			z-index: 1;
+			background: rgba(0, 0, 0, 0.7);
+			border: none;
+			border-radius: 50%;
+			width: 32px;
+			height: 32px;
+			padding: 0;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			cursor: pointer;
+			transition: background-color 0.2s;
+	
+			&:hover {
+				background: rgba(0, 0, 0, 0.9);
+			}
+	
+			&::before,
+			&::after {
+				content: '';
+				position: absolute;
+				width: 16px;
+				height: 2px;
+				background-color: white;
+			}
+	
+			&::before {
+				transform: rotate(45deg);
+			}
+	
+			&::after {
+				transform: rotate(-45deg);
+			}
+		}
+
+    .modal-image {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+  
+    .modal-description {
+      position: absolute;
+      bottom: -70px;
+      left: 0;
+      color: white;
+      padding: 15px;
+      margin: 0;
+    }
+  }
+}

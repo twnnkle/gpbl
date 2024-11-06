@@ -1,0 +1,28 @@
+---
+import './index.scss';
+
+import Container from '@layouts/Container/index.astro';
+
+import Breadcrumbs from '@components/pages/hr/hr2/Breadcrumbs/index.astro';
+import Star from '@components/common/Star/index.astro';
+import LeftBlock from '@components/pages/hr/hr2/LeftBlock/index.astro';
+import RightBlock from '@components/pages/hr/hr2/RightBlock/index.astro';
+---
+
+<body>
+  <Container>
+    <main>
+      <div class="hr-page">
+        <div class="hr-page__header">
+          <Breadcrumbs />
+          <Star />
+        </div>
+
+        <div class="hr-page__content">
+          <LeftBlock />
+          <RightBlock />
+        </div>
+      </div>
+    </main>
+  </Container>
+</body>

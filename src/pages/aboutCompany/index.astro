@@ -1,0 +1,22 @@
+---
+import './index.scss';
+
+import Container from '@layouts/Container/index.astro';
+import CompanyDescription from '@components/pages/aboutCompany/CompanyDescription/index.astro';
+import CompanyMission from '@components/pages/aboutCompany/CompanyMission/index.astro';
+import CompanyGroupCards from '@components/pages/aboutCompany/CompanyGroupCards/index.astro';
+import CompanyRewards from '@components/pages/aboutCompany/CompanyRewards/index.astro';
+---
+
+<body>
+  <Container>
+    <main>
+      <div class="about-company-page">
+        <CompanyDescription />
+        <CompanyMission />
+        <CompanyGroupCards />
+        <CompanyRewards />
+      </div>
+    </main>
+  </Container>
+</body>

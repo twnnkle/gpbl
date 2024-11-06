@@ -1,0 +1,17 @@
+.link-card {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+	justify-content: space-between;
+	background-color: #f3f5fb;
+	border-radius: 24px;
+	padding: 28px 18px;
+	text-decoration: none;
+
+	&__text {
+		color: #212529;
+		font-size: 20px;
+		font-weight: 500;
+		line-height: 120%;
+	}
+}

@@ -1,0 +1,87 @@
+---
+import './index.scss';
+
+import CompanyGroupCard from './CompanyGroupCard/index.astro';
+
+import bgImg1 from '@assets/pages/aboutCompany/groupCards/backgrounds/1.png';
+import bgImg2 from '@assets/pages/aboutCompany/groupCards/backgrounds/2.png';
+import bgImg3 from '@assets/pages/aboutCompany/groupCards/backgrounds/3.png';
+import bgImg4 from '@assets/pages/aboutCompany/groupCards/backgrounds/4.png';
+import bgImg5 from '@assets/pages/aboutCompany/groupCards/backgrounds/5.png';
+import logo1 from '@assets/pages/aboutCompany/groupCards/logos/1.png';
+import logo2 from '@assets/pages/aboutCompany/groupCards/logos/2.png';
+import logo3 from '@assets/pages/aboutCompany/groupCards/logos/3.png';
+import logo4 from '@assets/pages/aboutCompany/groupCards/logos/4.png';
+import logo5 from '@assets/pages/aboutCompany/groupCards/logos/5.png';
+
+const logos = [
+  {
+    logo: logo1,
+    width: 226,
+  },
+  {
+    logo: logo2,
+    width: 145,
+  },
+  {
+    logo: logo3,
+    width: 176,
+  },
+  {
+    logo: logo4,
+    width: 153,
+  },
+  {
+    logo: logo5,
+    width: 68,
+  },
+];
+---
+
+<div class="group-cards">
+  <h4 class="group-cards__title">
+    Газпромбанк Лизинг входит в Группу Газпромбанк Лизинг
+  </h4>
+
+  <div class="row gy-4">
+    <div class="col-md-4">
+      <CompanyGroupCard
+        logo={logos[0]}
+        label="Для крупного и среднего бизнеса"
+        backgroundImg={bgImg1.src}
+      />
+    </div>
+
+    <div class="col-md-4">
+      <CompanyGroupCard
+        logo={logos[1]}
+        label="Авто и спецтехника для малого и среднего бизнеса"
+        backgroundImg={bgImg2.src}
+      />
+    </div>
+
+    <div class="col-md-4">
+      <CompanyGroupCard
+        logo={logos[2]}
+        label="Авто и спецтехника для малого и среднего бизнеса"
+        backgroundImg={bgImg3.src}
+      />
+    </div>
+
+    <div class="col-md-4">
+      <CompanyGroupCard
+        logo={logos[3]}
+        label="Организация сервисных услуг по страхованию"
+        backgroundImg={bgImg4.src}
+      />
+    </div>
+
+    <div class="col-md-4">
+      <CompanyGroupCard
+        logo={logos[4]}
+        label="Центр компетенций по цифровой трансформации"
+        backgroundImg={bgImg5.src}
+      />
+    </div>
+  </div>
+</div>

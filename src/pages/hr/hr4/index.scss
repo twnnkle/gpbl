@@ -1,0 +1,63 @@
+.hr-page {
+  margin: 50px 50px 50px 340px;
+
+  @media (max-width: 1300px) {
+    margin: 50px 50px 50px 200px;
+  }
+
+  &__header {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+    width: 100%;
+    align-items: center;
+  }
+
+  &__content {
+    width: 70%;
+    margin-top: 25px;
+  }
+
+  &__title {
+    margin-bottom: 30px;
+    font-size: 56px;
+    font-weight: 500;
+    line-height: auto;
+    color: #212529;
+  }
+
+  img {
+    width: 100%;
+    height: auto;
+  }
+
+  &__description {
+    margin-top: 30px;
+    font-size: 20px;
+    font-weight: 500;
+    line-height: auto;
+    color: #212529;
+  }
+
+  &__subtitle {
+    margin-top: 40px;
+    font-size: 32px;
+    font-weight: 500;
+    line-height: auto;
+    color: #212529;
+  }
+
+  &__info-cards {
+    margin-top: 30px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+  }
+
+  &__link-cards {
+    margin-top: 25px;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+  }
+}

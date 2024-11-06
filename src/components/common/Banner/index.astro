@@ -1,0 +1,13 @@
+---
+import './index.scss';
+
+const { title, text, btnText } = Astro.props;
+---
+
+<a href="#" class="banner">
+  <div class="banner__title">{title}</div>
+
+  <div class="banner__text">{text}</div>
+
+  {btnText && <span class="banner__btn">{btnText}</span>}
+</a>

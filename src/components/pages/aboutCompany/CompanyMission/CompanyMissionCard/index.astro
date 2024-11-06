@@ -1,0 +1,15 @@
+---
+import './index.scss';
+
+const { icon, label, description } = Astro.props;
+
+import { Image } from 'astro:assets';
+---
+
+<div class="company-mission-card">
+  <Image src={icon} width={80} height={80} alt="Иконка карточки" />
+
+  <p class="company-mission-card__label">{label}</p>
+
+  <p class="company-mission-card__description">{description}</p>
+</div>

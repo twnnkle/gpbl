@@ -1,0 +1,14 @@
+.about-company-page {
+  margin: 55px 192px 55px 232px;
+
+  @media (max-width: 1399px) {
+    margin: 55px 0 55px 0;
+  }
+
+  &__header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+  }
+}

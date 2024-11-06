@@ -1,0 +1,77 @@
+.company-description {
+  display: flex;
+  flex-direction: column;
+  gap: 72px;
+
+  &__title {
+    font-size: 56px;
+    line-height: 120%;
+    font-weight: 500;
+    color: #212529;
+  }
+
+  &__history {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+
+    p {
+      font-size: 16px;
+      line-height: 150%;
+      font-weight: 400;
+      color: #212529;
+    }
+  }
+
+  &__quote {
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+    padding: 24px;
+    background: #f5f7fc;
+  }
+
+  &__quote-text {
+    font-size: 20px;
+    line-height: 120%;
+    color: #212529;
+    font-weight: 500;
+  }
+
+  &__president {
+    display: flex;
+    gap: 14px;
+
+    img {
+      width: 60px;
+      height: 60px;
+      border-radius: 50%;
+    }
+
+    &-info {
+      display: flex;
+      flex-direction: column;
+      gap: 5px;
+      font-weight: 500;
+    }
+
+    &-name {
+      max-width: 50px;
+      color: rgba(33, 37, 41, 1);
+      font-size: 16px;
+      line-height: 19px;
+    }
+
+    &-position {
+      max-width: 400px;
+      color: #7f8ebe;
+      font-size: 14px;
+      line-height: 21px;
+    }
+  }
+
+  &__features {
+    padding: 0 12px;
+    --bs-gutter-y: 28px;
+  }
+}

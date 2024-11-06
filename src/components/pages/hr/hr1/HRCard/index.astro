@@ -1,0 +1,13 @@
+---
+import './index.scss';
+
+const { label, icon } = Astro.props;
+
+import { Image } from 'astro:assets';
+---
+
+<div class="hr-card">
+  <p class="hr-card__label">{label}</p>
+
+  <Image src={icon} alt={label} />
+</div>

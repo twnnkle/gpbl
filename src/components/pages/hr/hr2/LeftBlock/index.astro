@@ -1,0 +1,56 @@
+---
+import './index.scss';
+
+import { Image } from 'astro:assets';
+
+import hrImage from '@assets/pages/hr/hr-big-card-1.png';
+---
+
+<div class="left-block">
+  <h4 class="left-block__title">Отпуск</h4>
+
+  <Image src={hrImage} width={636} height={192} alt="Картинка статьи" />
+
+  <p class="left-block__description">
+    Работнику ежегодно предоставяется оплачиваемый отпуск продолжительностью 29
+    календарных дней
+  </p>
+
+  <div class="left-block__gray-block">
+    <p>
+      Обращаем ваше внимание, что на время отпуска требуется передать дела
+      коллегам, оставить все необходимые оригиналы документов, поставить
+      автоответ в почте. Во вложенных файлах к данной статье вы сможете найти
+      инструкции, по передаче дел на время отпуска.
+    </p>
+  </div>
+
+  <div class="left-block-instruction">
+    <p class="left-block-instruction__title">Как пойти в отпуск</p>
+
+    <p class="left-block-instruction__label">По утвержденному графику</p>
+
+    <p class="left-block-instruction__description">
+      Пойти в отпуск по утвержденному графику, тогда необходимо распечатать,
+      подписать и передать в Отдел персонала Уведомление о начале отпуска,
+      которое придет Вам на почту за 2 недели до даты начала отпуска.
+    </p>
+
+    <p class="left-block-instruction__label">Не по графику</p>
+
+    <p class="left-block-instruction__description">
+      Пойти в ежегодный оплачиваемый отпуск не по графику, оформите
+      <a href="#">Заявление на ежегодный отпуск</a>, согласуйте его с
+      Непосредственным руководителем. При отпуске на 14 календарных дней можно
+      получить материальную помощь при условии, что с даты приема уже прошло 6
+      месяцев.
+    </p>
+
+    <p class="left-block-instruction__label">За свой счет</p>
+
+    <p class="left-block-instruction__description">
+      Оформите <a href="#">Заявление на отпуск за свой счет</a>, согласуйте его
+      с Непосредственным руководителем.
+    </p>
+  </div>
+</div>

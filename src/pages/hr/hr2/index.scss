@@ -1,0 +1,21 @@
+.hr-page {
+  margin: 50px 50px 50px 340px;
+
+  @media (max-width: 1300px) {
+    margin: 50px 50px 50px 200px;
+  }
+
+  &__header {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+    width: 100%;
+		align-items: center;
+  }
+
+	&__content {
+		display: flex;
+		justify-content: space-between;
+    margin-top: 25px;
+	}
+}

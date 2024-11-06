@@ -22,4 +22,17 @@
     margin-top: 10px;
     margin-bottom: 20px;
   }
+
+  &__btn {
+    display: flex;
+    width: fit-content;
+    align-items: center;
+    height: 38px;
+    padding: 0 12px;
+    border-radius: 4px;
+    border: 1px solid #ffffff;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 150%;
+  }
 }
