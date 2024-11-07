@@ -1,0 +1,35 @@
+---
+import './index.scss';
+
+import Container from '@layouts/Container/index.astro';
+
+import SideMenu from '@components/pages/questionAndAnswer/SideMenu/index.astro';
+import Breadcrumbs from '@components/pages/questionAndAnswer/Breadcrumbs/index.astro';
+import Star from '@components/common/Star/index.astro';
+import QuestionsBlock from '@components/pages/questionAndAnswer/QuestionsBlock/index.astro';
+import ContactBlock from '@components/pages/questionAndAnswer/ContactBlock/index.astro';
+---
+
+<body>
+  <Container>
+    <main>
+      <div class="question-and-answer-page">
+        <div class="row justify-content-between">
+          <div class="col-md-3">
+            <SideMenu />
+          </div>
+
+          <div class="col-md-9">
+            <div class="question-and-answer-page__header">
+              <Breadcrumbs />
+              <Star />
+            </div>
+
+            <QuestionsBlock />
+            <ContactBlock />
+          </div>
+        </div>
+      </div>
+    </main>
+  </Container>
+</body>
