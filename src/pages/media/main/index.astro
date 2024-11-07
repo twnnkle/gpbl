@@ -1,0 +1,121 @@
+---
+import './_index.scss';
+
+import Container from '@layouts/Container/index.astro';
+import Star from '@components/common/Star/index.astro';
+import MediaCard from '@components/pages/media/main/MediaCard/index.astro';
+import EventCard from '@components/pages/media/common/EventCard/index.astro';
+
+const medias = [
+  {
+    link: '/media/calendar',
+    imageLink: '/src/assets/pages/media/main/calendar.svg',
+    title: 'Календарь мероприятий',
+  },
+  {
+    link: '#',
+    imageLink: '/src/assets/pages/media/main/clipboard-data-fill.svg',
+    title: 'Обзоры СМИ',
+  },
+  {
+    link: '#',
+    imageLink: '/src/assets/pages/media/main/file-earmark-fill.svg',
+    title: 'Отчеты пресс-службы',
+  },
+  {
+    link: '#',
+    imageLink: '/src/assets/pages/media/main/person-heart.svg',
+    title: 'Спецпроекты',
+  },
+  {
+    link: '#',
+    imageLink: '/src/assets/pages/media/main/briefcase-fill.svg',
+    title: 'Деловые мероприятия',
+  },
+  {
+    link: '#',
+    imageLink: '/src/assets/pages/media/main/filetype-doc.svg',
+    title: 'Информационная политика',
+  },
+];
+
+const events = [
+  {
+    link: '#',
+    imageLink: '/src/assets/pages/media/calendar/event-4.png',
+    period: 'с 05.12 по 06.12',
+    title: 'XXII Российский облигационный конгресс',
+    background: 'transparent',
+    categories: [
+      {
+        link: '#',
+        title: 'Подробнее',
+      },
+    ],
+  },
+  {
+    link: '#',
+    imageLink: '/src/assets/pages/media/calendar/event-4.png',
+    period: 'с 05.12 по 06.12',
+    title: 'Круглый стол по актуальным вопросам',
+    background: 'transparent',
+    categories: [
+      {
+        link: '#',
+        title: 'Подробнее',
+      },
+    ],
+  },
+];
+---
+
+<body>
+  <Container>
+    <main>
+      <div class="main-page">
+        <section class="media-calendar-star">
+          <div class="row flex-end g-0">
+            <div class="col-12">
+              <Star />
+            </div>
+          </div>
+        </section>
+
+        <section class="media-main-content">
+          <div class="media-main-content__list">
+            {
+              medias.map((media) => (
+                <div class="media-main-content__list__item">
+                  <MediaCard
+                    link={media.link}
+                    imageLink={media.imageLink}
+                    title={media.title}
+                  />
+                </div>
+              ))
+            }
+          </div>
+          <div class="media-main-content__events">
+            <div class="media-main-content__events__title">
+              Ближайшие мероприятия
+            </div>
+            <div class="media-main-content__events__list">
+              {
+                events.map((event) => (
+                  <EventCard
+                    link={event.link}
+                    imageLink={event.imageLink}
+                    title={event.title}
+                    background={event.background}
+                    period={event.period}
+                    categories={event.categories}
+                  />
+                ))
+              }
+            </div>
+          </div>
+        </section>
+      </div>
+    </main>
+  </Container>
+</body>
