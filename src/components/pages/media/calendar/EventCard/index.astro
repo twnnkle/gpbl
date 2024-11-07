@@ -1,0 +1,54 @@
+---
+import { Image } from 'astro:assets';
+import type { ImageMetadata } from 'astro';
+import './index.scss';
+
+interface Props {
+  link: string;
+  imageLink: string;
+  period: string;
+  title: string;
+  categories: { link: string; title: string }[];
+}
+
+const { link, imageLink, title, categories, period } = Astro.props;
+
+const images = import.meta.glob<{ default: ImageMetadata }>(
+  '/src/assets/**/*.{jpeg,jpg,png,gif}'
+);
+
+const fallbackImage = '/src/assets/pages/media/calendar/empty.png';
+
+const image = images[imageLink] ? images[imageLink]() : fallbackImage;
+---
+
+<div class="event-card">
+  <a href={link}>
+    <div class="event-card__image">
+      <Image
+        class="event-card__image__poster"
+        src={image}
+        alt={title}
+        width="306"
+        height="191"
+      />
+    </div>
+  </a>
+  <div class="event-card__content">
+    <div class="event-card__content__period">{period}</div>
+    <a class="event-card__content__header" href={link}>
+      {title}
+    </a>
+    <div class="event-card__content__categories">
+      <ul>
+        {
+          categories.map((category) => (
+            <li>
+              <a href={category.link}>{category.title}</a>
+            </li>
+          ))
+        }
+      </ul>
+    </div>
+  </div>
+</div>

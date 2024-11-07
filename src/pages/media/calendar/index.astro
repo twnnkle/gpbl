@@ -1,0 +1,246 @@
+---
+import { Image } from 'astro:assets';
+import './_index.scss';
+
+import Arrow from '@assets/arrow.svg';
+
+import Container from '@layouts/Container/index.astro';
+import Breadcrumbs from '@components/pages/media/calendar/Breadcrumbs/index.astro';
+import Search from '@components/pages/media/calendar/Search/index.astro';
+import EventCard from '@components/pages/media/calendar/EventCard/index.astro';
+
+const currentEvents = [
+  {
+    link: '#',
+    imageLink: '/src/assets/pages/media/calendar/event-1.png',
+    period: 'с 05.12 по 06.12',
+    title: 'Круглый стол по актуальным вопросам',
+    categories: [
+      {
+        link: '#',
+        title: 'Программа',
+      },
+      {
+        link: '#',
+        title: 'Сайт мероприятия',
+      },
+    ],
+  },
+  {
+    link: '#',
+    imageLink: '/src/assets/pages/media/calendar/event-2.png',
+    period: 'с 05.12 по 06.12',
+    title: 'Круглый стол по актуальным вопросам',
+    categories: [
+      {
+        link: '#',
+        title: 'Программа',
+      },
+      {
+        link: '#',
+        title: 'Сайт мероприятия',
+      },
+    ],
+  },
+  {
+    link: '#',
+    imageLink: '/src/assets/pages/media/calendar/event-3.png',
+    period: 'с 05.12 по 06.12',
+    title: 'Круглый стол по актуальным вопросам',
+    categories: [
+      {
+        link: '#',
+        title: 'Программа',
+      },
+      {
+        link: '#',
+        title: 'Сайт мероприятия',
+      },
+    ],
+  },
+  {
+    link: '#',
+    imageLink: '/src/assets/pages/media/calendar/event-4.png',
+    period: 'с 05.12 по 06.12',
+    title: 'Круглый стол по актуальным вопросам',
+    categories: [
+      {
+        link: '#',
+        title: 'Программа',
+      },
+      {
+        link: '#',
+        title: 'Сайт мероприятия',
+      },
+    ],
+  },
+  {
+    link: '#',
+    imageLink: '/src/assets/pages/media/calendar/event-1.png',
+    period: 'с 05.12 по 06.12',
+    title: 'Круглый стол по актуальным вопросам',
+    categories: [
+      {
+        link: '#',
+        title: 'Программа',
+      },
+      {
+        link: '#',
+        title: 'Сайт мероприятия',
+      },
+    ],
+  },
+  {
+    link: '#',
+    imageLink: '/src/assets/pages/media/calendar/event-2.png',
+    period: 'с 05.12 по 06.12',
+    title: 'Круглый стол по актуальным вопросам',
+    categories: [
+      {
+        link: '#',
+        title: 'Программа',
+      },
+      {
+        link: '#',
+        title: 'Сайт мероприятия',
+      },
+    ],
+  },
+  {
+    link: '#',
+    imageLink: '/src/assets/pages/media/calendar/event-3.png',
+    period: 'с 05.12 по 06.12',
+    title: 'Круглый стол по актуальным вопросам',
+    categories: [
+      {
+        link: '#',
+        title: 'Программа',
+      },
+      {
+        link: '#',
+        title: 'Сайт мероприятия',
+      },
+    ],
+  },
+  {
+    link: '#',
+    imageLink: '/src/assets/pages/media/calendar/event-4.png',
+    period: 'с 05.12 по 06.12',
+    title: 'Круглый стол по актуальным вопросам',
+    categories: [
+      {
+        link: '#',
+        title: 'Программа',
+      },
+      {
+        link: '#',
+        title: 'Сайт мероприятия',
+      },
+    ],
+  },
+];
+---
+
+<body>
+  <Container>
+    <main>
+      <div class="main-page">
+        <section class="media-calendar-breadcrumbs">
+          <div class="row g-0">
+            <div class="col-12">
+              <Breadcrumbs />
+            </div>
+          </div>
+        </section>
+
+        <section class="media-calendar-header">
+          <div class="row g-0">
+            <div class="col-12">
+              <h2>Календарь мероприятий</h2>
+            </div>
+          </div>
+        </section>
+
+        <section class="media-calendar-search">
+          <div class="row g-0">
+            <div class="col-12">
+              <div class="media-calendar-search__content">
+                <div class="media-calendar-search__content__input">
+                  <Search placeholder="Поиск..." bgColor="#ffffff" />
+                </div>
+                <div
+                  class="media-calendar-search__content__period"
+                  id="periodSearch"
+                >
+                  <div class="media-calendar-search__content__period__date">
+                    Выбрать период дат
+                  </div>
+                  <div class="media-calendar-search__content__period__icon">
+                    <Image
+                      src={Arrow}
+                      width={10}
+                      height={10}
+                      alt="Выбрать дату"
+                    />
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="media-calendar-events">
+          <div class="media-calendar-events__current">
+            <div class="row g-0">
+              <div class="col-12">
+                <h3>Актуальные мероприятия</h3>
+              </div>
+            </div>
+            <div class="row g-0">
+              <div class="col-12">
+                <div class="media-calendar-events__current__list">
+                  {
+                    currentEvents.map((item) => (
+                      <EventCard
+                        imageLink={item.imageLink}
+                        title={item.title}
+                        link={item.link}
+                        period={item.period}
+                        categories={item.categories}
+                      />
+                    ))
+                  }
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="media-calendar-events__previous">
+            <div class="row g-0">
+              <div class="col-12">
+                <h3>Прошедшие мероприятия</h3>
+              </div>
+            </div>
+            <div class="row g-0">
+              <div class="col-12">
+                <div class="media-calendar-events__previous__list">
+                  {
+                    currentEvents.map((item) => (
+                      <EventCard
+                        imageLink={item.imageLink}
+                        title={item.title}
+                        link={item.link}
+                        period={item.period}
+                        categories={item.categories}
+                      />
+                    ))
+                  }
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+    </main>
+  </Container>
+</body>
