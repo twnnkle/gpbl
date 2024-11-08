@@ -1,0 +1,55 @@
+---
+import './_index.scss';
+
+import Container from '@layouts/Container/index.astro';
+import Breadcrumbs from '@components/pages/media/common/Breadcrumbs/index.astro';
+import ProjectList from '@components/pages/media/special-projects/ProjectList/index.astro';
+
+const breadcrumbs = [
+  {
+    label: 'Медиа',
+    href: '/media/main',
+  },
+  {
+    label: 'Спецпроекты',
+  },
+];
+
+const projects = [
+  { title: '20 лет', imageLink: '/src/assets/pages/media/special-projects/1.png' },
+  { title: 'Лицо бренда', imageLink: '/src/assets/pages/media/special-projects/2.png' },
+  { title: 'Интервью сотрудников ', imageLink: '/src/assets/pages/media/special-projects/3.png' },
+];
+---
+
+<body>
+  <Container>
+    <main>
+      <div class="main-page">
+        <section class="media-special-projects-breadcrumbs">
+          <div class="row">
+            <div class="col-12">
+              <Breadcrumbs breadcrumbs={breadcrumbs} />
+            </div>
+          </div>
+        </section>
+
+        <section class="media-special-projects-header">
+          <div class="row">
+            <div class="col-12">
+              <h2>Спецпроекты</h2>
+            </div>
+          </div>
+        </section>
+
+        <section class="media-special-projects-list">
+          <div class="row">
+            <div class="col-12">
+              <ProjectList projects={projects}/>
+            </div>
+          </div>
+        </section>
+      </div>
+    </main>
+  </Container>
+</body>
