@@ -1,0 +1,170 @@
+---
+import './_index.scss';
+
+import { Image } from 'astro:assets';
+
+import Arrow from '@assets/arrow.svg';
+
+import Container from '@layouts/Container/index.astro';
+import SideMenu from '@components/pages/media/common/SideMenu/index.astro';
+import Breadcrumbs from '@components/pages/media/common/Breadcrumbs/index.astro';
+import ImageCard from '@components/pages/media/common/ImageCard/index.astro';
+import DocumentList from '@components/pages/media/common/DocumentList/index.astro';
+
+const breadcrumbs = [
+  {
+    label: 'Медиа',
+    href: '#',
+  },
+  {
+    label: 'Обзоры СМИ',
+    href: '/media/main',
+  },
+  {
+    label: 'Новости российского рынка лизинга',
+  },
+];
+
+const menu = [
+  {
+    label: 'Новости российского рынка лизинга',
+    active: true,
+  },
+  {
+    label: 'Новости зарубежного рынка лизинга',
+    active: false,
+  },
+  {
+    label: 'Новости рынка лизинга стран СНГ',
+    active: false,
+  },
+];
+
+const imageCard = {
+  title: 'Новости российского рынка лизинга',
+  imageLink: '/src/assets/pages/media/reviews/1.jpg',
+};
+
+const documents = [
+  {
+    title: '22.12 - 0.3.11.2023 года',
+    size: '140 мб',
+    format: 'PDF',
+    date: '21.11.2022',
+  },
+  {
+    title: '22.12 - 0.3.11.2023 года',
+    size: '140 мб',
+    format: 'PDF',
+    date: '21.11.2022',
+  },
+  {
+    title: '22.12 - 0.3.11.2023 года',
+    size: '140 мб',
+    format: 'PDF',
+    date: '21.11.2022',
+  },
+  {
+    title: '22.12 - 0.3.11.2023 года',
+    size: '140 мб',
+    format: 'PDF',
+    date: '21.11.2022',
+  },
+  {
+    title: '22.12 - 0.3.11.2023 года',
+    size: '140 мб',
+    format: 'PDF',
+    date: '21.11.2022',
+  },
+  {
+    title: '22.12 - 0.3.11.2023 года',
+    size: '140 мб',
+    format: 'PDF',
+    date: '21.11.2022',
+  },
+  {
+    title: '22.12 - 0.3.11.2023 года',
+    size: '140 мб',
+    format: 'PDF',
+    date: '21.11.2022',
+  },
+  {
+    title: '22.12 - 0.3.11.2023 года',
+    size: '140 мб',
+    format: 'PDF',
+    date: '21.11.2022',
+  },
+  {
+    title: '22.12 - 0.3.11.2023 года',
+    size: '140 мб',
+    format: 'PDF',
+    date: '21.11.2022',
+  },
+  {
+    title: '22.12 - 0.3.11.2023 года',
+    size: '140 мб',
+    format: 'PDF',
+    date: '21.11.2022',
+  }
+];
+---
+
+<body>
+  <Container>
+    <main>
+      <div class="main-page">
+        <section class="media-reviews">
+          <div class="row justify-content-between">
+            <div class="col-md-3">
+              <SideMenu items={menu} />
+            </div>
+
+            <div class="col-md-9">
+              <div class="media-reviews__content">
+                <Breadcrumbs breadcrumbs={breadcrumbs} />
+
+                <div class="media-reviews__content__image-card">
+                  <ImageCard
+                    title={imageCard.title}
+                    imageLink={imageCard.imageLink}
+                  />
+                </div>
+                <div class="media-reviews__content__filter">
+                  <div class="media-reviews__content__filter__year">
+                    <div class="media-reviews__content__filter__year__date">
+                      2024 год
+                    </div>
+                    <div class="media-reviews__content__filter__year__icon">
+                      <Image
+                        src={Arrow}
+                        width={10}
+                        height={10}
+                        alt="Выбрать год"
+                      />
+                    </div>
+                  </div>
+                  <div class="media-reviews__content__filter__period">
+                    <div class="media-reviews__content__filter__period__date">
+                      Выбрать период дат
+                    </div>
+                    <div class="media-reviews__content__filter__period__icon">
+                      <Image
+                        src={Arrow}
+                        width={10}
+                        height={10}
+                        alt="Выбрать период"
+                      />
+                    </div>
+                  </div>
+                </div>
+                <div class="media-reviews__content__documents">
+                  <DocumentList documents={documents} />
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+    </main>
+  </Container>
+</body>

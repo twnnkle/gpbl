@@ -5,9 +5,19 @@ import './_index.scss';
 import Arrow from '@assets/arrow.svg';
 
 import Container from '@layouts/Container/index.astro';
-import Breadcrumbs from '@components/pages/media/calendar/Breadcrumbs/index.astro';
+import Breadcrumbs from '@components/pages/media/common/Breadcrumbs/index.astro';
 import Search from '@components/pages/media/calendar/Search/index.astro';
 import EventCard from '../../../components/pages/media/common/EventCard/index.astro';
+
+const breadcrumbs = [
+  {
+    label: 'Медиа',
+    href: '#',
+  },
+  {
+    label: 'Календарь деловых мероприятий'
+  }
+];
 
 const currentEvents = [
   {
@@ -148,7 +158,7 @@ const currentEvents = [
         <section class="media-calendar-breadcrumbs">
           <div class="row g-0">
             <div class="col-12">
-              <Breadcrumbs />
+              <Breadcrumbs breadcrumbs={breadcrumbs} />
             </div>
           </div>
         </section>

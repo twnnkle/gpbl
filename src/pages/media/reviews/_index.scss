@@ -1,0 +1,43 @@
+body {
+  background-color: #f3f5fb;
+}
+
+.main-page {
+  margin-top: 25px;
+
+  .media-reviews {
+    &__content {
+      &__image-card {
+        margin-top: 27px;
+      }
+
+      &__filter {
+        margin-top: 32px;
+
+        display: flex;
+        gap: 10px;
+
+        &__year,
+        &__period {
+          cursor: pointer;
+          display: flex;
+          align-items: center;
+          gap: 4px;
+          padding: 7px 13px;
+          background-color: #ffffff;
+          border-radius: 4px;
+
+          &__date {
+            font-size: 16px;
+            line-height: 24px;
+            color: #222222;
+          }
+        }
+      }
+
+      &__documents {
+        margin-top: 28px;
+      }
+    }
+  }
+}
