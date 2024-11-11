@@ -1,0 +1,28 @@
+body {
+  background-color: #f3f5fb;
+}
+
+.gallery-page {
+  margin-top: 55px;
+
+  &__header {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+
+  &__title {
+    margin-top: 35px;
+    color: #212529;
+    font-size: 32px;
+    font-weight: 500;
+    line-height: 38.4px;
+  }
+
+  &__cards {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-top: 25px;
+  }
+}

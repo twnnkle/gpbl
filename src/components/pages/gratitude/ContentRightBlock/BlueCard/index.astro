@@ -1,0 +1,220 @@
+---
+import './index.scss';
+
+import { Image } from 'astro:assets';
+
+import avatar from '@assets/pages/gratitude/blue-card-avatar.png';
+---
+
+<div class="blue-card" data-bs-toggle="modal" data-bs-target="#gratitudeModal">
+  <div class="blue-card__peoples">
+    <div class="blue-card__people">
+      <Image src={avatar} width="32" height="32" alt="Аватар" />
+    </div>
+
+    <div class="blue-card__people with-letter">К</div>
+
+    <div class="blue-card__people with-icon">
+      <svg
+        width="18"
+        height="18"
+        viewBox="0 0 18 18"
+        fill="none"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <g clip-path="url(#clip0_1089_1060)">
+          <rect
+            width="18"
+            height="18"
+            transform="translate(0.000244141)"
+            fill="white"
+            fill-opacity="0.01"></rect>
+          <path
+            d="M8.99988 8.99927C9.89498 8.99927 10.7534 8.64369 11.3864 8.01075C12.0193 7.37782 12.3749 6.51937 12.3749 5.62427C12.3749 4.72916 12.0193 3.87072 11.3864 3.23778C10.7534 2.60485 9.89498 2.24927 8.99988 2.24927C8.10477 2.24927 7.24633 2.60485 6.61339 3.23778C5.98046 3.87072 5.62488 4.72916 5.62488 5.62427C5.62488 6.51937 5.98046 7.37782 6.61339 8.01075C7.24633 8.64369 8.10477 8.99927 8.99988 8.99927ZM11.2499 5.62427C11.2499 6.221 11.0128 6.7933 10.5909 7.21526C10.1689 7.63721 9.59661 7.87427 8.99988 7.87427C8.40314 7.87427 7.83084 7.63721 7.40889 7.21526C6.98693 6.7933 6.74988 6.221 6.74988 5.62427C6.74988 5.02753 6.98693 4.45523 7.40889 4.03328C7.83084 3.61132 8.40314 3.37427 8.99988 3.37427C9.59661 3.37427 10.1689 3.61132 10.5909 4.03328C11.0128 4.45523 11.2499 5.02753 11.2499 5.62427ZM15.7499 14.6243C15.7499 15.7493 14.6249 15.7493 14.6249 15.7493H3.37488C3.37488 15.7493 2.24988 15.7493 2.24988 14.6243C2.24988 13.4993 3.37488 10.1243 8.99988 10.1243C14.6249 10.1243 15.7499 13.4993 15.7499 14.6243ZM14.6249 14.6198C14.6238 14.343 14.4516 13.5105 13.6889 12.7478C12.9554 12.0143 11.575 11.2493 8.99988 11.2493C6.42363 11.2493 5.04438 12.0143 4.31088 12.7478C3.54813 13.5105 3.37713 14.343 3.37488 14.6198H14.6249Z"
+            fill="white"></path>
+        </g>
+        <defs>
+          <clipPath id="clip0_1089_1060">
+            <rect
+              width="18"
+              height="18"
+              fill="white"
+              transform="translate(0.000244141)"></rect>
+          </clipPath>
+        </defs>
+      </svg>
+    </div>
+
+    <div class="blue-card__people with-counter">+2</div>
+  </div>
+
+  <div class="blue-card__bottom-block">
+    <p>Поблагодарить коллегу</p>
+
+    <span>
+      <svg
+        width="16"
+        height="15"
+        viewBox="0 0 16 15"
+        fill="none"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          fill-rule="evenodd"
+          clip-rule="evenodd"
+          d="M0 7.49998C0 7.23477 0.105357 6.98041 0.292893 6.79288C0.48043 6.60534 0.734784 6.49998 1 6.49998H12.586L8.292 2.20798C8.10423 2.02021 7.99874 1.76553 7.99874 1.49998C7.99874 1.23443 8.10423 0.979755 8.292 0.791982C8.47977 0.604208 8.73445 0.498718 9 0.498718C9.26555 0.498718 9.52023 0.604208 9.708 0.791982L15.708 6.79198C15.8011 6.88487 15.875 6.99522 15.9254 7.11671C15.9758 7.2382 16.0018 7.36845 16.0018 7.49998C16.0018 7.63152 15.9758 7.76176 15.9254 7.88325C15.875 8.00474 15.8011 8.11509 15.708 8.20798L9.708 14.208C9.52023 14.3958 9.26555 14.5012 9 14.5012C8.73445 14.5012 8.47977 14.3958 8.292 14.208C8.10423 14.0202 7.99874 13.7655 7.99874 13.5C7.99874 13.2344 8.10423 12.9798 8.292 12.792L12.586 8.49998H1C0.734784 8.49998 0.48043 8.39463 0.292893 8.20709C0.105357 8.01955 0 7.7652 0 7.49998Z"
+          fill="#ffffff"></path>
+      </svg>
+    </span>
+  </div>
+</div>
+
+<div
+  class="modal fade"
+  id="gratitudeModal"
+  tabindex="-1"
+  aria-labelledby="gratitudeModalLabel"
+  aria-hidden="true"
+>
+  <div class="modal-dialog modal-dialog-centered" style="max-width: 550px;">
+    <div class="modal-content blue-card-modal">
+      <div class="blue-card-modal__close-btn">
+        <button
+          type="button"
+          class="btn-close"
+          data-bs-dismiss="modal"
+          aria-label="Закрыть"></button>
+      </div>
+      <h5 class="modal-title" id="gratitudeModalLabel">
+        Написать благодарность
+      </h5>
+      <div class="modal-body">
+        <form>
+          <div class="mb-3 input-block">
+            <label for="recipientName" class="form-label">Кого благодарю</label>
+            <div class="dropdown">
+              <input
+                type="text"
+                class="form-control search-input"
+                id="recipientName"
+                placeholder="Введите ФИО"
+                data-bs-toggle="dropdown"
+                autocomplete="off"
+              />
+              <ul class="dropdown-menu w-100">
+                <li>
+                  <a
+                    class="dropdown-item d-flex align-items-center gap-2"
+                    href="#"
+                    data-name="Иванов Иван Иванович"
+                  >
+                    <Image src={avatar} width="24" height="24" alt="Аватар" />
+                    <span>Иванов Иван Иванович</span>
+                  </a>
+                </li>
+                <li>
+                  <a
+                    class="dropdown-item d-flex align-items-center gap-2"
+                    href="#"
+                    data-name="Петров Петр Петрович"
+                  >
+                    <Image src={avatar} width="24" height="24" alt="Аватар" />
+                    <span>Петров Петр Петрович</span>
+                  </a>
+                </li>
+                <li>
+                  <a
+                    class="dropdown-item d-flex align-items-center gap-2"
+                    href="#"
+                    data-name="Сидоров Сидор Сидорович"
+                  >
+                    <Image src={avatar} width="24" height="24" alt="Аватар" />
+                    <span>Сидоров Сидор Сидорович</span>
+                  </a>
+                </li>
+              </ul>
+
+              <div class="input-search-icon">
+                <svg
+                  width="12"
+                  height="12"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M11 19C15.4183 19 19 15.4183 19 11C19 6.58172 15.4183 3 11 3C6.58172 3 3 6.58172 3 11C3 15.4183 6.58172 19 11 19Z"
+                    stroke="#7F8EBE"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"></path>
+                  <path
+                    d="M21 21L16.65 16.65"
+                    stroke="#7F8EBE"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"></path>
+                </svg>
+              </div>
+            </div>
+
+            <script>
+              document.addEventListener('DOMContentLoaded', function () {
+                const input = document.getElementById(
+                  'recipientName'
+                ) as HTMLInputElement;
+                const dropdownItems =
+                  document.querySelectorAll('.dropdown-menu li');
+                const dropdownLinks =
+                  document.querySelectorAll('.dropdown-item');
+
+                input.addEventListener('input', function () {
+                  const searchText = this.value.toLowerCase();
+
+                  dropdownItems.forEach((item) => {
+                    const text = item.textContent?.toLowerCase() || '';
+                    if (text.includes(searchText)) {
+                      (item as HTMLElement).style.display = 'block';
+                    } else {
+                      (item as HTMLElement).style.display = 'none';
+                    }
+                  });
+                });
+
+                dropdownLinks.forEach((link) => {
+                  link.addEventListener('click', function (e) {
+                    e.preventDefault();
+                    const name = this.getAttribute('data-name');
+                    if (name) {
+                      input.value = name;
+                    }
+                  });
+                });
+              });
+            </script>
+          </div>
+          <div class="mb-3 input-block">
+            <label for="gratitudeType" class="form-label">Ценности</label>
+            <select class="form-select" id="gratitudeType">
+              <option value="" selected disabled hidden>Выберите ценность</option>
+              <option value="1">Ответственно подходит к делу</option>
+              <option value="2">Эффективность каждого — результат команды</option>
+              <option value="3">Слушать — слушать, Уважать — ценить</option>
+              <option value="4">Option 04</option>
+            </select>
+          </div>
+          <div class="mb-3 input-block">
+            <label for="gratitudeMessage" class="form-label"
+              >Благодарность</label
+            >
+            <textarea class="form-control" id="gratitudeMessage" rows="3"
+            ></textarea>
+          </div>
+          <button disabled type="submit" class="btn btn-primary submit-btn"
+            >Поблагодарить коллегу</button
+          >
+        </form>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,124 @@
+.blue-card {
+  background: #487cfb;
+  padding: 16px;
+  border-radius: 16px;
+  height: 300px;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  &__peoples {
+    display: flex;
+    align-items: center;
+  }
+
+  &__people {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    width: 32px;
+    height: 32px;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 21px;
+
+    img {
+      width: 100%;
+      height: auto;
+    }
+
+    &:not(:first-child) {
+      margin-left: -8px;
+      border: 1px solid #f3f5fb;
+    }
+  }
+
+  .with-letter {
+    background-color: #fd7e14;
+    color: #ffffff;
+  }
+
+  .with-icon {
+    background-color: #198754;
+  }
+
+  .with-counter {
+    background-color: #fecba1;
+    color: #ca6510;
+  }
+
+  &__bottom-block {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+
+    p {
+      color: #ffffff;
+      font-size: 24px;
+      font-weight: 500;
+      line-height: 28.8px;
+    }
+
+    span {
+      display: flex;
+      width: 32px;
+      height: 32px;
+      min-width: 32px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 4px;
+      border: 1px solid #ffffff;
+    }
+  }
+}
+
+.blue-card-modal {
+  background-color: #f5f7fc;
+  padding: 24px;
+  border-radius: 24px;
+
+  &__close-btn {
+    display: flex;
+    justify-content: flex-end;
+  }
+
+  .modal-title {
+    font-size: 32px;
+    font-weight: 500;
+    line-height: 38.4px;
+    color: #212529;
+    margin-top: 5px;
+    margin-bottom: 10px;
+  }
+
+  .modal-body {
+    padding: 0;
+  }
+
+  .input-block {
+    background-color: #ffffff;
+    border-radius: 24px;
+    padding: 24px;
+  }
+
+  .submit-btn {
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+  }
+
+  .search-input {
+    position: relative;
+    padding-right: 35px;
+  }
+
+  .input-search-icon {
+    position: absolute;
+    top: 50%;
+    right: 12px;
+    transform: translateY(-50%);
+  }
+}

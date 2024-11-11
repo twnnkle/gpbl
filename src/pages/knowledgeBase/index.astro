@@ -1,0 +1,73 @@
+---
+import './index.scss';
+
+import Container from '@layouts/Container/index.astro';
+
+import KnowledgeBaseCard from '@components/pages/knowledgeBase/KnowledgeBaseCard/index.astro';
+import Breadcrumbs from '@components/pages/knowledgeBase/Breadcrumbs/index.astro';
+
+import cardIcon1 from '@assets/pages/knowledgeBase/cards/1.svg';
+import cardIcon2 from '@assets/pages/knowledgeBase/cards/2.svg';
+import cardIcon3 from '@assets/pages/knowledgeBase/cards/3.svg';
+import cardIcon4 from '@assets/pages/knowledgeBase/cards/4.svg';
+import cardIcon5 from '@assets/pages/knowledgeBase/cards/5.svg';
+import cardIcon6 from '@assets/pages/knowledgeBase/cards/6.svg';
+import cardIcon7 from '@assets/pages/knowledgeBase/cards/7.svg';
+---
+
+<body>
+  <Container>
+    <main>
+      <div class="knowledge-base-page">
+        <Breadcrumbs />
+
+        <h4 class="knowledge-base-page__title">База знаний</h4>
+        <p class="knowledge-base-page__description">
+          Раздел, где ты найдешь основную информацию по отпускам,
+          компенсационному пакету и другим вопросам
+        </p>
+
+        <div
+          class="row row-cols-xl-5 row-cols-md-4 gy-4 knowledge-base-page__cards"
+        >
+          <div class="col">
+            <KnowledgeBaseCard label="Презентация ГПБЛ" icon={cardIcon1} />
+          </div>
+
+          <div class="col">
+            <KnowledgeBaseCard
+              label="Приветственные материалы для клиентов"
+              icon={cardIcon2}
+            />
+          </div>
+
+          <div class="col">
+            <KnowledgeBaseCard
+              label="Бланки Газпромбанк Лизинг"
+              icon={cardIcon3}
+            />
+          </div>
+
+          <div class="col">
+            <KnowledgeBaseCard
+              label="Шаблон презентаций Газпромбанк Лизинг"
+              icon={cardIcon4}
+            />
+          </div>
+
+          <div class="col">
+            <KnowledgeBaseCard label="Иконки" icon={cardIcon5} />
+          </div>
+
+          <div class="col">
+            <KnowledgeBaseCard label="Фотобанк" icon={cardIcon6} />
+          </div>
+
+          <div class="col">
+            <KnowledgeBaseCard label="Логотипы" icon={cardIcon7} />
+          </div>
+        </div>
+      </div>
+    </main>
+  </Container>
+</body>
