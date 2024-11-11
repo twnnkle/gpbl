@@ -1,0 +1,42 @@
+---
+import fs from 'fs';
+import path from 'path';
+
+// Рекурсивная функция для получения всех файлов в директории
+function getFiles(dir, basePath = '') {
+  let results = [];
+  const list = fs.readdirSync(dir);
+
+  list.forEach(file => {
+    const filePath = path.join(dir, file);
+    const stat = fs.statSync(filePath);
+
+    if (stat && stat.isDirectory()) {
+      results = results.concat(getFiles(filePath, path.join(basePath, file)));
+    } else if (file.endsWith('.astro') || file.endsWith('.md')) {
+      const slug = '/' + path.relative('./src/pages', filePath).replace(/\\/g, '/').replace(/\/index$/, '').replace(/\.(astro|md)$/, '');
+      const title = basePath ? `${basePath}/${file.replace(/\.(astro|md)$/, '')}` : file.replace(/\.(astro|md)$/, '');
+      results.push({
+        title: title,
+        slug: slug.replace('/index', ''),
+      });
+    }
+  });
+
+  return results;
+}
+
+const pagesDir = path.resolve('./src/pages');
+const pages = getFiles(pagesDir);
+
+const title = 'Pages list';
+---
+
+<h1>{title}</h1>
+<ul>
+  {pages.map(page => (
+    <li>
+      <a href={page.slug}>{page.title}</a>
+    </li>
+  ))}
+</ul>

@@ -1,7 +1,7 @@
 ---
 import { Image } from 'astro:assets';
 import type { ImageMetadata } from 'astro';
-import './index.scss';
+import './_index.scss';
 
 interface Props {
   link: string;
@@ -9,9 +9,10 @@ interface Props {
   period: string;
   title: string;
   categories: { link: string; title: string }[];
+  background: string;
 }
 
-const { link, imageLink, title, categories, period } = Astro.props;
+const { link, imageLink, title, categories, period, background = "#ffffff" } = Astro.props;
 
 const images = import.meta.glob<{ default: ImageMetadata }>(
   '/src/assets/**/*.{jpeg,jpg,png,gif}'
@@ -22,7 +23,7 @@ const fallbackImage = '/src/assets/pages/media/calendar/empty.png';
 const image = images[imageLink] ? images[imageLink]() : fallbackImage;
 ---
 
-<div class="event-card">
+<div class="event-card" style={`background-color: ${background}`}>
   <a href={link}>
     <div class="event-card__image">
       <Image

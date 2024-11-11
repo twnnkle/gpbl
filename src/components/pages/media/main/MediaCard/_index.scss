@@ -1,0 +1,48 @@
+.media-card {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  background-color: #ffffff;
+  justify-content: space-between;
+  border-radius: 16px;
+  padding: 16px;
+  gap: 98px;
+
+  &__icon {
+    padding: 20px;
+    background-color: #F5F7FC;
+    border-radius: 50%;
+    max-width: 72px;
+    min-width: 72px;
+  }
+
+  &__link {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 24px;
+    text-decoration: none;
+
+    &:hover &__icon img {
+      transform: translateX(3px);
+    }
+
+    &__title {
+      font-size: 24px;
+      font-weight: 500;
+      line-height: 29px;
+      color: #222222;
+    }
+
+    &__icon {
+      display: flex;
+      border-radius: 4px;
+      padding: 8px;
+      border: 1px solid #CCD3E7;
+
+      img {
+        transition: transform 0.3s ease-in-out;
+      }
+    }
+  }
+}

@@ -1,0 +1,40 @@
+---
+import './_index.scss';
+import { Image } from 'astro:assets';
+
+import Download from '@assets/pages/media/reviews/download.svg';
+
+interface Props {
+  documents: {
+    title: string;
+    format: string;
+    size: string;
+    date: string;
+  }[];
+}
+
+const { documents } = Astro.props;
+---
+
+<div class="document-list">
+  {
+    documents.map((document) => (
+      <div class="document-list__item">
+        <div class="document-list__item__file">
+          <div class="document-list__item__file__title">{document.title}</div>
+          <div class="document-list__item__file__info">
+            <div class="document-list__item__file__info__date">
+              {document.date}
+            </div>
+            <div class="document-list__item__file__info__size">
+              {document.format} {document.size}
+            </div>
+          </div>
+        </div>
+        <div class="document-list__item__icon" title="Скачать документ">
+          <Image src={Download} alt="Скачать" width="24" height="24" />
+        </div>
+      </div>
+    ))
+  }
+</div>

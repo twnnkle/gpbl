@@ -1,0 +1,32 @@
+.projects-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(306px, 1fr));
+  gap: 24px;
+
+  &__item {
+    display: flex;
+    flex-direction: column;
+    text-decoration: none;
+
+    &__image {
+      & > img {
+        display: block;
+        border-radius: 24px;
+        max-width: 100%;
+        width: 100%;
+        object-fit: cover;
+      }
+    }
+
+    &__content {
+      padding: 16px;
+
+      &__title {
+        font-size: 20px;
+        font-weight: 500;
+        line-height: 24px;
+        color: #212529;
+      }
+    }
+  }
+}

@@ -1,0 +1,40 @@
+---
+import { Image } from 'astro:assets';
+import type { ImageMetadata } from 'astro';
+import './_index.scss';
+
+import arrow from '@assets/arrow-card-with-arrow.svg';
+
+interface Props {
+  link: string;
+  imageLink: string;
+  title: string;
+}
+
+const { link, imageLink, title } = Astro.props;
+
+const images = import.meta.glob<{ default: ImageMetadata }>(
+  '/src/assets/**/*.{jpeg,jpg,png,gif,svg}'
+);
+
+const image = images[imageLink]();
+---
+
+<div class="media-card">
+  <div class="media-card__icon">
+    <Image
+      src={image}
+      alt={title}
+      width="32"
+      height="32"
+    />
+  </div>
+  <a class="media-card__link" href={link}>
+    <div class="media-card__link__title">
+      {title}
+    </div>
+    <div class="media-card__link__icon">
+      <Image src={arrow} alt="Перейти" width="16" height="14"/>
+    </div>
+  </a>
+</div>

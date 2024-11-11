@@ -1,0 +1,13 @@
+---
+import '@styles/sideMenu.scss';
+
+const { items } = Astro.props;
+---
+
+<ul class="side-menu">
+  {items.map((item) => (
+    <li class:list={['side-menu__item', { 'side-menu__item_active': item.active }]}>
+      <p>{item.label}</p>
+    </li>
+  ))}
+</ul>

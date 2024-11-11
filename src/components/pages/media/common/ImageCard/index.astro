@@ -1,0 +1,16 @@
+---
+import './_index.scss';
+
+interface Props {
+  imageLink: string;
+  title: string;
+}
+
+const { imageLink, title } = Astro.props;
+
+let backgroundUrl = `url(${imageLink})`;
+---
+
+<div class="image-card" style={`background-image: ${backgroundUrl};`}>
+  <div class="image-card__title">{title}</div>
+</div>

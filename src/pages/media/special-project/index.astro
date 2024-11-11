@@ -1,0 +1,71 @@
+---
+import './_index.scss';
+
+import { Image } from 'astro:assets';
+
+import Container from '@layouts/Container/index.astro';
+import Breadcrumbs from '@components/pages/media/common/Breadcrumbs/index.astro';
+
+import Poster from '@assets/pages/media/special-project/1.png';
+
+const breadcrumbs = [
+  {
+    label: 'Медиа',
+    href: '/media/main',
+  },
+  {
+    label: 'Спецпроекты',
+    href: '/media/special-projects',
+  },
+  {
+    label: 'Лицо бренда',
+    href: '#',
+  },
+];
+---
+
+<body>
+  <Container>
+    <main>
+      <div class="main-page">
+        <section class="media-special-project">
+          <div class="row justify-content-center">
+            <div class="col-6">
+              <div class="row">
+                <div class="col-12">
+                  <Breadcrumbs breadcrumbs={breadcrumbs} />
+
+                  <h1>Лицо бренда</h1>
+
+                  <Image src={Poster} alt="Лицо бренда" />
+
+                  <p>
+                    Лид текст. Закрыть счет юридического лица может как владелец
+                    счета, так и банк. По закону клиент имеет право в любой
+                    момент отказаться от своего счета в банке, объяснять причины
+                    такого решения не требуется.
+                  </p>
+
+                  <div class="media-special-project__links">
+                    <a href="#" class="media-special-project__links__item">
+                      Отчет по проекту лицо бренда
+                      <div class="media-special-project__links__item__icon"></div>
+                    </a>
+                    <a href="#" class="media-special-project__links__item">
+                      Рекламный ролик
+                      <div class="media-special-project__links__item__icon"></div>
+                    </a>
+                    <a href="#" class="media-special-project__links__item">
+                      Интервью Максима Колинкина для Кирилла Токарева
+                      <div class="media-special-project__links__item__icon"></div>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+    </main>
+  </Container>
+</body>
