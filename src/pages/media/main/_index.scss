@@ -1,0 +1,42 @@
+body {
+  background-color: #f3f5fb;
+}
+
+.main-page {
+  margin-top: 25px;
+
+  .media-main-content {
+    margin-top: 24px;
+    display: flex;
+    justify-content: space-between;
+    gap: 48px;
+
+    &__list {
+      width: 100%;
+      max-width: 856px;
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      align-items: stretch;
+      gap: 24px;
+    }
+
+    &__events {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+
+      &__title {
+        font-size: 16px;
+        font-weight: 500;
+        line-height: 19px;
+        color: #A6B1D2;
+      }
+
+      &__list {
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+      }
+    }
+  }
+}

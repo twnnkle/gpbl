@@ -13,7 +13,7 @@
   "dependencies": {
     "air-datepicker": "^3.5.3",
     "astro": "^4.16.1",
-    "sass": "^1.79.1"
+    "sass": "^1.80.6"
   },
   "devDependencies": {
     "@typescript-eslint/parser": "^8.6.0",
