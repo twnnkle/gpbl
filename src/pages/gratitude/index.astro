@@ -1,0 +1,48 @@
+---
+import './index.scss';
+
+import Container from '@layouts/Container/index.astro';
+
+import Star from '@components/common/Star/index.astro';
+import WinnerCard from '@components/pages/gratitude/WinnerCard/index.astro';
+import ContentLeftBlock from '@components/pages/gratitude/ContentLeftBlock/index.astro';
+import ContentRightBlock from '@components/pages/gratitude/ContentRightBlock/index.astro';
+---
+
+<body>
+  <Container>
+    <main>
+      <div class="gratitude-page">
+        <div class="row justify-content-between">
+          <div class="col-md-3">
+            <div class="gratitude-page__winner-cards">
+              <WinnerCard label="Победитель IV кв. 2024" />
+              <WinnerCard label="Победитель III кв. 2024" />
+            </div>
+          </div>
+
+          <div class="col-md-9">
+            <div class="gratitude-page__header">
+              <div class="gratitude-page__title">
+                <h4>Благодарностей</h4>
+
+                <span class="gratitude-page__title-counter">99+</span>
+              </div>
+              <Star />
+            </div>
+
+            <div class="row justify-content-between">
+              <div class="col-md-8">
+                <ContentLeftBlock />
+              </div>
+
+              <div class="col-md-4">
+                <ContentRightBlock />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+  </Container>
+</body>

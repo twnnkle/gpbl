@@ -1,0 +1,25 @@
+.content-left-block {
+  margin-top: 15px;
+
+  &__btn {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    cursor: pointer;
+    width: fit-content;
+
+    span {
+      color: #212529;
+      font-size: 24px;
+      font-weight: 500;
+      line-height: 28.8px;
+    }
+  }
+
+  &__feedbackCards {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    margin-top: 10px;
+  }
+}

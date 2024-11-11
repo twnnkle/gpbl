@@ -1,0 +1,47 @@
+body {
+  background-color: #f3f5fb;
+}
+
+.gratitude-page {
+  margin-top: 35px;
+
+  &__winner-cards {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  &__header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+  }
+
+  &__title {
+    position: relative;
+
+    h4 {
+      font-size: 32px;
+      line-height: 38.4px;
+      font-weight: 500;
+      color: #2c2c2c;
+    }
+
+    &-counter {
+      position: absolute;
+      top: -5px;
+      right: -40px;
+      background-color: #487cfb;
+      border-radius: 100px;
+      height: 20px;
+      padding: 0 8px;
+      display: flex;
+			align-items: center;
+			color: #ffffff;
+			font-size: 12px;
+			font-weight: 700;
+			line-height: 12px;
+    }
+  }
+}

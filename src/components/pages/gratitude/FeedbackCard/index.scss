@@ -1,0 +1,109 @@
+.feedback-card {
+  background-color: #ffffff;
+  border-radius: 16px;
+  padding: 16px;
+  display: flex;
+  gap: 15px;
+
+  &__avatar {
+    position: relative;
+    width: fit-content;
+
+    img {
+      border-radius: 50%;
+    }
+  }
+
+  &__avatar-after-element {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 15px;
+    height: 15px;
+    display: flex;
+  }
+
+  &__name-and-date {
+    display: flex;
+    justify-content: space-between;
+    gap: 5px;
+
+    p {
+      color: #212529;
+      font-size: 16px;
+      font-weight: 500;
+      line-height: 19.2px;
+      max-width: 200px;
+    }
+
+    span {
+      color: #7f8ebe;
+      font-size: 14px;
+      font-weight: 400;
+      line-height: 21px;
+    }
+  }
+
+  &__position {
+    color: #7f8ebe;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 21px;
+    margin-top: 2px;
+  }
+
+  &__question-and-answer {
+    p {
+      color: #212529;
+      font-size: 16px;
+      font-weight: 500;
+      line-height: 19.2px;
+    }
+
+    span {
+      display: block;
+      color: #7f8ebe;
+      font-size: 16px;
+      font-weight: 400;
+      line-height: 24px;
+      margin-top: 5px;
+    }
+
+    &.value {
+      margin-top: 24px;
+    }
+
+    &.for-what {
+      margin-top: 16px;
+    }
+  }
+
+  &__who-gratitude-title {
+    margin-top: 24px;
+    color: #7f8ebe;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 21px;
+  }
+
+  &__who-gratitude-card {
+    margin-top: 15px;
+    display: flex;
+    gap: 15px;
+
+    p {
+      color: #212529;
+      font-size: 16px;
+      font-weight: 500;
+      line-height: 19.2px;
+      max-width: 200px;
+    }
+
+    span {
+      color: #7f8ebe;
+      font-size: 14px;
+      font-weight: 500;
+      line-height: 21px;
+    }
+  }
+}

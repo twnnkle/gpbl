@@ -1,0 +1,38 @@
+---
+import './index.scss';
+
+import Container from '@layouts/Container/index.astro';
+
+import SideMenu from '@components/pages/gallery/SideMenu/index.astro';
+import Star from '@components/common/Star/index.astro';
+import Breadcrumbs from '@components/pages/gallery/Breadcrumbs/index.astro';
+import GalleryCard from '@components/pages/gallery/GalleryCard/index.astro';
+---
+
+<body>
+  <Container>
+    <main>
+      <div class="gallery-page">
+        <div class="row justify-content-between">
+          <div class="col-md-3">
+            <SideMenu />
+          </div>
+
+          <div class="col-md-9">
+            <div class="gallery-page__header">
+              <Breadcrumbs />
+              <Star />
+            </div>
+
+            <h4 class="gallery-page__title">Внутренние мероприятия</h4>
+
+            <div class="gallery-page__cards">
+              <GalleryCard isFirst/>
+              <GalleryCard />
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+  </Container>
+</body>
