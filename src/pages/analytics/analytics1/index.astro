@@ -1,0 +1,45 @@
+---
+import './_index.scss';
+
+import Container from '@layouts/Container/index.astro';
+
+import SideMenu from '@components/pages/analytics/analytics1/SideMenu/index.astro';
+import BigImgBlock from '@components/pages/analytics/BigImgBlock/index.astro';
+import Card from '@components/pages/analytics/analytics1/Card/index.astro';
+
+import mainImg from '@assets/pages/analytics/main-img-1.png';
+---
+
+<body>
+  <Container>
+    <main>
+      <div class="analytics-page">
+        <div class="row justify-content-between">
+          <div class="col-md-3">
+            <SideMenu />
+          </div>
+
+          <div class="col-md-9">
+            <BigImgBlock
+              img={mainImg.src}
+              label="Отраслевые отчеты"
+              btnText="Заявка на исследование"
+            />
+
+            <div class="row gy-4 analytics-page__cards">
+              <Card text="Нефтегазовая отрасль" />
+              <Card text="Угольная промышленность" />
+              <Card text="Металлургия" />
+              <Card text="Химическая промышленность" />
+              <Card text="Горная промышленность" />
+              <Card text="Жд отрасль" />
+              <Card text="Аграрная промышленность" />
+              <Card text="Лесная промышленность" />
+              <Card text="Строительная отрасль" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+  </Container>
+</body>
