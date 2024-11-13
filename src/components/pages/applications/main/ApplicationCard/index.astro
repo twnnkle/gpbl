@@ -1,0 +1,28 @@
+---
+import { Image } from 'astro:assets';
+import './_index.scss';
+
+import arrow from '@assets/arrow-card-with-arrow.svg';
+
+interface Props {
+  link: string;
+  description: string;
+  title: string;
+}
+
+const { description, title, link } = Astro.props;
+---
+
+<a href={link} class="application-card">
+  <div class="application-card__title">
+    {title}
+  </div>
+  <div class="application-card__content">
+    <div class="application-card__content__description">
+      {description}
+    </div>
+    <div class="application-card__content__icon">
+      <Image src={arrow} alt="Перейти" width="16" height="14"/>
+    </div>
+  </div>
+</a>
