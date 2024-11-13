@@ -1,0 +1,46 @@
+---
+import './_index.scss';
+
+import Container from '@layouts/Container/index.astro';
+
+import Breadcrumbs from '@components/pages/analytics/analytics8/Breadcrumbs/index.astro';
+import Card from '@components/pages/analytics/analytics8/Card/index.astro';
+import Search from '@components/pages/analytics/analytics8/Search/index.astro';
+---
+
+<body>
+  <Container>
+    <main>
+      <div class="analytics-page">
+        <Breadcrumbs />
+
+        <div class="analytics-page__header">
+          <h4>Центральный ФО</h4>
+          <Search />
+        </div>
+
+        <div
+          class="row gy-4 row-cols-md-4 row-cols-xl-5 row-cols-xxl-6 analytics-page__cards"
+        >
+          <Card label="Владимирская  обл." />
+          <Card label="Брянская  обл." />
+          <Card label="Воронежская обл." />
+          <Card label="Ивановская обл." />
+          <Card label="Калужская обл." />
+          <Card label="Костромская обл." />
+          <Card label="Костромская обл." />
+          <Card label="Курская обл." />
+          <Card label="Липецкая обл." />
+          <Card label="Московская обл." />
+          <Card label="Орловская обл." />
+          <Card label="Рязанская обл." />
+          <Card label="Смоленская обл." />
+          <Card label="Тамбовская обл." />
+          <Card label="Тверская обл." />
+          <Card label="Тульская обл." />
+          <Card label="Ярославская  обл." />
+        </div>
+      </div>
+    </main>
+  </Container>
+</body>

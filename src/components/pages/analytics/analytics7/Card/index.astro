@@ -1,0 +1,23 @@
+---
+import './_index.scss';
+
+const { label, list, withBtn } = Astro.props;
+---
+
+<div class="col-md-6 col-xxl-4">
+  <div class="analytics-card">
+    <div class="analytics-card__text">
+      <span class="analytics-card__label">{label}</span>
+
+      <ul class="analytics-card__list">
+        {list.map((item) => <li class="analytics-card__list-item">
+            <span>{item.text}</span>
+            <span>{item.date}</span>
+          </li>
+        )}
+      </ul>
+    </div>
+
+    {withBtn && <span class="analytics-card__btn">Все отчеты</span>}
+  </div>
+</div>
