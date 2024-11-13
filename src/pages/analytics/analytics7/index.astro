@@ -1,0 +1,208 @@
+---
+import './_index.scss';
+
+import Container from '@layouts/Container/index.astro';
+
+import SideMenu from '@components/pages/analytics/analytics7/SideMenu/index.astro';
+import BigImgBlock from '@components/pages/analytics/BigImgBlock/index.astro';
+import Card from '@components/pages/analytics/analytics7/Card/index.astro';
+
+import mainImg from '@assets/pages/analytics/main-img-7.png';
+---
+
+<body>
+  <Container>
+    <main>
+      <div class="analytics-page">
+        <div class="row justify-content-between">
+          <div class="col-md-3">
+            <SideMenu />
+          </div>
+
+          <div class="col-md-9">
+            <div class="analytics-page__big-img-block">
+              <BigImgBlock
+                img={mainImg.src}
+                label="Аналитика по регионам РФ"
+                btnText="Заявка на исследование"
+              />
+            </div>
+
+            <div class="row gy-4 analytics-page__cards">
+              <Card
+                label="Центральный ФО"
+                list={[
+                  {
+                    text: 'Воронежская обл.',
+                    date: '06.23',
+                  },
+                  {
+                    text: 'Тульская обл.',
+                    date: '02.23',
+                  },
+                  {
+                    text: 'Тамбовская обл.',
+                    date: '04.22',
+                  },
+                  {
+                    text: 'Белградская обл.',
+                    date: '01.22',
+                  },
+                  {
+                    text: 'Белградская обл.',
+                    date: '01.22',
+                  },
+                  {
+                    text: 'Белградская обл.',
+                    date: '01.22',
+                  },
+                ]}
+                withBtn
+              />
+              <Card
+                label="Южный ФО"
+                list={[
+                  {
+                    text: 'Астраханская обл.',
+                    date: '06.23',
+                  },
+                  {
+                    text: 'Адыгея',
+                    date: '02.23',
+                  },
+                  {
+                    text: 'Республика Калмыкия',
+                    date: '04.22',
+                  },
+                  {
+                    text: 'Краснодарский край',
+                    date: '01.22',
+                  },
+                  {
+                    text: 'Астраханская область',
+                    date: '01.22',
+                  },
+                  {
+                    text: 'Волгоградская область',
+                    date: '01.22',
+                  },
+                  {
+                    text: 'Ростовская область',
+                    date: '01.22',
+                  },
+                ]}
+              />
+              <Card
+                label="Северо-Западный ФО"
+                list={[
+                  {
+                    text: 'Архангельская обл.',
+                    date: '06.23',
+                  },
+                  {
+                    text: 'Калининградская обл.',
+                    date: '02.23',
+                  },
+                  {
+                    text: 'Республика Коми',
+                    date: '04.22',
+                  },
+                ]}
+              />
+              <Card
+                label="Приволжский ФО"
+                list={[
+                  {
+                    text: 'Нижнегородская обл.',
+                    date: '06.23',
+                  },
+                  {
+                    text: 'Саратовская обл.',
+                    date: '02.23',
+                  },
+                  {
+                    text: 'Ульяновская обл.',
+                    date: '04.22',
+                  },
+                ]}
+              />
+              <Card
+                label="Уральский ФО"
+                list={[
+                  {
+                    text: 'Ямало-ненецкий АО',
+                    date: '06.23',
+                  },
+                  {
+                    text: 'Свердловская обл.',
+                    date: '02.23',
+                  },
+                ]}
+              />
+              <Card
+                label="Дальневосточный ФО"
+                list={[
+                  {
+                    text: 'Республика Бурятия',
+                    date: '06.23',
+                  },
+                  {
+                    text: 'Республика Саха',
+                    date: '02.23',
+                  },
+                  {
+                    text: 'Забайкальский край',
+                    date: '04.22',
+                  },
+                  {
+                    text: 'Камчатский край,',
+                    date: '01.22',
+                  },
+                  {
+                    text: 'Приморский край',
+                    date: '01.22',
+                  },
+                  {
+                    text: 'Хабаровский край',
+                    date: '01.22',
+                  },
+                ]}
+                withBtn
+              />
+              <Card
+                label="Сибирский ФО"
+                list={[
+                  {
+                    text: 'Республика Алтай',
+                    date: '06.23',
+                  },
+                  {
+                    text: 'Республика Тыва',
+                    date: '02.23',
+                  },
+                  {
+                    text: 'Республика Хакасия',
+                    date: '04.22',
+                  },
+                  {
+                    text: 'Алтайский край',
+                    date: '01.22',
+                  },
+                  {
+                    text: 'Красноярский край',
+                    date: '01.22',
+                  },
+                  {
+                    text: 'Иркутская область',
+                    date: '01.22',
+                  },
+                ]}
+                withBtn
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+  </Container>
+</body>
