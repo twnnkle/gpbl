@@ -1,0 +1,23 @@
+body {
+  background-color: #f3f5fb;
+}
+
+.employees-page {
+  margin-top: 50px;
+}
+
+.employee-pdf-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  &__title {
+    color: #212529;
+    font-weight: 500;
+    font-size: 28px;
+  }
+}
+
+.employee-pdf-content {
+  margin-top: 30px;
+}
