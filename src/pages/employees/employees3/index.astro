@@ -4,10 +4,10 @@ import './_index.scss';
 import Container from '@layouts/Container/index.astro';
 
 import SideMenu from '@components/pages/employees/employees3/SideMenu/index.astro';
+import NavMenu from '@components/pages/employees/employees3/NavMenu/index.astro';
 import Search from '@components/common/SearchWithBlueBtn/index.astro';
 import Star from '@components/common/Star/index.astro';
-import BirthdaysBlock from '@components/pages/employees/employees3/BirthdaysBlock/index.astro';
-import YourTeamBlock from '@components/pages/employees/employees3/YourTeamBlock/index.astro';
+import Table from '@components/pages/employees/employees3/table/Table/index.astro';
 ---
 
 <body>
@@ -21,33 +21,18 @@ import YourTeamBlock from '@components/pages/employees/employees3/YourTeamBlock/
 
           <div class="col-md-9">
             <div class="employees-header">
-              <Search bgColor="#ffffff" />
+              <div class="employees-header__search-and-nav">
+                <NavMenu />
+                <Search />
+              </div>
+
               <Star />
             </div>
 
-            <div class="employees-content">
-              <div class="row justify-content-between">
-                <div class="col-xxl-8 col-md-12">
-                  <BirthdaysBlock />
-                </div>
-
-                <div class="col-xxl-4 col-md-12">
-                  <YourTeamBlock />
-                </div>
-              </div>
-            </div>
+            <Table />
           </div>
         </div>
       </div>
-
-      <script>
-        import AirDatepicker from 'air-datepicker';
-        import 'air-datepicker/air-datepicker.css';
-
-        document.addEventListener('DOMContentLoaded', () => {
-          new AirDatepicker('#datepicker', {});
-        });
-      </script>
     </main>
   </Container>
 </body>

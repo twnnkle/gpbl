@@ -1,0 +1,17 @@
+.employees-table {
+  margin-top: 55px;
+
+  thead th {
+    border: none;
+    color: #b3b3b3;
+    font-size: 12px;
+    font-weight: 900;
+  }
+
+  tbody::before {
+    content: '-';
+    display: block;
+    line-height: 1em;
+    color: transparent;
+  }
+}

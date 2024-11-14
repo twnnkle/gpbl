@@ -1,53 +1,16 @@
-body {
-  background-color: #f3f5fb;
-  display: flex;
-  height: 100vh;
-}
-
-main {
-  flex: 1;
-  display: flex;
-}
-
 .employees-page {
   margin-top: 50px;
-  width: 100%;
-  display: flex;
 
   .employees-header {
     display: flex;
-    align-items: center;
+    align-items: flex-start;
     justify-content: space-between;
     gap: 10px;
-  }
-}
 
-.content-col {
-  display: flex;
-  flex-direction: column;
-}
-
-.tree-employees-content-wrapper {
-  margin-top: 20px;
-  background-color: #ffffff;
-  border-radius: 20px;
-  padding: 25px 15px 15px 40px;
-  height: 100%;
-}
-
-.tree-employees-content {
-  overflow: auto;
-  height: 100%;
-  display: flex;
-  padding: 0 25px 10px 0;
-
-  &::-webkit-scrollbar {
-    width: 8px;
-    height: 8px;
-  }
-
-  &::-webkit-scrollbar-thumb {
-    background-color: #ccd3e7;
-    border-radius: 100px;
+    &__search-and-nav {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
   }
 }
