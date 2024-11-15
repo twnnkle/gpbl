@@ -1,0 +1,48 @@
+.application-card {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  background-color: #ffffff;
+  justify-content: space-between;
+  border-radius: 16px;
+  padding: 17.5px 16px 16px;
+  gap: 135.5px;
+  text-decoration: none;
+
+  &:hover &__content__icon img {
+    transform: translateX(3px);
+  }
+
+  &__title {
+    font-size: 24px;
+    font-weight: 500;
+    line-height: 29px;
+    color: #222222;
+  }
+
+  &__content {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    gap: 24px;
+    text-decoration: none;
+
+    &__description {
+      font-size: 16px;
+      font-weight: 400;
+      line-height: 24px;
+      color: #7F8EBE;
+    }
+
+    &__icon {
+      display: flex;
+      border-radius: 4px;
+      padding: 8px;
+      border: 1px solid #CCD3E7;
+
+      img {
+        transition: transform 0.3s ease-in-out;
+      }
+    }
+  }
+}

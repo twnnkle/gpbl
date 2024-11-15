@@ -1,0 +1,17 @@
+body {
+  background-color: #f3f5fb;
+}
+
+.main-page {
+  margin-top: 25px;
+
+  .media-applications {
+    &__list {
+      width: 100%;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      align-items: stretch;
+      gap: 24px;
+    }
+  }
+}
