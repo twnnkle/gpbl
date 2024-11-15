@@ -3,7 +3,18 @@ body {
 }
 
 .main-page {
-  margin-top: 25px;
+  margin-top: 50px;
+
+  .media-special-projects-header {
+    margin-top: 25px;
+    
+    h2 {
+      color: #212529;
+      font-size: 32px;
+      font-weight: 500;
+      line-height: 38.4px;
+    }
+  }
 
   .media-special-projects {
     &-list {

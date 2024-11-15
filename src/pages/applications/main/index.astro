@@ -5,6 +5,7 @@ import Container from '@layouts/Container/index.astro';
 import SideMenu from '@components/pages/media/common/SideMenu/index.astro';
 import Breadcrumbs from '@components/pages/media/common/Breadcrumbs/index.astro';
 import ApplicationCard from '@components/pages/applications/main/ApplicationCard/index.astro';
+import Star from '@components/common/Star/index.astro';
 
 const breadcrumbs = [
   {
@@ -94,8 +95,9 @@ const cards = [
             </div>
 
             <div class="col-md-9">
-              <div class="media-applications__breadcrumbs">
+              <div class="media-applications__header">
                 <Breadcrumbs breadcrumbs={breadcrumbs} />
+                <Star />
               </div>
 
               <div class="media-applications__list">

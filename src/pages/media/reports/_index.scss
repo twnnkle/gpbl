@@ -3,11 +3,13 @@ body {
 }
 
 .main-page {
-  margin-top: 25px;
+  margin-top: 50px;
 
   .media-reports {
     &__content {
       &__header {
+        margin-top: 25px;
+        
         h2 {
           font-size: 32px;
           font-weight: 500;
