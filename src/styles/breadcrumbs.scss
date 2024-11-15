@@ -1,5 +1,12 @@
 .breadcrumb {
   margin-bottom: 0 !important;
+
+  .active {
+    color: #7f8ebe !important;
+    font-size: 16px;
+    font-weight: 400;
+    text-decoration-line: none;
+  }
 }
 
 .breadcrumb-item {
@@ -11,11 +18,4 @@
     font-size: 16px;
     font-weight: 500;
   }
-}
-
-.active {
-  color: #7f8ebe !important;
-  font-size: 16px;
-  font-weight: 400;
-  text-decoration-line: none;
 }

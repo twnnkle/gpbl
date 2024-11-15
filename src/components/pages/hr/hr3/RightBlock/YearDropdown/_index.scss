@@ -1,0 +1,29 @@
+.filter-dropdown-btn {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  border: 1px solid #f5f7fc;
+  padding: 0 12px;
+  border-radius: 4px;
+  cursor: pointer;
+  height: 38px;
+
+  span {
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 150%;
+    color: #212529;
+  }
+}
+
+.filter-dropdown-list {
+  width: 100%;
+}
+
+.filter-dropdown-item.active {
+  background-color: #487cfb !important;
+}
+
+.filter-dropdown-item:active {
+  background-color: #487cfb !important;
+}
