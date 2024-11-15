@@ -1,0 +1,88 @@
+---
+import './_index.scss';
+
+import Container from '@layouts/Container/index.astro';
+import SideMenu from '@components/pages/media/common/SideMenu/index.astro';
+import Breadcrumbs from '@components/pages/media/common/Breadcrumbs/index.astro';
+import DocumentList from '@components/pages/media/common/DocumentList/index.astro';
+
+const breadcrumbs = [
+  {
+    label: 'Медиа',
+    href: '/media/main',
+  },
+  {
+    label: 'Отчеты пресс-службы',
+  },
+];
+
+const menu = [
+  {
+    label: '2024 год',
+    active: true,
+  },
+  {
+    label: '2023 год',
+    active: false,
+  },
+  {
+    label: '2022 год',
+    active: false,
+  },
+];
+
+const documents = [
+  {
+    title: 'Отчет за 2024 год',
+    size: '140 мб',
+    format: 'PDF',
+    date: '21.11.2022',
+  },
+  {
+    title: 'Отчет за 3 квартал 2024 года',
+    size: '140 мб',
+    format: 'PDF',
+    date: '21.11.2022',
+  },
+  {
+    title: 'Отчет за 2 квартал 2024 года',
+    size: '140 мб',
+    format: 'PDF',
+    date: '21.11.2022',
+  },
+  {
+    title: 'Отчет за 1 квартал 2024 года',
+    size: '140 мб',
+    format: 'PDF',
+    date: '21.11.2022',
+  }
+];
+---
+
+<body>
+  <Container>
+    <main>
+      <div class="main-page">
+        <section class="media-reports">
+          <div class="row justify-content-between">
+            <div class="col-md-3">
+              <SideMenu items={menu} />
+            </div>
+
+            <div class="col-md-9">
+              <div class="media-reports__content">
+                <Breadcrumbs breadcrumbs={breadcrumbs} />
+
+                <h2 class="media-reports__content__header">Отчеты пресс-службы</h2>
+
+                <div class="media-reports__content__documents">
+                  <DocumentList documents={documents} />
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+    </main>
+  </Container>
+</body>
