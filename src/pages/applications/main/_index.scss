@@ -3,15 +3,22 @@ body {
 }
 
 .main-page {
-  margin-top: 25px;
+  margin-top: 40px;
 
   .media-applications {
+    &__header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
     &__list {
       width: 100%;
       display: grid;
       grid-template-columns: repeat(3, 1fr);
       align-items: stretch;
       gap: 24px;
+      margin-top: 25px;
     }
   }
 }
