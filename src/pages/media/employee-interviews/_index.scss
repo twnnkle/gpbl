@@ -1,0 +1,30 @@
+body {
+  background-color: #f3f5fb;
+}
+
+.main-page {
+  margin-top: 25px;
+
+  .media-employee-interviews {
+    &-header {
+      h2 {
+        font-size: 32px;
+        font-weight: 500;
+        line-height: 38px;
+      }
+    }
+
+    &-projects {
+      margin-top: 32px;
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+
+      &__list {
+        display: grid;
+        grid-template-columns: repeat( auto-fit, minmax(250px, 1fr) );
+        gap: 40px 25px;
+      }
+    }
+  }
+}
