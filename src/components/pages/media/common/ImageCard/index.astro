@@ -1,5 +1,7 @@
 ---
 import './_index.scss';
+import { Image } from 'astro:assets';
+import type { ImageMetadata } from 'astro';
 
 interface Props {
   imageLink: string;
@@ -8,9 +10,15 @@ interface Props {
 
 const { imageLink, title } = Astro.props;
 
-let backgroundUrl = `url(${imageLink})`;
+
+const images = import.meta.glob<{ default: ImageMetadata }>(
+  '/src/assets/**/*.{jpeg,jpg,png,gif}'
+);
+
+const image = images[imageLink]();
 ---
 
-<div class="image-card" style={`background-image: ${backgroundUrl};`}>
+<div class="image-card">
+  <Image src={image} alt={title}/>
   <div class="image-card__title">{title}</div>
 </div>
