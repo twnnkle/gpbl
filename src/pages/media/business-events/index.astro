@@ -1,0 +1,112 @@
+---
+import './_index.scss';
+
+import Container from '@layouts/Container/index.astro';
+import Breadcrumbs from '@components/pages/media/common/Breadcrumbs/index.astro';
+import EventCard from '@components/pages/media/common/EventCard/index.astro';
+
+const breadcrumbs = [
+  {
+    label: 'Медиа',
+    href: '/media/main',
+  },
+  {
+    label: 'Деловые мероприятия',
+  },
+];
+
+const events = [
+  {
+    link: '#',
+    imageLink: '/src/assets/pages/media/business-events/1.png',
+    period: '21.03',
+    title: 'Деловой завтрак со своим название или другое мероприятие'
+  },
+  {
+    link: '#',
+    imageLink: '/src/assets/pages/media/business-events/1.png',
+    period: '21.03',
+    title: 'Деловой завтрак со своим название или другое мероприятие'
+  },
+  {
+    link: '#',
+    imageLink: '/src/assets/pages/media/business-events/2.png',
+    period: '21.03',
+    title: 'Деловой завтрак со своим название или другое мероприятие'
+  },
+  {
+    link: '#',
+    imageLink: '/src/assets/pages/media/business-events/3.png',
+    period: '21.03',
+    title: 'Деловой завтрак со своим название или другое мероприятие'
+  },
+  {
+    link: '#',
+    imageLink: '/src/assets/pages/media/business-events/1.png',
+    period: '21.03',
+    title: 'Деловой завтрак со своим название или другое мероприятие'
+  },
+  {
+    link: '#',
+    imageLink: '/src/assets/pages/media/business-events/1.png',
+    period: '21.03',
+    title: 'Деловой завтрак со своим название или другое мероприятие'
+  },
+  {
+    link: '#',
+    imageLink: '/src/assets/pages/media/business-events/2.png',
+    period: '21.03',
+    title: 'Деловой завтрак со своим название или другое мероприятие'
+  },
+  {
+    link: '#',
+    imageLink: '/src/assets/pages/media/business-events/3.png',
+    period: '21.03',
+    title: 'Деловой завтрак со своим название или другое мероприятие'
+  },
+];
+---
+
+<body>
+  <Container>
+    <main>
+      <div class="main-page">
+        <section class="media-business-events">
+          <div class="row">
+            <div class="col-12">
+              <Breadcrumbs breadcrumbs={breadcrumbs} />
+            </div>
+          </div>
+        </section>
+
+        <section class="media-business-events-header">
+          <div class="row">
+            <div class="col-12">
+              <h2>Деловые мероприятия</h2>
+            </div>
+          </div>
+        </section>
+
+        <section class="media-business-events-cards">
+          <div class="row">
+            <div class="col-12">
+              <div class="media-business-events-cards__list">
+                {
+                  events.map((item) => (
+                    <EventCard
+                      imageLink={item.imageLink}
+                      title={item.title}
+                      link={item.link}
+                      period={item.period}
+                      background="transparent"
+                    />
+                  ))
+                }
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+    </main>
+  </Container>
+</body>
