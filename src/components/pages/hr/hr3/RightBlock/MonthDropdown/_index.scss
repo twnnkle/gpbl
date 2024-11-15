@@ -1,0 +1,29 @@
+.month-dropdown-btn {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  border: 1px solid #f5f7fc;
+  padding: 0 12px;
+  border-radius: 4px;
+  cursor: pointer;
+  height: 38px;
+
+  span {
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 150%;
+    color: #212529;
+  }
+}
+
+.month-dropdown-list {
+  width: 100%;
+}
+
+.month-dropdown-item.active {
+  background-color: #487cfb !important;
+}
+
+.month-dropdown-item:active {
+  background-color: #487cfb !important;
+}

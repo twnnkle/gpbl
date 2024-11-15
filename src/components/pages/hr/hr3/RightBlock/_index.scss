@@ -9,6 +9,12 @@
     color: #a6b1d2;
   }
 
+  &__dropdowns {
+    display: flex;
+    gap: 8px;
+    margin-top: 15px;
+  }
+
   &__file {
     margin-top: 15px;
     cursor: pointer;
