@@ -1,0 +1,51 @@
+---
+import './_index.scss';
+
+import Container from '@layouts/Container/index.astro';
+
+import SideMenu from '@components/pages/analytics/analytics4/SideMenu/index.astro';
+import BigImgBlock from '@components/pages/analytics/BigImgBlock/index.astro';
+import Cards from '@components/pages/analytics/analytics4/Cards/index.astro';
+import DatepickerDropdown from '@components/pages/analytics/analytics4/DatepickerDropdown/index.astro';
+import YearDropdown from '@components/pages/analytics/analytics4/YearDropdown/index.astro';
+
+import mainImg from '@assets/pages/analytics/main-img-4.png';
+---
+
+<body>
+  <Container>
+    <main>
+      <div class="analytics-page">
+        <div class="row justify-content-between">
+          <div class="col-md-3">
+            <SideMenu />
+          </div>
+
+          <div class="col-md-9">
+            <BigImgBlock img={mainImg.src} label="Обзор главных новостей" />
+
+            <div class="analytics-page__dropdowns">
+              <YearDropdown />
+              <DatepickerDropdown />
+            </div>
+
+            <Cards />
+          </div>
+        </div>
+      </div>
+
+      <script>
+        import AirDatepicker from 'air-datepicker';
+        import 'air-datepicker/air-datepicker.css';
+
+        document.addEventListener('DOMContentLoaded', () => {
+          new AirDatepicker('#datepicker', {
+            range: true,
+            multipleDates: true,
+            multipleDatesSeparator: ' - '
+          });
+        });
+      </script>
+    </main>
+  </Container>
+</body>

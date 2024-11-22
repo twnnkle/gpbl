@@ -1,0 +1,63 @@
+---
+import './_index.scss';
+
+import { Image } from 'astro:assets';
+
+import avatar from '@assets/avatar.png';
+---
+
+<div class="feedback-card">
+  <div class="feedback-card__avatar">
+    <Image src={avatar} width={60} height={60} alt="Аватар" />
+
+    <div class="feedback-card__avatar-after-element">
+      <svg
+        width="15"
+        height="15"
+        viewBox="0 0 15 15"
+        fill="none"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          fill-rule="evenodd"
+          clip-rule="evenodd"
+          d="M7.4375 14.4688C9.3023 14.4688 11.0907 13.728 12.4093 12.4093C13.728 11.0907 14.4688 9.3023 14.4688 7.4375C14.4688 5.5727 13.728 3.78427 12.4093 2.46566C11.0907 1.14704 9.3023 0.40625 7.4375 0.40625C5.5727 0.40625 3.78427 1.14704 2.46566 2.46566C1.14704 3.78427 0.40625 5.5727 0.40625 7.4375C0.40625 9.3023 1.14704 11.0907 2.46566 12.4093C3.78427 13.728 5.5727 14.4688 7.4375 14.4688Z"
+          fill="#198754"></path>
+      </svg>
+    </div>
+  </div>
+
+  <div class="feedback-card__content">
+    <div class="feedback-card__name-and-date">
+      <p>Константин Константинопальский</p>
+      <span>12 мая 2023</span>
+    </div>
+
+    <p class="feedback-card__position">Инженер программист 1с</p>
+
+    <div class="feedback-card__question-and-answer value">
+      <p>Ценность</p>
+      <span>Ответственно подходит к делу</span>
+    </div>
+
+    <div class="feedback-card__question-and-answer for-what">
+      <p>За что</p>
+      <span
+        >Благодарю своего коллегу за то и за то и вообще он самый лучший
+        сотрудник в этой компании, да и человек ничего тоже, выпил бы с ним
+        как-нибудь.</span
+      >
+    </div>
+
+    <p class="feedback-card__who-gratitude-title">Поблагодарил</p>
+
+    <div class="feedback-card__who-gratitude-card">
+      <Image src={avatar} width={60} height={60} alt="Аватар" />
+
+      <div class="feedback-card__who-gratitude-card-text">
+        <p>Константин Константинопальский</p>
+        <span>Дизайнер Дизайн системы</span>
+      </div>
+    </div>
+  </div>
+</div>

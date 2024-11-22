@@ -1,0 +1,90 @@
+---
+import './_index.scss';
+
+import TreeAccordionCard from '@components/pages/employees/employees8/treeAccordion/TreeAccordionCard/index.astro';
+---
+
+<div class="accordion" id="treeAccordion">
+  <div class="accordion-step">
+    <div class="accordion-step__cards">
+      <TreeAccordionCard position="Директор" grayClass />
+    </div>
+
+    <div
+      class="accordion-step__btn openedAccordion"
+      data-bs-toggle="collapse" 
+      data-bs-target="#collapseThree"
+      aria-expanded="true"
+      aria-controls="collapseThree"
+    >
+      <svg
+        width="16"
+        height="17"
+        viewBox="0 0 16 17"
+        fill="none"
+        xmlns="http://www.w3.org/2000/svg"
+        style="transform: rotate(180deg)"
+      >
+        <path
+          fill-rule="evenodd"
+          clip-rule="evenodd"
+          d="M8.35386 11.8541C8.30741 11.9006 8.25224 11.9376 8.19149 11.9628C8.13075 11.988 8.06562 12.001 7.99986 12.001C7.93409 12.001 7.86897 11.988 7.80822 11.9628C7.74748 11.9376 7.6923 11.9006 7.64586 11.8541L1.64586 5.85408C1.55197 5.7602 1.49923 5.63286 1.49923 5.50008C1.49923 5.36731 1.55197 5.23997 1.64586 5.14608C1.73974 5.0522 1.86708 4.99945 1.99986 4.99945C2.13263 4.99945 2.25997 5.0522 2.35386 5.14608L7.99986 10.7931L13.6459 5.14608C13.7397 5.0522 13.8671 4.99945 13.9999 4.99945C14.1326 4.99945 14.26 5.0522 14.3539 5.14608C14.4477 5.23997 14.5005 5.36731 14.5005 5.50008C14.5005 5.63286 14.4477 5.7602 14.3539 5.85408L8.35386 11.8541V11.8541Z"
+          fill="#487CFB"></path>
+      </svg>
+      <span>Свернуть</span>
+    </div>
+  </div>
+  <div
+    id="collapseThree"
+    class="accordion-collapse collapse show"
+    data-bs-parent="#treeAccordion"
+  >
+    <div class="accordion" id="treeAccordion2">
+      <div class="accordion-step accordion-step2">
+        <div class="accordion-step__cards">
+          <TreeAccordionCard position="HRBP" />
+          <TreeAccordionCard position="HRBP" />
+          <TreeAccordionCard position="HRBP" grayClass />
+        </div>
+
+        <div
+          class="accordion-step__btn"
+          data-bs-toggle="collapse"
+          data-bs-target="#collapseThree2"
+          aria-expanded="false"
+          aria-controls="collapseThree2"
+        >
+          <svg
+            width="16"
+            height="17"
+            viewBox="0 0 16 17"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              fill-rule="evenodd"
+              clip-rule="evenodd"
+              d="M8.35386 11.8541C8.30741 11.9006 8.25224 11.9376 8.19149 11.9628C8.13075 11.988 8.06562 12.001 7.99986 12.001C7.93409 12.001 7.86897 11.988 7.80822 11.9628C7.74748 11.9376 7.6923 11.9006 7.64586 11.8541L1.64586 5.85408C1.55197 5.7602 1.49923 5.63286 1.49923 5.50008C1.49923 5.36731 1.55197 5.23997 1.64586 5.14608C1.73974 5.0522 1.86708 4.99945 1.99986 4.99945C2.13263 4.99945 2.25997 5.0522 2.35386 5.14608L7.99986 10.7931L13.6459 5.14608C13.7397 5.0522 13.8671 4.99945 13.9999 4.99945C14.1326 4.99945 14.26 5.0522 14.3539 5.14608C14.4477 5.23997 14.5005 5.36731 14.5005 5.50008C14.5005 5.63286 14.4477 5.7602 14.3539 5.85408L8.35386 11.8541V11.8541Z"
+              fill="#487CFB"></path>
+          </svg>
+
+          <span>Развернуть</span>
+        </div>
+      </div>
+      <div
+        id="collapseThree2"
+        class="accordion-collapse collapse"
+        data-bs-parent="#treeAccordion2"
+      >
+        <div class="accordion-step accordion-step3">
+          <div class="accordion-step__cards">
+            <TreeAccordionCard position="HRBP" />
+            <TreeAccordionCard
+              position="Ведущий специалист по администрированию ИТ-инфраструктуры"
+            />
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

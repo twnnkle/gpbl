@@ -1,0 +1,20 @@
+---
+import './_index.scss';
+
+const { img, label, btnText } = Astro.props;
+
+import Button from '@components/common/Button/index.astro';
+---
+
+<div class="big-img-block" style={`background-image: url(${img})`}>
+  <div class="big-img-block__mask"></div>
+  <p class="big-img-block__label">{label}</p>
+
+  {
+    btnText && (
+      <div class="big-img-block__btn">
+        <Button text={btnText} option="btn-primary" />
+      </div>
+    )
+  }
+</div>

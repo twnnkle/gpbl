@@ -1,0 +1,67 @@
+---
+import './_index.scss';
+
+import Container from '@layouts/Container/index.astro';
+
+import SideMenu from '@components/pages/employees/employees8/SideMenu/index.astro';
+import Search from '@components/common/SearchWithBlueBtn/index.astro';
+import Star from '@components/common/Star/index.astro';
+import TreeAccordion from '@components/pages/employees/employees8/treeAccordion/TreeAccordion/index.astro';
+---
+
+<body>
+  <Container>
+    <main>
+      <div class="employees-page">
+        <div class="row justify-content-between w-100">
+          <div class="col-md-3">
+            <SideMenu />
+          </div>
+
+          <div class="col-md-9 content-col">
+            <div class="employees-header">
+              <Search bgColor="#ffffff" placeholder="Поиск" />
+              <Star />
+            </div>
+
+            <div class="tree-employees-content-wrapper">
+              <div class="tree-employees-content">
+                <TreeAccordion />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <script>
+        const accordionBtns = document.querySelectorAll('.accordion-step__btn');
+
+        accordionBtns.forEach((btn) => {
+          btn.addEventListener('click', () => {
+            const isOpen = btn.classList.toggle('openedAccordion');
+            const text = btn.querySelector('span');
+            const arrow = btn.querySelector('svg');
+
+            text.textContent = isOpen ? 'Свернуть' : 'Развернуть';
+            arrow.style.transform = isOpen ? 'rotate(180deg)' : 'unset';
+          });
+        });
+
+        const setContentHeight = () => {
+          const contentBlock = document.querySelector(
+            '.tree-employees-content-wrapper'
+          ) as HTMLElement;
+
+          contentBlock.style.maxHeight = `${contentBlock.offsetHeight}px`;
+        };
+
+        window.addEventListener('DOMContentLoaded', () => {
+          setContentHeight();
+        });
+
+        window.addEventListener('resize', () => {
+          setContentHeight();
+        });
+      </script>
+    </main>
+  </Container>
+</body>

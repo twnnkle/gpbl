@@ -2,6 +2,15 @@ ol {
   margin: 0;
 }
 
+.breadcrumb {
+  .active {
+    color: #7f8ebe;
+    font-size: 16px;
+    font-weight: 400;
+    text-decoration-line: none;
+  }
+}
+
 .item-with-icon {
   display: flex;
   align-items: center;
@@ -15,11 +24,4 @@ ol {
   font-weight: 500;
   text-decoration-line: underline;
   text-underline-offset: 5px;
-}
-
-.active {
-  color: #7f8ebe;
-  font-size: 16px;
-  font-weight: 400;
-  text-decoration-line: none;
 }

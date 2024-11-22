@@ -1,0 +1,38 @@
+---
+import './_index.scss';
+import { Image } from 'astro:assets';
+import type { ImageMetadata } from 'astro';
+
+interface Props {
+  projects: {
+    title: string;
+    imageLink: string;
+  }[];
+}
+
+const { projects } = Astro.props;
+
+const images = import.meta.glob<{ default: ImageMetadata }>(
+  '/src/assets/**/*.{jpeg,jpg,png}'
+);
+---
+
+<div class="projects-list">
+  {
+    projects.map((project) => (
+      <a href="#" class="projects-list__item">
+        <div class="projects-list__item__image">
+          <Image
+            src={images[project.imageLink]()}
+            alt={project.title}
+            width="306"
+            height="310"
+          />
+        </div>
+        <div class="projects-list__item__content">
+          <div class="projects-list__item__content__title">{project.title}</div>
+        </div>
+      </a>
+    ))
+  }
+</div>

@@ -1,0 +1,199 @@
+---
+import './_index.scss';
+
+import Container from '@layouts/Container/index.astro';
+import Breadcrumbs from '@components/pages/media/common/Breadcrumbs/index.astro';
+import EventCard from '@components/pages/media/common/EventCard/index.astro';
+
+const breadcrumbs = [
+  {
+    label: 'Медиа',
+    href: '/media/main',
+  },
+  {
+    label: 'Спецпроекты',
+    href: '/media/special-projects',
+  },
+  {
+    label: 'Интервью сотрудников',
+  },
+];
+
+const projects = [
+  {
+    link: '#',
+    imageLink: '/src/assets/pages/media/employee-interviews/1.png',
+    period: '21.08',
+    title: 'Интервью о путешествиях по нашей большой стране',
+    categories: [
+      {
+        link: '#',
+        title: 'Программа',
+      },
+      {
+        link: '#',
+        title: 'Сайт мероприятия',
+      },
+    ],
+  },
+  {
+    link: '#',
+    imageLink: '/src/assets/pages/media/employee-interviews/2.png',
+    period: '21.08',
+    title:
+      'Новогодние и рождественские праздники — это времся, когда хочется повторить что-то волшебное',
+    categories: [
+      {
+        link: '#',
+        title: 'Программа',
+      },
+      {
+        link: '#',
+        title: 'Сайт мероприятия',
+      },
+    ],
+  },
+  {
+    link: '#',
+    imageLink: '/src/assets/pages/media/employee-interviews/3.png',
+    period: '21.08',
+    title: 'Блиц-интервью ко дню лизинга',
+    categories: [
+      {
+        link: '#',
+        title: 'Программа',
+      },
+      {
+        link: '#',
+        title: 'Сайт мероприятия',
+      },
+    ],
+  },
+  {
+    link: '#',
+    imageLink: '/src/assets/pages/media/employee-interviews/3.png',
+    period: '21.08',
+    title: 'Блиц-интервью ко дню лизинга',
+    categories: [
+      {
+        link: '#',
+        title: 'Программа',
+      },
+      {
+        link: '#',
+        title: 'Сайт мероприятия',
+      },
+    ],
+  },
+  {
+    link: '#',
+    imageLink: '/src/assets/pages/media/employee-interviews/1.png',
+    period: '21.08',
+    title: 'Интервью о путешествиях по нашей большой стране',
+    categories: [
+      {
+        link: '#',
+        title: 'Программа',
+      },
+      {
+        link: '#',
+        title: 'Сайт мероприятия',
+      },
+    ],
+  },
+  {
+    link: '#',
+    imageLink: '/src/assets/pages/media/employee-interviews/2.png',
+    period: '21.08',
+    title:
+      'Новогодние и рождественские праздники — это времся, когда хочется повторить что-то волшебное',
+    categories: [
+      {
+        link: '#',
+        title: 'Программа',
+      },
+      {
+        link: '#',
+        title: 'Сайт мероприятия',
+      },
+    ],
+  },
+  {
+    link: '#',
+    imageLink: '/src/assets/pages/media/employee-interviews/3.png',
+    period: '21.08',
+    title: 'Блиц-интервью ко дню лизинга',
+    categories: [
+      {
+        link: '#',
+        title: 'Программа',
+      },
+      {
+        link: '#',
+        title: 'Сайт мероприятия',
+      },
+    ],
+  },
+  {
+    link: '#',
+    imageLink: '/src/assets/pages/media/employee-interviews/3.png',
+    period: '21.08',
+    title: 'Блиц-интервью ко дню лизинга',
+    categories: [
+      {
+        link: '#',
+        title: 'Программа',
+      },
+      {
+        link: '#',
+        title: 'Сайт мероприятия',
+      },
+    ],
+  },
+];
+---
+
+<body>
+  <Container>
+    <main>
+      <div class="main-page">
+        <section class="media-employee-interviews">
+          <div class="row">
+            <div class="col-12">
+              <Breadcrumbs breadcrumbs={breadcrumbs} />
+            </div>
+          </div>
+        </section>
+
+        <section class="media-employee-interviews-header">
+          <div class="row">
+            <div class="col-12">
+              <h2>Интервью сотрудников</h2>
+            </div>
+          </div>
+        </section>
+
+        <section class="media-employee-interviews-projects">
+          <div class="row">
+            <div class="col-12">
+              <div class="media-employee-interviews-projects__list">
+                {
+                  projects.map((item) => (
+                    <EventCard
+                      imageLink={item.imageLink}
+                      title={item.title}
+                      link={item.link}
+                      period={item.period}
+                      categories={item.categories}
+                      background="transparent"
+                    />
+                  ))
+                }
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+    </main>
+  </Container>
+</body>

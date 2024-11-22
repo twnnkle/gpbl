@@ -1,0 +1,18 @@
+.analytics-card {
+  background-color: #ffffff;
+  border-radius: 16px;
+  padding: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 5px;
+  height: 100%;
+  text-decoration: none;
+
+  &__text {
+    color: #222222;
+    font-size: 24px;
+    font-weight: 500;
+    line-height: 28.8px;
+  }
+}

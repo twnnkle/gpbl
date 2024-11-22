@@ -1,17 +1,12 @@
 ---
 import './_index.scss';
 
-import { Image } from 'astro:assets';
-
 import Container from '@layouts/Container/index.astro';
 
 import Breadcrumbs from '@components/pages/hr/hr4/Breadcrumbs/index.astro';
 import Star from '@components/common/Star/index.astro';
-import Banner from '@components/common/Banner/index.astro';
-import InfoCard from '@components/pages/hr/hr4/InfoCard/index.astro';
-import LinkCard from '@components/pages/hr/hr4/LinkCard/index.astro';
-
-import hrImage from '@assets/pages/hr/hr-big-card-3.png';
+import LeftBlock from '@components/pages/hr/hr4/LeftBlock/index.astro';
+import RightBlock from '@components/pages/hr/hr4/RightBlock/index.astro';
 ---
 
 <body>
@@ -24,70 +19,8 @@ import hrImage from '@assets/pages/hr/hr-big-card-3.png';
         </div>
 
         <div class="hr-page__content">
-          <h4 class="hr-page__title">
-            Добро пожаловать в команду «Газпромбанк Лизинг»!
-          </h4>
-
-          <Image src={hrImage} width={636} height={192} alt="Картинка статьи" />
-
-          <p class="hr-page__description">
-            Мы рады, что Вы стали частью нашего коллектива, ведь мы по праву
-            гордимся нашей командой профессионалов! Каждый день мы решаем
-            сложные и интересные задачи, чтобы предоставлять нашим клиентам
-            лучшие решения и сервис. Будьте готовы к амбициозным проектам, а мы
-            со своей стороны обещаем оказать поддержку на всех этапах Вашей
-            работы.
-          </p>
-
-          <Banner
-            title="Узнать больше о нашей Компании"
-            text="можно на Официальном сайте Газпромбанк Лизинг"
-            btnText="Перейти на сайт"
-          />
-
-          <h5 class="hr-page__subtitle">
-            А также предлагаем вам ознакомиться со следующей важной информацией:
-          </h5>
-
-          <div class="hr-page__info-cards">
-            <InfoCard
-              label="Сетевой диск"
-              description="на котором вы сможете найти папку своего подразделения, юридические документы, а также всю необходимую справочную информацию для работы"
-            />
-
-            <InfoCard
-              label="Общая презентация о компании"
-              description="где собрана вся информация про лизинг в целом, клиентов и направления деятельности Газпромбанк Лизинг"
-            />
-
-            <InfoCard
-              label="Шаблон почтовой подписи"
-              description="которую необходимо поставить в Microsoft Outlook."
-            />
-
-            <InfoCard
-              label="Шаблон почтовой подписи"
-              description="которую необходимо поставить в Microsoft Outlook."
-              isDownloadBtn
-            />
-
-            <InfoCard
-              label="Шаблон почтовой подписи"
-              description="которую необходимо поставить в Microsoft Outlook."
-              isDownloadBtn
-            />
-          </div>
-
-          <h5 class="hr-page__subtitle">
-            Кроме того, на нашем корпоративном портале вы сможете найти:
-          </h5>
-
-          <div class="hr-page__link-cards">
-            <LinkCard text="Организационную структуру ГПБЛ" />
-            <LinkCard
-              text="Телефонные справочники и информацию по подчиненности"
-            />
-          </div>
+          <LeftBlock />
+          <RightBlock />
         </div>
       </div>
     </main>

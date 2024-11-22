@@ -17,8 +17,9 @@
     margin: 0 25px 0 45px;
     padding: 0;
     list-style: none;
-    gap: 30px;
+    gap: 25px;
     transition: all 0.1s ease-in-out;
+    margin-right: 210px;
 
     @media (max-width: 1420px) {
       gap: 25px;
@@ -28,10 +29,56 @@
       gap: 20px;
     }
 
-    li {
+    .service-dropdown-btn,
+    .more-dropdown-btn {
+      display: flex;
+      align-items: center;
+      gap: 5px;
+    }
+
+    .more-dropdown-list,
+    .service-dropdown-list {
+      padding: 16px;
+
+      li {
+        white-space: nowrap;
+      }
+    }
+
+    .more-dropdown-list {
+      li {
+        &:nth-child(1) {
+          display: none;
+
+          @media (max-width: 1420px) {
+            display: block;
+          }
+        }
+
+        &:nth-child(2) {
+          display: none;
+
+          @media (max-width: 1280px) {
+            display: block;
+          }
+        }
+
+        &:nth-child(3) {
+          display: none;
+
+          @media (max-width: 1100px) {
+            display: block;
+          }
+        }
+      }
+    }
+
+    li,
+    li a {
       color: #212529;
       font-size: 16px;
       font-weight: 400;
+      text-decoration: none;
       cursor: pointer;
 
       &:hover {
@@ -39,13 +86,13 @@
       }
 
       &:nth-last-child(2) {
-        @media (max-width: 1340px) {
+        @media (max-width: 1420px) {
           display: none;
         }
       }
 
       &:nth-last-child(3) {
-        @media (max-width: 1250px) {
+        @media (max-width: 1280px) {
           display: none;
         }
       }
@@ -59,20 +106,40 @@
   }
 
   &__search {
-    padding: 7px 12px;
     border-radius: 42px;
     background-color: #ffffff;
     display: flex;
     align-items: center;
     margin-right: 15px;
+    position: absolute;
+    cursor: pointer;
+
+    &-inner {
+      display: flex;
+      align-items: center;
+      border-radius: 8px;
+      padding: 8px 16px;
+      width: 150px;
+      overflow: hidden;
+      transition: width 0.3s ease;
+    }
+
+    &-inner.expanded {
+      width: 500px;
+    }
+
+    &-icon {
+      min-width: 24px;
+    }
 
     input {
       outline: none;
       border: none;
       padding: 0 5px;
-      width: 100px;
+      width: 100%;
       margin-left: 10px;
       color: #212529;
+      transition: opacity 0.2s ease;
 
       &::placeholder {
         color: #7f8ebe;
@@ -88,6 +155,24 @@
 
     img {
       border-radius: 50%;
+    }
+  }
+
+  .avatar-dropdown-list {
+    padding: 16px;
+
+    li,
+    li a {
+      color: #212529;
+      font-size: 16px;
+      font-weight: 400;
+      text-decoration: none;
+      cursor: pointer;
+      white-space: nowrap;
+
+      &:hover {
+        color: #487cfb;
+      }
     }
   }
 }

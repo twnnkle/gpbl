@@ -1,0 +1,50 @@
+---
+import './_index.scss';
+
+import { Image } from 'astro:assets';
+
+import hrImage from '@assets/pages/hr/hr-big-card-2.png';
+---
+
+<div class="hr-left-block">
+  <h4 class="hr-left-block__title">Внутренние коммуникации</h4>
+
+  <Image src={hrImage} width={636} height={192} alt="Картинка статьи" />
+
+  <p class="hr-left-block__label">Коммуникационные сессии</p>
+
+  <p class="hr-left-block__description">
+    Коммуникационная сессия - новый формат информирования сотрудников о
+    происходящих в компании ключевых планах и событиях. Формат предполагает
+    проведение ежеквартальных сессий в режиме ВКС продолжительностью до 1 часа,
+    в рамках которых коллеги расскажут о результатах прошлого квартала, планах и
+    проектах на будущее, ключевых событиях, интересных кейсах, а также ответят
+    на вопросы сотрудников.
+  </p>
+
+  <div class="hr-left-block__tags">
+    <span class="hr-left-block__tag">Август 2023</span>
+    <span class="hr-left-block__tag">Июнь 2023</span>
+    <span class="hr-left-block__tag">Февраль 2023</span>
+    <span class="hr-left-block__tag">Октябрь 2022</span>
+  </div>
+
+  <p class="hr-left-block__label">eNPS</p>
+
+  <p class="hr-left-block__description">
+    eNPS — (от англ. employee Net Promoter Score) индекс удовлетворенности
+    персонала. Основная цель использования — помощь в изучении уровня лояльности
+    и получение «обратной связи» от сотрудников для развития компании и каждого
+    сотрудника.
+  </p>
+
+  <div class="hr-left-block__tags">
+    <span class="hr-left-block__tag">eNPS 2022</span>
+  </div>
+
+  <p class="hr-left-block__text-with-link">
+    Все материалы по внутренним коммуникациям можно найти <a href="#"
+      >в папке на сетевых ресурсах</a
+    >.
+  </p>
+</div>

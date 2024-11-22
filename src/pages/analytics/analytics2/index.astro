@@ -1,0 +1,93 @@
+---
+import './_index.scss';
+
+import Container from '@layouts/Container/index.astro';
+
+import SideMenu from '@components/pages/analytics/analytics2/SideMenu/index.astro';
+import Breadcrumbs from '@components/pages/analytics/analytics2/Breadcrumbs/index.astro';
+import BigImgBlock from '@components/pages/analytics/BigImgBlock/index.astro';
+import Card from '@components/pages/analytics/analytics2/Card/index.astro';
+
+import mainImg from '@assets/pages/analytics/main-img-2.png';
+---
+
+<body>
+  <Container>
+    <main>
+      <div class="analytics-page">
+        <div class="row justify-content-between">
+          <div class="col-md-3">
+            <SideMenu />
+          </div>
+
+          <div class="col-md-9">
+            <Breadcrumbs />
+
+            <div class="analytics-page__big-img-block">
+              <BigImgBlock
+                img={mainImg.src}
+                label="Угольная промышленность и исследования"
+                btnText="Заявка на исследование"
+              />
+            </div>
+
+            <div class="row gy-4 analytics-page__cards">
+              <Card
+                label="Яков и Партнеры"
+                list={[
+                  'Будущее угольной индустрии. Рынок России до 2050',
+                  'Будущее угольной индустрии. Мировой рынок до 2050 года. Глобальные тренды',
+                  'Будущее угольной индустрии. Мировой рынок до 2050 года. Глобальные тренды',
+                ]}
+                withBtn
+              />
+              <Card
+                label="Угольный дайджест"
+                list={[
+                  'Сентябрь 2023',
+                  'Август 2023',
+                  'Июль 2023',
+                  'Июнь 2023',
+                  'Май 2023',
+                  'Апрель 2023',
+                ]}
+                withBtn
+              />
+              <Card
+                label=`Журнал "Уголь"`
+                list={[
+                  'Будущее угольной индустрии. Рынок России до 2050',
+                  'Будущее угольной индустрии. Мировой рынок до 2050 года. Глобальные тренды',
+                  'Будущее угольной индустрии. Мировой рынок до 2050 года. Глобальные тренды',
+                ]}
+                withBtn
+              />
+              <Card label="УГМК" list={['Рынок угля 9м 2021']} />
+              <Card
+                label="ЦЭП"
+                list={[
+                  'Прогноз рынка угля на 2023-2028',
+                  'Прогноз рынка угля на 2023-2027',
+                  'Рынок углей 2024',
+                  'Чермет сырье угли',
+                  'еще что-то ',
+                  'еще что-то ',
+                ]}
+                withBtn
+              />
+              <Card
+                label="УСтР"
+                list={[
+                  'Обзор угледобывающей отрасли (9м_23)',
+                  'Обзор угледобывающей отрасли (6м_23) 2023',
+                  'Обзор угледобывающей отрасли (4м_23)',
+                ]}
+                withBtn
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+  </Container>
+</body>

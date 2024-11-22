@@ -1,0 +1,42 @@
+---
+import './_index.scss';
+
+import { Image } from 'astro:assets';
+
+import logo from '@assets/logo.png';
+---
+
+<div class="footer">
+  <div class="footer__left-block">
+    <Image src={logo} width="271" height="40" alt="Логотип" />
+
+    <div class="footer__copyright">
+      <p>© 2003-2024</p>
+      <p>АО «Газпромбанк Лизинг»</p>
+    </div>
+  </div>
+
+  <div class="footer__links-block">
+    <ul>
+      <li><a href="#">Сотрудники</a></li>
+      <li><a href="#">HR</a></li>
+      <li><a href="#">Медиа</a></li>
+      <li><a href="#">Благодарю</a></li>
+      <li><a href="#">База знаний</a></li>
+      <li><a href="#">О компании</a></li>
+    </ul>
+
+    <ul>
+      <li><a href="#">Аналитика</a></li>
+      <li><a href="#">Вопрос-ответ</a></li>
+      <li><a href="#">Опросы</a></li>
+      <li><a href="#">Новости</a></li>
+      <li><a href="#">Галерея</a></li>
+      <li><a href="#">Объявления</a></li>
+      <li><a href="#">Госпрограммы</a></li>
+      <li><a href="#">Заявки</a></li>
+      <li><a href="#">Горячая линия комплаенс</a></li>
+      <li><a href="#">Идея 2.0</a></li>
+    </ul>
+  </div>
+</div>

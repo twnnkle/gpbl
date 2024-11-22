@@ -3,9 +3,11 @@ import './_index.scss';
 
 import Container from '@layouts/Container/index.astro';
 
-import Star from '@components/common/Star/index.astro';
 import SideMenu from '@components/pages/employees/employees6/SideMenu/index.astro';
-import PDFCard from '@components/pages/employees/employees6/PDFCard/index.astro';
+import Search from '@components/common/SearchWithBlueBtn/index.astro';
+import Star from '@components/common/Star/index.astro';
+import BirthdaysBlock from '@components/pages/employees/employees6/BirthdaysBlock/index.astro';
+import YourTeamBlock from '@components/pages/employees/employees6/YourTeamBlock/index.astro';
 ---
 
 <body>
@@ -18,26 +20,20 @@ import PDFCard from '@components/pages/employees/employees6/PDFCard/index.astro'
           </div>
 
           <div class="col-md-9">
-            <div class="employee-pdf-header">
-              <h4 class="employee-pdf-header__title">PDF структура</h4>
+            <div class="employees-header">
+              <Search bgColor="#ffffff" />
               <Star />
             </div>
 
-            <div class="employee-pdf-content row justify-content-between">
-              <div class="col-md-6 mb-4">
-                <PDFCard />
-              </div>
+            <div class="employees-content">
+              <div class="row justify-content-between">
+                <div class="col-xxl-8 col-md-12">
+                  <BirthdaysBlock />
+                </div>
 
-              <div class="col-md-6 mb-4">
-                <PDFCard />
-              </div>
-
-              <div class="col-md-6 mb-4">
-                <PDFCard />
-              </div>
-
-              <div class="col-md-6 mb-4">
-                <PDFCard />
+                <div class="col-xxl-4 col-md-12">
+                  <YourTeamBlock />
+                </div>
               </div>
             </div>
           </div>

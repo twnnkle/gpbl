@@ -1,0 +1,32 @@
+.right-block {
+  width: 20%;
+  margin-top: 10px;
+
+	&__title {
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 120%;
+    color: #a6b1d2;
+  }
+
+  &__file {
+    margin-top: 15px;
+    cursor: pointer;
+  }
+
+  &__file-label,
+  &__file-info {
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 150%;
+    color: #212529;
+  }
+
+  &__file-label {
+    margin-top: 15px;
+  }
+
+  &__file-info {
+    margin-top: 5px;
+  }
+}

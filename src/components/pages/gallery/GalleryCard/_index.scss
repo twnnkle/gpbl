@@ -1,0 +1,79 @@
+.gallery-card {
+  background-color: #ffffff;
+  padding: 30px;
+  border-radius: 24px;
+
+  &__label-and-date {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+  }
+
+  &__label {
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 24px;
+    color: #212529;
+  }
+
+  &__date,
+  &__location {
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 21px;
+    color: #7f8ebe;
+  }
+
+  &__location {
+    margin-top: 10px;
+  }
+
+  &__image-and-menu {
+    display: flex;
+    gap: 30px;
+    margin-top: 25px;
+  }
+
+  &__menu {
+    display: flex;
+    flex-direction: column;
+    gap: 23px;
+  }
+
+  &__menu-label {
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 21px;
+    color: #212529;
+  }
+
+  &__menu-links {
+    display: flex;
+    column-gap: 30px;
+    row-gap: 10px;
+    flex-wrap: wrap;
+    margin-top: 10px;
+
+    a {
+      padding-right: 24px;
+      color: #487cfb;
+      font-size: 16px;
+      font-weight: 400;
+      line-height: 24px;
+      text-decoration: none;
+      position: relative;
+
+      &::after {
+        content: "";
+        width: 16px;
+        height: 16px;
+        background-image: url("../../../../assets/pages/gallery/arrow.svg");
+        position: absolute;
+        right: 0;
+        top: 50%;
+        transform: translateY(-50%);
+      }
+    }
+  }
+}

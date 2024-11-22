@@ -1,0 +1,48 @@
+---
+import './_index.scss';
+
+import Container from '@layouts/Container/index.astro';
+
+import SideMenu from '@components/pages/analytics/analytics6/SideMenu/index.astro';
+import BigImgBlock from '@components/pages/analytics/BigImgBlock/index.astro';
+import Card from '@components/pages/analytics/analytics6/Card/index.astro';
+
+import mainImg from '@assets/pages/analytics/main-img-6.png';
+---
+
+<body>
+  <Container>
+    <main>
+      <div class="analytics-page">
+        <div class="row justify-content-between">
+          <div class="col-md-3">
+            <SideMenu />
+          </div>
+
+          <div class="col-md-9">
+            <BigImgBlock img={mainImg.src} label="Рынок лизинга" />
+
+            <div class="row gy-4 row-cols-md-3 row-cols-xl-4 analytics-page__cards">
+              <Card label="Сводные данные 2001- 20022" withBtn />
+              <Card label="2023" />
+              <Card label="2022" />
+              <Card label="2021" />
+              <Card label="2020" />
+              <Card label="2019" />
+              <Card label="2018" />
+              <Card label="2017" />
+              <Card label="2016" />
+              <Card label="2015" />
+              <Card label="2014" />
+              <Card label="2013" />
+              <Card label="2012" />
+              <Card label="2011" />
+              <Card label="2010" />
+              <Card label="2009" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+  </Container>
+</body>

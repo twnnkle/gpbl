@@ -1,0 +1,22 @@
+body {
+  background-color: #f3f5fb;
+}
+
+.analytics-page {
+  margin-top: 55px;
+
+  &__header {
+    margin-top: 25px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+
+    h4 {
+      color: #212529;
+      font-size: 32px;
+      font-weight: 500;
+      line-height: 38.4px;
+    }
+  }
+}

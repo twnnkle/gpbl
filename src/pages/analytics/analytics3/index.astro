@@ -1,0 +1,26 @@
+---
+import './_index.scss';
+
+import Container from '@layouts/Container/index.astro';
+
+import Breadcrumbs from '@components/pages/analytics/analytics3/Breadcrumbs/index.astro';
+import Cards from '@components/pages/analytics/analytics3/Cards/index.astro';
+import Search from '@components/pages/analytics/analytics3/Search/index.astro';
+---
+
+<body>
+  <Container>
+    <main>
+      <div class="analytics-page">
+        <Breadcrumbs />
+
+        <div class="analytics-page__header">
+          <h4>Яков и Партнеры</h4>
+          <Search />
+        </div>
+
+        <Cards />
+      </div>
+    </main>
+  </Container>
+</body>

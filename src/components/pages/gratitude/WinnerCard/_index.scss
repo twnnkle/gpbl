@@ -1,0 +1,51 @@
+.winner-card {
+  background-color: #ffffff;
+  padding: 16px;
+  border-radius: 16px;
+  cursor: pointer;
+
+  &__label,
+  &__text {
+    font-size: 24px;
+    line-height: 28.8px;
+    font-weight: 500;
+  }
+
+  &__label {
+    color: #2c2c2c;
+  }
+
+  &__text {
+    color: #a6b1d2;
+  }
+
+  img {
+    display: block;
+    margin: 40px auto 0 auto;
+  }
+
+  &__bottom-block {
+    margin-top: 65px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 5px;
+
+    p {
+      font-size: 16px;
+      line-height: 24px;
+      font-weight: 400;
+      color: #2c2c2c;
+    }
+  }
+
+  &__btn {
+    width: 32px;
+    height: 32px;
+    border: 1px solid #ccd3e7;
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}

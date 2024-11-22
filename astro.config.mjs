@@ -2,7 +2,6 @@ import { defineConfig } from 'astro/config';
 import { passthroughImageService } from 'astro/config';
 import relativeLinks from 'astro-relative-links';
 
-// TODO: Переименовать все index.scss файлы в _index.scss, чтобы ушли варнинги в консоли (предположительно)
 // TODO: Сделать все SVG компонентами. Только нужно сохранить ховер эффекты и чтобы при сборке не было js для этого
 
 // https://astro.build/config

@@ -1,0 +1,173 @@
+body {
+  background-color: #f3f5fb;
+}
+
+.employees-page {
+  margin-top: 50px;
+}
+
+.employee-info-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.employee-info {
+  margin-top: 40px;
+
+  &__white-block {
+    display: flex;
+    background-color: #ffffff;
+    padding: 32px;
+    border-radius: 20px;
+    gap: 30px;
+  }
+}
+
+.employee-info-avatar {
+  position: relative;
+  height: fit-content;
+  width: 25%;
+
+  img {
+    border-radius: 50%;
+    width: 100%;
+    height: auto;
+  }
+
+  &__status {
+    position: absolute;
+    bottom: -15px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #ffffff;
+    border-radius: 46px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 6px 12px;
+
+    span {
+      color: #212529;
+      font-size: 16px;
+      font-weight: 400;
+      white-space: nowrap;
+    }
+  }
+}
+
+.employee-info-about {
+  width: 70%;
+
+  p,
+  h4,
+  a {
+    color: #212529;
+    line-height: 100%;
+  }
+
+  &__name {
+    font-size: 32px;
+    font-weight: 500;
+  }
+
+  &__positions {
+    font-size: 15px;
+    font-weight: 400;
+    margin-top: 10px;
+  }
+
+  &__about-label {
+    font-size: 16px;
+    font-weight: 700;
+    margin-top: 30px;
+  }
+
+  &__about-description {
+    font-size: 14px;
+    font-weight: 500;
+    margin-top: 12px;
+  }
+
+  &__about-items {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin-top: 30px;
+    gap: 15px;
+  }
+
+  &__about-item {
+    width: 40%;
+
+    span {
+      color: #636464;
+      font-size: 12px;
+      font-weight: 700;
+      display: block;
+    }
+
+    p,
+    a {
+      font-size: 14px;
+      font-weight: 500;
+      margin-top: 8px;
+      width: fit-content;
+      white-space: nowrap;
+    }
+
+    a {
+      text-decoration: none;
+      display: flex;
+      align-items: center;
+      gap: 5px;
+    }
+  }
+}
+
+.employee-info-supervisor {
+  @media (max-width: 1199px) {
+    margin-top: 20px;
+  }
+
+  h4 {
+    color: #212529;
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 100%;
+  }
+}
+
+.employee-info-supervisor-card {
+  display: flex;
+  margin-top: 10px;
+  text-decoration: none;
+  width: fit-content;
+
+  img {
+    border-radius: 50%;
+  }
+
+  &__text {
+    margin-left: 10px;
+
+    p {
+      color: #212529;
+      font-size: 14px;
+      font-weight: 500;
+      line-height: 100%;
+    }
+
+    span {
+      color: #7f8ebe;
+      font-size: 14px;
+      font-weight: 400;
+      line-height: 100%;
+      white-space: nowrap;
+    }
+  }
+
+  &__button {
+    margin-left: 20px;
+  }
+}

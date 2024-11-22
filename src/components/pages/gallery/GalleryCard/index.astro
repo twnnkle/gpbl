@@ -1,0 +1,75 @@
+---
+import './_index.scss';
+
+const { isFirst } = Astro.props;
+
+import { Image } from 'astro:assets';
+
+import cardImg1 from '@assets/pages/gallery/card-1.png';
+import cardImg2 from '@assets/pages/gallery/card-2.png';
+---
+
+<div class="gallery-card">
+  <div class="gallery-card__label-and-date">
+    <p class="gallery-card__label">
+      {
+        isFirst
+          ? '20 лет Газпромбанк Лизинг'
+          : 'Корпоратив в честь нового 2023 года'
+      }
+    </p>
+    <p class="gallery-card__date">
+      {isFirst ? '12 мая 2023' : '25 декабря 2023'}
+    </p>
+  </div>
+
+  <p class="gallery-card__location">Яхт-клуб «Галс»</p>
+
+  <div class="gallery-card__image-and-menu">
+    <Image
+      src={isFirst ? cardImg1 : cardImg2}
+      width="220"
+      height="166"
+      alt="Картинка карточки"
+    />
+
+    <div class="gallery-card__menu">
+      <div class="gallery-card__menu-item">
+        <p class="gallery-card__menu-label">Фотографии</p>
+
+        <div class="gallery-card__menu-links">
+          <a href="#">Фотографии с мероприятия</a>
+          {
+            isFirst && (
+              <>
+                <a href="#">Фотоконкурс «Невесомость»</a>
+                <a href="#">Поздравления от сотрудников</a>
+              </>
+            )
+          }
+        </div>
+      </div>
+
+      <div class="gallery-card__menu-item">
+        <p class="gallery-card__menu-label">Видео</p>
+
+        <div class="gallery-card__menu-links">
+          <a href="#">Видеоролик с мероприятия</a>
+          <a href="#">Поздравления от сотрудников</a>
+        </div>
+      </div>
+
+      {
+        !isFirst && (
+          <div class="gallery-card__menu-item">
+            <p class="gallery-card__menu-label">Файлы</p>
+
+            <div class="gallery-card__menu-links">
+              <a href="#">Презентация на тему итогов года.pdf</a>
+            </div>
+          </div>
+        )
+      }
+    </div>
+  </div>
+</div>

@@ -1,0 +1,27 @@
+---
+import './_index.scss';
+
+import TableCard from '@components/pages/employees/employees3/table/TableCard/index.astro';
+---
+
+<div class="employees-table table-responsive">
+  <table class="table align-middle">
+    <thead>
+      <tr>
+        <th>ФИО</th>
+        <th>Подразделение</th>
+        <th>Должность</th>
+        <th>Вн. номер</th>
+        <th>Моб.номер</th>
+        <th>Почта</th>
+      </tr>
+    </thead>
+
+    <tbody>
+      <TableCard />
+      <TableCard />
+      <TableCard />
+      <TableCard />
+    </tbody>
+  </table>
+</div>
