@@ -1,17 +1,24 @@
-textarea {
+input.select {
   width: 100%;
   border: 1px solid #CCD3E7;
   border-radius: 4px;
-  padding: 6px 12px;
+  padding: 6px 24px 6px 12px;
   overflow: hidden;
   font-size: 16px;
   font-weight: 400;
   color: #212529;
+  background-image: url("/src/assets/pages/applications/icon-down.svg");
+  background-repeat: no-repeat;
+  background-position: calc(100% - 12px) center;
 
   &::placeholder {
     font-size: 16px;
     font-weight: 400;
     color: #ccd3e7;
+  }
+
+  &:disabled {
+    background-color: #fafbfd;
   }
 
   &:focus {

@@ -1,0 +1,12 @@
+---
+import './_index.scss';
+
+interface Props {
+  placeholder?: string;
+  disabled?: boolean;
+}
+
+const { placeholder, disabled = false } = Astro.props;
+---
+
+<input class="input-text" type="text" placeholder={placeholder} disabled={disabled} />

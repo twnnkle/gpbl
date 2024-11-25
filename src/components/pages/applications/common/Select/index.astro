@@ -1,0 +1,11 @@
+---
+import './_index.scss';
+
+interface Props {
+  placeholder?: string;
+}
+
+const { placeholder } = Astro.props;
+---
+
+<input class="select" type="text" placeholder={placeholder} />
