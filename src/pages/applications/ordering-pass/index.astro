@@ -9,6 +9,8 @@ import CardField from '@components/pages/applications/common/CardField/index.ast
 import Button from '@components/common/Button/index.astro';
 
 import Textarea from '@components/pages/applications/common/Textarea/index.astro';
+import Input from '@components/pages/applications/common/Input/index.astro';
+import Select from '@components/pages/applications/common/Select/index.astro';
 
 const breadcrumbs = [
   {
@@ -24,7 +26,7 @@ const breadcrumbs = [
     href: '#',
   },
   {
-    label: 'Заказ продуктов',
+    label: 'Заказ пропуска',
   },
 ];
 ---
@@ -44,7 +46,7 @@ const breadcrumbs = [
                 <div
                   class="media-applications-courier-services__content__title"
                 >
-                  Заказ продуктов
+                  Заказ пропуска
                 </div>
                 <div
                   class="media-applications-courier-services__content__description"
@@ -68,7 +70,40 @@ const breadcrumbs = [
                     class="media-applications-courier-services__content__form__fields"
                   >
                     <CardField isRequired={true}>
-                      <label slot="title">Заказ</label>
+                      <label slot="title">Тип доставки</label>
+                      <span slot="content">
+                        <Select placeholder="Выберите тип доставки" />
+                      </span>
+                    </CardField>
+
+                    <CardField isRequired={true}>
+                      <label slot="title">Дата посещения</label>
+                      <span slot="content">
+                        <Input placeholder="02.10.2023" type="date" />
+                      </span>
+                    </CardField>
+
+                    <CardField isRequired={true}>
+                      <label slot="title">Способ исполнения</label>
+                      <span slot="content">
+                        <Select placeholder="Выберите Способ" />
+                      </span>
+                    </CardField>
+
+                    <CardField isRequired={true}>
+                      <label slot="title">Пропуск</label>
+                      <span slot="content">
+                        <span
+                          class="media-applications-courier-services__content__form__fields__row"
+                        >
+                          <Input placeholder="Модель автомобиля" />
+                          <Input placeholder="Гос. номер" />
+                        </span>
+                      </span>
+                    </CardField>
+
+                    <CardField>
+                      <label slot="title">Примечание</label>
                       <span slot="content">
                         <Textarea />
                       </span>
