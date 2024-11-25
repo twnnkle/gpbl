@@ -1,0 +1,146 @@
+---
+import './_index.scss';
+
+import Container from '@layouts/Container/index.astro';
+import SideMenu from '@components/pages/media/common/SideMenu/index.astro';
+import Breadcrumbs from '@components/pages/media/common/Breadcrumbs/index.astro';
+import ProgressBar from '@components/pages/applications/common/ProgressBar/index.astro';
+import CardField from '@components/pages/applications/common/CardField/index.astro';
+
+import Button from '@components/common/Button/index.astro';
+
+import Textarea from '@components/pages/applications/common/Textarea/index.astro';
+import Input from '@components/pages/applications/common/Input/index.astro';
+import Select from '@components/pages/applications/common/Select/index.astro';
+
+const breadcrumbs = [
+  {
+    label: 'Сервисы',
+    href: '#',
+  },
+  {
+    label: 'Заявки',
+    href: '/applications/main',
+  },
+  {
+    label: 'Административный отдел',
+    href: '#',
+  },
+  {
+    label: 'Курьерские услуги',
+  },
+];
+---
+
+<body>
+  <Container>
+    <main>
+      <div class="main-page">
+        <section class="media-applications-courier-services">
+          <div class="row justify-content-center">
+            <div class="col-md-7">
+              <div class="media-applications-courier-services__breadcrumbs">
+                <Breadcrumbs breadcrumbs={breadcrumbs} />
+              </div>
+
+              <div class="media-applications-courier-services__content">
+                <div
+                  class="media-applications-courier-services__content__title"
+                >
+                  Курьерские услуги
+                </div>
+                <div
+                  class="media-applications-courier-services__content__description"
+                >
+                  Если вам требуется подготовить или закупить кое-либо
+                  аналитическое исследование, пожалуйста, заполните форму на
+                  данной странице с указанием объекта исследования, необходимых
+                  пунктов содержания и сроков получения отчета
+                </div>
+
+                <div
+                  class="media-applications-courier-services__content__progress"
+                >
+                  <ProgressBar current={7} total={14} />
+                </div>
+
+                <form
+                  class="media-applications-courier-services__content__form"
+                >
+                  <div
+                    class="media-applications-courier-services__content__form__fields"
+                  >
+                    <CardField isRequired={true}>
+                      <label slot="title">Дата исполнения</label>
+                      <span slot="content">
+                        <Input placeholder="02.10.2023" type="date" />
+                      </span>
+                    </CardField>
+
+                    <CardField isRequired={true}>
+                      <label slot="title">Контрагент</label>
+                      <span slot="content">
+                        <Input placeholder="Название компании" />
+                      </span>
+                    </CardField>
+
+                    <CardField isRequired={true}>
+                      <label slot="title">Адрес</label>
+                      <span slot="content">
+                        <Input placeholder="Адрес доставки" />
+                      </span>
+                      <div
+                        class="media-applications-courier-services__content__form__fields__description"
+                        slot="description"
+                      >
+                        Индекс, страна, улица, дом
+                      </div>
+                    </CardField>
+
+                    <CardField isRequired={true}>
+                      <label slot="title">Контактное лицо</label>
+                      <span slot="content">
+                        <Input placeholder="HR рекрутер" />
+                      </span>
+                    </CardField>
+
+                    <CardField isRequired={true}>
+                      <label slot="title">Контактный телефон</label>
+                      <span slot="content">
+                        <Input placeholder="+7(999)999 99-12" />
+                      </span>
+                    </CardField>
+
+                    <CardField isRequired={true}>
+                      <label slot="title">Описание отправляемых документов</label>
+                      <span slot="content">
+                        <Textarea />
+                      </span>
+                    </CardField>
+
+                    <CardField>
+                      <label slot="title">Примечание</label>
+                      <span slot="content">
+                        <Textarea />
+                      </span>
+                    </CardField>
+                  </div>
+
+                  <div
+                    class="media-applications-courier-services__content__form__submit"
+                  >
+                    <Button
+                      text="Создать заявку"
+                      option="btn-primary"
+                      type="submit"
+                    />
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+    </main>
+  </Container>
+</body>

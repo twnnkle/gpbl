@@ -17,6 +17,10 @@ const { isRequired = false } = Astro.props;
   <div class="field-card__content">
     <slot name="content"/>
 
+    <div class="field-card__content__description">
+      <slot name="description"/>
+    </div>
+
     <div class="field-card__content__error">
       <slot name="error"/>
     </div>
