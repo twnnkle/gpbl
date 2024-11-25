@@ -2,11 +2,18 @@
 import './_index.scss';
 
 interface Props {
+  type?: string;
   placeholder?: string;
   disabled?: boolean;
 }
 
-const { placeholder, disabled = false } = Astro.props;
+const { placeholder, disabled = false, type = 'text' } = Astro.props;
 ---
 
-<input class="input-text" type="text" placeholder={placeholder} disabled={disabled} />
+<input
+  class="input-text"
+  type="text"
+  placeholder={placeholder}
+  disabled={disabled}
+  class:list={{ 'input-date': type === 'date' }}
+/>
