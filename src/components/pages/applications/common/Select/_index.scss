@@ -4,7 +4,7 @@ input.select {
   border-radius: 4px;
   padding: 6px 24px 6px 12px;
   overflow: hidden;
-  font-size: 16px;
+  font-size: 13px;
   font-weight: 400;
   color: #212529;
   background-image: url("/src/assets/pages/applications/icon-down.svg");
@@ -12,9 +12,10 @@ input.select {
   background-position: calc(100% - 12px) center;
 
   &::placeholder {
-    font-size: 16px;
+    font-size: 13px;
+    line-height: 20px;
     font-weight: 400;
-    color: #ccd3e7;
+    color: #212529;
   }
 
   &:disabled {
