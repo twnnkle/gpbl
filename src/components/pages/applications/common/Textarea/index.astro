@@ -1,0 +1,11 @@
+---
+import './_index.scss';
+
+interface Props {
+  rows?: number;
+}
+
+const { rows = 4 } = Astro.props;
+---
+
+<textarea rows={rows}/>

@@ -1,0 +1,22 @@
+.field-card {
+  background-color: #ffffff;
+  padding: 24px;
+  gap: 12px;
+  border-radius: 24px;
+
+  &__title {
+    margin-bottom: 8px;
+    color: #212529;
+    font-size: 16px;
+    line-height: 24px;
+
+    &_required {
+      margin-left: 4px;
+      color: #DC3545;
+    }
+  }
+
+  &__content {
+    display: block;
+  }
+}

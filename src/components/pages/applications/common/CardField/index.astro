@@ -1,0 +1,24 @@
+---
+import './_index.scss';
+
+interface Props {
+  isRequired?: boolean;
+}
+
+const { isRequired = false } = Astro.props;
+---
+
+<div class="field-card">
+  <div class="field-card__title">
+    <slot name="title"/>
+    {isRequired && <span class="field-card__title_required">*</span>}
+  </div>
+
+  <div class="field-card__content">
+    <slot name="content"/>
+
+    <div class="field-card__content__error">
+      <slot name="error"/>
+    </div>
+  </div>
+</div>

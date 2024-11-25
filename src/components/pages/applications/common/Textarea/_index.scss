@@ -1,0 +1,22 @@
+textarea {
+  width: 100%;
+  border: 1px solid #f5f7fc;
+  border-radius: 4px;
+  padding: 6px 12px;
+  overflow: hidden;
+  font-size: 16px;
+  font-weight: 400;
+  color: #212529;
+
+  &::placeholder {
+    font-size: 16px;
+    font-weight: 400;
+    color: #ccd3e7;
+  }
+
+  &:focus {
+    border: 1px solid #86B7FE;
+    box-shadow: 0 0 0 4px #0D6EFD40;
+    outline: none;
+  }
+}
