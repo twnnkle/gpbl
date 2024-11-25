@@ -1,0 +1,105 @@
+---
+import './_index.scss';
+
+import Container from '@layouts/Container/index.astro';
+import SideMenu from '@components/pages/media/common/SideMenu/index.astro';
+import Breadcrumbs from '@components/pages/media/common/Breadcrumbs/index.astro';
+import ProgressBar from '@components/pages/applications/common/ProgressBar/index.astro';
+import CardField from '@components/pages/applications/common/CardField/index.astro';
+
+import Button from '@components/common/Button/index.astro';
+
+import Textarea from '@components/pages/applications/common/Textarea/index.astro';
+
+const breadcrumbs = [
+  {
+    label: 'Сервисы',
+    href: '#',
+  },
+  {
+    label: 'Заявки',
+    href: '/applications/main',
+  },
+  {
+    label: 'Аналитика',
+  },
+];
+
+const menu = [
+  {
+    label: 'Популярное',
+    active: false,
+  },
+  {
+    label: 'Административный отдел',
+    active: false,
+  },
+  {
+    label: 'Персонал',
+    active: false,
+  },
+  {
+    label: 'IT',
+    active: false,
+  },
+  {
+    label: 'Маркетинг',
+    active: false,
+  },
+  {
+    label: 'Аналитика',
+    active: true,
+  },
+];
+---
+
+<body>
+  <Container>
+    <main>
+      <div class="main-page">
+        <section class="media-applications-analytics">
+          <div class="row">
+            <div class="col-md-3">
+              <SideMenu items={menu} />
+            </div>
+
+            <div class="col-md-7 offset-1">
+              <div class="media-applications-analytics__breadcrumbs">
+                <Breadcrumbs breadcrumbs={breadcrumbs} />
+              </div>
+
+              <div class="media-applications-analytics__content">
+                <div class="media-applications-analytics__content__title">
+                  Аналитика
+                </div>
+                <div class="media-applications-analytics__content__description">
+                  Если вам требуется подготовить или закупить кое-либо
+                  аналитическое исследование, пожалуйста, заполните форму на
+                  данной странице с указанием объекта исследования, необходимых
+                  пунктов содержания и сроков получения отчета
+                </div>
+
+                <div class="media-applications-analytics__content__progress">
+                  <ProgressBar current={7} total={14}/>
+                </div>
+
+                <form class="media-applications-analytics__content__form">
+                  <CardField>
+                    <label slot="title">Предмет исследования</label>
+                    <span slot="content">
+                      <Textarea />
+                    </span>
+                  </CardField>
+
+                  <div class="media-applications-analytics__content__form__submit">
+                    <Button text="Создать заявку" option="btn-primary" type="submit"/>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+    </main>
+  </Container>
+</body>

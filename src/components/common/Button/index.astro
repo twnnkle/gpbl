@@ -1,7 +1,7 @@
 ---
 import './_index.scss';
 
-const { text, option } = Astro.props;
+const { text, option, type = 'button' } = Astro.props;
 ---
 
-<button type="button" class=`btn ${option}`>{text}</button>
+<button type={ type } class=`btn ${option}`>{text}</button>
