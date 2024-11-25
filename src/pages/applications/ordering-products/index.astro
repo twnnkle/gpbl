@@ -1,0 +1,98 @@
+---
+import './_index.scss';
+
+import Container from '@layouts/Container/index.astro';
+import SideMenu from '@components/pages/media/common/SideMenu/index.astro';
+import Breadcrumbs from '@components/pages/media/common/Breadcrumbs/index.astro';
+import ProgressBar from '@components/pages/applications/common/ProgressBar/index.astro';
+import CardField from '@components/pages/applications/common/CardField/index.astro';
+
+import Button from '@components/common/Button/index.astro';
+
+import Textarea from '@components/pages/applications/common/Textarea/index.astro';
+import Input from '@components/pages/applications/common/Input/index.astro';
+import Select from '@components/pages/applications/common/Select/index.astro';
+
+const breadcrumbs = [
+  {
+    label: 'Сервисы',
+    href: '#',
+  },
+  {
+    label: 'Заявки',
+    href: '/applications/main',
+  },
+  {
+    label: 'Административный отдел',
+    href: '#',
+  },
+  {
+    label: 'Заказ продуктов',
+  },
+];
+---
+
+<body>
+  <Container>
+    <main>
+      <div class="main-page">
+        <section class="media-applications-courier-services">
+          <div class="row justify-content-center">
+            <div class="col-md-7">
+              <div class="media-applications-courier-services__breadcrumbs">
+                <Breadcrumbs breadcrumbs={breadcrumbs} />
+              </div>
+
+              <div class="media-applications-courier-services__content">
+                <div
+                  class="media-applications-courier-services__content__title"
+                >
+                  Заказ продуктов
+                </div>
+                <div
+                  class="media-applications-courier-services__content__description"
+                >
+                  Если вам требуется подготовить или закупить кое-либо
+                  аналитическое исследование, пожалуйста, заполните форму на
+                  данной странице с указанием объекта исследования, необходимых
+                  пунктов содержания и сроков получения отчета
+                </div>
+
+                <div
+                  class="media-applications-courier-services__content__progress"
+                >
+                  <ProgressBar current={7} total={14} />
+                </div>
+
+                <form
+                  class="media-applications-courier-services__content__form"
+                >
+                  <div
+                    class="media-applications-courier-services__content__form__fields"
+                  >
+                    <CardField isRequired={true}>
+                      <label slot="title">Заказ</label>
+                      <span slot="content">
+                        <Textarea />
+                      </span>
+                    </CardField>
+                  </div>
+
+                  <div
+                    class="media-applications-courier-services__content__form__submit"
+                  >
+                    <Button
+                      text="Создать заявку"
+                      option="btn-primary"
+                      type="submit"
+                    />
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+    </main>
+  </Container>
+</body>
