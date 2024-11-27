@@ -1,0 +1,15 @@
+.input-file-container {
+  display: inline-flex;
+  align-items: center;
+  padding: 7px 13px;
+  background-color: #487CFB;
+  border-radius: 4px;
+
+  & > label {
+    display: flex;
+    align-items: center;
+    color: white;
+    gap: 8px;
+    cursor: pointer;
+  }
+}
