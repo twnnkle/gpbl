@@ -1,0 +1,133 @@
+---
+import './_index.scss';
+
+import Container from '@layouts/Container/index.astro';
+import Breadcrumbs from '@components/pages/media/common/Breadcrumbs/index.astro';
+import ProgressBar from '@components/pages/applications/common/ProgressBar/index.astro';
+import CardField from '@components/pages/applications/common/CardField/index.astro';
+
+import Button from '@components/common/Button/index.astro';
+
+import Textarea from '@components/pages/applications/common/Textarea/index.astro';
+import Select from '@components/pages/applications/common/Select/index.astro';
+import Radio from '@components/pages/applications/common/Radio/index.astro';
+import Number from '@components/pages/applications/common/Number/index.astro';
+
+const breadcrumbs = [
+  {
+    label: 'Сервисы',
+    href: '#',
+  },
+  {
+    label: 'Заявки',
+    href: '/applications/main',
+  },
+  {
+    label: 'Административный отдел',
+    href: '#',
+  },
+  {
+    label: 'Запрос справки',
+  },
+];
+---
+
+<body>
+  <Container>
+    <main>
+      <div class="main-page">
+        <section class="media-applications-ordering-help">
+          <div class="row justify-content-center">
+            <div class="col-md-7">
+              <div class="media-applications-ordering-help__breadcrumbs">
+                <Breadcrumbs breadcrumbs={breadcrumbs} />
+              </div>
+
+              <div class="media-applications-ordering-help__content">
+                <div
+                  class="media-applications-ordering-help__content__title"
+                >
+                  Запрос справки
+                </div>
+                <div
+                  class="media-applications-ordering-help__content__description"
+                >
+                  Если вам требуется подготовить или закупить кое-либо
+                  аналитическое исследование, пожалуйста, заполните форму на
+                  данной странице с указанием объекта исследования, необходимых
+                  пунктов содержания и сроков получения отчета
+                </div>
+
+                <div
+                  class="media-applications-ordering-help__content__progress"
+                >
+                  <ProgressBar current={7} total={14} />
+                </div>
+
+                <form
+                  class="media-applications-ordering-help__content__form"
+                >
+                  <div
+                    class="media-applications-ordering-help__content__form__fields"
+                  >
+                    <CardField isRequired={true}>
+                      <label slot="title">Тип справки</label>
+                      <span slot="content">
+                        <Select placeholder="Тип справки" />
+                      </span>
+                    </CardField>
+
+                    <CardField isRequired={true}>
+                      <label slot="title">На английском</label>
+                      <div slot="content">
+                        <div class="media-applications-ordering-help__content__form__fields__column">
+                          <Radio id="is-english-true" name="is-english" value="true">
+                            Да
+                          </Radio>
+                          <Radio id="is-english-false" name="is-english" value="false">
+                            Нет
+                          </Radio>
+                        </div>
+                      </div>
+                    </CardField>
+
+                    <CardField isRequired={true}>
+                      <label slot="title">Год</label>
+                      <span slot="content">
+                        <Select placeholder="2024" />
+                      </span>
+                    </CardField>
+
+                    <CardField isRequired={true}>
+                      <label slot="title">Количество</label>
+                      <div slot="content">
+                        <Number />
+                      </div>
+                    </CardField>
+
+                    <CardField>
+                      <label slot="title">Примечание</label>
+                      <span slot="content">
+                        <Textarea />
+                      </span>
+                    </CardField>
+                  </div>
+
+                  <div
+                    class="media-applications-ordering-help__content__form__submit"
+                  >
+                    <Button
+                      text="Создать заявку"
+                      option="btn-primary"
+                      type="submit"
+                    />
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+    </main>
+  </Container>
+</body>
