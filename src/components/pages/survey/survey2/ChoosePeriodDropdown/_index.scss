@@ -1,0 +1,26 @@
+.choose-period-dropdown-btn {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  cursor: pointer;
+	margin-left: 15px;
+
+  span {
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 22px;
+    color: #212529;
+  }
+}
+
+.choose-period-dropdown-list {
+  width: 100%;
+}
+
+.choose-period-dropdown-item.active {
+  background-color: #487cfb !important;
+}
+
+.choose-period-dropdown-item:active {
+  background-color: #487cfb !important;
+}

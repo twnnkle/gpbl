@@ -1,0 +1,62 @@
+---
+import './_index.scss';
+
+import Container from '@layouts/Container/index.astro';
+
+import Breadcrumbs1 from '@components/pages/survey/survey3/Breadcrumbs1/index.astro';
+import Breadcrumbs2 from '@components/pages/survey/survey3/Breadcrumbs2/index.astro';
+import WhiteCard from '@components/pages/survey/survey3/WhiteCard/index.astro';
+
+const lists1 = {
+  grayList: ['Буклет ', 'Баннер', 'Реклама'],
+  blackList: ['76%', '14%', '3%'],
+};
+
+const lists2 = {
+  grayList: ['23.09', '23.12', '25.01'],
+  blackList: ['76%', '14%', '3%'],
+};
+---
+
+<body>
+  <Container>
+    <main>
+      <div class="survey-page">
+        <Breadcrumbs1 />
+
+        <h3 class="survey-page__title">Маркетинговая поддержка 2024</h3>
+        <p class="survey-page__description">
+          Цель опроса заключалась в том, чтобы определить наиболее важные
+          критерии выбора продукции для потребителей, а также выявить их
+          предпочтения относительно дизайна, упаковки, цены и других
+          характеристик товаров.
+        </p>
+
+        <Breadcrumbs2 />
+
+        <div class="survey-page__cards">
+          <WhiteCard
+            title="Каких маркетенговых материалов вам не хватает"
+            text="Ответы скрыты, так как они индивидуальны"
+          />
+
+          <WhiteCard
+            title="Каких маркетенговых материалов вам не хватает"
+            withBtn
+          />
+
+          <WhiteCard title="Как вам сейчас материалы?" text="Хорошие" />
+
+          <WhiteCard title="Как вам сейчас материалы?" lists={lists1} />
+
+          <WhiteCard title="Как вам сейчас материалы?" lists={lists2} />
+
+          <WhiteCard
+            title="Как вы оцените работу Маркетенга по 10 бальной шкале. где 0 — ужасно, а 10 — превосходно"
+            text="7 из 10 баллов"
+          />
+        </div>
+      </div>
+    </main>
+  </Container>
+</body>

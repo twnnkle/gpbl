@@ -1,0 +1,48 @@
+---
+import './_index.scss';
+
+import Container from '@layouts/Container/index.astro';
+
+import Search from '@components/pages/survey/survey2/Search/index.astro';
+import ChoosePeriodDropdown from '@components/pages/survey/survey2/ChoosePeriodDropdown/index.astro';
+import Switcher from '@components/pages/survey/survey2/Switcher/index.astro';
+import Button from '@components/common/Button/index.astro';
+import WhiteCard from '@components/pages/survey/survey2/WhiteCard/index.astro';
+---
+
+<body>
+  <Container>
+    <main>
+      <div class="survey-page">
+        <div class="survey-page__header">
+          <div class="survey-page__page-title">
+            <h3>Опросы</h3>
+
+            <div class="survey-page__page-title-counter">3</div>
+          </div>
+
+          <Search />
+          <ChoosePeriodDropdown />
+          <Switcher />
+
+          <div class="survey-page__btn">
+            <Button text="Создать опрос" option="btn-primary" />
+          </div>
+        </div>
+
+        <div class="survey-page__cards">
+          <WhiteCard
+            title="Маркетинговая поддержка 2024"
+            blueBtnText="Учавствовать"
+          />
+          <WhiteCard title="Провести Демо по проекту?" whiteBtns />
+          <WhiteCard
+            title="Новогодний календарь ГПБЛ 2024"
+            blueBtnText="Смотреть результат"
+          />
+          <WhiteCard title="Новогодний календарь ГПБЛ 2024" whiteBtn />
+        </div>
+      </div>
+    </main>
+  </Container>
+</body>
