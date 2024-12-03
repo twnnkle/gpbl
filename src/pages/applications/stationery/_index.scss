@@ -1,0 +1,114 @@
+body {
+  background-color: #f3f5fb;
+}
+
+.main-page {
+  margin-top: 54px;
+
+  .media-applications-stationery {
+    &__breadcrumbs {
+      margin-bottom: 24px;
+    }
+
+    &__content {
+      &__title {
+        font-size: 32px;
+        font-weight: 500;
+        line-height: 38px;
+        margin-bottom: 12px;
+      }
+
+      &__description {
+        max-width: 746px;
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 24px;
+        color: #212529;
+        margin-bottom: 40px;
+      }
+
+      &__progress {
+        margin-top: 40px;
+        margin-bottom: 32px;
+        max-width: 540px;
+      }
+
+      &__form {
+        &__fields {
+          display: flex;
+          flex-direction: column;
+          gap: 12px;
+
+          &__categories {
+            display: flex;
+            flex-direction: column;
+            margin-top: 32px;
+
+            &__row {
+              display: flex;
+              gap: 24px;
+
+              &:not(:first-child) {
+                margin-top: 24px;
+                border-top: 1px solid #d3d6d8;
+                padding-top: 24px;
+              }
+            }
+
+            &__column {
+              flex: 1;
+            }
+
+            &__title {
+              display: flex;
+              justify-content: space-between;
+              align-items: center;
+              gap: 12px;
+            }
+
+            &__delete {
+              margin: 4px 0;
+              outline: none;
+              border: none;
+              width: 24px;
+              height: 24px;
+              background-color: transparent;
+              background-image: url("/src/assets/pages/applications/delete-simple.svg");
+              background-repeat: no-repeat;
+              background-size: contain;
+            }
+
+            &__inventory {
+              display: flex;
+              flex-direction: column;
+              gap: 24px;
+
+              &__items {
+                display: flex;
+                flex-direction: column;
+                gap: 12px;
+              }
+
+              &__item {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                gap: 12px;
+
+                &__count {
+                  display: flex;
+                  align-items: center;
+                  gap: 12px;
+                }
+              }
+            }
+          }
+        }
+
+        &__submit {
+          margin-top: 32px;
+        }
+      }
+    }
+  }
+}

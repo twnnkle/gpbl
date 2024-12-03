@@ -1,0 +1,158 @@
+---
+import './_index.scss';
+
+import Container from '@layouts/Container/index.astro';
+import Breadcrumbs from '@components/pages/media/common/Breadcrumbs/index.astro';
+import ProgressBar from '@components/pages/applications/common/ProgressBar/index.astro';
+import CardField from '@components/pages/applications/common/CardField/index.astro';
+
+import Button from '@components/common/Button/index.astro';
+
+import Textarea from '@components/pages/applications/common/Textarea/index.astro';
+import Select from '@components/pages/applications/common/Select/index.astro';
+import Number from '@components/pages/applications/common/Number/index.astro';
+
+const breadcrumbs = [
+  {
+    label: 'Сервисы',
+    href: '#',
+  },
+  {
+    label: 'Заявки',
+    href: '/applications/main',
+  },
+  {
+    label: 'Административный отдел',
+    href: '#',
+  },
+  {
+    label: 'Канцтовары',
+  },
+];
+---
+
+<body>
+  <Container>
+    <main>
+      <div class="main-page">
+        <section class="media-applications-stationery">
+          <div class="row justify-content-center">
+            <div class="col-md-7">
+              <div class="media-applications-stationery__breadcrumbs">
+                <Breadcrumbs breadcrumbs={breadcrumbs} />
+              </div>
+
+              <div class="media-applications-stationery__content">
+                <div
+                  class="media-applications-stationery__content__title"
+                >
+                  Канцтовары
+                </div>
+                <div
+                  class="media-applications-stationery__content__description"
+                >
+                  Если вам требуется подготовить или закупить кое-либо
+                  аналитическое исследование, пожалуйста, заполните форму на
+                  данной странице с указанием объекта исследования, необходимых
+                  пунктов содержания и сроков получения отчета
+                </div>
+
+                <div
+                  class="media-applications-stationery__content__progress"
+                >
+                  <ProgressBar current={7} total={14} />
+                </div>
+
+                <form
+                  class="media-applications-stationery__content__form"
+                >
+                  <div
+                    class="media-applications-stationery__content__form__fields"
+                  >
+                    <CardField isRequired={true}>
+                      <label slot="title">Канцтовары, которые вы хотите заказать</label>
+                      <div slot="content">
+                        <Select placeholder="Добавить категорию" />
+
+                        <div class="media-applications-stationery__content__form__fields__categories">
+                          <div class="media-applications-stationery__content__form__fields__categories__row">
+                            <div class="media-applications-stationery__content__form__fields__categories__column">
+                              <div class="media-applications-stationery__content__form__fields__categories__title">
+                                Карандаши и точилки
+
+                                <button class="media-applications-stationery__content__form__fields__categories__delete" />
+                              </div>
+                            </div>
+                            <div class="media-applications-stationery__content__form__fields__categories__column">
+                              <div class="media-applications-stationery__content__form__fields__categories__inventory">
+                                <Select placeholder="Добавить позицию"/>
+
+                                <div class="media-applications-stationery__content__form__fields__categories__inventory__items">
+                                  <div class="media-applications-stationery__content__form__fields__categories__inventory__item">
+                                    <div class="media-applications-stationery__content__form__fields__categories__inventory__item__name">
+                                      Карандаши
+                                    </div>
+                                    <div class="media-applications-stationery__content__form__fields__categories__inventory__item__count">
+                                      <Number />
+
+                                      <button class="media-applications-stationery__content__form__fields__categories__delete" />
+                                    </div>
+                                  </div>
+                                  <div class="media-applications-stationery__content__form__fields__categories__inventory__item">
+                                    <div class="media-applications-stationery__content__form__fields__categories__inventory__item__name">
+                                      Точилки
+                                    </div>
+                                    <div class="media-applications-stationery__content__form__fields__categories__inventory__item__count">
+                                      <Number />
+
+                                      <button class="media-applications-stationery__content__form__fields__categories__delete" />
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="media-applications-stationery__content__form__fields__categories__row">
+                            <div class="media-applications-stationery__content__form__fields__categories__column">
+                              <div class="media-applications-stationery__content__form__fields__categories__title">
+                                Фломастеры
+
+                                <button class="media-applications-stationery__content__form__fields__categories__delete" />
+                              </div>
+                            </div>
+                            <div class="media-applications-stationery__content__form__fields__categories__column">
+                              <div class="media-applications-stationery__content__form__fields__categories__inventory">
+                                <Select placeholder="Добавить позицию"/>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </CardField>
+
+                    <CardField>
+                      <label slot="title">Примечание</label>
+                      <span slot="content">
+                        <Textarea />
+                      </span>
+                    </CardField>
+                  </div>
+
+                  <div
+                    class="media-applications-stationery__content__form__submit"
+                  >
+                    <Button
+                      text="Создать заявку"
+                      option="btn-primary"
+                      type="submit"
+                    />
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+    </main>
+  </Container>
+</body>
