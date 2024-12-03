@@ -1,0 +1,57 @@
+body {
+  background-color: #f3f5fb;
+}
+
+.survey-page {
+  margin-top: 50px;
+
+  &__header {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    row-gap: 16px;
+  }
+
+  &__page-title {
+    position: relative;
+
+    h3 {
+      color: #212529;
+      font-size: 32px;
+      line-height: 38.4px;
+      font-weight: 500;
+    }
+
+    &-counter {
+      position: absolute;
+      right: -20px;
+      top: -5px;
+      color: #ffffff;
+      font-size: 12px;
+      line-height: 12px;
+      font-weight: 700;
+      background-color: #007bff;
+      height: 20px;
+      width: 20px;
+      border-radius: 100px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+  }
+
+  &__btn {
+    margin-left: auto;
+
+    @media (max-width: 1371px) {
+      margin-left: unset;
+    }
+  }
+
+  &__cards {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    margin: 32px 232px 0 192px;
+  }
+}

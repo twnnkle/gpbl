@@ -1,0 +1,78 @@
+.white-card {
+  background-color: #ffffff;
+  padding: 16px;
+  border-radius: 16px;
+
+  &__header {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+    align-items: center;
+  }
+
+  &__status,
+  &__date {
+    color: #7f8ebe;
+    font-weight: 400;
+  }
+
+  &__status {
+    font-size: 16px;
+    line-height: 24px;
+  }
+
+  &__date {
+    font-size: 14px;
+    line-height: 21px;
+  }
+
+  &__title {
+    color: #212529;
+    font-size: 24px;
+    line-height: 28.8px;
+    font-weight: 500;
+    margin-top: 12px;
+  }
+
+  &__text {
+    color: #7f8ebe;
+    font-size: 15px;
+    line-height: 24px;
+    font-weight: 400;
+    margin-top: 12px;
+    max-width: 530px;
+  }
+
+  &__bottom {
+    margin-top: 24px;
+  }
+
+  &__white-btns {
+    display: flex;
+    gap: 8px;
+    align-items: center;
+
+    span {
+      color: #7f8ebe;
+      font-size: 16px;
+      line-height: 24px;
+      font-weight: 400;
+      margin-left: 8px;
+    }
+  }
+
+  &__white-btn {
+    color: #212529;
+    font-size: 16px;
+    line-height: 26px;
+    font-weight: 400;
+    height: 38px;
+    border: 1px solid #ccd3e7;
+    border-radius: 4px;
+    padding: 0 12px;
+    display: flex;
+    align-items: center;
+    width: fit-content;
+    cursor: pointer;
+  }
+}

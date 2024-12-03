@@ -1,0 +1,31 @@
+body {
+  background-color: #f3f5fb;
+}
+
+.survey-page {
+  margin: 50px 287px 0 287px;
+
+  &__title {
+    color: #212529;
+    font-size: 32px;
+    line-height: 38.4px;
+    font-weight: 500;
+		margin-top: 24px;
+  }
+
+  &__description {
+    color: #212529;
+    font-size: 16px;
+    line-height: 24px;
+    font-weight: 400;
+		margin-top: 12px;
+		margin-bottom: 40px;
+  }
+
+  &__cards {
+    margin-top: 32px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
+}

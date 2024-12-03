@@ -1,0 +1,50 @@
+---
+import './_index.scss';
+
+const { title, text, withBtn, lists, withStatisticsCards } = Astro.props;
+
+import Button from '@components/common/Button/index.astro';
+---
+
+<div class="white-card">
+  <p class="white-card__title">{title}</p>
+
+  {text && <p class="white-card__text">{text}</p>}
+
+  {
+    withBtn && (
+      <div class="white-card__btn">
+        <Button text="Посмотреть ответы" option="btn-primary" />
+      </div>
+    )
+  }
+
+  {
+    lists && (
+      <div class="white-card__lists">
+        <ul class="white-card__list white-card__list_gray">
+          {lists.grayList.map((listItem) => (
+            <li>{listItem}</li>
+          ))}
+        </ul>
+
+        <ul class="white-card__list white-card__list_black">
+          {lists.blackList.map((listItem) => (
+            <li>{listItem}</li>
+          ))}
+        </ul>
+      </div>
+    )
+  }
+
+  <!-- {
+    withStatisticsCards && (
+      <div class="white-card__statistics-cards">
+        <StatisticsCard progress="3%" />
+        <StatisticsCard progress="76%" />
+        <StatisticsCard progress="3%" />
+        <StatisticsCard progress="3%" />
+      </div>
+    )
+  } -->
+</div>

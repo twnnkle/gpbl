@@ -1,0 +1,44 @@
+---
+import './_index.scss';
+
+const { title, blueBtnText, whiteBtn, whiteBtns } = Astro.props;
+
+import Button from '@components/common/Button/index.astro';
+---
+
+<div class="white-card">
+  <div class="white-card__header">
+    <span class="white-card__status"> Анонимный </span>
+    <span class="white-card__date"> 12 мая 2023 </span>
+  </div>
+
+  <p class="white-card__title">{title}</p>
+
+  <p class="white-card__text">
+    Цель опроса заключалась в том, чтобы определить наиболее важные критерии
+    выбора продукции для потребителей, а также выявить их предпочтения
+    относительно дизайна, упаковки, цены и других характеристик товаров.
+  </p>
+
+  <div class="white-card__bottom">
+    {blueBtnText && <Button text={blueBtnText} option="btn-primary" />}
+
+    {
+      whiteBtn && (
+        <div class="white-card__white-btn">
+          Спасибо что приняли участие в опросе!
+        </div>
+      )
+    }
+
+    {
+      whiteBtns && (
+        <div class="white-card__white-btns">
+          <div class="white-card__white-btn">Да</div>
+          <div class="white-card__white-btn">Не знаю</div>
+          <span>1/2</span>
+        </div>
+      )
+    }
+  </div>
+</div>
