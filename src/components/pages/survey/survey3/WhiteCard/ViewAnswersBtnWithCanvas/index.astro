@@ -1,0 +1,59 @@
+---
+import './_index.scss';
+
+import Button from '@components/common/Button/index.astro';
+---
+
+<div
+  class="view-answers-btn"
+  data-bs-toggle="offcanvas"
+  data-bs-target="#offcanvasRight"
+  aria-controls="offcanvasRight"
+>
+  <Button text="Посмотреть ответы" option="btn-primary" />
+</div>
+
+<div
+  class="offcanvas offcanvas-end offcanvas-answers"
+  tabindex="-1"
+  id="offcanvasRight"
+  aria-labelledby="offcanvasRightLabel"
+>
+  <div class="offcanvas-header">
+    <p class="offcanvas-title" id="offcanvasRightLabel">
+      <span>Ответы на вопрос:</span> Каких маркетенговых материалов вам не хватает
+    </p>
+    <button
+      type="button"
+      class="btn-close"
+      data-bs-dismiss="offcanvas"
+      aria-label="Close"></button>
+  </div>
+
+  <div class="offcanvas-body">
+    <div class="offcanvas-answers__cards">
+      <div class="offcanvas-answers__card">
+        Цель опроса заключалась в том, чтобы определить наиболее важные критерии
+        выбора продукции для потребителей, а также выявить их предпочтения
+        относительно дизайна, упаковки, цены и других характеристик товаров.
+      </div>
+
+      <div class="offcanvas-answers__card">
+        Цель опроса заключалась в том, чтобы определить наиболее важные критерии
+        выбора
+      </div>
+
+      <div class="offcanvas-answers__card">
+        Цель опроса заключалась в том, чтобы определить наиболее важные критерии
+        выбора продукции для потребителей, а также выявить их предпочтения
+        относительно дизайна
+      </div>
+
+      <div class="offcanvas-answers__card">
+        Цель опроса заключалась в том, чтобы определить наиболее важные критерии
+        выбора продукции для потребителей, а также выявить их предпочтения
+        относительно дизайна, упаковки, цены и других характеристик товаров.
+      </div>
+    </div>
+  </div>
+</div>

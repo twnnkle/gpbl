@@ -1,0 +1,43 @@
+.view-answers-btn {
+  margin-top: 12px;
+}
+
+.offcanvas-answers {
+  width: 540px !important;
+  background-color: #f3f5fb;
+
+  .offcanvas-header {
+    align-items: flex-start !important;
+
+    button {
+      margin-top: 1px;
+    }
+  }
+
+  .offcanvas-title {
+    color: #212529;
+    font-size: 32px;
+    line-height: 38.4px;
+    font-weight: 500;
+
+    span {
+      color: #7f8ebe;
+    }
+  }
+
+  &__cards {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  &__card {
+    padding: 20px;
+    border-radius: 30px;
+    background: #ffffff;
+    color: #7f8ebe;
+    font-size: 16px;
+    line-height: 24px;
+    font-weight: 400;
+  }
+}

@@ -19,10 +19,6 @@
     margin-top: 8px;
   }
 
-  &__btn {
-    margin-top: 12px;
-  }
-
   &__lists {
     display: flex;
     justify-content: space-between;
@@ -49,5 +45,12 @@
       color: #212529;
       font-weight: 700;
     }
+  }
+
+  &__statistics-cards {
+    display: flex;
+    gap: 12px;
+    margin-top: 8px;
+    flex-wrap: wrap;
   }
 }

@@ -1,0 +1,30 @@
+---
+import './_index.scss';
+
+import Container from '@layouts/Container/index.astro';
+
+import Breadcrumbs from '@components/pages/advertisement/advertisement2/Breadcrumbs/index.astro';
+import WhiteBlock1 from '@components/pages/advertisement/advertisement2/WhiteBlock1/index.astro';
+---
+
+<body>
+  <Container>
+    <main>
+      <div class="advertisement-page">
+        <Breadcrumbs />
+
+        <h3 class="advertisement-page__title">
+          Уютная 2-комнатная квартира в центре города
+        </h3>
+        <p class="advertisement-page__price">6 960 000 руб</p>
+
+        <div class="advertisement-page__white-blocks">
+          <div class="advertisement-page__white-blocks-item">
+            <WhiteBlock1 />
+          </div>
+          <div class="advertisement-page__white-blocks-item"></div>
+        </div>
+      </div>
+    </main>
+  </Container>
+</body>
