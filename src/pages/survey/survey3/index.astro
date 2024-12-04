@@ -3,8 +3,7 @@ import './_index.scss';
 
 import Container from '@layouts/Container/index.astro';
 
-import Breadcrumbs1 from '@components/pages/survey/survey3/Breadcrumbs1/index.astro';
-import Breadcrumbs2 from '@components/pages/survey/survey3/Breadcrumbs2/index.astro';
+import Breadcrumbs from '@components/pages/survey/survey3/Breadcrumbs/index.astro';
 import WhiteCard from '@components/pages/survey/survey3/WhiteCard/index.astro';
 
 const lists1 = {
@@ -22,7 +21,7 @@ const lists2 = {
   <Container>
     <main>
       <div class="survey-page">
-        <Breadcrumbs1 />
+        <Breadcrumbs />
 
         <h3 class="survey-page__title">Маркетинговая поддержка 2024</h3>
         <p class="survey-page__description">
@@ -31,8 +30,6 @@ const lists2 = {
           предпочтения относительно дизайна, упаковки, цены и других
           характеристик товаров.
         </p>
-
-        <Breadcrumbs2 />
 
         <div class="survey-page__cards">
           <WhiteCard
@@ -50,6 +47,8 @@ const lists2 = {
           <WhiteCard title="Как вам сейчас материалы?" lists={lists1} />
 
           <WhiteCard title="Как вам сейчас материалы?" lists={lists2} />
+
+          <WhiteCard title="К какой дате и времени надо?" withStatisticsCards />
 
           <WhiteCard
             title="Как вы оцените работу Маркетенга по 10 бальной шкале. где 0 — ужасно, а 10 — превосходно"

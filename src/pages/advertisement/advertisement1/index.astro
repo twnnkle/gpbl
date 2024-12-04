@@ -1,0 +1,100 @@
+---
+import './_index.scss';
+
+import Container from '@layouts/Container/index.astro';
+
+import Breadcrumbs from '@components/pages/advertisement/advertisement1/Breadcrumbs/index.astro';
+import Button from '@components/common/Button/index.astro';
+import Search from '@components/pages/advertisement/advertisement1/Search/index.astro';
+import NavMenu from '@components/pages/advertisement/advertisement1/NavMenu/index.astro';
+import Card from '@components/pages/advertisement/advertisement1/Card/index.astro';
+
+import cardImg1 from '@assets/pages/advertisement/advertisement1/cards/1.png';
+import cardImg2 from '@assets/pages/advertisement/advertisement1/cards/2.png';
+import cardImg3 from '@assets/pages/advertisement/advertisement1/cards/3.png';
+import cardImg4 from '@assets/pages/advertisement/advertisement1/cards/4.png';
+import cardImg5 from '@assets/pages/advertisement/advertisement1/cards/5.png';
+import cardImg6 from '@assets/pages/advertisement/advertisement1/cards/6.png';
+import cardImg7 from '@assets/pages/advertisement/advertisement1/cards/7.png';
+import cardImg8 from '@assets/pages/advertisement/advertisement1/cards/8.png';
+---
+
+<body>
+  <Container>
+    <main>
+      <div class="advertisement-page">
+        <Breadcrumbs />
+
+        <div class="advertisement-page__header">
+          <h3>Доска объявлений</h3>
+          <Button text="Разместить объявление" option="btn-primary" />
+        </div>
+
+        <p class="advertisement-page__description">
+          Покупайте и продавайте вещи среди коллег
+        </p>
+
+        <Search />
+        <NavMenu />
+
+        <div class="row gy-4 row-cols-md-4 advertisement-page__cards">
+          <Card
+            img={cardImg1}
+            category="Недвижимость"
+            label="Уютная 2-комнатная квартира в центре города"
+            price="6 960 000 руб."
+          />
+
+          <Card
+            img={cardImg2}
+            category="Для детей"
+            label="Коляска-трансформер Bebetto Bono Polar 2 dв 1"
+            price="19 000 руб."
+          />
+
+          <Card
+            img={cardImg3}
+            category="Техника"
+            label="Робот-пылесос Xiaomi Mijia Sweeping Robot 1S (SDJQR SDJQR SDJQR"
+            price="16 000 руб."
+          />
+
+          <Card
+            img={cardImg4}
+            category="Одежда и обувь"
+            label="Зимняя куртка жекткая 46р"
+            price="2 000 руб."
+          />
+
+          <Card
+            img={cardImg5}
+            category="Техника"
+            label="Вязанный комбинезон и шапочка для новорожденных"
+            price="1 500 руб."
+          />
+
+          <Card
+            img={cardImg6}
+            category="Техника"
+            label="ВАЗ (LADA) Granta 1.6 MT, 2024, 1 000 км"
+            price="190 000 руб."
+          />
+
+          <Card
+            img={cardImg7}
+            category="Техника"
+            label="IPhone 15 Pro Max 256gb"
+            price="69 000 руб."
+          />
+
+          <Card
+            img={cardImg8}
+            category="Техника"
+            label="IPhone 13 128gb"
+            price="39 000 руб."
+          />
+        </div>
+      </div>
+    </main>
+  </Container>
+</body>

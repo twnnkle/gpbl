@@ -1,0 +1,19 @@
+---
+import './_index.scss';
+
+import { Image } from 'astro:assets';
+
+const { img, category, label, price } = Astro.props;
+---
+
+<div class="col">
+  <a href='#' class="advertisement-card">
+    <Image src={img} width="306" height="191" alt="Карточка" />
+
+    <div class="advertisement-card__text">
+      <span class="advertisement-card__category">{category}</span>
+      <p class="advertisement-card__label">{label}</p>
+      <span class="advertisement-card__price">{price}</span>
+    </div>
+  </a>
+</div>

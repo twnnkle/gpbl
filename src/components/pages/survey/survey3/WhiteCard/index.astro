@@ -3,7 +3,8 @@ import './_index.scss';
 
 const { title, text, withBtn, lists, withStatisticsCards } = Astro.props;
 
-import Button from '@components/common/Button/index.astro';
+import StatisticsCard from '@components/pages/survey/survey3/WhiteCard/StatisticsCard/index.astro';
+import ViewAnswersBtnWithCanvas from '@components/pages/survey/survey3/WhiteCard/ViewAnswersBtnWithCanvas/index.astro';
 ---
 
 <div class="white-card">
@@ -11,13 +12,7 @@ import Button from '@components/common/Button/index.astro';
 
   {text && <p class="white-card__text">{text}</p>}
 
-  {
-    withBtn && (
-      <div class="white-card__btn">
-        <Button text="Посмотреть ответы" option="btn-primary" />
-      </div>
-    )
-  }
+  {withBtn && <ViewAnswersBtnWithCanvas />}
 
   {
     lists && (
@@ -37,7 +32,7 @@ import Button from '@components/common/Button/index.astro';
     )
   }
 
-  <!-- {
+  {
     withStatisticsCards && (
       <div class="white-card__statistics-cards">
         <StatisticsCard progress="3%" />
@@ -46,5 +41,5 @@ import Button from '@components/common/Button/index.astro';
         <StatisticsCard progress="3%" />
       </div>
     )
-  } -->
+  }
 </div>

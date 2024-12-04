@@ -1,0 +1,15 @@
+---
+import './_index.scss';
+
+import { Image } from 'astro:assets';
+
+const { progress } = Astro.props;
+
+import CardImg from '@assets/pages/survey/card.png';
+---
+
+<div class="statistics-card">
+  <Image src={CardImg} width="343" height="273" alt="Карточка" />
+
+  <span class="statistics-card__progress">{progress}</span>
+</div>
