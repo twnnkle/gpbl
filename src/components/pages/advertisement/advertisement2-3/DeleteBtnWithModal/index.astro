@@ -1,0 +1,43 @@
+---
+import './_index.scss';
+
+import Button from '@components/common/Button/index.astro';
+---
+
+<div class="delete-btn-with-modal">
+  <div
+    class="delete-btn-with-modal__btn"
+    data-bs-toggle="modal"
+    data-bs-target="#deleteModal"
+  >
+    <Button text="Удалить объявление" option="btn-primary" />
+  </div>
+
+  <div
+    class="modal fade"
+    id="deleteModal"
+    tabindex="-1"
+    aria-labelledby="deleteModalLabel"
+    aria-hidden="true"
+  >
+    <div class="modal-dialog modal-dialog-centered" style="max-width: 410px;">
+      <div class="modal-content" style="height: 210px;">
+        <div class="modal-body">
+          <h5 id="deleteModalLabel">
+            Уверенны, что хотите удалить объявление?
+          </h5>
+
+          <p>Восстановить его будет невозможно</p>
+
+          <div class="modal-btns">
+            <Button text="Удалить" option="btn-primary" />
+
+            <div data-bs-dismiss="modal">
+              <Button text="Отмена" option="btn btn-outline-primary" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

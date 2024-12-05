@@ -1,0 +1,35 @@
+.delete-btn-with-modal {
+
+  .modal-body {
+    padding: 24px 32px;
+  }
+  
+  &__btn {
+    button {
+      height: fit-content;
+      white-space: nowrap;
+      margin-top: 10px;
+    }
+  }
+
+  h5 {
+    font-size: 32px;
+    font-weight: 500;
+    line-height: 35.2px;
+    color: #212529;
+  }
+
+  p {
+    margin-top: 10px;
+    font-size: 16px;
+    line-height: 24px;
+    font-weight: 400;
+    color: #212529;
+  }
+
+  .modal-btns {
+    display: flex;
+    gap: 10px;
+    margin-top: 24px;
+  }
+}

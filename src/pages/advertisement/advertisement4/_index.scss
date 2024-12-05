@@ -3,11 +3,7 @@ body {
 }
 
 .advertisement-page {
-  margin: 50px 277px 0 277px;
-
-  @media (max-width: 1300px) {
-    margin: 50px 100px 0 100px;
-  }
+  margin-top: 50px;
 
   &__title {
     font-size: 32px;
@@ -17,18 +13,22 @@ body {
     margin-top: 24px;
   }
 
-  &__price {
-    font-size: 24px;
+  &__label {
+    margin-top: 32px;
+    font-size: 20px;
     font-weight: 500;
-    color: #487cfb;
-    line-height: 28.8px;
-    margin-top: 8px;
+    color: #212529;
+    line-height: 24px;
   }
 
-  &__white-blocks {
+  &__fields {
+    margin-top: 12px;
     display: flex;
     flex-direction: column;
     gap: 12px;
+  }
+
+  &__btn {
     margin-top: 32px;
   }
 }
