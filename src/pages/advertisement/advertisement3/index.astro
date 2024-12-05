@@ -6,6 +6,7 @@ import Container from '@layouts/Container/index.astro';
 import Breadcrumbs from '@components/pages/advertisement/advertisement2-3/Breadcrumbs/index.astro';
 import WhiteBlock1 from '@components/pages/advertisement/advertisement2-3/WhiteBlock1/index.astro';
 import WhiteBlock2 from '@components/pages/advertisement/advertisement2-3/WhiteBlock2/index.astro';
+import DeleteBtnWithModal from '@components/pages/advertisement/advertisement2-3/DeleteBtnWithModal/index.astro';
 import Carousel from '@components/pages/advertisement/advertisement2-3/Carousel/index.astro';
 ---
 
@@ -15,9 +16,11 @@ import Carousel from '@components/pages/advertisement/advertisement2-3/Carousel/
       <div class="advertisement-page">
         <Breadcrumbs />
 
-        <h3 class="advertisement-page__title">
-          Уютная 2-комнатная квартира в центре города
-        </h3>
+        <div class="advertisement-page__header">
+          <h3>Уютная 2-комнатная квартира в центре города</h3>
+          <DeleteBtnWithModal />
+        </div>
+        
         <p class="advertisement-page__price">6 960 000 руб</p>
 
         <Carousel />

@@ -1,0 +1,61 @@
+---
+import './_index.scss';
+
+import Container from '@layouts/Container/index.astro';
+
+import Breadcrumbs from '@components/pages/advertisement/advertisement4/Breadcrumbs/index.astro';
+import Button from '@components/common/Button/index.astro';
+import CardField from '@components/pages/applications/common/CardField/index.astro';
+import Textarea from '@components/pages/applications/common/Textarea/index.astro';
+import Select from '@components/pages/applications/common/Select/index.astro';
+import Input from '@components/pages/applications/common/Input/index.astro';
+---
+
+<body>
+  <Container>
+    <main>
+      <div class="advertisement-page">
+        <Breadcrumbs />
+
+        <h5 class="advertisement-page__title">Новое объявление</h5>
+        <p class="advertisement-page__label">Основная информация</p>
+        <p class="advertisement-page__label">Фотографии</p>
+        <p class="advertisement-page__label">Контактная информация</p>
+
+        <div class="advertisement-page__fields">
+          <CardField isRequired={true}>
+            <label slot="title">Категория</label>
+            <span slot="content">
+              <Select placeholder="Выберите категорию" />
+            </span>
+          </CardField>
+
+          <CardField>
+            <label slot="title">Название</label>
+            <span slot="content">
+              <Input placeholder="Заполните название" />
+            </span>
+          </CardField>
+
+          <CardField isRequired={true}>
+            <label slot="title">Описание</label>
+            <span slot="content">
+              <Textarea />
+            </span>
+          </CardField>
+
+          <CardField>
+            <label slot="title">Цена</label>
+            <span slot="content">
+              <Input placeholder="Укажите цену" />
+            </span>
+          </CardField>
+        </div>
+
+        <div class="advertisement-page__btn">
+          <Button text="Разместить объявление" option="btn-primary" />
+        </div>
+      </div>
+    </main>
+  </Container>
+</body>
