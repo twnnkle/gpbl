@@ -3,9 +3,10 @@ import './_index.scss';
 
 interface Props {
   rows?: number;
+  placeholder?: string;
 }
 
-const { rows = 4 } = Astro.props;
+const { rows = 4, placeholder } = Astro.props;
 ---
 
-<textarea rows={rows}/>
+<textarea rows={rows} placeholder={placeholder}></textarea>

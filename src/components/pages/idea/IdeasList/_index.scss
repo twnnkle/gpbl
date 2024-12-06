@@ -1,0 +1,18 @@
+.ideas-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+
+  li {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    font-size: 16px;
+    line-height: 19.2px;
+    font-weight: 400;
+    color: #212529;
+  }
+}

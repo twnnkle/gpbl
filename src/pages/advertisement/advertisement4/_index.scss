@@ -3,7 +3,11 @@ body {
 }
 
 .advertisement-page {
-  margin-top: 50px;
+  margin: 50px 277px 0 277px;
+
+  @media (max-width: 1300px) {
+    margin: 50px 100px 0 100px;
+  }
 
   &__title {
     font-size: 32px;

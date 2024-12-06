@@ -9,6 +9,7 @@ import CardField from '@components/pages/applications/common/CardField/index.ast
 import Textarea from '@components/pages/applications/common/Textarea/index.astro';
 import Select from '@components/pages/applications/common/Select/index.astro';
 import Input from '@components/pages/applications/common/Input/index.astro';
+import Photo from '@components/pages/advertisement/advertisement4/Photo/index.astro';
 ---
 
 <body>
@@ -19,8 +20,6 @@ import Input from '@components/pages/applications/common/Input/index.astro';
 
         <h5 class="advertisement-page__title">Новое объявление</h5>
         <p class="advertisement-page__label">Основная информация</p>
-        <p class="advertisement-page__label">Фотографии</p>
-        <p class="advertisement-page__label">Контактная информация</p>
 
         <div class="advertisement-page__fields">
           <CardField isRequired={true}>
@@ -30,7 +29,7 @@ import Input from '@components/pages/applications/common/Input/index.astro';
             </span>
           </CardField>
 
-          <CardField>
+          <CardField isRequired={true}>
             <label slot="title">Название</label>
             <span slot="content">
               <Input placeholder="Заполните название" />
@@ -40,14 +39,43 @@ import Input from '@components/pages/applications/common/Input/index.astro';
           <CardField isRequired={true}>
             <label slot="title">Описание</label>
             <span slot="content">
-              <Textarea />
+              <Textarea placeholder="Добавьте описание" />
+            </span>
+          </CardField>
+
+          <CardField isRequired={true}>
+            <label slot="title">Цена</label>
+            <span slot="content">
+              <Input placeholder="Укажите цену" />
+            </span>
+          </CardField>
+        </div>
+
+        <p class="advertisement-page__label">Фотографии</p>
+
+        <Photo />
+
+        <p class="advertisement-page__label">Контактная информация</p>
+
+        <div class="advertisement-page__fields">
+          <CardField>
+            <label slot="title">Имя</label>
+            <span slot="content">
+              <Input placeholder="Укажите ваше имя" />
             </span>
           </CardField>
 
           <CardField>
-            <label slot="title">Цена</label>
+            <label slot="title">Номер телефона</label>
             <span slot="content">
-              <Input placeholder="Укажите цену" />
+              <Input placeholder="+7 (___)-___-__-__" />
+            </span>
+          </CardField>
+
+          <CardField>
+            <label slot="title">Email</label>
+            <span slot="content">
+              <Input placeholder="Укажите email" />
             </span>
           </CardField>
         </div>

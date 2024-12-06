@@ -1,0 +1,39 @@
+---
+import './_index.scss';
+
+import Container from '@layouts/Container/index.astro';
+
+import Breadcrumbs from '@components/pages/idea/Breadcrumbs/index.astro';
+import HeroBlock from '@components/pages/idea/HeroBlock/index.astro';
+import CardsWithIcons from '@components/pages/idea/CardsWithIcons/index.astro';
+import IdeasList from '@components/pages/idea/IdeasList/index.astro';
+import StepsCards from '@components/pages/idea/StepsCards/index.astro';
+import Banner from '@components/pages/idea/Banner/index.astro';
+import DocumentForDownload from '@components/pages/idea/DocumentForDownload/index.astro';
+---
+
+<body>
+  <Container>
+    <main>
+      <div class="idea-page">
+        <Breadcrumbs />
+        <HeroBlock />
+
+        <h4 class="idea-page__title">
+          Участие в проекте даёт реальную возможность, чтобы:
+        </h4>
+
+        <CardsWithIcons />
+        <h4 class="idea-page__title">Свою идею можно подать в категориях:</h4>
+        <IdeasList />
+        <h4 class="idea-page__title">4 шага к реализации вашей идеи:</h4>
+        <StepsCards />
+        <h4 class="idea-page__title">Документы</h4>
+
+        <DocumentForDownload />
+
+        <Banner />
+      </div>
+    </main>
+  </Container>
+</body>
