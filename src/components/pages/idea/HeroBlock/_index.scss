@@ -1,0 +1,40 @@
+.idea-block {
+  background-image: url('/src/assets/pages/idea/hero-bg.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  padding: 32px;
+  border-radius: 16px;
+  margin-top: 24px;
+
+  h3 {
+    font-size: 32px;
+    line-height: 38.4px;
+    font-weight: 500;
+    color: #212529;
+  }
+
+  p {
+    margin-top: 10px;
+    font-size: 16px;
+    line-height: 20.8px;
+    font-weight: 400;
+    color: #878b94;
+    max-width: 315px;
+  }
+
+  &__btns {
+    margin-top: 90px;
+    display: flex;
+    gap: 24px;
+    align-items: center;
+
+    a {
+      font-size: 16px;
+      line-height: 25px;
+      font-weight: 400;
+      color: #487cfb;
+      text-decoration: none;
+    }
+  }
+}

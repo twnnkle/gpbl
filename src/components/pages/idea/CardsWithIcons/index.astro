@@ -1,0 +1,27 @@
+---
+import CardWithIcon from '@components/pages/idea/CardsWithIcons/CardWithIcon/index.astro';
+
+import cardIcon1 from '@assets/pages/idea/cardsWithIcons/1.svg';
+import cardIcon2 from '@assets/pages/idea/cardsWithIcons/2.svg';
+import cardIcon3 from '@assets/pages/idea/cardsWithIcons/3.svg';
+import cardIcon4 from '@assets/pages/idea/cardsWithIcons/4.svg';
+import cardIcon5 from '@assets/pages/idea/cardsWithIcons/5.svg';
+import cardIcon6 from '@assets/pages/idea/cardsWithIcons/6.svg';
+---
+
+<div class="cards-with-icons">
+  <div class="row row-cols-md-3 gy-4">
+    <CardWithIcon
+      icon={cardIcon1}
+      text="Повлиять на оптимизацию процессов компании"
+    />
+    <CardWithIcon icon={cardIcon2} text="Принять участие в развитии бизнеса" />
+    <CardWithIcon icon={cardIcon3} text="Раскрыть свой лидерский потенциал" />
+    <CardWithIcon
+      icon={cardIcon4}
+      text="Улучшить условия работы для себя и коллег"
+    />
+    <CardWithIcon icon={cardIcon5} text="Завоевать уважение коллег" />
+    <CardWithIcon icon={cardIcon6} text="Быть услышанным" />
+  </div>
+</div>

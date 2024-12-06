@@ -1,0 +1,17 @@
+---
+import './_index.scss';
+
+const { step, title, description, date } = Astro.props;
+---
+
+<div class="col">
+  <div class="step-card">
+    <div class="step-card__step-and-date">
+      <span class="step-card__step">Шаг {step}</span>
+      {date && <span class="step-card__date">{date}</span>}
+    </div>
+
+    <p class="step-card__title">{title}</p>
+    <p class="step-card__description">{description}</p>
+  </div>
+</div>

@@ -1,0 +1,50 @@
+.step-card {
+  background-image: url('src/assets/pages/idea/step-card-bg.png');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  padding: 16px;
+  border-radius: 16px;
+  height: 100%;
+
+  &__step-and-date {
+    display: flex;
+    justify-content: space-between;
+    gap: 5px;
+  }
+
+  &__step {
+    color: #ffffff;
+    font-size: 14px;
+    line-height: 14px;
+    font-weight: 700;
+    padding: 5px 10px;
+    border-radius: 4px;
+    background-color: #007bff;
+    white-space: nowrap;
+  }
+
+  &__date {
+    color: #487cfb;
+    font-size: 14px;
+    line-height: 12.6px;
+    font-weight: 500;
+    text-align: right;
+  }
+
+  &__title {
+    margin-top: 65px;
+    color: #212529;
+    font-size: 18px;
+    line-height: 21.6px;
+    font-weight: 500;
+  }
+
+  &__description {
+    margin-top: 8px;
+    color: #212529;
+    font-size: 14px;
+    line-height: 16.8px;
+    font-weight: 400;
+  }
+}

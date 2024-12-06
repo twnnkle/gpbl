@@ -1,0 +1,27 @@
+---
+import './_index.scss';
+
+import { Image } from 'astro:assets';
+
+import checkIcon from '@assets/pages/idea/check-icon.svg';
+
+const text = [
+  'Бизнес-идея с экономическим эффектом',
+  'Оптимизация бизнес-процессов',
+  'Улучшение условий работы в офисе',
+  'Повышение лояльности клиентов и развитие бренда',
+  'Развитие внутренних коммуникаций',
+  'Другое',
+];
+---
+
+<ul class="ideas-list">
+  {
+    text.map((item) => (
+      <li>
+        <Image src={checkIcon} width="24" height="24" alt="Иконка галочки" />
+        <p>{item}</p>
+      </li>
+    ))
+  }
+</ul>

@@ -1,0 +1,34 @@
+---
+import StepCard from '@components/pages/idea/StepsCards/StepCard/index.astro';
+---
+
+<div class="cards-with-icons">
+  <div class="row row-cols-md-3 row-cols-xxl-4 gy-4">
+    <StepCard
+      step="1"
+      title="Подача заявки с идеей"
+      description="Заполните анкету на портале"
+    />
+
+    <StepCard
+      step="2"
+      title="Первичная модерация"
+      description="Дождитесь прохождение первичной модерации"
+      date="48 часов"
+    />
+
+    <StepCard
+      step="3"
+      title="Рассмотрение комиссией"
+      description="Комиссия рассмотрит идею и утвердит команду для реализации"
+      date="1-4 недели"
+    />
+
+    <StepCard
+      step="4"
+      title="Реализация идеи"
+      description="Утвержденная команда реализует идею"
+      date="Установленные сроки"
+    />
+  </div>
+</div>

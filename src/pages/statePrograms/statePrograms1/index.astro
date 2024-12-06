@@ -1,0 +1,104 @@
+---
+import './_index.scss';
+
+import Container from '@layouts/Container/index.astro';
+
+import StateProgramsCard from '@components/pages/statePrograms/statePrograms1/StateProgramsCard/index.astro';
+import Breadcrumbs from '@components/pages/statePrograms/statePrograms1/Breadcrumbs/index.astro';
+
+import cardIcon1 from '@assets/pages/statePrograms/cards/1.svg';
+import cardIcon2 from '@assets/pages/statePrograms/cards/2.svg';
+import cardIcon3 from '@assets/pages/statePrograms/cards/3.svg';
+import cardIcon4 from '@assets/pages/statePrograms/cards/4.svg';
+import cardIcon5 from '@assets/pages/statePrograms/cards/5.svg';
+import cardIcon6 from '@assets/pages/statePrograms/cards/6.svg';
+import cardIcon7 from '@assets/pages/statePrograms/cards/7.svg';
+import cardIcon8 from '@assets/pages/statePrograms/cards/8.svg';
+import cardIcon9 from '@assets/pages/statePrograms/cards/9.svg';
+import cardIcon10 from '@assets/pages/statePrograms/cards/10.svg';
+import cardIcon11 from '@assets/pages/statePrograms/cards/11.svg';
+---
+
+<body>
+  <Container>
+    <main>
+      <div class="state-programs-page">
+        <Breadcrumbs />
+
+        <h4 class="state-programs-page__title">Госпрограммы</h4>
+        <p class="state-programs-page__description">
+          Раздел, где собрана вся информация по госпрограммам льготного лизинга
+        </p>
+
+        <div
+          class="row row-cols-xl-5 row-cols-md-4 gy-4 state-programs-page__cards"
+        >
+          <div class="col">
+            <StateProgramsCard label="Авиализинг" icon={cardIcon1} />
+          </div>
+
+          <div class="col">
+            <StateProgramsCard label="Автопром" icon={cardIcon2} />
+          </div>
+
+          <div class="col">
+            <StateProgramsCard label="Лизинг вертолетов" icon={cardIcon3} />
+          </div>
+
+          <div class="col">
+            <StateProgramsCard
+              label="Лизинг промышленного оборудования"
+              icon={cardIcon4}
+            />
+          </div>
+
+          <div class="col">
+            <StateProgramsCard
+              label="Лизинг речных и морских судов"
+              icon={cardIcon5}
+            />
+          </div>
+
+          <div class="col">
+            <StateProgramsCard
+              label="Лизинг сельскохозяйственной техники и оборудования"
+              icon={cardIcon6}
+            />
+          </div>
+
+          <div class="col">
+            <StateProgramsCard
+              label="Лизинг строитольно-дорожной и коммунальной техники"
+              icon={cardIcon7}
+            />
+          </div>
+
+          <div class="col">
+            <StateProgramsCard
+              label="Лизинг техники на газомоторном топливе"
+              icon={cardIcon8}
+            />
+          </div>
+
+          <div class="col">
+            <StateProgramsCard
+              label="Лизинговые проекты ФРП"
+              icon={cardIcon9}
+            />
+          </div>
+
+          <div class="col">
+            <StateProgramsCard label="Республика Беларусь" icon={cardIcon10} />
+          </div>
+
+          <div class="col">
+            <StateProgramsCard
+              label="Утилизационный грант речных и морских судов"
+              icon={cardIcon11}
+            />
+          </div>
+        </div>
+      </div>
+    </main>
+  </Container>
+</body>

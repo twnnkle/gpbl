@@ -1,0 +1,17 @@
+---
+import './_index.scss';
+
+import { Image } from 'astro:assets';
+
+const { icon, text } = Astro.props;
+---
+
+<div class="col">
+  <a href="#" class="card-with-icon">
+    <div class="card-with-icon__icon">
+      <Image src={icon} width="24" height="24" alt="Иконка карточки" />
+    </div>
+
+    <p>{text}</p>
+  </a>
+</div>
