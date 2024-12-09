@@ -7,6 +7,7 @@ import ProgressBar from '@components/pages/applications/common/ProgressBar/index
 import CardField from '@components/pages/applications/common/CardField/index.astro';
 
 import Button from '@components/common/Button/index.astro';
+import Star from '@components/common/Star/index.astro';
 
 import Textarea from '@components/pages/applications/common/Textarea/index.astro';
 import Input from '@components/pages/applications/common/Input/index.astro';
@@ -38,8 +39,12 @@ const breadcrumbs = [
         <section class="media-applications-events">
           <div class="row justify-content-center">
             <div class="col-md-7">
-              <div class="media-applications-events__breadcrumbs">
+              <div class="media-applications-events__breadcrumbs-and-star">
                 <Breadcrumbs breadcrumbs={breadcrumbs} />
+
+                <div class="media-applications-events__star">
+                  <Star />
+                </div>
               </div>
 
               <div class="media-applications-events__content">
@@ -58,9 +63,7 @@ const breadcrumbs = [
                 </div>
 
                 <form class="media-applications-events__content__form">
-                  <div
-                    class="media-applications-events__content__form__fields"
-                  >
+                  <div class="media-applications-events__content__form__fields">
                     <CardField isRequired={true}>
                       <label slot="title">Согласовант</label>
                       <span slot="content">
@@ -71,12 +74,11 @@ const breadcrumbs = [
                     <CardField isRequired={true}>
                       <label slot="title">с</label>
                       <div slot="content">
-                        <div class="media-applications-events__content__form__fields__row">
+                        <div
+                          class="media-applications-events__content__form__fields__row"
+                        >
                           <Input placeholder="02.02.2024 18:00" />
-                          <Button
-                            text="С начала дня"
-                            option="btn-primary"
-                          />
+                          <Button text="С начала дня" option="btn-primary" />
                         </div>
                       </div>
                     </CardField>
@@ -84,12 +86,11 @@ const breadcrumbs = [
                     <CardField isRequired={true}>
                       <label slot="title">По</label>
                       <div slot="content">
-                        <div class="media-applications-events__content__form__fields__row">
+                        <div
+                          class="media-applications-events__content__form__fields__row"
+                        >
                           <Input placeholder="02.02.2024 18:00" />
-                          <Button
-                            text="По конец дня"
-                            option="btn-primary"
-                          />
+                          <Button text="По конец дня" option="btn-primary" />
                         </div>
                       </div>
                     </CardField>
@@ -109,9 +110,7 @@ const breadcrumbs = [
                     </CardField>
                   </div>
 
-                  <div
-                    class="media-applications-events__content__form__submit"
-                  >
+                  <div class="media-applications-events__content__form__submit">
                     <Button
                       text="Создать заявку"
                       option="btn-primary"

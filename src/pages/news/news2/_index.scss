@@ -77,10 +77,13 @@
   }
 
   &__right-block {
-    margin-top: 160px;
     width: 15%;
     cursor: pointer;
     height: fit-content;
+  }
+
+  &__file {
+    margin-top: 160px;
 
     p {
       font-size: 16px;

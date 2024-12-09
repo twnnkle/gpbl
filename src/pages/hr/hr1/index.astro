@@ -4,6 +4,7 @@ import './_index.scss';
 import Container from '@layouts/Container/index.astro';
 
 import HRCard from '@components/pages/hr/hr1/HRCard/index.astro';
+import Star from '@components/common/Star/index.astro';
 
 import cardIcon1 from '@assets/pages/hr/cards/1.svg';
 import cardIcon2 from '@assets/pages/hr/cards/2.svg';
@@ -26,7 +27,11 @@ import cardIcon15 from '@assets/pages/hr/cards/15.svg';
   <Container>
     <main>
       <div class="hr-page">
-        <h4 class="hr-page__title">HR</h4>
+        <div class="hr-page__header">
+          <h4>HR</h4>
+          <Star />
+        </div>
+        
         <p class="hr-page__description">
           Раздел, где ты найдешь основную информацию по отпускам,
           компенсационному пакету и другим вопросам

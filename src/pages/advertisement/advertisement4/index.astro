@@ -10,13 +10,17 @@ import Textarea from '@components/pages/applications/common/Textarea/index.astro
 import Select from '@components/pages/applications/common/Select/index.astro';
 import Input from '@components/pages/applications/common/Input/index.astro';
 import Photo from '@components/pages/advertisement/advertisement4/Photo/index.astro';
+import Star from '@components/common/Star/index.astro';
 ---
 
 <body>
   <Container>
     <main>
       <div class="advertisement-page">
-        <Breadcrumbs />
+        <div class="advertisement-page__breadcrumbs-and-star">
+          <Breadcrumbs />
+          <Star />
+        </div>
 
         <h5 class="advertisement-page__title">Новое объявление</h5>
         <p class="advertisement-page__label">Основная информация</p>

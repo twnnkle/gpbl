@@ -6,7 +6,7 @@ import Container from '@layouts/Container/index.astro';
 import SideMenu from '@components/pages/analytics/analytics5/SideMenu/index.astro';
 import BigImgBlock from '@components/pages/analytics/BigImgBlock/index.astro';
 import Card from '@components/pages/analytics/analytics5/Card/index.astro';
-
+import Star from '@components/common/Star/index.astro';
 import mainImg from '@assets/pages/analytics/main-img-5.png';
 ---
 
@@ -20,6 +20,10 @@ import mainImg from '@assets/pages/analytics/main-img-5.png';
           </div>
 
           <div class="col-md-9">
+            <div class="analytics-page__star">
+              <Star />
+            </div>
+
             <BigImgBlock img={mainImg.src} label="NPS" />
 
             <div class="row gy-4 analytics-page__cards">

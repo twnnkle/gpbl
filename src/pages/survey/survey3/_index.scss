@@ -5,6 +5,13 @@ body {
 .survey-page {
   margin: 50px 287px 0 287px;
 
+  &__breadcrumbs-and-star {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+  }
+
   &__title {
     color: #212529;
     font-size: 32px;

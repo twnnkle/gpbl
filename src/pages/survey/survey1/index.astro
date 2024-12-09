@@ -5,13 +5,11 @@ import Container from '@layouts/Container/index.astro';
 import Breadcrumbs from '@components/pages/media/common/Breadcrumbs/index.astro';
 import ProgressBar from '@components/pages/applications/common/ProgressBar/index.astro';
 import CardField from '@components/pages/applications/common/CardField/index.astro';
-
-import Button from '@components/common/Button/index.astro';
+import Star from '@components/common/Star/index.astro';
 
 import Textarea from '@components/pages/applications/common/Textarea/index.astro';
 import Input from '@components/pages/applications/common/Input/index.astro';
 import Select from '@components/pages/applications/common/Select/index.astro';
-import File from '@components/pages/applications/common/File/index.astro';
 
 const breadcrumbs = [
   {
@@ -35,8 +33,9 @@ const breadcrumbs = [
         <section class="media-applications-training">
           <div class="row justify-content-center">
             <div class="col-md-7">
-              <div class="media-applications-training__breadcrumbs">
+              <div class="media-applications-training__breadcrumbs-and-star">
                 <Breadcrumbs breadcrumbs={breadcrumbs} />
+                <Star />
               </div>
 
               <div class="media-applications-training__content">

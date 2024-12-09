@@ -2,9 +2,11 @@
 import './_index.scss';
 
 import Container from '@layouts/Container/index.astro';
+
 import SideMenu from '@components/pages/media/common/SideMenu/index.astro';
 import Breadcrumbs from '@components/pages/media/common/Breadcrumbs/index.astro';
 import DocumentList from '@components/pages/media/common/DocumentList/index.astro';
+import Star from '@components/common/Star/index.astro';
 
 const breadcrumbs = [
   {
@@ -71,7 +73,10 @@ const documents = [
 
             <div class="col-md-9">
               <div class="media-reports__content">
-                <Breadcrumbs breadcrumbs={breadcrumbs} />
+                <div class="media-reports__breadcrumbs-and-star">
+                  <Breadcrumbs breadcrumbs={breadcrumbs} />
+                  <Star />
+                </div>
 
                 <h2 class="media-reports__content__header">Отчеты пресс-службы</h2>
 

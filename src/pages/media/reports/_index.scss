@@ -6,10 +6,17 @@ body {
   margin-top: 50px;
 
   .media-reports {
+    &__breadcrumbs-and-star {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 10px;
+    }
+    
     &__content {
       &__header {
         margin-top: 25px;
-        
+
         h2 {
           font-size: 32px;
           font-weight: 500;

@@ -7,6 +7,7 @@ import SideMenu from '@components/pages/analytics/analytics2/SideMenu/index.astr
 import Breadcrumbs from '@components/pages/analytics/analytics2/Breadcrumbs/index.astro';
 import BigImgBlock from '@components/pages/analytics/BigImgBlock/index.astro';
 import Card from '@components/pages/analytics/analytics2/Card/index.astro';
+import Star from '@components/common/Star/index.astro';
 
 import mainImg from '@assets/pages/analytics/main-img-2.png';
 ---
@@ -21,7 +22,10 @@ import mainImg from '@assets/pages/analytics/main-img-2.png';
           </div>
 
           <div class="col-md-9">
-            <Breadcrumbs />
+            <div class="analytics-page__breadcrumbs-and-star">
+              <Breadcrumbs />
+              <Star />
+            </div>
 
             <div class="analytics-page__big-img-block">
               <BigImgBlock

@@ -8,6 +8,7 @@ import BigImgBlock from '@components/pages/analytics/BigImgBlock/index.astro';
 import Cards from '@components/pages/analytics/analytics4/Cards/index.astro';
 import DatepickerDropdown from '@components/pages/analytics/analytics4/DatepickerDropdown/index.astro';
 import YearDropdown from '@components/pages/analytics/analytics4/YearDropdown/index.astro';
+import Star from '@components/common/Star/index.astro';
 
 import mainImg from '@assets/pages/analytics/main-img-4.png';
 ---
@@ -22,6 +23,10 @@ import mainImg from '@assets/pages/analytics/main-img-4.png';
           </div>
 
           <div class="col-md-9">
+            <div class="analytics-page__star">
+              <Star />
+            </div>
+
             <BigImgBlock img={mainImg.src} label="Обзор главных новостей" />
 
             <div class="analytics-page__dropdowns">
@@ -42,7 +47,7 @@ import mainImg from '@assets/pages/analytics/main-img-4.png';
           new AirDatepicker('#datepicker', {
             range: true,
             multipleDates: true,
-            multipleDatesSeparator: ' - '
+            multipleDatesSeparator: ' - ',
           });
         });
       </script>

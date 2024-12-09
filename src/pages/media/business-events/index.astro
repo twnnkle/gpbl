@@ -2,8 +2,10 @@
 import './_index.scss';
 
 import Container from '@layouts/Container/index.astro';
+
 import Breadcrumbs from '@components/pages/media/common/Breadcrumbs/index.astro';
 import EventCard from '@components/pages/media/common/EventCard/index.astro';
+import Star from '@components/common/Star/index.astro';
 
 const breadcrumbs = [
   {
@@ -74,7 +76,10 @@ const events = [
         <section class="media-business-events">
           <div class="row">
             <div class="col-12">
-              <Breadcrumbs breadcrumbs={breadcrumbs} />
+              <div class="media-business-events__breadcrumbs-and-star">
+                <Breadcrumbs breadcrumbs={breadcrumbs} />
+                <Star />
+              </div>
             </div>
           </div>
         </section>

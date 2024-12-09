@@ -4,7 +4,9 @@ import './_index.scss';
 import { Image } from 'astro:assets';
 
 import Container from '@layouts/Container/index.astro';
+
 import Breadcrumbs from '@components/pages/media/common/Breadcrumbs/index.astro';
+import Star from '@components/common/Star/index.astro';
 
 import Poster from '@assets/pages/media/special-project/1.png';
 
@@ -33,7 +35,10 @@ const breadcrumbs = [
             <div class="col-6">
               <div class="row">
                 <div class="col-12">
-                  <Breadcrumbs breadcrumbs={breadcrumbs} />
+                  <div class="media-special-project__breadcrumbs-and-star">
+                    <Breadcrumbs breadcrumbs={breadcrumbs} />
+                    <Star />
+                  </div>
 
                   <h1>Лицо бренда</h1>
 
@@ -49,15 +54,18 @@ const breadcrumbs = [
                   <div class="media-special-project__links">
                     <a href="#" class="media-special-project__links__item">
                       Отчет по проекту лицо бренда
-                      <div class="media-special-project__links__item__icon"></div>
+                      <div class="media-special-project__links__item__icon">
+                      </div>
                     </a>
                     <a href="#" class="media-special-project__links__item">
                       Рекламный ролик
-                      <div class="media-special-project__links__item__icon"></div>
+                      <div class="media-special-project__links__item__icon">
+                      </div>
                     </a>
                     <a href="#" class="media-special-project__links__item">
                       Интервью Максима Колинкина для Кирилла Токарева
-                      <div class="media-special-project__links__item__icon"></div>
+                      <div class="media-special-project__links__item__icon">
+                      </div>
                     </a>
                   </div>
                 </div>
