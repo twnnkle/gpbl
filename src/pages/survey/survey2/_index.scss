@@ -5,6 +5,10 @@ body {
 .survey-page {
   margin-top: 50px;
 
+  &__star {
+    margin-bottom: 24px;
+  }
+
   &__header {
     display: flex;
     align-items: center;

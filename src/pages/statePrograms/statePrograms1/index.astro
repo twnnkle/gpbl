@@ -5,6 +5,7 @@ import Container from '@layouts/Container/index.astro';
 
 import StateProgramsCard from '@components/pages/statePrograms/statePrograms1/StateProgramsCard/index.astro';
 import Breadcrumbs from '@components/pages/statePrograms/statePrograms1/Breadcrumbs/index.astro';
+import Star from '@components/common/Star/index.astro';
 
 import cardIcon1 from '@assets/pages/statePrograms/cards/1.svg';
 import cardIcon2 from '@assets/pages/statePrograms/cards/2.svg';
@@ -23,7 +24,10 @@ import cardIcon11 from '@assets/pages/statePrograms/cards/11.svg';
   <Container>
     <main>
       <div class="state-programs-page">
-        <Breadcrumbs />
+        <div class="state-programs-page__breadcrumbs-and-star">
+          <Breadcrumbs />
+          <Star />
+        </div>
 
         <h4 class="state-programs-page__title">Госпрограммы</h4>
         <p class="state-programs-page__description">

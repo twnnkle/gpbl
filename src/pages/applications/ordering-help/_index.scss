@@ -6,8 +6,16 @@ body {
   margin-top: 54px;
 
   .media-applications-ordering-help {
-    &__breadcrumbs {
+    &__breadcrumbs-and-star {
       margin-bottom: 24px;
+      position: relative;
+    }
+
+    &__star {
+      position: absolute;
+      top: 50%;
+      right: -100px;
+      transform: translateY(-50%);
     }
 
     &__content {

@@ -6,7 +6,7 @@ import Container from '@layouts/Container/index.astro';
 import SideMenu from '@components/pages/analytics/analytics6/SideMenu/index.astro';
 import BigImgBlock from '@components/pages/analytics/BigImgBlock/index.astro';
 import Card from '@components/pages/analytics/analytics6/Card/index.astro';
-
+import Star from '@components/common/Star/index.astro';
 import mainImg from '@assets/pages/analytics/main-img-6.png';
 ---
 
@@ -20,6 +20,10 @@ import mainImg from '@assets/pages/analytics/main-img-6.png';
           </div>
 
           <div class="col-md-9">
+            <div class="analytics-page__star">
+              <Star />
+            </div>
+
             <BigImgBlock img={mainImg.src} label="Рынок лизинга" />
 
             <div class="row gy-4 row-cols-md-3 row-cols-xl-4 analytics-page__cards">

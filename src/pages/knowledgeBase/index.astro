@@ -5,6 +5,7 @@ import Container from '@layouts/Container/index.astro';
 
 import KnowledgeBaseCard from '@components/pages/knowledgeBase/KnowledgeBaseCard/index.astro';
 import Breadcrumbs from '@components/pages/knowledgeBase/Breadcrumbs/index.astro';
+import Star from '@components/common/Star/index.astro';
 
 import cardIcon1 from '@assets/pages/knowledgeBase/cards/1.svg';
 import cardIcon2 from '@assets/pages/knowledgeBase/cards/2.svg';
@@ -19,7 +20,10 @@ import cardIcon7 from '@assets/pages/knowledgeBase/cards/7.svg';
   <Container>
     <main>
       <div class="knowledge-base-page">
-        <Breadcrumbs />
+        <div class="knowledge-base-page__header">
+          <Breadcrumbs />
+          <Star />
+        </div>
 
         <h4 class="knowledge-base-page__title">База знаний</h4>
         <p class="knowledge-base-page__description">

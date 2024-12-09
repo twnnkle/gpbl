@@ -8,6 +8,7 @@ import Button from '@components/common/Button/index.astro';
 import Search from '@components/pages/advertisement/advertisement1/Search/index.astro';
 import NavMenu from '@components/pages/advertisement/advertisement1/NavMenu/index.astro';
 import Card from '@components/pages/advertisement/advertisement1/Card/index.astro';
+import Star from '@components/common/Star/index.astro';
 
 import cardImg1 from '@assets/pages/advertisement/advertisement1/cards/1.png';
 import cardImg2 from '@assets/pages/advertisement/advertisement1/cards/2.png';
@@ -23,7 +24,10 @@ import cardImg8 from '@assets/pages/advertisement/advertisement1/cards/8.png';
   <Container>
     <main>
       <div class="advertisement-page">
-        <Breadcrumbs />
+        <div class="advertisement-page__breadcrumbs-and-star">
+          <Breadcrumbs />
+          <Star />
+        </div>
 
         <div class="advertisement-page__header">
           <h3>Доска объявлений</h3>

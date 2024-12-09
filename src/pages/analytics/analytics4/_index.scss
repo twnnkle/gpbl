@@ -5,6 +5,10 @@ body {
 .analytics-page {
   margin-top: 55px;
 
+  &__star {
+    margin-bottom: 20px;
+  }
+
   &__dropdowns {
     margin-top: 30px;
     display: flex;

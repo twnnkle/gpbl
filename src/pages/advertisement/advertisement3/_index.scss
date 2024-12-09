@@ -3,16 +3,23 @@ body {
 }
 
 .advertisement-page {
-  margin: 50px 277px 0 277px;
+  margin: 50px 260px 0 260px;
 
   @media (max-width: 1300px) {
     margin: 50px 100px 0 100px;
   }
 
+  &__breadcrumbs-and-star {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+  }
+
   &__header {
     display: flex;
     justify-content: space-between;
-    gap: 10px;
+    gap: 20px;
     margin-top: 24px;
 
     h3 {

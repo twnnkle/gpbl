@@ -1,7 +1,8 @@
 ---
 import './_index.scss';
 
-import Button from '@components/common/Button/index.astro';
+import SendIdeaBtnWithModal from '@components/pages/idea/HeroBlock/SendIdeaBtnWithModal/index.astro';
+import AllIdeaBtnWithModal from '@components/pages/idea/HeroBlock/AllIdeaBtnWithModal/index.astro';
 ---
 
 <div class="idea-block">
@@ -9,7 +10,7 @@ import Button from '@components/common/Button/index.astro';
   <p>Проект ориентированный на вовлечение сотрудников в развитие бизнеса</p>
 
   <div class="idea-block__btns">
-    <Button text="Есть идея" option="btn-primary" />
-    <a href="#"> Посмотреть все идеи</a>
+    <SendIdeaBtnWithModal />
+    <AllIdeaBtnWithModal />
   </div>
 </div>

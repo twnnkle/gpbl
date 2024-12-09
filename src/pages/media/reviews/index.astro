@@ -1,17 +1,15 @@
 ---
 import './_index.scss';
 
-import { Image } from 'astro:assets';
-
-import Arrow from '@assets/arrow.svg';
-
 import Container from '@layouts/Container/index.astro';
+
 import SideMenu from '@components/pages/media/common/SideMenu/index.astro';
 import Breadcrumbs from '@components/pages/media/common/Breadcrumbs/index.astro';
 import ImageCard from '@components/pages/media/common/ImageCard/index.astro';
 import DocumentList from '@components/pages/media/common/DocumentList/index.astro';
 import DatepickerDropdown from '@components/pages/media/reviews/DatepickerDropdown/index.astro';
 import YearDropdown from '@components/pages/media/reviews/YearDropdown/index.astro';
+import Star from '@components/common/Star/index.astro';
 
 const breadcrumbs = [
   {
@@ -123,7 +121,10 @@ const documents = [
 
             <div class="col-md-9">
               <div class="media-reviews__content">
-                <Breadcrumbs breadcrumbs={breadcrumbs} />
+                <div class="media-reviews__breadcrumbs-and-star">
+                  <Breadcrumbs breadcrumbs={breadcrumbs} />
+                  <Star />
+                </div>
 
                 <div class="media-reviews__content__image-card">
                   <ImageCard

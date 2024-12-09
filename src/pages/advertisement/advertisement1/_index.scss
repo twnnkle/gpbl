@@ -5,6 +5,13 @@ body {
 .advertisement-page {
   margin-top: 50px;
 
+  &__breadcrumbs-and-star {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+  }
+
   &__header {
     display: flex;
     align-items: center;

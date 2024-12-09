@@ -8,13 +8,17 @@ import WhiteBlock1 from '@components/pages/advertisement/advertisement2-3/WhiteB
 import WhiteBlock2 from '@components/pages/advertisement/advertisement2-3/WhiteBlock2/index.astro';
 import DeleteBtnWithModal from '@components/pages/advertisement/advertisement2-3/DeleteBtnWithModal/index.astro';
 import Carousel from '@components/pages/advertisement/advertisement2-3/Carousel/index.astro';
+import Star from '@components/common/Star/index.astro';
 ---
 
 <body>
   <Container>
     <main>
       <div class="advertisement-page">
-        <Breadcrumbs />
+        <div class="advertisement-page__breadcrumbs-and-star">
+          <Breadcrumbs />
+          <Star />
+        </div>
 
         <div class="advertisement-page__header">
           <h3>Уютная 2-комнатная квартира в центре города</h3>

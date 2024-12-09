@@ -10,13 +10,18 @@ import IdeasList from '@components/pages/idea/IdeasList/index.astro';
 import StepsCards from '@components/pages/idea/StepsCards/index.astro';
 import Banner from '@components/pages/idea/Banner/index.astro';
 import DocumentForDownload from '@components/pages/idea/DocumentForDownload/index.astro';
+import Star from '@components/common/Star/index.astro';
 ---
 
 <body>
   <Container>
     <main>
       <div class="idea-page">
-        <Breadcrumbs />
+        <div class="idea-page__header">
+          <Breadcrumbs />
+          <Star />
+        </div>
+
         <HeroBlock />
 
         <h4 class="idea-page__title">

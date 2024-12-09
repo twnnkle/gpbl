@@ -6,7 +6,11 @@ body {
   margin-top: 25px;
 
   .media-applications-analytics {
-    &__breadcrumbs {
+    &__breadcrumbs-and-star {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 10px;
       margin-bottom: 24px;
     }
 

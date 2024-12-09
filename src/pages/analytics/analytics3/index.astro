@@ -6,13 +6,17 @@ import Container from '@layouts/Container/index.astro';
 import Breadcrumbs from '@components/pages/analytics/analytics3/Breadcrumbs/index.astro';
 import Cards from '@components/pages/analytics/analytics3/Cards/index.astro';
 import Search from '@components/pages/analytics/analytics3/Search/index.astro';
+import Star from '@components/common/Star/index.astro';
 ---
 
 <body>
   <Container>
     <main>
       <div class="analytics-page">
-        <Breadcrumbs />
+        <div class="analytics-page__breadcrumbs-and-star">
+          <Breadcrumbs />
+          <Star />
+        </div>
 
         <div class="analytics-page__header">
           <h4>Яков и Партнеры</h4>

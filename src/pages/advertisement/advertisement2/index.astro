@@ -7,13 +7,17 @@ import Breadcrumbs from '@components/pages/advertisement/advertisement2-3/Breadc
 import WhiteBlock1 from '@components/pages/advertisement/advertisement2-3/WhiteBlock1/index.astro';
 import WhiteBlock2 from '@components/pages/advertisement/advertisement2-3/WhiteBlock2/index.astro';
 import Carousel from '@components/pages/advertisement/advertisement2-3/Carousel/index.astro';
+import Star from '@components/common/Star/index.astro';
 ---
 
 <body>
   <Container>
     <main>
       <div class="advertisement-page">
-        <Breadcrumbs />
+        <div class="advertisement-page__breadcrumbs-and-star">
+          <Breadcrumbs />
+          <Star />
+        </div>
 
         <h3 class="advertisement-page__title">
           Уютная 2-комнатная квартира в центре города

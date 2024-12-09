@@ -1,0 +1,33 @@
+---
+import './_index.scss';
+
+import Search from '@components/pages/idea/HeroBlock/AllIdeaBtnWithModal/Search/index.astro';
+import NavMenu from '@components/pages/idea/HeroBlock/AllIdeaBtnWithModal/NavMenu/index.astro';
+---
+
+<a href="#" data-bs-toggle="modal" data-bs-target="#allIdeaModal">
+  Посмотреть все идеи</a
+>
+
+<div
+  class="modal fade"
+  id="allIdeaModal"
+  tabindex="-1"
+  aria-labelledby="allIdeaModalLabel"
+  aria-hidden="true"
+>
+  <div class="modal-dialog modal-dialog-centered" style="max-width: 1000px;">
+    <div class="modal-content all-idea-modal" style="height: 935px;">
+      <h4>Поделиться идеей</h4>
+
+      <button
+        type="button"
+        class="all-idea-modal__close-btn btn-close"
+        data-bs-dismiss="modal"
+        aria-label="Close"></button>
+
+      <Search />
+      <NavMenu />
+    </div>
+  </div>
+</div>

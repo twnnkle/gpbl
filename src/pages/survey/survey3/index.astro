@@ -5,6 +5,7 @@ import Container from '@layouts/Container/index.astro';
 
 import Breadcrumbs from '@components/pages/survey/survey3/Breadcrumbs/index.astro';
 import WhiteCard from '@components/pages/survey/survey3/WhiteCard/index.astro';
+import Star from '@components/common/Star/index.astro';
 
 const lists1 = {
   grayList: ['Буклет ', 'Баннер', 'Реклама'],
@@ -21,7 +22,10 @@ const lists2 = {
   <Container>
     <main>
       <div class="survey-page">
-        <Breadcrumbs />
+        <div class="survey-page__breadcrumbs-and-star">
+          <Breadcrumbs />
+          <Star />
+        </div>
 
         <h3 class="survey-page__title">Маркетинговая поддержка 2024</h3>
         <p class="survey-page__description">
