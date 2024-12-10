@@ -1,0 +1,15 @@
+---
+import './_index.scss';
+
+import Comment from '@components/pages/idea/HeroBlock/DetailIdeaModal/Comments/Comment/index.astro';
+---
+
+<div class="comments">
+  <h4 class="comments__title">Комментарии</h4>
+
+  <div class="comments__list">
+    <Comment changeStatus />
+    <Comment />
+    <Comment />
+  </div>
+</div>

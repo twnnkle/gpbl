@@ -3,14 +3,18 @@ import './_index.scss';
 
 import SendIdeaBtnWithModal from '@components/pages/idea/HeroBlock/SendIdeaBtnWithModal/index.astro';
 import AllIdeaBtnWithModal from '@components/pages/idea/HeroBlock/AllIdeaBtnWithModal/index.astro';
+import DetailIdeaModal from '@components/pages/idea/HeroBlock/DetailIdeaModal/index.astro';
 ---
 
 <div class="idea-block">
-  <h3>Идея 2.0</h3>
-  <p>Проект ориентированный на вовлечение сотрудников в развитие бизнеса</p>
+  <h3 class="idea-block__title">Идея 2.0</h3>
+  <p class="idea-block__description">
+    Проект ориентированный на вовлечение сотрудников в развитие бизнеса
+  </p>
 
   <div class="idea-block__btns">
     <SendIdeaBtnWithModal />
     <AllIdeaBtnWithModal />
+    <DetailIdeaModal />
   </div>
 </div>
