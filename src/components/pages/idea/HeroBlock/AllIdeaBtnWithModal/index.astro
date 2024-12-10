@@ -3,6 +3,7 @@ import './_index.scss';
 
 import Search from '@components/pages/idea/HeroBlock/AllIdeaBtnWithModal/Search/index.astro';
 import NavMenu from '@components/pages/idea/HeroBlock/AllIdeaBtnWithModal/NavMenu/index.astro';
+import Table from '@components/pages/idea/HeroBlock/AllIdeaBtnWithModal/Table/index.astro';
 ---
 
 <a href="#" data-bs-toggle="modal" data-bs-target="#allIdeaModal">
@@ -16,7 +17,7 @@ import NavMenu from '@components/pages/idea/HeroBlock/AllIdeaBtnWithModal/NavMen
   aria-labelledby="allIdeaModalLabel"
   aria-hidden="true"
 >
-  <div class="modal-dialog modal-dialog-centered" style="max-width: 1000px;">
+  <div class="modal-dialog modal-dialog-centered" style="max-width: 1100px;">
     <div class="modal-content all-idea-modal" style="height: 935px;">
       <h4>Поделиться идеей</h4>
 
@@ -28,6 +29,7 @@ import NavMenu from '@components/pages/idea/HeroBlock/AllIdeaBtnWithModal/NavMen
 
       <Search />
       <NavMenu />
+      <Table />
     </div>
   </div>
 </div>

@@ -1,0 +1,87 @@
+---
+import './_index.scss';
+
+import Comments from '@components/pages/idea/HeroBlock/DetailIdeaModal/Comments/index.astro';
+import SendCommentBlock from '@components/pages/idea/HeroBlock/DetailIdeaModal/SendCommentBlock/index.astro';
+---
+
+<div
+  class="modal fade"
+  id="detailIdeaModal"
+  tabindex="-1"
+  aria-labelledby="detailIdeaModal"
+  aria-hidden="true"
+>
+  <div class="modal-dialog modal-dialog-centered" style="max-width: 1100px;">
+    <div class="modal-content detail-idea-modal" style="height: 935px;">
+      <button
+        type="button"
+        class="detail-idea-modal__close-btn btn-close"
+        data-bs-dismiss="modal"
+        aria-label="Close"></button>
+
+      <div
+        class="detail-idea-modal__back-btn"
+        data-bs-toggle="modal"
+        data-bs-target="#allIdeaModal"
+        data-bs-dismiss="modal"
+      >
+        <svg
+          width="16"
+          height="17"
+          viewBox="0 0 16 17"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M12.6668 8.49998H3.3335M3.3335 8.49998L8.00016 13.1666M3.3335 8.49998L8.00016 3.83331"
+            stroke="#B2BBD8"
+            stroke-width="1.33333"
+            stroke-linecap="round"
+            stroke-linejoin="round"></path>
+        </svg>
+
+        <span>Все идеи</span>
+      </div>
+
+      <div class="detail-idea-modal__header">
+        <h4>№10 Компенсация питания</h4>
+
+        <span>Отложена</span>
+      </div>
+
+      <div class="detail-idea-modal__info">
+        <div class="detail-idea-modal__info-item">
+          <span>Категория:</span>
+          <p>Другое</p>
+        </div>
+
+        <div class="detail-idea-modal__info-item">
+          <span>Суть идеи:</span>
+          <p>
+            Хотелось бы чтобы работодатель частично компенсировал затраты на
+            ежедневное питание
+          </p>
+        </div>
+
+        <div class="detail-idea-modal__info-item">
+          <span>Проблема, которую решает идея:</span>
+          <p>Финансовая</p>
+        </div>
+
+        <div class="detail-idea-modal__info-item">
+          <span>Ожидаемый результат:</span>
+          <p>—</p>
+        </div>
+
+        <div class="detail-idea-modal__info-item">
+          <span>Дополнительный комментарий:</span>
+          <p>—</p>
+        </div>
+      </div>
+
+      <Comments />
+      <SendCommentBlock />
+    </div>
+  </div>
+</div>

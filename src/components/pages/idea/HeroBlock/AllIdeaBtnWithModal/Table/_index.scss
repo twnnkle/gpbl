@@ -1,0 +1,74 @@
+.all-idea-table {
+  margin-top: 24px;
+  overflow-y: auto;
+  padding-right: 24px;
+
+  &::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+  }
+
+  &::-webkit-scrollbar-track {
+    background-color: transparent;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background: #d9d9d9;
+    border-radius: 3px;
+  }
+
+  &::-webkit-scrollbar-thumb:hover {
+    background: #bfbfbf;
+  }
+
+  th {
+    color: #b3b3b3;
+    font-size: 12px;
+    line-height: 18px;
+    font-weight: 900;
+    padding: 8px 16px;
+    position: sticky;
+    top: 0;
+    background: white;
+    z-index: 1;
+    vertical-align: top;
+    border: none;
+
+    span {
+      color: #487cfb;
+      margin-left: 4px;
+    }
+  }
+
+  td {
+    padding: 20px;
+    vertical-align: top;
+    font-size: 14px;
+    line-height: 20px;
+    color: #41464b;
+    font-weight: 500;
+
+    a {
+      font-size: 14px;
+      line-height: 20px;
+      color: #41464b;
+      font-weight: 500;
+      text-decoration: underline;
+    }
+  }
+
+  .status-cell {
+    vertical-align: middle;
+    text-align: end;
+
+    span {
+      padding: 4px 8px;
+      border-radius: 4px;
+    }
+  }
+
+  .ready-cell {
+    text-align: center;
+    vertical-align: middle;
+  }
+}

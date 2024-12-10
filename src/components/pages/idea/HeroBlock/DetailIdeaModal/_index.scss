@@ -1,0 +1,81 @@
+.detail-idea-modal {
+  padding: 32px;
+
+  &__close-btn {
+    position: absolute;
+    top: 16px;
+    right: 16px;
+  }
+
+  &__back-btn {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    cursor: pointer;
+    width: fit-content;
+
+    span {
+      font-size: 14px;
+      line-height: 21px;
+      font-weight: 500;
+      color: #b2bbd8;
+    }
+  }
+
+  &__header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+    margin-top: 16px;
+
+    h4 {
+      font-size: 32px;
+      line-height: 35.2px;
+      font-weight: 500;
+      color: #212529;
+    }
+
+    span {
+      font-size: 14px;
+      line-height: 21px;
+      font-weight: 500;
+      padding: 4px 8px;
+      border-radius: 4px;
+      color: #b2bbd8;
+      border: 1px solid #b2bbd8;
+    }
+  }
+
+  &__info {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    margin-top: 25px;
+
+    &-item {
+      display: flex;
+      gap: 20px;
+      align-items: flex-start;
+
+      span,
+      p {
+        font-size: 16px;
+        line-height: 19.2px;
+        font-weight: 400;
+      }
+
+      span {
+        width: 15%;
+        color: #a6b1d2;
+      }
+
+      p {
+        flex: 1;
+        color: #212529;
+        margin: 0;
+        max-width: unset;
+      }
+    }
+  }
+}
