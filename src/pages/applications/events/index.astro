@@ -8,10 +8,10 @@ import CardField from '@components/pages/applications/common/CardField/index.ast
 
 import Button from '@components/common/Button/index.astro';
 import Star from '@components/common/Star/index.astro';
+import FieldWithDropdown from '@components/common/FieldWithDropdown/index.astro';
 
 import Textarea from '@components/pages/applications/common/Textarea/index.astro';
 import Input from '@components/pages/applications/common/Input/index.astro';
-import Select from '@components/pages/applications/common/Select/index.astro';
 
 const breadcrumbs = [
   {
@@ -65,9 +65,12 @@ const breadcrumbs = [
                 <form class="media-applications-events__content__form">
                   <div class="media-applications-events__content__form__fields">
                     <CardField isRequired={true}>
-                      <label slot="title">Согласовант</label>
+                      <label slot="title">Согласован</label>
                       <span slot="content">
-                        <Select placeholder="ФИО" />
+                        <FieldWithDropdown
+                          placeholder="Выберите согласован"
+                          list={['Согласован 1', 'Согласован 2']}
+                        />
                       </span>
                     </CardField>
 
@@ -98,7 +101,10 @@ const breadcrumbs = [
                     <CardField isRequired={true}>
                       <label slot="title">Причина отсутствия</label>
                       <span slot="content">
-                        <Select placeholder="Болезнь" />
+                        <FieldWithDropdown
+                          placeholder="Выберите причину отсутствия"
+                          list={['Причина 1', 'Причина 2']}
+                        />
                       </span>
                     </CardField>
 

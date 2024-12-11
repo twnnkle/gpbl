@@ -11,6 +11,8 @@ import Star from '@components/common/Star/index.astro';
 
 import Textarea from '@components/pages/applications/common/Textarea/index.astro';
 import Input from '@components/pages/applications/common/Input/index.astro';
+import DateInput from '@components/pages/applications/common/DateInput/index.astro';
+import PhoneInput from '@components/pages/applications/common/PhoneInput/index.astro';
 
 const breadcrumbs = [
   {
@@ -42,7 +44,7 @@ const breadcrumbs = [
                 class="media-applications-courier-services__breadcrumbs-and-star"
               >
                 <Breadcrumbs breadcrumbs={breadcrumbs} />
-                
+
                 <div class="media-applications-courier-services__star">
                   <Star />
                 </div>
@@ -78,7 +80,7 @@ const breadcrumbs = [
                     <CardField isRequired={true}>
                       <label slot="title">Дата исполнения</label>
                       <span slot="content">
-                        <Input placeholder="02.10.2023" type="date" />
+                        <DateInput placeholder="02.10.2023" />
                       </span>
                     </CardField>
 
@@ -112,7 +114,7 @@ const breadcrumbs = [
                     <CardField isRequired={true}>
                       <label slot="title">Контактный телефон</label>
                       <span slot="content">
-                        <Input placeholder="+7(999)999 99-12" />
+                        <PhoneInput placeholder="+7(999)999 99-12" />
                       </span>
                     </CardField>
 
@@ -148,6 +150,15 @@ const breadcrumbs = [
           </div>
         </section>
       </div>
+
+      <script>
+        import AirDatepicker from 'air-datepicker';
+        import 'air-datepicker/air-datepicker.css';
+
+        document.addEventListener('DOMContentLoaded', () => {
+          new AirDatepicker('#datepicker', {});
+        });
+      </script>
     </main>
   </Container>
 </body>

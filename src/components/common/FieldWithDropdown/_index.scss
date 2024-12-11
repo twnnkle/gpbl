@@ -1,0 +1,19 @@
+.field-with-dropdown {
+  &__input-wrapper {
+    position: relative;
+    margin-top: 8px;
+
+    .input-arrow-icon {
+      position: absolute;
+      top: 50%;
+      right: 16px;
+      transform: translateY(-50%);
+    }
+
+    input {
+      &::placeholder {
+        color: #ccd3e7;
+      }
+    }
+  }
+}

@@ -8,12 +8,47 @@ interface Props {
 }
 
 const { placeholder, disabled = false, type = 'text' } = Astro.props;
+
+import { Image } from 'astro:assets';
+
+import calendarIcon from '@assets/pages/applications/icon-calendar.png';
+
+import Datepicker from '@components/common/Datepicker/index.astro';
 ---
 
-<input
-  class="input-text"
-  type="text"
-  placeholder={placeholder}
-  disabled={disabled}
-  class:list={{ 'input-date': type === 'date' }}
-/>
+{
+  type === 'date' ? (
+    <div
+      class="input-block-wrapper"
+      data-bs-toggle="dropdown"
+      aria-expanded="false"
+    >
+      <input
+        class="input-text"
+        type="text"
+        placeholder={placeholder}
+        disabled={disabled}
+      />
+
+      <div class="datepicker-dropdown">
+        <div class="datepicker-dropdown-btn" id="datepickerDropdown">
+          <Image src={calendarIcon} alt="calendar" />
+        </div>
+
+        <div
+          class="dropdown-menu datepicker-dropdown-menu"
+          aria-labelledby="datepickerDropdown"
+        >
+          <Datepicker />
+        </div>
+      </div>
+    </div>
+  ) : (
+    <input
+      class="input-text"
+      type="text"
+      placeholder={placeholder}
+      disabled={disabled}
+    />
+  )
+}
