@@ -9,10 +9,11 @@ import CardField from '@components/pages/applications/common/CardField/index.ast
 
 import Button from '@components/common/Button/index.astro';
 import Star from '@components/common/Star/index.astro';
+import FieldWithDropdown from '@components/common/FieldWithDropdown/index.astro';
 
 import Textarea from '@components/pages/applications/common/Textarea/index.astro';
 import Input from '@components/pages/applications/common/Input/index.astro';
-import Select from '@components/pages/applications/common/Select/index.astro';
+import PhoneInput from '@components/pages/applications/common/PhoneInput/index.astro';
 
 const breadcrumbs = [
   {
@@ -71,7 +72,9 @@ const menu = [
             </div>
 
             <div class="col-md-7 offset-1">
-              <div class="media-applications-business-cards__breadcrumbs-and-star">
+              <div
+                class="media-applications-business-cards__breadcrumbs-and-star"
+              >
                 <Breadcrumbs breadcrumbs={breadcrumbs} />
                 <Star />
               </div>
@@ -80,23 +83,35 @@ const menu = [
                 <div class="media-applications-business-cards__content__title">
                   Визитки
                 </div>
-                <div class="media-applications-business-cards__content__description">
+                <div
+                  class="media-applications-business-cards__content__description"
+                >
                   Если вам требуется подготовить или закупить кое-либо
                   аналитическое исследование, пожалуйста, заполните форму на
                   данной странице с указанием объекта исследования, необходимых
                   пунктов содержания и сроков получения отчета
                 </div>
 
-                <div class="media-applications-business-cards__content__progress">
-                  <ProgressBar current={7} total={14}/>
+                <div
+                  class="media-applications-business-cards__content__progress"
+                >
+                  <ProgressBar current={7} total={14} />
                 </div>
 
                 <form class="media-applications-business-cards__content__form">
-                  <div class="media-applications-business-cards__content__form__fields">
+                  <div
+                    class="media-applications-business-cards__content__form__fields"
+                  >
                     <CardField isRequired={true}>
                       <label slot="title">Фамилия Имя Отчество</label>
                       <span slot="content">
-                        <Select placeholder="Введите ФИО" />
+                        <FieldWithDropdown
+                          placeholder="Введите ФИО"
+                          list={[
+                            'Иванов Иван Иванович',
+                            'Петров Петр Петрович',
+                          ]}
+                        />
                       </span>
                     </CardField>
 
@@ -124,7 +139,7 @@ const menu = [
                     <CardField isRequired={true}>
                       <label slot="title">Телефон</label>
                       <span slot="content">
-                        <Input placeholder="+7(999)999 99-12" />
+                        <PhoneInput placeholder="+7(999)999 99-12" />
                       </span>
                     </CardField>
 
@@ -150,8 +165,14 @@ const menu = [
                     </CardField>
                   </div>
 
-                  <div class="media-applications-business-cards__content__form__submit">
-                    <Button text="Создать заявку" option="btn-primary" type="submit"/>
+                  <div
+                    class="media-applications-business-cards__content__form__submit"
+                  >
+                    <Button
+                      text="Создать заявку"
+                      option="btn-primary"
+                      type="submit"
+                    />
                   </div>
                 </form>
               </div>

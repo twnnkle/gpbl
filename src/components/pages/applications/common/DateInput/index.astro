@@ -1,0 +1,55 @@
+---
+import Input from '@components/pages/applications/common/Input/index.astro';
+
+const { placeholder } = Astro.props;
+---
+
+<div class="date-input" id="date">
+  <Input placeholder={placeholder} type="date" />
+</div>
+
+<script>
+  import IMask from 'imask';
+
+  const dateInput = document.getElementById('date').querySelector('input');
+
+  if (dateInput) {
+    IMask(dateInput, {
+      mask: Date,
+      pattern: 'd.`m.`Y',
+      blocks: {
+        d: {
+          mask: IMask.MaskedRange,
+          from: 1,
+          to: 31,
+          maxLength: 2,
+        },
+        m: {
+          mask: IMask.MaskedRange,
+          from: 1,
+          to: 12,
+          maxLength: 2,
+        },
+        Y: {
+          mask: IMask.MaskedRange,
+          from: 1900,
+          to: 2999,
+        }
+      },
+      format: function (date) {
+        let day = date.getDate();
+        let month = date.getMonth() + 1;
+        const year = date.getFullYear();
+        
+        day = day < 10 ? '0' + day : day;
+        month = month < 10 ? '0' + month : month;
+
+        return `${day}.${month}.${year}`;
+      },
+      parse: function (str) {
+        const [day, month, year] = str.split('.');
+        return new Date(parseInt(year), parseInt(month) - 1, parseInt(day));
+      },
+    });
+  }
+</script>

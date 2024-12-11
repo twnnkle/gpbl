@@ -1,0 +1,22 @@
+---
+import Input from '@components/pages/applications/common/Input/index.astro';
+
+const { placeholder } = Astro.props;
+---
+
+<div class="phone-input" id="phone">
+  <Input placeholder={placeholder} />
+</div>
+
+<script>
+  import IMask from 'imask';
+
+  const phoneInput = document.getElementById('phone').querySelector('input');
+
+  if (phoneInput) {
+    IMask(phoneInput, {
+      mask: '+{7}(000)000-00-00',
+      lazy: true,
+    });
+  }
+</script>

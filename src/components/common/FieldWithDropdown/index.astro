@@ -1,0 +1,94 @@
+---
+import './_index.scss';
+
+const { placeholder, list } = Astro.props;
+---
+
+<div class="field-with-dropdown">
+  <div class="dropdown">
+    <div class="field-with-dropdown__input-wrapper" data-bs-toggle="dropdown">
+      <input
+        type="text"
+        class="form-control search-input field-with-dropdown__input"
+        placeholder={placeholder}
+        autocomplete="off"
+      />
+
+      <div class="input-arrow-icon">
+        <svg
+          width="12"
+          height="12"
+          viewBox="0 0 12 12"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <g clip-path="url(#clip0_1747_1400)">
+            <rect width="12" height="12" fill="white" fill-opacity="0.01"
+            ></rect>
+            <path
+              d="M1.5 3.75L6 8.25L10.5 3.75"
+              stroke="#7F8EBE"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"></path>
+          </g>
+          <defs>
+            <clipPath id="clip0_1747_1400">
+              <rect width="12" height="12" fill="white"></rect>
+            </clipPath>
+          </defs>
+        </svg>
+      </div>
+    </div>
+    <ul class="dropdown-menu w-100">
+      {
+        list.map((item) => (
+          <li>
+            <a
+              class="dropdown-item d-flex align-items-center gap-2"
+              href="#"
+              data-name={item}
+            >
+              <span>{item}</span>
+            </a>
+          </li>
+        ))
+      }
+    </ul>
+  </div>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      const containers = document.querySelectorAll('.field-with-dropdown');
+
+      containers.forEach(container => {
+        const input = container.querySelector('.field-with-dropdown__input') as HTMLInputElement;
+        const dropdownItems = container.querySelectorAll('.dropdown-menu li');
+        const dropdownLinks = container.querySelectorAll('.dropdown-item');
+
+        input.addEventListener('input', function () {
+          const searchText = this.value.toLowerCase();
+
+          dropdownItems.forEach((item) => {
+            const text = item.textContent?.toLowerCase() || '';
+            if (text.includes(searchText)) {
+              (item as HTMLElement).style.display = 'block';
+            } else {
+              (item as HTMLElement).style.display = 'none';
+            }
+          });
+        });
+
+        dropdownLinks.forEach((link) => {
+          link.addEventListener('click', function (e) {
+            e.preventDefault();
+            const name = this.getAttribute('data-name');
+            if (name) {
+              input.value = name;
+            }
+          });
+        });
+      });
+    });
+  </script>
+</div>

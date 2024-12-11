@@ -2,6 +2,7 @@
 import './_index.scss';
 
 import Button from '@components/common/Button/index.astro';
+import FieldWithDropdown from '@components/common/FieldWithDropdown/index.astro';
 import CardField from '@components/pages/applications/common/CardField/index.astro';
 import Input from '@components/pages/applications/common/Input/index.astro';
 import Radio from '@components/pages/applications/common/Radio/index.astro';
@@ -39,114 +40,15 @@ import Radio from '@components/pages/applications/common/Radio/index.astro';
         </div>
 
         <div class="send-idea-modal__fields-item">
-          <div class="dropdown">
+          <CardField isRequired={true}>
             <label slot="title">Категория</label>
-
-            <div
-              class="send-idea-modal__input-wrapper"
-              data-bs-toggle="dropdown"
-            >
-              <input
-                type="text"
-                id="recipientName"
-                class="form-control search-input"
+            <span slot="content">
+              <FieldWithDropdown
                 placeholder="Выберите категорию"
-                autocomplete="off"
+                list={['Категория 1', 'Категория 2', 'Категория 3']}
               />
-
-              <div class="input-arrow-icon">
-                <svg
-                  width="12"
-                  height="12"
-                  viewBox="0 0 12 12"
-                  fill="none"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <g clip-path="url(#clip0_1747_1400)">
-                    <rect
-                      width="12"
-                      height="12"
-                      fill="white"
-                      fill-opacity="0.01"></rect>
-                    <path
-                      d="M1.5 3.75L6 8.25L10.5 3.75"
-                      stroke="#7F8EBE"
-                      stroke-width="2"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"></path>
-                  </g>
-                  <defs>
-                    <clipPath id="clip0_1747_1400">
-                      <rect width="12" height="12" fill="white"></rect>
-                    </clipPath>
-                  </defs>
-                </svg>
-              </div>
-            </div>
-            <ul class="dropdown-menu w-100">
-              <li>
-                <a
-                  class="dropdown-item d-flex align-items-center gap-2"
-                  href="#"
-                  data-name="Категория 1"
-                >
-                  <span>Категория 1</span>
-                </a>
-              </li>
-              <li>
-                <a
-                  class="dropdown-item d-flex align-items-center gap-2"
-                  href="#"
-                  data-name="Категория 2"
-                >
-                  <span>Категория 2</span>
-                </a>
-              </li>
-              <li>
-                <a
-                  class="dropdown-item d-flex align-items-center gap-2"
-                  href="#"
-                  data-name="Категория 3"
-                >
-                  <span>Категория 3</span>
-                </a>
-              </li>
-            </ul>
-          </div>
-
-          <script>
-            document.addEventListener('DOMContentLoaded', function () {
-              const input = document.getElementById(
-                'recipientName'
-              ) as HTMLInputElement;
-              const dropdownItems =
-                document.querySelectorAll('.dropdown-menu li');
-              const dropdownLinks = document.querySelectorAll('.dropdown-item');
-
-              input.addEventListener('input', function () {
-                const searchText = this.value.toLowerCase();
-
-                dropdownItems.forEach((item) => {
-                  const text = item.textContent?.toLowerCase() || '';
-                  if (text.includes(searchText)) {
-                    (item as HTMLElement).style.display = 'block';
-                  } else {
-                    (item as HTMLElement).style.display = 'none';
-                  }
-                });
-              });
-
-              dropdownLinks.forEach((link) => {
-                link.addEventListener('click', function (e) {
-                  e.preventDefault();
-                  const name = this.getAttribute('data-name');
-                  if (name) {
-                    input.value = name;
-                  }
-                });
-              });
-            });
-          </script>
+            </span>
+          </CardField>
         </div>
 
         <div class="send-idea-modal__fields-item">

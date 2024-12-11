@@ -8,10 +8,11 @@ import CardField from '@components/pages/applications/common/CardField/index.ast
 
 import Button from '@components/common/Button/index.astro';
 import Star from '@components/common/Star/index.astro';
+import FieldWithDropdown from '@components/common/FieldWithDropdown/index.astro';
 
 import Textarea from '@components/pages/applications/common/Textarea/index.astro';
 import Input from '@components/pages/applications/common/Input/index.astro';
-import Select from '@components/pages/applications/common/Select/index.astro';
+import DateInput from '@components/pages/applications/common/DateInput/index.astro';
 
 const breadcrumbs = [
   {
@@ -39,7 +40,9 @@ const breadcrumbs = [
         <section class="media-applications-courier-services">
           <div class="row justify-content-center">
             <div class="col-md-7">
-              <div class="media-applications-courier-services__breadcrumbs-and-star">
+              <div
+                class="media-applications-courier-services__breadcrumbs-and-star"
+              >
                 <Breadcrumbs breadcrumbs={breadcrumbs} />
 
                 <div class="media-applications-courier-services__star">
@@ -77,21 +80,27 @@ const breadcrumbs = [
                     <CardField isRequired={true}>
                       <label slot="title">Тип доставки</label>
                       <span slot="content">
-                        <Select placeholder="Выберите тип доставки" />
+                        <FieldWithDropdown
+                          placeholder="Выберите тип доставки"
+                          list={['Тип доставки 1', 'Тип доставки 2']}
+                        />
                       </span>
                     </CardField>
 
                     <CardField isRequired={true}>
                       <label slot="title">Дата посещения</label>
                       <span slot="content">
-                        <Input placeholder="02.10.2023" type="date" />
+                        <DateInput placeholder="02.10.2023" />
                       </span>
                     </CardField>
 
                     <CardField isRequired={true}>
                       <label slot="title">Способ исполнения</label>
                       <span slot="content">
-                        <Select placeholder="Выберите Способ" />
+                        <FieldWithDropdown
+                          placeholder="Выберите способ исполнения"
+                          list={['Способ 1', 'Способ 2']}
+                        />
                       </span>
                     </CardField>
 
@@ -130,6 +139,15 @@ const breadcrumbs = [
           </div>
         </section>
       </div>
+
+      <script>
+        import AirDatepicker from 'air-datepicker';
+        import 'air-datepicker/air-datepicker.css';
+
+        document.addEventListener('DOMContentLoaded', () => {
+          new AirDatepicker('#datepicker', {});
+        });
+      </script>
     </main>
   </Container>
 </body>
