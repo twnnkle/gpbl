@@ -1,5 +1,7 @@
 ---
 import './_index.scss';
+
+const { datePickerId = 'datepicker' } = Astro.props;
 ---
 
-<div id="datepicker"></div>
+<div id={datePickerId}></div>

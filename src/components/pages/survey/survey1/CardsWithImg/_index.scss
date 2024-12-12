@@ -1,0 +1,17 @@
+.cards-with-img {
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+
+  &__item {
+    width: calc(50% - 8px);
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+
+    img {
+      width: 100%;
+      height: auto;
+    }
+  }
+}

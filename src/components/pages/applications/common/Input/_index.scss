@@ -26,9 +26,11 @@ input.input-text {
 }
 
 .input-block-wrapper {
-  position: relative;
+  .datepicker-dropdown-btn {
+    position: relative;
+  }
 
-  .datepicker-dropdown {
+  .datepicker-dropdown-icon {
     position: absolute;
     top: 50%;
     right: 16px;

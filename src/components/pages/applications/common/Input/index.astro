@@ -5,42 +5,56 @@ interface Props {
   type?: string;
   placeholder?: string;
   disabled?: boolean;
+  datePickerId?: string;
+  isTimepicker?: boolean;
 }
 
-const { placeholder, disabled = false, type = 'text' } = Astro.props;
+const {
+  placeholder,
+  disabled = false,
+  type = 'text',
+  datePickerId,
+  isTimepicker,
+} = Astro.props;
 
 import { Image } from 'astro:assets';
 
 import calendarIcon from '@assets/pages/applications/icon-calendar.png';
+import timeIcon from '@assets/pages/applications/icon-time.png';
 
 import Datepicker from '@components/common/Datepicker/index.astro';
 ---
 
 {
   type === 'date' ? (
-    <div
-      class="input-block-wrapper"
-      data-bs-toggle="dropdown"
-      aria-expanded="false"
-    >
-      <input
-        class="input-text"
-        type="text"
-        placeholder={placeholder}
-        disabled={disabled}
-      />
+    <div class="input-block-wrapper">
+      <div
+        class="datepicker-dropdown-btn"
+        id="datepickerDropdown"
+        data-bs-toggle="dropdown"
+        data-bs-auto-close={isTimepicker ? 'outside' : null}
+        aria-expanded="false"
+      >
+        <input
+          class="input-text"
+          type="text"
+          placeholder={placeholder}
+          disabled={disabled}
+        />
 
-      <div class="datepicker-dropdown">
-        <div class="datepicker-dropdown-btn" id="datepickerDropdown">
-          <Image src={calendarIcon} alt="calendar" />
+        <div class="datepicker-dropdown-icon">
+          <Image
+            src={isTimepicker ? timeIcon : calendarIcon}
+            alt="Иконка поля"
+          />
         </div>
+      </div>
 
-        <div
-          class="dropdown-menu datepicker-dropdown-menu"
-          aria-labelledby="datepickerDropdown"
-        >
-          <Datepicker />
-        </div>
+      <div
+        class="dropdown-menu datepicker-dropdown-menu"
+        aria-labelledby="datepickerDropdown"
+      >
+        <Datepicker datePickerId={datePickerId} />
       </div>
     </div>
   ) : (

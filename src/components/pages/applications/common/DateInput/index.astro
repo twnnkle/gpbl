@@ -1,11 +1,16 @@
 ---
 import Input from '@components/pages/applications/common/Input/index.astro';
 
-const { placeholder } = Astro.props;
+const { placeholder, datePickerId, isTimepicker } = Astro.props;
 ---
 
-<div class="date-input" id="date">
-  <Input placeholder={placeholder} type="date" />
+<div class="date-input" id={isTimepicker ? 'time' : 'date'} style="width: 100%">
+  <Input
+    placeholder={placeholder}
+    type="date"
+    datePickerId={datePickerId}
+    isTimepicker={isTimepicker}
+  />
 </div>
 
 <script>
@@ -34,13 +39,13 @@ const { placeholder } = Astro.props;
           mask: IMask.MaskedRange,
           from: 1900,
           to: 2999,
-        }
+        },
       },
       format: function (date) {
         let day = date.getDate();
         let month = date.getMonth() + 1;
         const year = date.getFullYear();
-        
+
         day = day < 10 ? '0' + day : day;
         month = month < 10 ? '0' + month : month;
 
@@ -49,6 +54,28 @@ const { placeholder } = Astro.props;
       parse: function (str) {
         const [day, month, year] = str.split('.');
         return new Date(parseInt(year), parseInt(month) - 1, parseInt(day));
+      },
+    });
+  }
+
+  const timeInput = document.getElementById('time').querySelector('input');
+
+  if (timeInput) {
+    IMask(timeInput, {
+      mask: 'HH:MM',
+      blocks: {
+        HH: {
+          mask: IMask.MaskedRange,
+          from: 0,
+          to: 23,
+          maxLength: 2,
+        },
+        MM: {
+          mask: IMask.MaskedRange,
+          from: 0,
+          to: 59,
+          maxLength: 2,
+        },
       },
     });
   }
