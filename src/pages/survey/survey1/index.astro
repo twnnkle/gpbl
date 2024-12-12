@@ -2,14 +2,19 @@
 import './_index.scss';
 
 import Container from '@layouts/Container/index.astro';
+
+import FieldWithDropdown from '@components/common/FieldWithDropdown/index.astro';
+import Star from '@components/common/Star/index.astro';
+import Button from '@components/common/Button/index.astro';
+
 import Breadcrumbs from '@components/pages/media/common/Breadcrumbs/index.astro';
 import ProgressBar from '@components/pages/applications/common/ProgressBar/index.astro';
 import CardField from '@components/pages/applications/common/CardField/index.astro';
-import Star from '@components/common/Star/index.astro';
-
 import Textarea from '@components/pages/applications/common/Textarea/index.astro';
-import Input from '@components/pages/applications/common/Input/index.astro';
-import Select from '@components/pages/applications/common/Select/index.astro';
+import DateInput from '@components/pages/applications/common/DateInput/index.astro';
+import RangeSteps from '@components/pages/survey/survey1/RangeSteps/index.astro';
+import CheckboxBlock from '@components/pages/survey/survey1/CheckboxBlock/index.astro';
+import CardsWithImg from '@components/pages/survey/survey1/CardsWithImg/index.astro';
 
 const breadcrumbs = [
   {
@@ -66,27 +71,68 @@ const breadcrumbs = [
                       </span>
                     </CardField>
 
-                    <CardField isRequired={true}>
+                    <CardField>
                       <label slot="title">Как вам сейчас материалы?</label>
                       <span slot="content">
-                        <Select placeholder="Материал" />
+                        <FieldWithDropdown
+                          placeholder="Материал"
+                          list={['Материал 1', 'Материал 2']}
+                        />
                       </span>
                     </CardField>
 
                     <CardField>
-                      <label slot="title">К какой дате вам надо?</label>
-                      <span slot="content">
-                        <Input placeholder="02.10.2023" />
-                      </span>
-                    </CardField>
-
-                    <CardField>
-                      <label slot="title">В какое время?</label>
+                      <label slot="title">В какое время и дату?</label>
                       <span slot="content">
                         <div style="display: flex; gap: 12px">
-                          <Input placeholder="02.10.2023" />
-                          <Input placeholder="02.10.2023" />
+                          <DateInput placeholder="02.10.2023" />
+                          <DateInput
+                            placeholder="18:00"
+                            datePickerId="timepicker"
+                            isTimepicker
+                          />
                         </div>
+                      </span>
+                    </CardField>
+
+                    <CardField>
+                      <label slot="title"
+                        >Какими материалами вы пользуетесь?</label
+                      >
+                      <span slot="content">
+                        <RangeSteps />
+                      </span>
+                    </CardField>
+
+                    <CardField>
+                      <label slot="title"
+                        >Какими материалами вы пользуетесь?</label
+                      >
+                      <span slot="content">
+                        <CheckboxBlock />
+                      </span>
+                    </CardField>
+
+                    <CardField>
+                      <label slot="title"
+                        >Какими материалами вы пользуетесь?</label
+                      >
+                      <span slot="content">
+                        <CheckboxBlock isRadio />
+                      </span>
+                    </CardField>
+
+                    <CardField>
+                      <label slot="title">К какой дате и времени надо?</label>
+                      <span slot="content">
+                        <CardsWithImg />
+                      </span>
+                    </CardField>
+
+                    <CardField>
+                      <label slot="title">К какой дате и времени надо?</label>
+                      <span slot="content">
+                        <CardsWithImg isRadio />
                       </span>
                     </CardField>
 
@@ -96,6 +142,16 @@ const breadcrumbs = [
                         <Textarea />
                       </span>
                     </CardField>
+
+                    <div
+                      class="media-applications-training__content__form__submit"
+                    >
+                      <Button
+                        text="Создать заявку"
+                        option="btn-primary"
+                        type="submit"
+                      />
+                    </div>
                   </div>
                 </form>
               </div>
@@ -103,6 +159,21 @@ const breadcrumbs = [
           </div>
         </section>
       </div>
+
+      <script>
+        import AirDatepicker from 'air-datepicker';
+        import 'air-datepicker/air-datepicker.css';
+
+        document.addEventListener('DOMContentLoaded', () => {
+          new AirDatepicker('#datepicker', {});
+          new AirDatepicker('#timepicker', {
+            onlyTimepicker: true,
+            timepicker: true,
+            dateFormat: 'HH:mm',
+            timeFormat: 'HH:mm',
+          });
+        });
+      </script>
     </main>
   </Container>
 </body>

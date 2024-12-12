@@ -1,0 +1,13 @@
+.range-steps {
+  &__labels {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 5px;
+    
+    span {
+      font-size: 14px;
+      font-weight: 500;
+      color: #212529;
+    }
+  }
+}

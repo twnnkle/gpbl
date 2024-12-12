@@ -1,0 +1,51 @@
+---
+import './_index.scss';
+
+import { Image } from 'astro:assets';
+
+const { isRadio = false } = Astro.props;
+---
+
+<div class="cards-with-img">
+  {
+    Array.from({ length: 4 }, (_, index) => (
+      <div class="cards-with-img__item">
+        {isRadio ? (
+          <div class="form-check">
+            <input
+              class="form-check-input"
+              type="radio"
+              name="cardswithimgRadioDefault"
+              id={`cardswithimgRadioDefault${index + 1}`}
+            />
+            <label
+              class="form-check-label"
+              for={`cardswithimgRadioDefault${index + 1}`}
+            >
+              Label
+            </label>
+          </div>
+        ) : (
+          <div class="form-check">
+            <input
+              class="form-check-input"
+              type="checkbox"
+              value=""
+              id={`cardswithimgCheckDefault${index + 1}`}
+            />
+            <label class="form-check-label" for={`cardswithimgCheckDefault${index + 1}`}>
+              Label
+            </label>
+          </div>
+        )}
+
+        <Image
+          src="https://images.placeholders.dev/?width=126&height=71&text=+&bgColor=%23000000"
+          alt="Картинка"
+          width="343"
+          height="273"
+        />
+      </div>
+    ))
+  }
+</div>

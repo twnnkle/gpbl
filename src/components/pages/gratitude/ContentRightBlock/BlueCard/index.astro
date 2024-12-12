@@ -138,22 +138,28 @@ import avatar from '@assets/pages/gratitude/blue-card-avatar.png';
                 <svg
                   width="12"
                   height="12"
-                  viewBox="0 0 24 24"
+                  viewBox="0 0 12 12"
                   fill="none"
                   xmlns="http://www.w3.org/2000/svg"
                 >
-                  <path
-                    d="M11 19C15.4183 19 19 15.4183 19 11C19 6.58172 15.4183 3 11 3C6.58172 3 3 6.58172 3 11C3 15.4183 6.58172 19 11 19Z"
-                    stroke="#7F8EBE"
-                    stroke-width="2"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"></path>
-                  <path
-                    d="M21 21L16.65 16.65"
-                    stroke="#7F8EBE"
-                    stroke-width="2"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"></path>
+                  <g clip-path="url(#clip0_1747_1400)">
+                    <rect
+                      width="12"
+                      height="12"
+                      fill="white"
+                      fill-opacity="0.01"></rect>
+                    <path
+                      d="M1.5 3.75L6 8.25L10.5 3.75"
+                      stroke="#7F8EBE"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"></path>
+                  </g>
+                  <defs>
+                    <clipPath id="clip0_1747_1400">
+                      <rect width="12" height="12" fill="white"></rect>
+                    </clipPath>
+                  </defs>
                 </svg>
               </div>
             </div>
@@ -196,9 +202,13 @@ import avatar from '@assets/pages/gratitude/blue-card-avatar.png';
           <div class="mb-3 input-block">
             <label for="gratitudeType" class="form-label">Ценности</label>
             <select class="form-select" id="gratitudeType">
-              <option value="" selected disabled hidden>Выберите ценность</option>
+              <option value="" selected disabled hidden
+                >Выберите ценность</option
+              >
               <option value="1">Ответственно подходит к делу</option>
-              <option value="2">Эффективность каждого — результат команды</option>
+              <option value="2"
+                >Эффективность каждого — результат команды</option
+              >
               <option value="3">Слушать — слушать, Уважать — ценить</option>
               <option value="4">Option 04</option>
             </select>
