@@ -1,0 +1,127 @@
+---
+import './_index.scss';
+
+import { Image } from 'astro:assets';
+
+import icon1 from '@assets/pages/myPage/myPage1/achievements/1.svg';
+import icon2 from '@assets/pages/myPage/myPage1/achievements/2.svg';
+import icon3 from '@assets/pages/myPage/myPage1/achievements/3.svg';
+import icon4 from '@assets/pages/myPage/myPage1/achievements/4.svg';
+import icon5 from '@assets/pages/myPage/myPage1/achievements/5.svg';
+import icon6 from '@assets/pages/myPage/myPage1/achievements/6.svg';
+import icon7 from '@assets/pages/myPage/myPage1/achievements/7.svg';
+import icon8 from '@assets/pages/myPage/myPage1/achievements/8.svg';
+import icon9 from '@assets/pages/myPage/myPage1/achievements/9.svg';
+import icon10 from '@assets/pages/myPage/myPage1/achievements/10.svg';
+import icon11 from '@assets/pages/myPage/myPage1/achievements/11.svg';
+import icon12 from '@assets/pages/myPage/myPage1/achievements/12.svg';
+
+const achievements = [
+  { icon: icon1, tag: '25 лет' },
+  { icon: icon2 },
+  { icon: icon3 },
+  { icon: icon4 },
+  { icon: icon5 },
+  { icon: icon6 },
+  { icon: icon7, tag: '2024' },
+  { icon: icon8 },
+  { icon: icon9 },
+  { icon: icon10 },
+  { icon: icon11 },
+  { icon: icon12 },
+];
+---
+
+<div class="row justify-content-between">
+  <div class="col-md-4">
+    <h4 class="achievements-title">Мои достижения</h4>
+  </div>
+
+  <div class="col-md-7">
+    <div
+      class="achievements-content row-cols-md-4 row justify-content-between gy-3"
+    >
+      {
+        achievements.map((achievement) => (
+          <div class="col">
+            <div
+              class="achievements-content__item"
+              data-bs-toggle="modal"
+              data-bs-target="#achievementModal"
+            >
+              <div
+                class="achievements-content__tooltip-wrapper"
+                data-bs-toggle="tooltip"
+                data-bs-placement="bottom"
+                data-bs-custom-class="achievements-tooltip"
+                title="Благотворительность"
+              >
+                <Image
+                  src={achievement.icon}
+                  width={24}
+                  height={24}
+                  alt="Достижение"
+                />
+
+                {achievement.tag && (
+                  <span class="achievements-content__item-tag">
+                    {achievement.tag}
+                  </span>
+                )}
+              </div>
+            </div>
+
+            <div
+              class="modal fade"
+              id="achievementModal"
+              tabindex="-1"
+              aria-labelledby="achievementModalLabel"
+              aria-hidden="true"
+            >
+              <div
+                class="modal-dialog modal-dialog-centered"
+                style="max-width: 415px"
+              >
+                <div class="modal-content achievement-modal">
+                  <div class="achievement-modal__close-btn">
+                    <button
+                      type="button"
+                      class="btn-close"
+                      data-bs-dismiss="modal"
+                      aria-label="Закрыть"
+                    />
+                  </div>
+                  <div class="modal-body">
+                    <div class="achievement-modal__icon">
+                      <Image
+                        src={icon11}
+                        width={24}
+                        height={24}
+                        alt="Достижение"
+                      />
+                    </div>
+
+                    <h5>Благотворительность</h5>
+                    <p>
+                      Вы получили награду за участие в благотворительном
+                      мероприятии «Подари жизнь»
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        ))
+      }
+    </div>
+  </div>
+
+  <script>
+    const tooltipTriggerList = document.querySelectorAll(
+      '[data-bs-toggle="tooltip"]'
+    );
+    [...tooltipTriggerList].map(
+      (tooltipTriggerEl) => new bootstrap.Tooltip(tooltipTriggerEl)
+    );
+  </script>
+</div>
