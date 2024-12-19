@@ -11,9 +11,11 @@ const { placeholder } = Astro.props;
 <script>
   import IMask from 'imask';
 
+  // Находим поле ввода телефона
   const phoneInput = document.getElementById('phone').querySelector('input');
 
   if (phoneInput) {
+    // Инициализируем маску для поля ввода телефона в формате +7(XXX)XXX-XX-XX
     IMask(phoneInput, {
       mask: '+{7}(000)000-00-00',
       lazy: true,

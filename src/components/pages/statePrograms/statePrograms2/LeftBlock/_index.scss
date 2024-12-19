@@ -1,0 +1,35 @@
+.left-block {
+  width: 70%;
+
+  &__title {
+    margin-bottom: 30px;
+    font-size: 56px;
+    font-weight: 500;
+    line-height: auto;
+    color: #212529;
+  }
+
+  img {
+    width: 100%;
+    height: auto;
+    border-radius: 16px;
+  }
+
+  &__description {
+    ul {
+      margin: 0;
+    }
+
+    p {
+      margin-top: 15px;
+    }
+
+    p,
+    span {
+      font-size: 16px;
+      font-weight: 400;
+      color: #212529;
+      line-height: 24px;
+    }
+  }
+}

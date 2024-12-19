@@ -14,7 +14,7 @@ import mainImg from '@assets/pages/analytics/main-img-4.png';
 ---
 
 <body>
-  <Container>
+  <Container isWhiteBgSearch>
     <main>
       <div class="analytics-page">
         <div class="row justify-content-between">
@@ -40,10 +40,13 @@ import mainImg from '@assets/pages/analytics/main-img-4.png';
       </div>
 
       <script>
+        // Импортируем библиотеку выбора даты и её стили
         import AirDatepicker from 'air-datepicker';
         import 'air-datepicker/air-datepicker.css';
 
+        // После загрузки DOM инициализируем выбор даты
         document.addEventListener('DOMContentLoaded', () => {
+          // Создаем новый экземпляр выбора даты с настройками
           new AirDatepicker('#datepicker', {
             range: true,
             multipleDates: true,

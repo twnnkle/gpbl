@@ -58,17 +58,24 @@ const { placeholder, list } = Astro.props;
   </div>
 
   <script>
+    // Инициализация после загрузки DOM
     document.addEventListener('DOMContentLoaded', function () {
+      // Находим все контейнеры с выпадающим списком
       const containers = document.querySelectorAll('.field-with-dropdown');
 
-      containers.forEach(container => {
-        const input = container.querySelector('.field-with-dropdown__input') as HTMLInputElement;
+      containers.forEach((container) => {
+        // Получаем элементы внутри каждого контейнера
+        const input = container.querySelector(
+          '.field-with-dropdown__input'
+        ) as HTMLInputElement;
         const dropdownItems = container.querySelectorAll('.dropdown-menu li');
         const dropdownLinks = container.querySelectorAll('.dropdown-item');
 
+        // Обработчик ввода в поле поиска
         input.addEventListener('input', function () {
           const searchText = this.value.toLowerCase();
 
+          // Фильтруем элементы списка по введенному тексту
           dropdownItems.forEach((item) => {
             const text = item.textContent?.toLowerCase() || '';
             if (text.includes(searchText)) {
@@ -79,9 +86,11 @@ const { placeholder, list } = Astro.props;
           });
         });
 
+        // Обработчик клика по элементу выпадающего списка
         dropdownLinks.forEach((link) => {
           link.addEventListener('click', function (e) {
             e.preventDefault();
+            // Подставляем выбранное значение в поле ввода
             const name = this.getAttribute('data-name');
             if (name) {
               input.value = name;

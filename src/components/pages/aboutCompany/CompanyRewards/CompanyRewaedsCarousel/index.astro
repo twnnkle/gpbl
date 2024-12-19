@@ -128,21 +128,29 @@ const rewards2 = [
 </div>
 
 <script>
+  // Инициализация после загрузки DOM
   document.addEventListener('DOMContentLoaded', () => {
+    // Получаем модальное окно по ID
     const modal = document.getElementById('rewardModal');
 
     if (modal) {
+      // Добавляем обработчик события открытия модального окна
       modal.addEventListener('show.bs.modal', (event) => {
+        // Получаем кнопку, которая вызвала модальное окно
         const button = event.relatedTarget;
+        // Получаем данные из атрибутов кнопки
         const title = button.getAttribute('data-title');
         const description = button.getAttribute('data-description');
         const image = button.getAttribute('data-image');
 
+        // Находим элементы модального окна
         const modalDescription = modal.querySelector('.modal-description');
         const modalImage = modal.querySelector('.modal-image');
 
+        // Заполняем текстовое описание
         if (modalDescription)
           modalDescription.textContent = title + ' ' + description;
+        // Устанавливаем атрибуты изображения
         if (modalImage) {
           modalImage.src = image;
           modalImage.alt = title;

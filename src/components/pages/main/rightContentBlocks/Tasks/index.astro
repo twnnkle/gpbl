@@ -1,9 +1,15 @@
 ---
 import './_index.scss';
+
+const { changeStatus } = Astro.props;
+
+import CardOverlay from '@components/pages/main/rightContentBlocks/CardOverlay/index.astro';
 ---
 
-<div class="row card-row gy-2">
+<div class="row card-row gy-2 card-with-overlay">
   <div class="col-md-12 gx-2">
+    {changeStatus && <CardOverlay />}
+
     <div class="block-with-title">
       <h4>Мои задачи</h4>
 

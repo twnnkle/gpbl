@@ -10,7 +10,7 @@ import TreeAccordion from '@components/pages/employees/employees8/treeAccordion/
 ---
 
 <body>
-  <Container>
+  <Container isWhiteBgSearch>
     <main>
       <div class="employees-page">
         <div class="row justify-content-between w-100">
@@ -33,8 +33,12 @@ import TreeAccordion from '@components/pages/employees/employees8/treeAccordion/
         </div>
       </div>
       <script>
+        // Получаем все кнопки аккордеона
         const accordionBtns = document.querySelectorAll('.accordion-step__btn');
 
+        // Добавляем обработчик клика для каждой кнопки
+        // При клике меняем состояние аккордеона (открыт/закрыт)
+        // Меняем текст кнопки и поворачиваем стрелку
         accordionBtns.forEach((btn) => {
           btn.addEventListener('click', () => {
             const isOpen = btn.classList.toggle('openedAccordion');
@@ -46,18 +50,22 @@ import TreeAccordion from '@components/pages/employees/employees8/treeAccordion/
           });
         });
 
+        // Функция устанавливает максимальную высоту для контейнера с контентом
+        // на основе его текущей высоты
         const setContentHeight = () => {
           const contentBlock = document.querySelector(
             '.tree-employees-content-wrapper'
-          ) as HTMLElement;
+          );
 
           contentBlock.style.maxHeight = `${contentBlock.offsetHeight}px`;
         };
 
+        // Устанавливаем высоту при загрузке страницы
         window.addEventListener('DOMContentLoaded', () => {
           setContentHeight();
         });
 
+        // Обновляем высоту при изменении размера окна
         window.addEventListener('resize', () => {
           setContentHeight();
         });

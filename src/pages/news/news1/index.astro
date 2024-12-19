@@ -55,10 +55,13 @@ import DatepickerDropdown from '@components/pages/news/news1/DatepickerDropdown/
       </div>
 
       <script>
+        // Импортируем библиотеку выбора даты и её стили
         import AirDatepicker from 'air-datepicker';
         import 'air-datepicker/air-datepicker.css';
 
+        // После загрузки DOM инициализируем выбор даты
         document.addEventListener('DOMContentLoaded', () => {
+          // Создаем новый экземпляр выбора даты с настройками по умолчанию
           new AirDatepicker('#datepicker', {});
         });
       </script>

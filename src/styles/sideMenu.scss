@@ -13,12 +13,13 @@
     align-items: center;
     gap: 8px;
     width: fit-content;
-    padding: 6px 12px;
+    padding: 0 12px;
+    height: 38px;
     transition: all 0.1s ease-in-out;
     border-radius: 4px;
 
     &:not(:first-child) {
-      margin-top: 5px;
+      margin-top: 8px;
     }
 
     &:hover:not(.side-menu__item_active) {

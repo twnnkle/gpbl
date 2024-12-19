@@ -87,6 +87,7 @@ const images = [
 </div>
 
 <script>
+  // Получаем основные элементы карусели
   const mainImage = document.querySelector(
     '.advertisement-carousel-active-img'
   ) as HTMLImageElement;
@@ -101,10 +102,14 @@ const images = [
 
   let currentIndex = 0;
 
+  // Функция обновления активного изображения и состояния карусели
   function updateActiveImage(index) {
+    // Обновляем текущий индекс
     currentIndex = index;
+    // Устанавливаем основное изображение
     mainImage.src = thumbs[index].src;
 
+    // Обновляем стили миниатюр
     thumbs.forEach((thumb) => thumb.classList.remove('active'));
     thumbs[index].classList.add('active');
     thumbs[index].style.border = '2px solid #487cfb';
@@ -114,6 +119,7 @@ const images = [
       }
     });
 
+    // Вычисляем параметры для прокрутки карусели
     const thumbWidth = thumbs[0].parentElement.offsetWidth;
     const containerWidth = carouselTrack.parentElement.offsetWidth;
     const visibleThumbs = Math.floor(containerWidth / thumbWidth);
@@ -121,6 +127,7 @@ const images = [
 
     let offset;
 
+    // Определяем смещение карусели в зависимости от позиции активной миниатюры
     if (index <= Math.floor(visibleThumbs / 2)) {
       offset = 0;
     } else if (index >= thumbs.length - Math.floor(visibleThumbs / 2)) {
@@ -129,25 +136,30 @@ const images = [
       offset = (index - Math.floor(visibleThumbs / 2)) * thumbWidth;
     }
 
+    // Применяем трансформацию для плавной прокрутки
     carouselTrack.style.transform = `translateX(-${Math.max(0, Math.min(offset, maxOffset))}px)`;
     carouselTrack.style.transition = 'transform 0.3s ease-in-out';
   }
 
+  // Обработчик клика по кнопке "Предыдущий"
   prevMainBtn.addEventListener('click', () => {
     currentIndex = currentIndex > 0 ? currentIndex - 1 : thumbs.length - 1;
     updateActiveImage(currentIndex);
   });
 
+  // Обработчик клика по кнопке "Следующий"
   nextMainBtn.addEventListener('click', () => {
     currentIndex = currentIndex < thumbs.length - 1 ? currentIndex + 1 : 0;
     updateActiveImage(currentIndex);
   });
 
+  // Добавляем обработчики клика на миниатюры
   thumbs.forEach((thumb, index) => {
     thumb.addEventListener('click', () => {
       updateActiveImage(index);
     });
   });
 
+  // Инициализация карусели
   updateActiveImage(0);
 </script>

@@ -6,6 +6,7 @@ import Container from '@layouts/Container/index.astro';
 import Breadcrumbs from '@components/pages/media/common/Breadcrumbs/index.astro';
 import EventCard from '@components/pages/media/common/EventCard/index.astro';
 import Star from '@components/common/Star/index.astro';
+import DatepickerDropdown from '@components/pages/media/reviews/DatepickerDropdown/index.astro';
 
 const breadcrumbs = [
   {
@@ -25,7 +26,7 @@ const projects = [
   {
     link: '#',
     imageLink: '/src/assets/pages/media/employee-interviews/1.png',
-    period: '21.08',
+    period: '21.08.2024',
     title: 'Интервью о путешествиях по нашей большой стране',
     categories: [
       {
@@ -41,7 +42,7 @@ const projects = [
   {
     link: '#',
     imageLink: '/src/assets/pages/media/employee-interviews/2.png',
-    period: '21.08',
+    period: '21.08.2024',
     title:
       'Новогодние и рождественские праздники — это времся, когда хочется повторить что-то волшебное',
     categories: [
@@ -58,7 +59,7 @@ const projects = [
   {
     link: '#',
     imageLink: '/src/assets/pages/media/employee-interviews/3.png',
-    period: '21.08',
+    period: '21.08.2024',
     title: 'Блиц-интервью ко дню лизинга',
     categories: [
       {
@@ -74,7 +75,7 @@ const projects = [
   {
     link: '#',
     imageLink: '/src/assets/pages/media/employee-interviews/3.png',
-    period: '21.08',
+    period: '21.08.2024',
     title: 'Блиц-интервью ко дню лизинга',
     categories: [
       {
@@ -90,7 +91,7 @@ const projects = [
   {
     link: '#',
     imageLink: '/src/assets/pages/media/employee-interviews/1.png',
-    period: '21.08',
+    period: '21.08.2024',
     title: 'Интервью о путешествиях по нашей большой стране',
     categories: [
       {
@@ -106,7 +107,7 @@ const projects = [
   {
     link: '#',
     imageLink: '/src/assets/pages/media/employee-interviews/2.png',
-    period: '21.08',
+    period: '21.08.2024',
     title:
       'Новогодние и рождественские праздники — это времся, когда хочется повторить что-то волшебное',
     categories: [
@@ -123,7 +124,7 @@ const projects = [
   {
     link: '#',
     imageLink: '/src/assets/pages/media/employee-interviews/3.png',
-    period: '21.08',
+    period: '21.08.2024',
     title: 'Блиц-интервью ко дню лизинга',
     categories: [
       {
@@ -139,7 +140,7 @@ const projects = [
   {
     link: '#',
     imageLink: '/src/assets/pages/media/employee-interviews/3.png',
-    period: '21.08',
+    period: '21.08.2024',
     title: 'Блиц-интервью ко дню лизинга',
     categories: [
       {
@@ -156,7 +157,7 @@ const projects = [
 ---
 
 <body>
-  <Container>
+  <Container isWhiteBgSearch>
     <main>
       <div class="main-page">
         <section class="media-employee-interviews">
@@ -170,10 +171,11 @@ const projects = [
           </div>
         </section>
 
-        <section class="media-employee-interviews-header">
+        <section class="media-employee-interviews-header-block">
           <div class="row">
-            <div class="col-12">
+            <div class="col-12 media-employee-interviews-header">
               <h2>Интервью сотрудников</h2>
+              <DatepickerDropdown />
             </div>
           </div>
         </section>
@@ -199,6 +201,21 @@ const projects = [
           </div>
         </section>
       </div>
+
+      <script>
+        // Импортируем библиотеку выбора даты и её стили
+        import AirDatepicker from 'air-datepicker';
+        import 'air-datepicker/air-datepicker.css';
+
+        // После загрузки DOM инициализируем выбор даты
+        document.addEventListener('DOMContentLoaded', () => {
+          new AirDatepicker('#datepicker', {
+            range: true,
+            multipleDates: true,
+            multipleDatesSeparator: ' - ',
+          });
+        });
+      </script>
     </main>
   </Container>
 </body>

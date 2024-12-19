@@ -2,8 +2,6 @@ import { defineConfig } from 'astro/config';
 import { passthroughImageService } from 'astro/config';
 import relativeLinks from 'astro-relative-links';
 
-// TODO: Сделать все SVG компонентами. Только нужно сохранить ховер эффекты и чтобы при сборке не было js для этого
-
 // https://astro.build/config
 export default defineConfig({
   image: {
@@ -41,10 +39,10 @@ export default defineConfig({
     css: {
       preprocessorOptions: {
         scss: {
-          api: "modern-compiler"
-        }
-      }
-    }
+          api: 'modern-compiler',
+        },
+      },
+    },
   },
   compressHTML: false,
 });

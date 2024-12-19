@@ -1,11 +1,19 @@
 .company-description-features {
+  &__title {
+    font-size: 32px;
+    line-height: 120%;
+    font-weight: 500;
+    color: #212529;
+    margin-bottom: 20px;
+  }
+
   &__item {
     p {
       line-height: 120%;
       color: #3271ec;
-      font-size: 24px;
+      font-size: 20px;
       font-weight: 500;
-			overflow-wrap: break-word;
+      overflow-wrap: break-word;
     }
 
     span {

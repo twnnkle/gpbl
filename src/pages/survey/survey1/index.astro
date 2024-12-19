@@ -32,7 +32,7 @@ const breadcrumbs = [
 ---
 
 <body>
-  <Container>
+  <Container isWhiteBgSearch>
     <main>
       <div class="main-page">
         <section class="media-applications-training">
@@ -161,15 +161,19 @@ const breadcrumbs = [
       </div>
 
       <script>
+        // Импортируем библиотеку выбора даты/времени и её стили
         import AirDatepicker from 'air-datepicker';
         import 'air-datepicker/air-datepicker.css';
 
+        // После загрузки DOM инициализируем два пикера
         document.addEventListener('DOMContentLoaded', () => {
+          // Создаем пикер для выбора даты с настройками по умолчанию
           new AirDatepicker('#datepicker', {});
+
+          // Создаем пикер только для выбора времени
           new AirDatepicker('#timepicker', {
             onlyTimepicker: true,
             timepicker: true,
-            dateFormat: 'HH:mm',
             timeFormat: 'HH:mm',
           });
         });

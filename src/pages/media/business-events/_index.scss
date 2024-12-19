@@ -13,7 +13,7 @@ body {
       gap: 10px;
     }
 
-    &-header {
+    &-header-block {
       margin-top: 25px;
       
       h2 {
@@ -21,6 +21,13 @@ body {
         font-weight: 500;
         line-height: 38px;
       }
+    }
+
+    &-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 10px;
     }
 
     &-cards {

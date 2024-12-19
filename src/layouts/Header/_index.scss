@@ -14,18 +14,18 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    margin: 0 25px 0 45px;
+    margin: 0 25px 0 25px;
     padding: 0;
     list-style: none;
     gap: 25px;
     transition: all 0.1s ease-in-out;
     margin-right: 210px;
 
-    @media (max-width: 1420px) {
+    @media (max-width: 1435px) {
       gap: 25px;
     }
 
-    @media (max-width: 1380px) {
+    @media (max-width: 1395px) {
       gap: 20px;
     }
 
@@ -38,10 +38,16 @@
 
     .more-dropdown-list,
     .service-dropdown-list {
-      padding: 16px;
-
       li {
         white-space: nowrap;
+      }
+
+      li a {
+        padding: 5px 20px;
+        
+        &:active {
+          color: #ffffff;
+        }
       }
     }
 
@@ -50,7 +56,7 @@
         &:nth-child(1) {
           display: none;
 
-          @media (max-width: 1420px) {
+          @media (max-width: 1435px) {
             display: block;
           }
         }
@@ -58,7 +64,7 @@
         &:nth-child(2) {
           display: none;
 
-          @media (max-width: 1280px) {
+          @media (max-width: 1290px) {
             display: block;
           }
         }
@@ -66,10 +72,26 @@
         &:nth-child(3) {
           display: none;
 
-          @media (max-width: 1100px) {
+          @media (max-width: 1130px) {
             display: block;
           }
         }
+      }
+    }
+
+    &-item_active {
+      background-color: #487cfb;
+      height: 38px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 4px;
+      padding: 0 12px;
+      cursor: default !important;
+
+      a {
+        color: #ffffff !important;
+        cursor: default !important;
       }
     }
 
@@ -86,29 +108,37 @@
       }
 
       &:nth-last-child(2) {
-        @media (max-width: 1420px) {
+        @media (max-width: 1435px) {
           display: none;
           color: red;
         }
       }
 
       &:nth-last-child(3) {
-        @media (max-width: 1280px) {
+        @media (max-width: 1290px) {
           display: none;
         }
       }
 
       &:nth-last-child(4) {
-        @media (max-width: 1100px) {
+        @media (max-width: 1130px) {
           display: none;
         }
       }
     }
   }
 
+  .white-bg-search {
+    background-color: #ffffff;
+
+    input {
+      background-color: #ffffff;
+    }
+  }
+
   &__search {
     border-radius: 42px;
-    background-color: #ffffff;
+    background-color: #f3f5fb;
     display: flex;
     align-items: center;
     margin-right: 15px;
@@ -141,6 +171,7 @@
       margin-left: 10px;
       color: #212529;
       transition: opacity 0.2s ease;
+      background-color: #f3f5fb;
 
       &::placeholder {
         color: #7f8ebe;
