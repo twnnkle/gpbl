@@ -4,14 +4,20 @@
   flex-direction: column;
   background-color: #ffffff;
   justify-content: space-between;
-  border-radius: 16px;
-  padding: 16px;
+  border-radius: 24px;
+  padding: 24px;
   gap: 98px;
   cursor: pointer;
 
+  &:hover {
+    .media-card__link__title {
+      color: #007bff;
+    }
+  }
+
   &__icon {
     padding: 20px;
-    background-color: #F5F7FC;
+    background-color: #f5f7fc;
     border-radius: 50%;
     max-width: 72px;
     min-width: 72px;
@@ -39,7 +45,7 @@
       display: flex;
       border-radius: 4px;
       padding: 8px;
-      border: 1px solid #CCD3E7;
+      border: 1px solid #ccd3e7;
 
       img {
         transition: transform 0.3s ease-in-out;

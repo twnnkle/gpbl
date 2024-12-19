@@ -5,6 +5,8 @@ import { Image } from 'astro:assets';
 
 import logo from '@assets/logo.png';
 import miniAvatar from '@assets/mini-avatar.png';
+
+const { isWhiteBgSearch } = Astro.props;
 ---
 
 <div class="header">
@@ -14,7 +16,9 @@ import miniAvatar from '@assets/mini-avatar.png';
 
   <div class="header__nav-and-search">
     <ul class="header__nav-list">
-      <li class="header__nav-list-item"><a href="#">Сотрудники</a></li>
+      <li class="header__nav-list-item header__nav-list-item_active">
+        <a href="#">Сотрудники</a>
+      </li>
       <li class="header__nav-list-item">
         <div class="dropdown">
           <div
@@ -44,9 +48,9 @@ import miniAvatar from '@assets/mini-avatar.png';
             class="dropdown-menu service-dropdown-list"
             aria-labelledby="serviceDropdown"
           >
-            <li><a href="#">Заявки</a></li>
-            <li><a href="#">Горячая линия комплаенс</a></li>
-            <li><a href="#">Идея 2.0</a></li>
+            <li><a href="#" class="dropdown-item">Заявки</a></li>
+            <li><a href="#" class="dropdown-item">Горячая линия комплаенс</a></li>
+            <li><a href="#" class="dropdown-item">Идея 2.0</a></li>
           </ul>
         </div>
       </li>
@@ -84,22 +88,22 @@ import miniAvatar from '@assets/mini-avatar.png';
             class="dropdown-menu more-dropdown-list"
             aria-labelledby="moreDropdown"
           >
-            <li><a href="#">О компании</a></li>
-            <li><a href="#">База знаний</a></li>
-            <li><a href="#">Благодарю</a></li>
-            <li><a href="#">Аналитика</a></li>
-            <li><a href="#">Вопрос-ответ</a></li>
-            <li><a href="#">Опросы</a></li>
-            <li><a href="#">Новости</a></li>
-            <li><a href="#">Галерея</a></li>
-            <li><a href="#">Объявления</a></li>
-            <li><a href="#">Госпрограммы</a></li>
+            <li><a href="#" class="dropdown-item">О компании</a></li>
+            <li><a href="#" class="dropdown-item">База знаний</a></li>
+            <li><a href="#" class="dropdown-item">Благодарю</a></li>
+            <li><a href="#" class="dropdown-item">Аналитика</a></li>
+            <li><a href="#" class="dropdown-item">Вопрос-ответ</a></li>
+            <li><a href="#" class="dropdown-item">Опросы</a></li>
+            <li><a href="#" class="dropdown-item">Новости</a></li>
+            <li><a href="#" class="dropdown-item">Галерея</a></li>
+            <li><a href="#" class="dropdown-item">Объявления</a></li>
+            <li><a href="#" class="dropdown-item">Госпрограммы</a></li>
           </ul>
         </div>
       </li>
     </ul>
 
-    <div class="header__search">
+    <div class={`header__search ${isWhiteBgSearch ? 'white-bg-search' : ''}`}>
       <div class="header__search-inner">
         <svg
           width="24"
@@ -142,21 +146,28 @@ import miniAvatar from '@assets/mini-avatar.png';
   </div>
 
   <script>
+    // Получаем элементы поиска
     const searchInner = document.querySelector('.header__search-inner');
     const searchInput = document.querySelector('.header__search-input');
 
+    // Флаг состояния поиска (развернут/свернут)
     let isExpanded = false;
 
+    // При клике на поле поиска
     searchInner.addEventListener('click', () => {
       if (!isExpanded) {
+        // Разворачиваем поле поиска
         searchInner.classList.add('expanded');
         searchInput.focus();
         isExpanded = true;
       }
     });
 
+    // При клике в любом месте документа
     document.addEventListener('click', (e) => {
+      // Если клик был вне поля поиска и поиск развернут
       if (!searchInner.contains(e.target) && isExpanded) {
+        // Сворачиваем поле поиска
         searchInner.classList.remove('expanded');
         isExpanded = false;
       }

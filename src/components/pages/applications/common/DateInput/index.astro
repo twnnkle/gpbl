@@ -16,9 +16,11 @@ const { placeholder, datePickerId, isTimepicker } = Astro.props;
 <script>
   import IMask from 'imask';
 
+  // Находим поле ввода даты
   const dateInput = document.getElementById('date').querySelector('input');
 
   if (dateInput) {
+    // Инициализируем маску для поля ввода даты в формате ДД.ММ.ГГГГ
     IMask(dateInput, {
       mask: Date,
       pattern: 'd.`m.`Y',
@@ -41,16 +43,19 @@ const { placeholder, datePickerId, isTimepicker } = Astro.props;
           to: 2999,
         },
       },
+      // Функция форматирования даты в строку
       format: function (date) {
         let day = date.getDate();
         let month = date.getMonth() + 1;
         const year = date.getFullYear();
 
+        // Добавляем ведущие нули для дня и месяца если нужно
         day = day < 10 ? '0' + day : day;
         month = month < 10 ? '0' + month : month;
 
         return `${day}.${month}.${year}`;
       },
+      // Функция парсинга строки в объект Date
       parse: function (str) {
         const [day, month, year] = str.split('.');
         return new Date(parseInt(year), parseInt(month) - 1, parseInt(day));
@@ -58,9 +63,11 @@ const { placeholder, datePickerId, isTimepicker } = Astro.props;
     });
   }
 
+  // Находим поле ввода времени
   const timeInput = document.getElementById('time').querySelector('input');
 
   if (timeInput) {
+    // Инициализируем маску для поля ввода времени в формате ЧЧ:ММ
     IMask(timeInput, {
       mask: 'HH:MM',
       blocks: {

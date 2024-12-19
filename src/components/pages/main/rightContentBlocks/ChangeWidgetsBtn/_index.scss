@@ -23,3 +23,27 @@
     font-weight: 400;
   }
 }
+
+.change-widgets-modal {
+  background-color: #f3f5fb;
+  padding: 32px;
+
+  h4 {
+    font-size: 32px;
+    line-height: 35.2px;
+    font-weight: 500;
+    color: #212529;
+  }
+
+  &__close-btn {
+    position: absolute;
+    top: 16px;
+    right: 16px;
+  }
+
+  &__content {
+    width: 350px;
+    margin: 0 auto;
+    padding: 40px 0;
+  }
+}

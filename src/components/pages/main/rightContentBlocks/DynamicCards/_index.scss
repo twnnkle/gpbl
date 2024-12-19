@@ -1,0 +1,85 @@
+.cards-with-animation {
+  .card-with-icon-and-label {
+    animation: scale 1s ease-in-out infinite;
+    position: relative;
+    cursor: grab !important;
+
+    &:hover {
+      svg path {
+        fill: #a6b1d2 !important;
+      }
+
+      .card-overlay__eye-icon svg path {
+        fill: #ffffff !important;
+      }
+
+      .card-with-icon-and-label__label {
+        color: #a6b1d2 !important;
+      }
+
+      .card-overlay {
+        opacity: 1;
+        visibility: visible;
+      }
+    }
+
+    @keyframes scale {
+      0% {
+        transform: scale(1);
+      }
+      33% {
+        transform: scale(0.98);
+      }
+      66% {
+        transform: scale(0.96);
+      }
+      100% {
+        transform: scale(1);
+      }
+    }
+  }
+}
+
+.dynamic-card-row {
+  max-height: 700px;
+  overflow-y: auto;
+  padding-right: 8px;
+  margin-top: 5px;
+
+  &::-webkit-scrollbar {
+    width: 5px;
+    height: 5px;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background-color: #ccd3e7;
+    border-radius: 100px;
+  }
+
+  .card-with-icon-and-label {
+    padding: 12px;
+    border-radius: 16px;
+    cursor: pointer;
+    transition: all 0.1s ease-in-out;
+    height: 100%;
+    background-color: #ffffff;
+
+    &:hover {
+      .card-with-icon-and-label__label {
+        color: #487cfb;
+      }
+
+      svg path {
+        fill: #487cfb;
+      }
+    }
+
+    &__label {
+      color: #a6b1d2;
+      font-size: 15px;
+      font-weight: 700;
+      margin-top: 45px;
+      line-height: 100%;
+    }
+  }
+}

@@ -138,11 +138,15 @@ import { Image } from 'astro:assets';
 </div>
 
 <script>
+  // Получаем все миниатюры изображений из карусели
   const thumbs = document.querySelectorAll('.history-carousel-items img');
+  // Получаем основное отображаемое изображение
   const mainImage = document.querySelector('.history-carousel-active-img');
 
+  // Добавляем обработчик клика для каждой миниатюры
   thumbs.forEach((thumb) => {
     thumb.addEventListener('click', () => {
+      // При клике на миниатюру меняем источник основного изображения на источник миниатюры
       mainImage.src = thumb.src;
     });
   });

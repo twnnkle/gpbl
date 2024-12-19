@@ -37,7 +37,7 @@ const achievements = [
     <h4 class="achievements-title">Мои достижения</h4>
   </div>
 
-  <div class="col-md-7">
+  <div class="col-md-8">
     <div
       class="achievements-content row-cols-md-4 row justify-content-between gy-3"
     >
@@ -117,9 +117,12 @@ const achievements = [
   </div>
 
   <script>
+    // Инициализация всплывающих подсказок Bootstrap
     const tooltipTriggerList = document.querySelectorAll(
       '[data-bs-toggle="tooltip"]'
     );
+
+    // Для каждого найденного элемента создаем новый экземпляр подсказки Bootstrap
     [...tooltipTriggerList].map(
       (tooltipTriggerEl) => new bootstrap.Tooltip(tooltipTriggerEl)
     );

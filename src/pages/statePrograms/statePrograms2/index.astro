@@ -3,6 +3,36 @@ import './_index.scss';
 
 import Container from '@layouts/Container/index.astro';
 
+import Breadcrumbs from '@components/pages/statePrograms/statePrograms2/Breadcrumbs/index.astro';
+import Star from '@components/common/Star/index.astro';
+import LeftBlock from '@components/pages/statePrograms/statePrograms2/LeftBlock/index.astro';
+import RightBlock from '@components/pages/statePrograms/statePrograms2/RightBlock/index.astro';
+---
+
+<body>
+  <Container>
+    <main>
+      <div class="state-programs-page">
+        <div class="state-programs-page__header">
+          <Breadcrumbs />
+          <Star />
+        </div>
+
+        <div class="state-programs-page__content">
+          <LeftBlock />
+          <RightBlock />
+        </div>
+      </div>
+    </main>
+  </Container>
+</body>
+
+
+<!-- ---
+import './_index.scss';
+
+import Container from '@layouts/Container/index.astro';
+
 import { Image } from 'astro:assets';
 
 import stateProgramImage from '@assets/pages/statePrograms/state-program-image.png';
@@ -12,7 +42,7 @@ import Star from '@components/common/Star/index.astro';
 ---
 
 <body>
-  <Container>
+  <Container isWhiteBgSearch>
     <main>
       <div class="state-programs-page">
         <div class="state-programs-page__breadcrumbs-and-star">
@@ -111,7 +141,7 @@ import Star from '@components/common/Star/index.astro';
               </svg>
 
               <p>Перечень необходимых документов — PDF, 100кб</p>
-              <a href="#">Скачать</a>
+              <a stateProgramsef="#">Скачать</a>
             </li>
 
             <li>
@@ -150,11 +180,11 @@ import Star from '@components/common/Star/index.astro';
               </svg>
 
               <p>Условия госпрограммы</p>
-              <a href="#">Скачать</a>
+              <a stateProgramsef="#">Скачать</a>
             </li>
           </ul>
         </div>
       </div>
     </main>
   </Container>
-</body>
+</body> -->

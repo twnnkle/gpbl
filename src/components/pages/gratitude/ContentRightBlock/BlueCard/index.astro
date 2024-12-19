@@ -165,7 +165,9 @@ import avatar from '@assets/pages/gratitude/blue-card-avatar.png';
             </div>
 
             <script>
+              // Инициализация после загрузки DOM
               document.addEventListener('DOMContentLoaded', function () {
+                // Получаем элементы для работы с выпадающим списком
                 const input = document.getElementById(
                   'recipientName'
                 ) as HTMLInputElement;
@@ -174,6 +176,8 @@ import avatar from '@assets/pages/gratitude/blue-card-avatar.png';
                 const dropdownLinks =
                   document.querySelectorAll('.dropdown-item');
 
+                // Обработчик ввода в поле поиска
+                // Фильтрует элементы списка по введенному тексту
                 input.addEventListener('input', function () {
                   const searchText = this.value.toLowerCase();
 
@@ -187,6 +191,8 @@ import avatar from '@assets/pages/gratitude/blue-card-avatar.png';
                   });
                 });
 
+                // Обработчик клика по элементу выпадающего списка
+                // Подставляет выбранное значение в поле ввода
                 dropdownLinks.forEach((link) => {
                   link.addEventListener('click', function (e) {
                     e.preventDefault();

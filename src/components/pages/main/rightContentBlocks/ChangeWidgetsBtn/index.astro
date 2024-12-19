@@ -1,10 +1,21 @@
 ---
 import './_index.scss';
+
+import StaticCards from '@components/pages/main/rightContentBlocks/StaticCards/index.astro';
+import DynamicCards from '@components/pages/main/rightContentBlocks/DynamicCards/index.astro';
+import Employees from '@components/pages/main/rightContentBlocks/Employees/index.astro';
+import Tasks from '@components/pages/main/rightContentBlocks/Tasks/index.astro';
+import Vacation from '@components/pages/main/rightContentBlocks/Vacation/index.astro';
+import GrayCardWithImg from '@components/pages/main/rightContentBlocks/GrayCardWithImg/index.astro';
 ---
 
 <div class="row card-row gy-2">
   <div class="col-md-12 gx-2">
-    <div class="change-widgets-btn">
+    <div
+      class="change-widgets-btn"
+      data-bs-toggle="modal"
+      data-bs-target="#changeWidgetsModal"
+    >
       <p>Изменить виджеты</p>
 
       <svg
@@ -32,3 +43,75 @@ import './_index.scss';
     </div>
   </div>
 </div>
+
+<div
+  class="modal fade"
+  id="changeWidgetsModal"
+  tabindex="-1"
+  aria-labelledby="changeWidgetsModalLabel"
+  aria-hidden="true"
+>
+  <div class="modal-dialog modal-dialog-centered" style="max-width: 1100px;">
+    <div class="modal-content change-widgets-modal">
+      <h4>Изменение виджетов</h4>
+
+      <button
+        type="button"
+        class="change-widgets-modal__close-btn btn-close"
+        data-bs-dismiss="modal"
+        aria-label="Close"></button>
+
+      <div class="change-widgets-modal__content">
+        <StaticCards changeStatus />
+        <DynamicCards changeStatus />
+        <Employees changeStatus />
+        <Tasks changeStatus />
+        <Vacation changeStatus />
+        <GrayCardWithImg changeStatus />
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+  import Sortable from 'sortablejs';
+
+  // Инициализация после загрузки DOM
+  document.addEventListener('DOMContentLoaded', function () {
+    const el = document.getElementById('sortable-cards');
+
+    // Инициализация библиотеки Sortable для возможности перетаскивания карточек
+    new Sortable(el, {
+      animation: 150,
+      ghostClass: 'sortable-ghost',
+    });
+
+    if (el) {
+      // Обработка кнопок удаления карточек
+      const deleteBtns = document.querySelectorAll(
+        '.card-overlay__delete-icon'
+      );
+      deleteBtns.forEach((btn) => {
+        btn.addEventListener('click', function () {
+          const card = this.closest('.card-with-overlay');
+          if (card) {
+            card.remove(); // Удаляем карточку при клике на кнопку удаления
+          }
+        });
+      });
+
+      // Обработка кнопок скрытия/показа карточек
+      const eyeBtns = document.querySelectorAll('.card-overlay__eye-icon');
+      eyeBtns.forEach((btn) => {
+        btn.addEventListener('click', function () {
+          const card = this.closest('.card-with-overlay');
+          console.log(card);
+
+          if (card) {
+            card.classList.toggle('blurred-card'); // Переключаем размытие карточки при клике на кнопку глаза
+          }
+        });
+      });
+    }
+  });
+</script>
