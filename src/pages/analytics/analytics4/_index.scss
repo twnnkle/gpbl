@@ -4,9 +4,12 @@ body {
 
 .analytics-page {
   margin-top: 55px;
-
+  position: relative;
+  
   &__star {
-    margin-bottom: 20px;
+    position: absolute;
+    top: 0;
+    right: -60px;
   }
 
   &__dropdowns {

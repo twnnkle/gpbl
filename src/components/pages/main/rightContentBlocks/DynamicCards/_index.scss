@@ -3,6 +3,8 @@
     animation: scale 1s ease-in-out infinite;
     position: relative;
     cursor: grab !important;
+    display: block;
+    text-decoration: none;
 
     &:hover {
       svg path {
