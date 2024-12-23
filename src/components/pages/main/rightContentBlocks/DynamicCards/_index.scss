@@ -2,7 +2,7 @@
   .card-with-icon-and-label {
     animation: scale 1s ease-in-out infinite;
     position: relative;
-    cursor: grab !important;
+    cursor: grab;
     display: block;
     text-decoration: none;
 
@@ -61,10 +61,11 @@
   .card-with-icon-and-label {
     padding: 12px;
     border-radius: 16px;
-    cursor: pointer;
     transition: all 0.1s ease-in-out;
     height: 100%;
     background-color: #ffffff;
+    display: block;
+    text-decoration: none;
 
     &:hover {
       .card-with-icon-and-label__label {
