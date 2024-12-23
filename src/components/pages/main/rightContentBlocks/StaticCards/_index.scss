@@ -1,7 +1,7 @@
 .cards-change-status {
   .card-with-icon-and-label {
     opacity: 0.5;
-    cursor:no-drop;
+    cursor: no-drop;
 
     &:hover {
       .card-with-icon-and-label__label {
@@ -18,10 +18,11 @@
 .card-with-icon-and-label {
   padding: 12px;
   border-radius: 16px;
-  cursor: pointer;
   transition: all 0.1s ease-in-out;
   height: 100%;
   background-color: #ffffff;
+  display: block;
+  text-decoration: none;
 
   &:hover {
     .card-with-icon-and-label__label {
