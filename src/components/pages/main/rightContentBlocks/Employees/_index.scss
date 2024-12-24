@@ -22,8 +22,8 @@
 .employee-card {
   display: flex;
   margin-top: 12px;
-  cursor: pointer;
   transition: all 0.1s ease-in-out;
+  text-decoration: none;
 
   &:hover {
     .employee-card__text p {

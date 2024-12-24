@@ -24,8 +24,8 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  cursor: pointer;
   transition: all 0.1s ease-in-out;
+  text-decoration: none;
 
   &:hover {
     .task-card__btn {
