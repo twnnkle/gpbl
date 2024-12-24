@@ -31,8 +31,18 @@
   display: flex;
   align-items: center;
   margin-top: 12px;
-  cursor: pointer;
+  text-decoration: none;
   width: fit-content;
+
+  &:hover {
+    p {
+      color: #487cfb;
+    }
+
+    svg path {
+      fill: #487cfb;
+    }
+  }
 
   p {
     color: #7f8ebe;
@@ -49,9 +59,9 @@
   padding: 6px 12px;
   display: block;
   width: fit-content;
-  cursor: pointer;
   margin-top: 45px;
   color: #212529;
   font-size: 16px;
   font-weight: 400;
+  text-decoration: none;
 }

@@ -45,8 +45,13 @@
 .dynamic-card-row {
   max-height: 700px;
   overflow-y: auto;
-  padding-right: 8px;
+  padding-right: 5px;
   margin-top: 5px;
+  margin-right: -25px;
+  
+  > * {
+    padding-right: 5px; 
+  }
 
   &::-webkit-scrollbar {
     width: 5px;
