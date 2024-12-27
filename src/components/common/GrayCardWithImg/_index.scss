@@ -35,6 +35,11 @@
     color: #212529;
     font-size: 20px;
     font-weight: 500;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+    overflow: hidden;
+    height: 50px;
   }
 
   &__description {
