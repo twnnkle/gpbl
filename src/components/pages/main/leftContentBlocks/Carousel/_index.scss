@@ -7,11 +7,16 @@
   background-size: cover;
   display: block;
   text-decoration: none;
+  height: 400px;
 
   h4 {
     font-size: 40px;
     font-weight: 500;
     line-height: 48px;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+    overflow: hidden;
   }
 
   p {
